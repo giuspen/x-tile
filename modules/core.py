@@ -62,7 +62,10 @@ class InfoModel:
       for client in clients:
          if support.is_window_sticky(client): continue
          support.get_property("_NET_WM_DESKTOP", client, glob.XA_CARDINAL)
-         workspace_num = glob.ret_pointer[0]
+         if bool(glob.ret_pointer): workspace_num = glob.ret_pointer[0]
+         else:
+            print "DEBUG warning _NET_WM_DESKTOP improperly set"
+            workspace_num = curr_workspace_num
          if self.gconf_client.get_string(cons.GCONF_ONLY_CURR_DESK % glob.screen_index) == "True"\
          and (workspace_num != curr_workspace_num or not support.is_window_in_curr_viewport(desktop_width, desktop_height, client)):
             continue
