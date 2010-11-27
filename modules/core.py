@@ -34,13 +34,14 @@ class InfoModel:
       
    def __init__(self):
       """Sets up and populates the gtk.ListStore"""
-      # 0:selected, 1:window ref, 2:title, 3:pixbuf of icon, 4:selected2
+      # 0:selected, 1:window ref, 2:title, 3:pixbuf of icon, 4:selected2, 5:win_curr_monitor
       self.gconf_client = gconf.client_get_default()
       self.liststore = gtk.ListStore(gobject.TYPE_BOOLEAN,
-                                     int,
-                                     str,
+                                     gobject.TYPE_ULONG,
+                                     gobject.TYPE_STRING,
                                      gobject.TYPE_PYOBJECT,
-                                     gobject.TYPE_BOOLEAN)
+                                     gobject.TYPE_BOOLEAN,
+                                     gobject.TYPE_UINT)
       self.process_picklist = set()
       self.process_blacklist = set()
       self.process_whitelist = set()
@@ -59,6 +60,7 @@ class InfoModel:
          print "DEBUG warning _NET_CURRENT_DESKTOP improperly set"
       else: curr_workspace_num = glob.ret_pointer[0] # the number of the current workspace
       desktop_width, desktop_height = support.get_desktop_width_n_height()
+      screen = gtk.gdk.screen_get_default()
       for client in clients:
          if support.is_window_sticky(client): continue
          support.get_property("_NET_WM_DESKTOP", client, glob.XA_CARDINAL)
@@ -104,9 +106,11 @@ class InfoModel:
          # filter based on process name - NB beppie I'd like something better for this but dont know what!
          self.process_picklist.add(process_name)
          if process_name not in self.process_blacklist: # user filter
+            win_curr_monitor = screen.get_monitor_at_window(gtk.gdk.window_foreign_new(client))
+            print win_curr_monitor
             if process_name not in self.process_whitelist: # user flagged by default list
-               self.liststore.append([False, client, title, pxb, False])
-            else: self.liststore.append([True, client, title, pxb, False])
+               self.liststore.append([False, client, title, pxb, False, win_curr_monitor])
+            else: self.liststore.append([True, client, title, pxb, False, win_curr_monitor])
             rows_num += 1
       if rows_num == 2:
          iter = self.liststore.get_iter_first()
