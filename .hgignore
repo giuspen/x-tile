@@ -1,0 +1,8 @@
+syntax: glob
+*.pyc
+de
+fr
+it
+ru
+zh_CN
+zh_TW

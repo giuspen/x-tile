@@ -1,0 +1,592 @@
+# French translations for PACKAGE package.
+# Copyright (C) 2010 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# maul <giuspen@gmail.com>, 2010.
+# Ludovic Troisi <axalis@cegetel.net> 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-10-24 00:29+0200\n"
+"PO-Revision-Date: 2010-03-06 20:34+0200\n"
+"Last-Translator: Ludovic Troisi <axalis@cegetel.net>\n"
+"Language-Team: X Tile\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: x-tile:68 modules/cons.py:255
+msgid "_About"
+msgstr "À _propos"
+
+#: x-tile:69
+msgid "_Maximize All"
+msgstr "Tout _maximiser"
+
+#: x-tile:70
+msgid "Tile All _Quad"
+msgstr "Tout répartir en _quartiers"
+
+#: x-tile:71
+msgid "Tile All Triangle _Right"
+msgstr "Tout répartir en triangle à partir de la dr_oite"
+
+#: x-tile:72
+msgid "Tile All Triangle _Left"
+msgstr "Tout répartir en triangle à partir de la _gauche"
+
+#: x-tile:73
+msgid "Tile All Triangle _Down"
+msgstr "Tout répartir en triangle à partir du _bas"
+
+#: x-tile:74
+msgid "Tile All Triangle _Up"
+msgstr "Tout répartir en triangle à partir du h_aut"
+
+#: x-tile:75
+msgid "Tile All Custom _2"
+msgstr "Tout répartir en personnalisée _2"
+
+#: x-tile:76
+msgid "Tile All Custom _1"
+msgstr "Tout répartir en personnalisée _1"
+
+#: x-tile:77
+msgid "Tile All _Horizontally"
+msgstr "Tout répartir _horizontalement"
+
+#: x-tile:78
+msgid "Tile All _Vertically"
+msgstr "Tout répartir ve_rticalement"
+
+#: x-tile:79 modules/cons.py:243
+msgid "U_ndo Tiling"
+msgstr "A_nnuler la répartition"
+
+#: x-tile:98
+msgid ""
+"X Tile\n"
+"Tile The Windows Upon Your Desktop"
+msgstr ""
+"X Tile\n"
+"Répartit vos fenêtres sur l'espace de travail selon un pavage"
+
+#: modules/core.py:324
+msgid "The New Language will be Available Only After Restarting X Tile"
+msgstr "La nouvelle langue sera chargée une fois X Tile relancé"
+
+#: modules/core.py:457
+msgid "The Size of the Toolbar Icons is already at the Maximum Value"
+msgstr "La taille de la barre d'outils est déjà à sa valeur maximale"
+
+#: modules/core.py:467
+msgid "The Size of the Toolbar Icons is already at the Minimum Value"
+msgstr "La taille de la barre d'outils est déjà à sa valeur minimale"
+
+#: modules/core.py:475
+msgid "ON"
+msgstr "ACTIVÉ"
+
+#: modules/core.py:475
+msgid "OFF"
+msgstr "DÉSACTIVÉ"
+
+#: modules/core.py:476
+#, python-format
+msgid "Version %s  -  Exit After Tile: %s"
+msgstr "Version %s  -  Fermer après répartition : %s"
+
+#: modules/core.py:518 modules/core.py:524
+msgid ""
+"The used shortcut is not available when the Preferences Window is opened"
+msgstr ""
+"Le raccourci clavier utilisé n'est pas disponible lorsque la fenêtre de "
+"préférences est ouverte"
+
+#: modules/core.py:596 modules/core.py:604 modules/core.py:612
+msgid "No Row is Selected"
+msgstr "Aucune ligne n'a été sélectionnée"
+
+#: modules/core.py:634 modules/core.py:668
+msgid "No Application Selected!"
+msgstr "Aucune application sélectionnée !"
+
+#: modules/core.py:781 modules/core.py:789 modules/core.py:801
+msgid "No Windows Checked"
+msgstr "Aucune fenêtre n'a été sélectionnée"
+
+#: modules/core.py:835 modules/core.py:848
+msgid "Edit Custom Tile Settings"
+msgstr "Éditer la répartition personnalisée"
+
+#: modules/core.py:917
+msgid ""
+"The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
+"Set'"
+msgstr ""
+"La répartition personnalisée 1 n'est pas définie: Cliquez sur le menu 'Tile-"
+">Configurer la répartition personnalisée 1'"
+
+#: modules/core.py:936
+msgid ""
+"The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
+"Set'"
+msgstr ""
+"La répartition personnalisée 2 n'est pas définie: Cliquez sur le menu 'Tile-"
+">Configurer la répartition personnalisée 2'"
+
+#: modules/cons.py:218
+msgid "_File"
+msgstr "_Fichier"
+
+#: modules/cons.py:219
+msgid "_Edit"
+msgstr "É_dition"
+
+#: modules/cons.py:220
+msgid "_Row"
+msgstr "_Ligne"
+
+#: modules/cons.py:221
+msgid "_Tile"
+msgstr "_Répartir"
+
+#: modules/cons.py:222
+msgid "_View"
+msgstr "_Affichage"
+
+#: modules/cons.py:223 modules/cons.py:254
+msgid "_Help"
+msgstr "Aid_e"
+
+#: modules/cons.py:225
+msgid "_Filter"
+msgstr "_Filtrer"
+
+#: modules/cons.py:225
+msgid "Filter Rows"
+msgstr "Filtre les lignes"
+
+#: modules/cons.py:226
+msgid "Selected by _Default"
+msgstr "Sélectionnée par _défaut"
+
+#: modules/cons.py:226 glade/x-tile.glade.h:51
+msgid "Rows to be Selected by Default"
+msgstr "Lignes à être sélectionné par défaut"
+
+#: modules/cons.py:227
+msgid "_Reload"
+msgstr "_Recharger"
+
+#: modules/cons.py:227
+msgid "Reload the Windows List"
+msgstr "Recharge la liste des fenêtres"
+
+#: modules/cons.py:228
+msgid "_Quit"
+msgstr "_Quitter"
+
+#: modules/cons.py:228
+msgid "Quit the Application"
+msgstr "Quitte l'application"
+
+#: modules/cons.py:229
+msgid "_Preferences"
+msgstr "_Préférences"
+
+#: modules/cons.py:229
+msgid "Open the Preferences Window"
+msgstr "Ouvre la fenêtre de préférences"
+
+#: modules/cons.py:230
+msgid "Select _All"
+msgstr "_Tout sélectionner"
+
+#: modules/cons.py:230
+msgid "Select All the Windows in the List"
+msgstr "Sélectionne toutes les fenêtres de la liste"
+
+#: modules/cons.py:231
+msgid "Deselect A_ll"
+msgstr "Tout _désélectionner"
+
+#: modules/cons.py:231
+msgid "Deselect All the Windows in the List"
+msgstr "Désélectionne toutes les fenêtres de la liste"
+
+#: modules/cons.py:232
+msgid "Tile _Vertically"
+msgstr "Répartir _verticalement"
+
+#: modules/cons.py:232
+msgid "Tile Vertically The Checked Windows"
+msgstr "Répartit verticalement les fenêtres sélectionnées"
+
+#: modules/cons.py:233
+msgid "Tile _Horizontally"
+msgstr "Répartir _horizontalement"
+
+#: modules/cons.py:233
+msgid "Tile Horizontally The Checked Windows"
+msgstr "Répartit horizontalement les fenêtres sélectionnées"
+
+#: modules/cons.py:234
+msgid "_Triangle Up"
+msgstr "Répartir en triangle à partir du h_aut"
+
+#: modules/cons.py:234
+msgid "Tile Triangle Up The Checked Windows"
+msgstr "Répartit selon un triangle les fenêtres sélectionnées à partir du haut"
+
+#: modules/cons.py:235
+msgid "Triangle _Down"
+msgstr "Répartir en triangle à partir du _bas"
+
+#: modules/cons.py:235
+msgid "Tile Triangle Down The Checked Windows"
+msgstr "Répartit selon un triangle les fenêtres sélectionnées à partir du bas"
+
+#: modules/cons.py:236
+msgid "Triangle _Left"
+msgstr "Répartir en triangle à partir de la _gauche"
+
+#: modules/cons.py:236
+msgid "Tile Triangle Left The Checked Windows"
+msgstr ""
+"Répartit selon un triangle les fenêtres sélectionnées à partir de la gauche"
+
+#: modules/cons.py:237
+msgid "Triangle _Right"
+msgstr "Répartir en triangle à partir de la dr_oite"
+
+#: modules/cons.py:237
+msgid "Tile Triangle Right The Checked Windows"
+msgstr ""
+"Répartit selon un triangle les fenêtres sélectionnées à partir de la droite"
+
+#: modules/cons.py:238
+msgid "Tile _Quad"
+msgstr "Répartir en _quartiers"
+
+#: modules/cons.py:238
+msgid "Tile into 4 quadrants The Checked Windows"
+msgstr "Répartit selon quatre quartiers les fenêtres sélectionnées"
+
+#: modules/cons.py:239
+msgid "Custom Tile 1 _Set"
+msgstr "_Configurer la répartition personnalisée 1"
+
+#: modules/cons.py:239
+msgid "Edit Custom Tile 1 Settings"
+msgstr "Paramétrages de la répartition personnalisée 1"
+
+#: modules/cons.py:240
+msgid "Custom Tile _1 Run"
+msgstr "Lancer la répartition personnalisée 1"
+
+#: modules/cons.py:240
+msgid "Execute Custom Tile 1"
+msgstr "Exécuter la répartition personnalisée 1"
+
+#: modules/cons.py:241
+msgid "Custom Tile 2 S_et"
+msgstr "C_onfigurer la répartition personnalisée 2"
+
+#: modules/cons.py:241
+msgid "Edit Custom Tile 2 Settings"
+msgstr "Paramétrages de la répartition personnalisée 1"
+
+#: modules/cons.py:242
+msgid "Custom Tile _2 Run"
+msgstr "Lancer la répartition personnalisée 2"
+
+#: modules/cons.py:242
+msgid "Execute Custom Tile 2"
+msgstr "Exécuter la répartition personnalisée 2"
+
+#: modules/cons.py:243
+msgid "Undo the Latest Tiling Operation"
+msgstr "Annule la dernière opération de répartition"
+
+#: modules/cons.py:244
+msgid "_Maximize Windows"
+msgstr "_Maximiser les fenêtres"
+
+#: modules/cons.py:244
+msgid "Maximize The Checked Windows"
+msgstr "Maximise les fenêtres sélectionnées"
+
+#: modules/cons.py:245
+msgid "_Unmaximize Windows"
+msgstr "_Restaurer les fenêtres"
+
+#: modules/cons.py:245
+msgid "Unmaximize The Checked Windows"
+msgstr "Restaure les fenêtres sélectionnées"
+
+#: modules/cons.py:246
+msgid "_Close Windows"
+msgstr "_Fermer les fenêtres"
+
+#: modules/cons.py:246
+msgid "Close The Checked Windows"
+msgstr "Ferme les fenêtres sélectionnées"
+
+#: modules/cons.py:247
+msgid "Move _Up"
+msgstr "Déplacer vers le _haut"
+
+#: modules/cons.py:247 glade/x-tile.glade.h:41
+msgid "Move the Selected Row Up"
+msgstr "Déplace la ligne sélectionnée vers le haut"
+
+#: modules/cons.py:248
+msgid "Move _Down"
+msgstr "Déplacer vers le _bas"
+
+#: modules/cons.py:248 glade/x-tile.glade.h:40
+msgid "Move the Selected Row Down"
+msgstr "Déplace la ligne sélectionnée vers le bas"
+
+#: modules/cons.py:249
+msgid "_Remove"
+msgstr "_Supprimer"
+
+#: modules/cons.py:249 glade/x-tile.glade.h:49
+msgid "Remove the Selected Row"
+msgstr "Supprime la ligne sélectionnée (Retour arrière)"
+
+#: modules/cons.py:250
+msgid "Show/Hide _Vertical Buttons"
+msgstr "Afficher/Masquer la barre de boutons _verticale"
+
+#: modules/cons.py:250
+msgid "Toggle Show/Hide Vertical Buttons"
+msgstr "Affiche/Masque la barre de boutons verticale"
+
+#: modules/cons.py:251
+msgid "Show/Hide _Toolbar"
+msgstr "Afficher/Masquer la barre d'_outils"
+
+#: modules/cons.py:251
+msgid "Toggle Show/Hide Toolbar"
+msgstr "Affiche/Masque la barre d'outils"
+
+#: modules/cons.py:252
+msgid "_Increase Toolbar Icons Size"
+msgstr "_Augmenter la taille de la barre d'outils"
+
+#: modules/cons.py:252
+msgid "Increase the Size of the Toolbar Icons"
+msgstr "Augmente la taille de la barre d'outils"
+
+#: modules/cons.py:253
+msgid "_Decrease Toolbar Icons Size"
+msgstr "_Diminuer la taille de la barre d'outils"
+
+#: modules/cons.py:253
+msgid "Decrease the Size of the Toolbar Icons"
+msgstr "Diminue la taille de la barre d'outils"
+
+#: modules/cons.py:254
+msgid "X Tile Project Home Page"
+msgstr "Page d'accueil de X Tile"
+
+#: modules/cons.py:255 glade/x-tile.glade.h:22
+msgid "About X Tile"
+msgstr "Informations à propos de X Tile"
+
+#: glade/x-tile.glade.h:1
+msgid ""
+"\n"
+"This program is free software; you can redistribute it and/or modify\n"
+"it under the terms of the GNU General Public License as published by\n"
+"the Free Software Foundation; either version 2 of the License, or\n"
+"(at your option) any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful,\n"
+"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
+"GNU General Public License for more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License\n"
+"along with this program; if not, write to the Free Software\n"
+"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,\n"
+"MA 02110-1301, USA."
+msgstr ""
+"\n"
+"Ce programme est un logiciel libre ; vous pouvez le redistribuer\n"
+"et/ou le modifier au titre des clauses de la Licence Publique\n"
+"Générale GNU, telle que publiée par la Free Software Foundation ;\n"
+"soit la version 2 de la Licence, ou (à votre discrétion) une version\n"
+"ultérieure quelconque.\n"
+"\n"
+"Ce programme est distribué dans l'espoir qu'il sera utile, mais SANS\n"
+"AUCUNE GARANTIE ; sans même une garantie implicite de\n"
+"COMMERCIABILITE ou DE CONFORMITE A UNE UTILISATION\n"
+"PARTICULIERE. Voir la Licence Publique Générale GNU pour plus de\n"
+"détails.\n"
+"\n"
+"Vous devriez avoir reçu un exemplaire de la Licence Publique\n"
+"Générale GNU avec ce programme ; si ce n'est pas le cas, écrivez à\n"
+"la Free Software Foundation Inc., 51 Franklin Street, Fifth Floor,\n"
+"Boston, MA 02110-1301, USA."
+
+#: glade/x-tile.glade.h:16
+msgid " Language "
+msgstr " Langue"
+
+#: glade/x-tile.glade.h:17
+msgid "1) Tile Some Windows Manually"
+msgstr "1) Disposez quelques fenêtres manuellement"
+
+#: glade/x-tile.glade.h:18
+msgid "2) Select Them in the X Tile Windows List"
+msgstr "2) Cochez-les dans la liste de X Tile"
+
+#: glade/x-tile.glade.h:19
+msgid "3) Click the Update Button"
+msgstr "3) Cliquez sur le bouton Mettre à jour"
+
+#: glade/x-tile.glade.h:20
+msgid "<b>Custom Tiling Layout</b>"
+msgstr "<b>Mise en page personnalisée</b>"
+
+#: glade/x-tile.glade.h:21
+msgid "A Gnome Applet to Tile the Opened Windows"
+msgstr ""
+"Une applet GNOME pour répartir les fenêtres actives sur l'espace de travail "
+"selon un pavage"
+
+#: glade/x-tile.glade.h:23
+msgid "Add Row"
+msgstr "Ajouter une ligne"
+
+#: glade/x-tile.glade.h:24
+msgid "Add an Application Filter"
+msgstr "Ajoute une application au filtre"
+
+#: glade/x-tile.glade.h:25
+msgid "Cancel"
+msgstr "Annuler"
+
+#: glade/x-tile.glade.h:26
+msgid ""
+"Chinese Simplified (zh_CN) Khi-yuan Fan <Fan.khiyuan@gmail.com>\n"
+"Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
+"French (fr) Ludovic Troisi <axalis@cegetel.net>\n"
+"German (de) J&#xF6;ran Zeller <joeran@zeller.ws>\n"
+"Italian (it) Giuseppe Penone <giuspen@gmail.com>\n"
+"Russian (ru) Andriy Kovtun <kovtunos@yandex.ru>"
+msgstr ""
+"Chinois simplifié (zh_CN) Khi-yuan Fan <Fan.khiyuan@gmail.com>\n"
+"Chinois traditionnel (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
+"Français (fr) Ludovic Troisi <axalis@cegetel.net>\n"
+"Allemand (de) J&#xF6;ran Zeller <joeran@zeller.ws>\n"
+"Italien (it) Giuseppe Penone <giuspen@gmail.com>\n"
+"Russe (ru) Andriy Kovtun <kovtunos@yandex.ru>"
+
+#: glade/x-tile.glade.h:32
+msgid "Close"
+msgstr "Fermer"
+
+#: glade/x-tile.glade.h:33
+msgid ""
+"Copyright &#xA9; 2009-2010\n"
+"Giuseppe Penone <giuspen@gmail.com>\n"
+"Chris Camacho <chris_camacho@yahoo.com>"
+msgstr ""
+"Copyright &#xA9; 2009-2010\n"
+"Giuseppe Penone <giuspen@gmail.com>\n"
+"Chris Camacho <chris_camacho@yahoo.com>"
+
+#: glade/x-tile.glade.h:36
+msgid "Do Not List Minimized Windows"
+msgstr "Ne pas lister les fenêtres minimisées"
+
+#: glade/x-tile.glade.h:37
+msgid "Exit After Tile"
+msgstr "Fermer après répartition"
+
+#: glade/x-tile.glade.h:38
+msgid "Height"
+msgstr "Hauteur"
+
+#: glade/x-tile.glade.h:39
+msgid "Hide the Vertical ButtonBox"
+msgstr "Masque la barre de boutons verticale"
+
+#: glade/x-tile.glade.h:42
+msgid "OK"
+msgstr "Valider"
+
+#: glade/x-tile.glade.h:43
+msgid "Only Current Workspace"
+msgstr "Uniquement l'espace de travail courant"
+
+#: glade/x-tile.glade.h:44
+msgid "Override Monitor 1 Tiling Area"
+msgstr "Zone de répartition personnalisée pour l'écran 1"
+
+#: glade/x-tile.glade.h:45
+msgid "Override Monitor 2 Tiling Area"
+msgstr "Zone de répartition personnalisée pour l'écran 2"
+
+#: glade/x-tile.glade.h:46
+msgid "Position"
+msgstr "Position"
+
+#: glade/x-tile.glade.h:47
+msgid "Preferences"
+msgstr "Préférences"
+
+#: glade/x-tile.glade.h:48
+msgid "Remove an Application Filter"
+msgstr "Retire une application du filtre"
+
+#: glade/x-tile.glade.h:50
+msgid "Rows to Filter"
+msgstr "Lignes à filtrer"
+
+#: glade/x-tile.glade.h:52
+msgid "Show Toolbar"
+msgstr "Afficher la barre d'outils"
+
+#: glade/x-tile.glade.h:53
+msgid "Show Windows Sorting Buttons"
+msgstr "Afficher les boutons de tri des fenêtres"
+
+#: glade/x-tile.glade.h:54
+msgid "Size"
+msgstr "Taille"
+
+#: glade/x-tile.glade.h:55
+msgid "Update"
+msgstr "Mettre à jour"
+
+#: glade/x-tile.glade.h:56
+msgid "Use Drag and Drop to Sort the Rows"
+msgstr "Utilisez le glisser-déposer pour trier les lignes"
+
+#: glade/x-tile.glade.h:57
+msgid "Width"
+msgstr "Largeur"
+
+#: glade/x-tile.glade.h:58
+msgid "X"
+msgstr "X"
+
+#: glade/x-tile.glade.h:59
+msgid "X Tile"
+msgstr "X Tile"
+
+#: glade/x-tile.glade.h:60
+msgid "Y"
+msgstr "Y"
+
+#: glade/x-tile.glade.h:61
+msgid "http://www.giuspen.com/x-tile/"
+msgstr "http://www.giuspen.com/x-tile/"

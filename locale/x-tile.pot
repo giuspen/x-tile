@@ -1,0 +1,553 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-10-24 00:38+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: x-tile:68 modules/cons.py:255
+msgid "_About"
+msgstr ""
+
+#: x-tile:69
+msgid "_Maximize All"
+msgstr ""
+
+#: x-tile:70
+msgid "Tile All _Quad"
+msgstr ""
+
+#: x-tile:71
+msgid "Tile All Triangle _Right"
+msgstr ""
+
+#: x-tile:72
+msgid "Tile All Triangle _Left"
+msgstr ""
+
+#: x-tile:73
+msgid "Tile All Triangle _Down"
+msgstr ""
+
+#: x-tile:74
+msgid "Tile All Triangle _Up"
+msgstr ""
+
+#: x-tile:75
+msgid "Tile All Custom _2"
+msgstr ""
+
+#: x-tile:76
+msgid "Tile All Custom _1"
+msgstr ""
+
+#: x-tile:77
+msgid "Tile All _Horizontally"
+msgstr ""
+
+#: x-tile:78
+msgid "Tile All _Vertically"
+msgstr ""
+
+#: x-tile:79 modules/cons.py:243
+msgid "U_ndo Tiling"
+msgstr ""
+
+#: x-tile:98
+msgid ""
+"X Tile\n"
+"Tile The Windows Upon Your Desktop"
+msgstr ""
+
+#: modules/core.py:324
+msgid "The New Language will be Available Only After Restarting X Tile"
+msgstr ""
+
+#: modules/core.py:457
+msgid "The Size of the Toolbar Icons is already at the Maximum Value"
+msgstr ""
+
+#: modules/core.py:467
+msgid "The Size of the Toolbar Icons is already at the Minimum Value"
+msgstr ""
+
+#: modules/core.py:475
+msgid "ON"
+msgstr ""
+
+#: modules/core.py:475
+msgid "OFF"
+msgstr ""
+
+#: modules/core.py:476
+#, python-format
+msgid "Version %s  -  Exit After Tile: %s"
+msgstr ""
+
+#: modules/core.py:518 modules/core.py:524
+msgid ""
+"The used shortcut is not available when the Preferences Window is opened"
+msgstr ""
+
+#: modules/core.py:596 modules/core.py:604 modules/core.py:612
+msgid "No Row is Selected"
+msgstr ""
+
+#: modules/core.py:634 modules/core.py:668
+msgid "No Application Selected!"
+msgstr ""
+
+#: modules/core.py:781 modules/core.py:789 modules/core.py:801
+msgid "No Windows Checked"
+msgstr ""
+
+#: modules/core.py:835 modules/core.py:848
+msgid "Edit Custom Tile Settings"
+msgstr ""
+
+#: modules/core.py:917
+msgid ""
+"The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
+"Set'"
+msgstr ""
+
+#: modules/core.py:936
+msgid ""
+"The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
+"Set'"
+msgstr ""
+
+#: modules/cons.py:218
+msgid "_File"
+msgstr ""
+
+#: modules/cons.py:219
+msgid "_Edit"
+msgstr ""
+
+#: modules/cons.py:220
+msgid "_Row"
+msgstr ""
+
+#: modules/cons.py:221
+msgid "_Tile"
+msgstr ""
+
+#: modules/cons.py:222
+msgid "_View"
+msgstr ""
+
+#: modules/cons.py:223 modules/cons.py:254
+msgid "_Help"
+msgstr ""
+
+#: modules/cons.py:225
+msgid "_Filter"
+msgstr ""
+
+#: modules/cons.py:225
+msgid "Filter Rows"
+msgstr ""
+
+#: modules/cons.py:226
+msgid "Selected by _Default"
+msgstr ""
+
+#: modules/cons.py:226 glade/x-tile.glade.h:51
+msgid "Rows to be Selected by Default"
+msgstr ""
+
+#: modules/cons.py:227
+msgid "_Reload"
+msgstr ""
+
+#: modules/cons.py:227
+msgid "Reload the Windows List"
+msgstr ""
+
+#: modules/cons.py:228
+msgid "_Quit"
+msgstr ""
+
+#: modules/cons.py:228
+msgid "Quit the Application"
+msgstr ""
+
+#: modules/cons.py:229
+msgid "_Preferences"
+msgstr ""
+
+#: modules/cons.py:229
+msgid "Open the Preferences Window"
+msgstr ""
+
+#: modules/cons.py:230
+msgid "Select _All"
+msgstr ""
+
+#: modules/cons.py:230
+msgid "Select All the Windows in the List"
+msgstr ""
+
+#: modules/cons.py:231
+msgid "Deselect A_ll"
+msgstr ""
+
+#: modules/cons.py:231
+msgid "Deselect All the Windows in the List"
+msgstr ""
+
+#: modules/cons.py:232
+msgid "Tile _Vertically"
+msgstr ""
+
+#: modules/cons.py:232
+msgid "Tile Vertically The Checked Windows"
+msgstr ""
+
+#: modules/cons.py:233
+msgid "Tile _Horizontally"
+msgstr ""
+
+#: modules/cons.py:233
+msgid "Tile Horizontally The Checked Windows"
+msgstr ""
+
+#: modules/cons.py:234
+msgid "_Triangle Up"
+msgstr ""
+
+#: modules/cons.py:234
+msgid "Tile Triangle Up The Checked Windows"
+msgstr ""
+
+#: modules/cons.py:235
+msgid "Triangle _Down"
+msgstr ""
+
+#: modules/cons.py:235
+msgid "Tile Triangle Down The Checked Windows"
+msgstr ""
+
+#: modules/cons.py:236
+msgid "Triangle _Left"
+msgstr ""
+
+#: modules/cons.py:236
+msgid "Tile Triangle Left The Checked Windows"
+msgstr ""
+
+#: modules/cons.py:237
+msgid "Triangle _Right"
+msgstr ""
+
+#: modules/cons.py:237
+msgid "Tile Triangle Right The Checked Windows"
+msgstr ""
+
+#: modules/cons.py:238
+msgid "Tile _Quad"
+msgstr ""
+
+#: modules/cons.py:238
+msgid "Tile into 4 quadrants The Checked Windows"
+msgstr ""
+
+#: modules/cons.py:239
+msgid "Custom Tile 1 _Set"
+msgstr ""
+
+#: modules/cons.py:239
+msgid "Edit Custom Tile 1 Settings"
+msgstr ""
+
+#: modules/cons.py:240
+msgid "Custom Tile _1 Run"
+msgstr ""
+
+#: modules/cons.py:240
+msgid "Execute Custom Tile 1"
+msgstr ""
+
+#: modules/cons.py:241
+msgid "Custom Tile 2 S_et"
+msgstr ""
+
+#: modules/cons.py:241
+msgid "Edit Custom Tile 2 Settings"
+msgstr ""
+
+#: modules/cons.py:242
+msgid "Custom Tile _2 Run"
+msgstr ""
+
+#: modules/cons.py:242
+msgid "Execute Custom Tile 2"
+msgstr ""
+
+#: modules/cons.py:243
+msgid "Undo the Latest Tiling Operation"
+msgstr ""
+
+#: modules/cons.py:244
+msgid "_Maximize Windows"
+msgstr ""
+
+#: modules/cons.py:244
+msgid "Maximize The Checked Windows"
+msgstr ""
+
+#: modules/cons.py:245
+msgid "_Unmaximize Windows"
+msgstr ""
+
+#: modules/cons.py:245
+msgid "Unmaximize The Checked Windows"
+msgstr ""
+
+#: modules/cons.py:246
+msgid "_Close Windows"
+msgstr ""
+
+#: modules/cons.py:246
+msgid "Close The Checked Windows"
+msgstr ""
+
+#: modules/cons.py:247
+msgid "Move _Up"
+msgstr ""
+
+#: modules/cons.py:247 glade/x-tile.glade.h:41
+msgid "Move the Selected Row Up"
+msgstr ""
+
+#: modules/cons.py:248
+msgid "Move _Down"
+msgstr ""
+
+#: modules/cons.py:248 glade/x-tile.glade.h:40
+msgid "Move the Selected Row Down"
+msgstr ""
+
+#: modules/cons.py:249
+msgid "_Remove"
+msgstr ""
+
+#: modules/cons.py:249 glade/x-tile.glade.h:49
+msgid "Remove the Selected Row"
+msgstr ""
+
+#: modules/cons.py:250
+msgid "Show/Hide _Vertical Buttons"
+msgstr ""
+
+#: modules/cons.py:250
+msgid "Toggle Show/Hide Vertical Buttons"
+msgstr ""
+
+#: modules/cons.py:251
+msgid "Show/Hide _Toolbar"
+msgstr ""
+
+#: modules/cons.py:251
+msgid "Toggle Show/Hide Toolbar"
+msgstr ""
+
+#: modules/cons.py:252
+msgid "_Increase Toolbar Icons Size"
+msgstr ""
+
+#: modules/cons.py:252
+msgid "Increase the Size of the Toolbar Icons"
+msgstr ""
+
+#: modules/cons.py:253
+msgid "_Decrease Toolbar Icons Size"
+msgstr ""
+
+#: modules/cons.py:253
+msgid "Decrease the Size of the Toolbar Icons"
+msgstr ""
+
+#: modules/cons.py:254
+msgid "X Tile Project Home Page"
+msgstr ""
+
+#: modules/cons.py:255 glade/x-tile.glade.h:22
+msgid "About X Tile"
+msgstr ""
+
+#: glade/x-tile.glade.h:1
+msgid ""
+"\n"
+"This program is free software; you can redistribute it and/or modify\n"
+"it under the terms of the GNU General Public License as published by\n"
+"the Free Software Foundation; either version 2 of the License, or\n"
+"(at your option) any later version.\n"
+"\n"
+"This program is distributed in the hope that it will be useful,\n"
+"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
+"GNU General Public License for more details.\n"
+"\n"
+"You should have received a copy of the GNU General Public License\n"
+"along with this program; if not, write to the Free Software\n"
+"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,\n"
+"MA 02110-1301, USA."
+msgstr ""
+
+#: glade/x-tile.glade.h:16
+msgid " Language "
+msgstr ""
+
+#: glade/x-tile.glade.h:17
+msgid "1) Tile Some Windows Manually"
+msgstr ""
+
+#: glade/x-tile.glade.h:18
+msgid "2) Select Them in the X Tile Windows List"
+msgstr ""
+
+#: glade/x-tile.glade.h:19
+msgid "3) Click the Update Button"
+msgstr ""
+
+#: glade/x-tile.glade.h:20
+msgid "<b>Custom Tiling Layout</b>"
+msgstr ""
+
+#: glade/x-tile.glade.h:21
+msgid "A Gnome Applet to Tile the Opened Windows"
+msgstr ""
+
+#: glade/x-tile.glade.h:23
+msgid "Add Row"
+msgstr ""
+
+#: glade/x-tile.glade.h:24
+msgid "Add an Application Filter"
+msgstr ""
+
+#: glade/x-tile.glade.h:25
+msgid "Cancel"
+msgstr ""
+
+#: glade/x-tile.glade.h:26
+msgid ""
+"Chinese Simplified (zh_CN) Khi-yuan Fan <Fan.khiyuan@gmail.com>\n"
+"Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
+"French (fr) Ludovic Troisi <axalis@cegetel.net>\n"
+"German (de) J&#xF6;ran Zeller <joeran@zeller.ws>\n"
+"Italian (it) Giuseppe Penone <giuspen@gmail.com>\n"
+"Russian (ru) Andriy Kovtun <kovtunos@yandex.ru>"
+msgstr ""
+
+#: glade/x-tile.glade.h:32
+msgid "Close"
+msgstr ""
+
+#: glade/x-tile.glade.h:33
+msgid ""
+"Copyright &#xA9; 2009-2010\n"
+"Giuseppe Penone <giuspen@gmail.com>\n"
+"Chris Camacho <chris_camacho@yahoo.com>"
+msgstr ""
+
+#: glade/x-tile.glade.h:36
+msgid "Do Not List Minimized Windows"
+msgstr ""
+
+#: glade/x-tile.glade.h:37
+msgid "Exit After Tile"
+msgstr ""
+
+#: glade/x-tile.glade.h:38
+msgid "Height"
+msgstr ""
+
+#: glade/x-tile.glade.h:39
+msgid "Hide the Vertical ButtonBox"
+msgstr ""
+
+#: glade/x-tile.glade.h:42
+msgid "OK"
+msgstr ""
+
+#: glade/x-tile.glade.h:43
+msgid "Only Current Workspace"
+msgstr ""
+
+#: glade/x-tile.glade.h:44
+msgid "Override Monitor 1 Tiling Area"
+msgstr ""
+
+#: glade/x-tile.glade.h:45
+msgid "Override Monitor 2 Tiling Area"
+msgstr ""
+
+#: glade/x-tile.glade.h:46
+msgid "Position"
+msgstr ""
+
+#: glade/x-tile.glade.h:47
+msgid "Preferences"
+msgstr ""
+
+#: glade/x-tile.glade.h:48
+msgid "Remove an Application Filter"
+msgstr ""
+
+#: glade/x-tile.glade.h:50
+msgid "Rows to Filter"
+msgstr ""
+
+#: glade/x-tile.glade.h:52
+msgid "Show Toolbar"
+msgstr ""
+
+#: glade/x-tile.glade.h:53
+msgid "Show Windows Sorting Buttons"
+msgstr ""
+
+#: glade/x-tile.glade.h:54
+msgid "Size"
+msgstr ""
+
+#: glade/x-tile.glade.h:55
+msgid "Update"
+msgstr ""
+
+#: glade/x-tile.glade.h:56
+msgid "Use Drag and Drop to Sort the Rows"
+msgstr ""
+
+#: glade/x-tile.glade.h:57
+msgid "Width"
+msgstr ""
+
+#: glade/x-tile.glade.h:58
+msgid "X"
+msgstr ""
+
+#: glade/x-tile.glade.h:59
+msgid "X Tile"
+msgstr ""
+
+#: glade/x-tile.glade.h:60
+msgid "Y"
+msgstr ""
+
+#: glade/x-tile.glade.h:61
+msgid "http://www.giuspen.com/x-tile/"
+msgstr ""

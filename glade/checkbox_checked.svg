@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape -->
+<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+version="1.0" width="30" height="30" id="checkbox">
+<path d="M 12.94,21.25
+C 11.05,18.66 11.2,16.25 9.7,14.64
+C 8.2,13.06 10.06,13.34 10.48,13.6
+C 13.943,15.906 13.114,22.358 15.75,14.24
+C 17.506,8.016 21,3 21.707,2.0616
+C 22.46,1.13 22.811,2.1486 22.049,3.27
+C 18.69,8.78 17.98,12.14 15.561,20.34
+C 15.257,21.37 13.775,22.39 12.94,21.24
+L 12.939,21.245 z"
+style="fill:#400" id="tick"/>
+<rect width="19" height="19" x="5.5" y="5.5"
+style="fill:none;stroke:black;stroke-width:1;stroke-opacity:0.33" id="box"/></svg>
