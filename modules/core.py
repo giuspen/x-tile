@@ -55,7 +55,7 @@ class InfoModel:
          clients.append(glob.ret_pointer[i])
       rows_num = 0
       support.get_property("_NET_CURRENT_DESKTOP", glob.root, glob.XA_CARDINAL)
-      if bool(glob.ret_pointer)==False:
+      if bool(glob.ret_pointer) == False:
          curr_workspace_num = -2
          print "DEBUG warning _NET_CURRENT_DESKTOP improperly set"
       else: curr_workspace_num = glob.ret_pointer[0] # the number of the current workspace
