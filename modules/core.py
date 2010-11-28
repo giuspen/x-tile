@@ -34,14 +34,14 @@ class InfoModel:
       
    def __init__(self):
       """Sets up and populates the gtk.ListStore"""
-      # 0:selected, 1:window ref, 2:title, 3:pixbuf of icon, 4:selected2, 5:win_curr_monitor
+      # 0:selected, 1:window ref, 2:title, 3:pixbuf of icon, 4:selected2, 5:cell_background
       self.gconf_client = gconf.client_get_default()
       self.liststore = gtk.ListStore(gobject.TYPE_BOOLEAN,
                                      gobject.TYPE_ULONG,
                                      gobject.TYPE_STRING,
                                      gobject.TYPE_PYOBJECT,
                                      gobject.TYPE_BOOLEAN,
-                                     gobject.TYPE_UINT)
+                                     gobject.TYPE_STRING)
       self.process_picklist = set()
       self.process_blacklist = set()
       self.process_whitelist = set()
@@ -107,10 +107,12 @@ class InfoModel:
          self.process_picklist.add(process_name)
          if process_name not in self.process_blacklist: # user filter
             win_curr_monitor = screen.get_monitor_at_window(gtk.gdk.window_foreign_new(client))
-            print win_curr_monitor
-            if process_name not in self.process_whitelist: # user flagged by default list
-               self.liststore.append([False, client, title, pxb, False, win_curr_monitor])
-            else: self.liststore.append([True, client, title, pxb, False, win_curr_monitor])
+            if win_curr_monitor == 0: cell_background = 'white'
+            else: cell_background = 'gray'
+            if process_name not in self.process_whitelist: flagged = False
+            else: flagged = True
+            if win_curr_monitor == 0: self.liststore.prepend([flagged, client, title, pxb, False, cell_background])
+            else: self.liststore.append([flagged, client, title, pxb, False, cell_background])
             rows_num += 1
       if rows_num == 2:
          iter = self.liststore.get_iter_first()
@@ -282,10 +284,14 @@ class XTile:
       self.renderer_text = gtk.CellRendererText()
       self.columns = [None]*4
       self.columns[0] = gtk.TreeViewColumn("Tile", self.renderer_checkbox, active=0) # active=0 <> read from column 0 of model
+      self.columns[0].add_attribute(self.renderer_checkbox, "cell-background", 5)
       self.columns[1] = gtk.TreeViewColumn("Tile", self.renderer_checkbox2, active=4) # active=4 <> read from column 4 of model
+      self.columns[1].add_attribute(self.renderer_checkbox2, "cell-background", 5)
       self.columns[2] = gtk.TreeViewColumn("Logo", self.renderer_pixbuf)
       self.columns[2].set_cell_data_func(self.renderer_pixbuf, self.make_pixbuf)
+      self.columns[2].add_attribute(self.renderer_pixbuf, "cell-background", 5)
       self.columns[3] = gtk.TreeViewColumn("Window Description", self.renderer_text, text=2) # text=2 <> read from column 2 of model
+      self.columns[3].add_attribute(self.renderer_text, "cell-background", 5)
       for n in range(4): self.view.append_column(self.columns[n])
       if glob.num_monitors < 2: self.columns[1].set_visible(False)
       self.view.set_reorderable(True) # allow drag and drop reordering of rows
