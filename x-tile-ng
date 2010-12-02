@@ -1,0 +1,95 @@
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+"""X Tile No Gnome module"""
+
+#      x-tile-ng
+#      
+#      Copyright 2009-2010
+#      Giuseppe Penone <giuspen@gmail.com>,
+#      Chris Camacho (chris_c) <chris_camacho@yahoo.com>.
+#      
+#      plus many thanks to  http://tronche.com/gui/x/xlib/
+#                      and  http://tripie.sweb.cz/utils/wmctrl/
+#
+#      This program is free software; you can redistribute it and/or modify
+#      it under the terms of the GNU General Public License as published by
+#      the Free Software Foundation; either version 2 of the License, or
+#      (at your option) any later version.
+#      
+#      This program is distributed in the hope that it will be useful,
+#      but WITHOUT ANY WARRANTY; without even the implied warranty of
+#      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#      GNU General Public License for more details.
+#      
+#      You should have received a copy of the GNU General Public License
+#      along with this program; if not, write to the Free Software
+#      Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+#      MA 02110-1301, USA.
+
+import sys, os, gettext, ctypes, ctypes.util, locale
+import gtk, gconf
+import __builtin__
+
+if os.path.isdir('modules'): MODULES_PATH = 'modules/'
+else: MODULES_PATH = '/usr/share/x-tile/modules/'
+sys.path.append(MODULES_PATH)
+import cons, globs, core
+
+# language installation
+gconf_client = gconf.client_get_default()
+gconf_client.add_dir(cons.GCONF_DIR, gconf.CLIENT_PRELOAD_NONE)
+lang_str = gconf_client.get_string(cons.GCONF_LANG)
+if lang_str == None:
+   gconf_client.set_string(cons.GCONF_LANG, "default")
+   lang_str = "default"
+if lang_str != "default": os.environ["LANGUAGE"] = lang_str
+try:
+   locale.bindtextdomain(cons.APP_NAME, cons.LOCALE_PATH)
+   gettext.translation(cons.APP_NAME, cons.LOCALE_PATH).install()
+except:
+   def _(transl_str):
+      return transl_str
+   __builtin__._ = _
+
+__builtin__.glob = globs.GlobalsObject()
+
+try:
+   libc = ctypes.cdll.LoadLibrary(ctypes.util.find_library("libc"))
+   libc.prctl(15, cons.APP_NAME, 0, 0, 0)
+except: print "libc.prctl not available, the process name will be python and not x-tile"
+
+# icons generation
+factory = gtk.IconFactory()
+for filename, stock_name in cons.ICONS_FILENAMES:
+   pixbuf = gtk.gdk.pixbuf_new_from_file(filename)
+   iconset = gtk.IconSet(pixbuf)
+   factory.add(stock_name, iconset)
+factory.add_default()
+
+if len(sys.argv) < 2: sys.argv.append("w")
+
+arg = sys.argv[1]
+if arg == "w":
+   x = core.XTile(core.InfoModel())
+   x.launch_application()
+   x.reload_windows_list()
+   gtk.main()
+elif arg in ["z", "v", "h", "u", "d", "l", "r", "1", "2", "q", "m"]:
+   x = core.XTile(core.InfoModel())
+   x.launch_application()
+   if arg != "z":
+      x.reload_windows_list()
+      x.flag_all_rows()
+   if arg == "z": x.undo_tiling()
+   elif arg == "v": x.tile_vertically()
+   elif arg == "h": x.tile_horizontally()
+   elif arg == "u": x.tile_triangle_up()
+   elif arg == "d": x.tile_triangle_down()
+   elif arg == "l": x.tile_triangle_left()
+   elif arg == "r": x.tile_triangle_right()
+   elif arg == "q": x.tile_quad()
+   elif arg == "1": x.tile_custom_1_run()
+   elif arg == "2": x.tile_custom_2_run()
+   elif arg == "m": x.maximize_checked_windows()
+else: # -h
+   print cons.HELP_TEXT
