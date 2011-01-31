@@ -1,0 +1,25 @@
+Source: x-tile
+Section: utils
+Priority: optional
+Maintainer: Giuseppe Penone <giuspen@gmail.com>
+Build-Depends: debhelper (>= 7), python-central (>=0.5.6), python (>=2.4), python-gtk2 (>=2.17), python-gnome2 (>=2.28), python-gnomeapplet (>=2.30)
+Standards-Version: 3.8.1
+Homepage: http://www.giuspen.com/x-tile/
+
+Package: x-tile
+Version: 1.8.4-1
+Architecture: all
+XS-Python-Version: >=2.4
+XB-Python-Version: >=2.4
+Depends: python-gtk2, python-gnome2, python-gnomeapplet
+Conflicts: x-tile-ng
+Description: X Tile
+ A gnome applet for your panel (or optionally a standalone application, working with kde as well) that allows you to select a number of windows and tile them in different ways.
+
+Package: x-tile-ng
+Version: 1.8.4-1
+Architecture: all
+Depends: python-gtk2
+Conflicts: x-tile
+Description: X Tile NG
+ Allows you to select a number of windows and tile them in different ways
