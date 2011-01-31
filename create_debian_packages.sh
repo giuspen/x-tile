@@ -1,3 +1,3 @@
 #!/bin/sh
 
-dpkg-buildpackage -b
+dpkg-buildpackage -b -d
