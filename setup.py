@@ -9,6 +9,7 @@ from distutils.core import setup
 from distutils.dist import Distribution
 from distutils.cmd import Command
 from distutils.command.install_data import install_data
+from distutils.command.install import install
 from distutils.command.build import build
 from distutils.dep_util import newer
 from distutils.log import warn, info, error
@@ -119,11 +120,19 @@ class Uninstall(Command):
         else:
           info("skipping empty directory %s" % repr(dir))
 
+class Install(install):
+  def run(self):
+    if self.distribution.no_panel_applet:
+      self.distribution.scripts=['x-tile-ng']
+    else:
+      self.distribution.scripts=['x-tile']
+    install.run(self)
+
 class InstallData(install_data):
-  def run (self):
+  def run(self):
     self.data_files.extend(self._find_mo_files())
     self.data_files.extend(self._find_desktop_file())
-    install_data.run (self)
+    install_data.run(self)
 
   def _find_desktop_file(self):
     if self.distribution.no_panel_applet:
@@ -152,7 +161,6 @@ setup(
    author_email = "giuspen@gmail.com & chris_camacho@yahoo.com",
    url = "http://www.giuspen.com/x-tile/",
    license = "GPL",
-   scripts = ["x-tile"],
    data_files = [
                   ("share/pixmaps", ["linux/x-tile.svg"] ),
                   ("share/x-tile/glade", glob.glob("glade/*.*") ),
@@ -160,6 +168,7 @@ setup(
    cmdclass={
         'build': BuildData, 
         'install_data': InstallData, 
+        'install': Install,
         'uninstall': Uninstall
       },
    distclass=xtileDist

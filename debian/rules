@@ -43,8 +43,10 @@ install: build
 	dh_prep  
 	dh_installdirs
 
+	rm -rf build
 	python setup.py install --no-compile \
 		--root=debian/tmp --prefix=/usr --install-layout=deb
+	rm -rf build
 	python setup.py --no-panel-applet install --no-compile \
 		--root=debian/x-tile-ng --prefix=/usr --install-layout=deb
 
