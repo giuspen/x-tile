@@ -1,69 +1,71 @@
-# Chinese translations for PACKAGE package
-# traditional Chinese translation for PACKAGE.
-# Copyright (C) 2010 THE PACKAGE'S COPYRIGHT HOLDER
+# Spanish translations for PACKAGE package.
+# Copyright (C) 2011 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Automatically generated, 2010.
-# Yan-ren Tsai <elleryq@gmail.com>, 2010.
+# giuspen <giuspen@gmail.com>, 2011.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.6\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-02-20 14:31+0100\n"
-"PO-Revision-Date: 2010-10-25 05:38+0800\n"
-"Last-Translator: Yan-ren Tsai <elleryq@gmail.com>\n"
-"Language-Team: zh_TW <elleryq@gmail.com>\n"
+"POT-Creation-Date: 2011-02-20 14:28+0100\n"
+"PO-Revision-Date: 2011-02-20 01:49-0300\n"
+"Last-Translator: MeloPixel <melopixel@gmail.com>\n"
+"Language-Team: Spanish\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Spanish\n"
+"X-Poedit-Country: ARGENTINA\n"
 
 #: x-tile:70 modules/cons.py:255
 msgid "_About"
-msgstr "關於 (_A)"
+msgstr "_Acerca de"
 
 #: x-tile:71
 msgid "_Maximize All"
-msgstr "最大化全部 (_M)"
+msgstr "_Maximizar Todo"
 
 #: x-tile:72
 msgid "Tile All _Quad"
-msgstr "平鋪所有視窗為4個 (_Q)"
+msgstr "_Cuadricula"
 
 #: x-tile:73
 msgid "Tile All Triangle _Right"
-msgstr "平舖所有視窗為三等份，最大的在右 (_R)"
+msgstr "Triangular _Derecha"
 
 #: x-tile:74
 msgid "Tile All Triangle _Left"
-msgstr "平舖所有視窗為三等份，最大的在左 (_L)"
+msgstr "Triangular _Izquierda"
 
 #: x-tile:75
 msgid "Tile All Triangle _Down"
-msgstr "平舖所有視窗為三等份，最大的在下 (_D)"
+msgstr "Triangular A_bajo"
 
 #: x-tile:76
 msgid "Tile All Triangle _Up"
-msgstr "平舖所有視窗為三等份，最大的在上 (_U)"
+msgstr "Triangular _Arriba"
 
 #: x-tile:77
 msgid "Tile All Custom _2"
-msgstr "平舖所有自訂2 (_2)"
+msgstr "Personalizado _2"
 
 #: x-tile:78
 msgid "Tile All Custom _1"
-msgstr "平舖所有自訂1 (_1)"
+msgstr "Personalizado _1"
 
 #: x-tile:79
 msgid "Tile All _Horizontally"
-msgstr "水平鋪排全部視窗 (_H)"
+msgstr "_Horizontal"
 
 #: x-tile:80
 msgid "Tile All _Vertically"
-msgstr "垂直鋪排全部視窗 (_V)"
+msgstr "_Vertical"
 
 #: x-tile:81 modules/cons.py:243
 msgid "U_ndo Tiling"
-msgstr "復原鋪排"
+msgstr "_Deshacer"
 
 #: x-tile:100
 msgid ""
@@ -71,325 +73,335 @@ msgid ""
 "Tile The Windows Upon Your Desktop"
 msgstr ""
 "X Tile\n"
-"在你的桌面排列視窗"
+"Ventanas como Mosaico en el Escritorio"
 
 #: modules/core.py:337
 msgid "The New Language will be Available Only After Restarting X Tile"
-msgstr "新的語言在重新啟動 X Tile 後才會生效。"
+msgstr "El nuevo idioma no estará disponible hasta que Reinicie  X Tile"
 
 #: modules/core.py:470
 msgid "The Size of the Toolbar Icons is already at the Maximum Value"
-msgstr "工具列圖示的尺寸已經是最大的了。"
+msgstr ""
+"El tamaño de los Iconos de la Barra de Herramientas ya está en su Valor "
+"Máximo"
 
 #: modules/core.py:480
 msgid "The Size of the Toolbar Icons is already at the Minimum Value"
-msgstr "工具列圖示的尺寸已經是最小的了。"
+msgstr ""
+"El tamaño de los Iconos de la Barra de Herramientas ya está en su Valor "
+"Mínimo"
 
 #: modules/core.py:488
 msgid "ON"
-msgstr "ON"
+msgstr "Activado"
 
 #: modules/core.py:488
 msgid "OFF"
-msgstr "OFF"
+msgstr "Desactivado"
 
 #: modules/core.py:489
 #, python-format
 msgid "Version %s  -  Exit After Tile: %s"
-msgstr "版本:%s  - 在鋪排後離開: %s"
+msgstr "Versión %s  -  Salida después de Mosaico: %s"
 
 #: modules/core.py:531 modules/core.py:537
 msgid ""
 "The used shortcut is not available when the Preferences Window is opened"
-msgstr "當偏好設定視窗開啟時，使用的捷徑無效。"
+msgstr ""
+"El atajo utilizado no está disponible cuando la Ventana de Preferencias se "
+"abre"
 
 #: modules/core.py:609 modules/core.py:617 modules/core.py:625
 msgid "No Row is Selected"
-msgstr "沒有選定任何列"
+msgstr "No hay Filas Selecionadas"
 
 #: modules/core.py:647 modules/core.py:681
 msgid "No Application Selected!"
-msgstr "沒有選擇任何應用程式!"
+msgstr "No hay ninguna Aplicación Seleccionada!"
 
 #: modules/core.py:794 modules/core.py:802 modules/core.py:814
 msgid "No Windows Checked"
-msgstr "沒選擇視窗"
+msgstr "No hay Ventanas Selecionadas"
 
 #: modules/core.py:848 modules/core.py:861
 msgid "Edit Custom Tile Settings"
-msgstr "編輯自訂排列設定"
+msgstr "Editar configuración Personalizada  de Mosaico"
 
 #: modules/core.py:930
 msgid ""
 "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
 "Set'"
-msgstr "自訂排列1尚未設定：點擊選單項目 '排列->自訂排列1' 進行設定。"
+msgstr ""
+"El Mosaico Personalizado 1 No de ha establecido: Haz Clic en el Menú -> "
+"Mosaico Personalizado 1"
 
 #: modules/core.py:949
 msgid ""
 "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
 "Set'"
-msgstr "自訂排列2尚未設定：點擊選單項目 '排列->自訂排列2' 進行設定。"
+msgstr ""
+"El Mosaico Personalizado 2 No de ha establecido: Haz Clic en el Menú -> "
+"Mosaico Personalizado 2"
 
 #: modules/cons.py:218
 msgid "_File"
-msgstr "檔案 (_F)"
+msgstr "_Archivo"
 
 #: modules/cons.py:219
 msgid "_Edit"
-msgstr "編輯 (_E)"
+msgstr "_Editar"
 
 #: modules/cons.py:220
 msgid "_Row"
-msgstr "列(_R)"
+msgstr "_Fila"
 
 #: modules/cons.py:221
 msgid "_Tile"
-msgstr "排列 (_T)"
+msgstr "_Mosaico"
 
 #: modules/cons.py:222
 msgid "_View"
-msgstr "檢視 (_V)"
+msgstr "_Ver"
 
 #: modules/cons.py:223 modules/cons.py:254
 msgid "_Help"
-msgstr "求助 (_H)"
+msgstr "_Ayuda"
 
 #: modules/cons.py:225
 msgid "_Filter"
-msgstr "篩選 (_F)"
+msgstr "_Filtro"
 
 #: modules/cons.py:225
 msgid "Filter Rows"
-msgstr "篩選列"
+msgstr "Filtrar Filas"
 
 #: modules/cons.py:226
 msgid "Selected by _Default"
-msgstr "預設選定的"
+msgstr "Seleccionar por _Defecto"
 
 #: modules/cons.py:226 glade/x-tile.glade.h:52
 msgid "Rows to be Selected by Default"
-msgstr "預設選定的列"
+msgstr "Filas para seleccionar por defecto"
 
 #: modules/cons.py:227
 msgid "_Reload"
-msgstr "重新載入"
+msgstr "_Actualizar"
 
 #: modules/cons.py:227
 msgid "Reload the Windows List"
-msgstr "重新載入視窗列表"
+msgstr "Actualiza la Lista de Ventanas"
 
 #: modules/cons.py:228
 msgid "_Quit"
-msgstr "離開 (_Q)"
+msgstr "_Salir"
 
 #: modules/cons.py:228
 msgid "Quit the Application"
-msgstr "離開應用程式"
+msgstr "Salir de Aplicación"
 
 #: modules/cons.py:229
 msgid "_Preferences"
-msgstr "偏好設定 (_P)"
+msgstr "_Preferencias"
 
 #: modules/cons.py:229
 msgid "Open the Preferences Window"
-msgstr "開啟偏好設定視窗"
+msgstr "Abre las Preferencias de Ventanas"
 
 #: modules/cons.py:230
 msgid "Select _All"
-msgstr "選擇全部 (_A)"
+msgstr "M_arcar Todo"
 
 #: modules/cons.py:230
 msgid "Select All the Windows in the List"
-msgstr "選擇列表內所有視窗"
+msgstr "Tilda Todas las Ventanas de la Lista "
 
 #: modules/cons.py:231
 msgid "Deselect A_ll"
-msgstr "取消選擇全部 (_l)"
+msgstr "Desmarcar _todo"
 
 #: modules/cons.py:231
 msgid "Deselect All the Windows in the List"
-msgstr "取消選擇列表上所有視窗"
+msgstr "Des-tilda Todas las Ventanas de la Lista "
 
 #: modules/cons.py:232
 msgid "Tile _Vertically"
-msgstr "垂直鋪排 (_V)"
+msgstr "Mosaico _Vertical"
 
 #: modules/cons.py:232
 msgid "Tile Vertically The Checked Windows"
-msgstr "垂直鋪排選定的視窗"
+msgstr "Muestra las Ventanas en modo  Mosaico Vertical"
 
 #: modules/cons.py:233
 msgid "Tile _Horizontally"
-msgstr "水平鋪排 (_H)"
+msgstr "Mosaico _Horizontal"
 
 #: modules/cons.py:233
 msgid "Tile Horizontally The Checked Windows"
-msgstr "水平鋪排選定的視窗"
+msgstr "Muestra las Ventanas en modo Mosaico Horizontal"
 
 #: modules/cons.py:234
 msgid "_Triangle Up"
-msgstr "三等份，最大的在上 (_T)"
+msgstr "_Triangulo Arriba"
 
 #: modules/cons.py:234
 msgid "Tile Triangle Up The Checked Windows"
-msgstr "平舖選定視窗為三等份，最大的在上"
+msgstr "Muestra las Ventanas en Modo Triangular hacia Arriba"
 
 #: modules/cons.py:235
 msgid "Triangle _Down"
-msgstr "三等份，最大的在下 (_D)"
+msgstr "Triangulo _Abajo"
 
 #: modules/cons.py:235
 msgid "Tile Triangle Down The Checked Windows"
-msgstr "平舖選定視窗為三等份，最大的在下"
+msgstr "Muestra las Ventanas en Modo Triangular hacia Abajo"
 
 #: modules/cons.py:236
 msgid "Triangle _Left"
-msgstr "三等份，最大的在左 (_L)"
+msgstr "Triangulo _Izquierda"
 
 #: modules/cons.py:236
 msgid "Tile Triangle Left The Checked Windows"
-msgstr "平舖選定視窗為三等份，最大的在左"
+msgstr "Muestra las Ventanas en Modo Triangular hacia la Izquierda"
 
 #: modules/cons.py:237
 msgid "Triangle _Right"
-msgstr "三等份，最大的在右 (_R)"
+msgstr "Triangulo _Derecha"
 
 #: modules/cons.py:237
 msgid "Tile Triangle Right The Checked Windows"
-msgstr "平舖選定視窗為三等份，最大的在右"
+msgstr "Muestra las Ventanas en Modo Triangular hacia la Derecha"
 
 #: modules/cons.py:238
 msgid "Tile _Quad"
-msgstr "平鋪為4個 (_Q)"
+msgstr "Mosaico Cuadricula"
 
 #: modules/cons.py:238
 msgid "Tile into 4 quadrants The Checked Windows"
-msgstr "將選定的視窗平鋪到四個象限"
+msgstr "Muestra las Ventanas en Modo Cuadricula"
 
 #: modules/cons.py:239
 msgid "Custom Tile 1 _Set"
-msgstr "自訂鋪排1設定 (_S)"
+msgstr "Ajuste Per_sonalizado 1"
 
 #: modules/cons.py:239
 msgid "Edit Custom Tile 1 Settings"
-msgstr "編輯自訂鋪排1設定"
+msgstr "Edita la configuración de Mosaico Personalizado 1"
 
 #: modules/cons.py:240
 msgid "Custom Tile _1 Run"
-msgstr "執行自訂鋪排1 (_1)"
+msgstr "Personalizado _1"
 
 #: modules/cons.py:240
 msgid "Execute Custom Tile 1"
-msgstr "執行自訂鋪排1"
+msgstr "Ejecuta el ajuste del Mosaico Personalizado 1"
 
 #: modules/cons.py:241
 msgid "Custom Tile 2 S_et"
-msgstr "自訂鋪排2設定 (_e)"
+msgstr "Ajuste P_ersonalizado 2"
 
 #: modules/cons.py:241
 msgid "Edit Custom Tile 2 Settings"
-msgstr "編輯自訂鋪排2設定"
+msgstr "Edita la configuración de Mosaico Personalizado 2"
 
 #: modules/cons.py:242
 msgid "Custom Tile _2 Run"
-msgstr "執行自訂鋪排2 (_2)"
+msgstr "Personalizado _2"
 
 #: modules/cons.py:242
 msgid "Execute Custom Tile 2"
-msgstr "執行自訂鋪排2"
+msgstr "Ejecuta el ajuste del Mosaico Personalizado 2"
 
 #: modules/cons.py:243
 msgid "Undo the Latest Tiling Operation"
-msgstr "復原最後一次鋪排的動作"
+msgstr "Deshacer el Ultimo Mosaico Aplicado"
 
 #: modules/cons.py:244
 msgid "_Maximize Windows"
-msgstr "最大化視窗 (_M)"
+msgstr "_Maximizar Ventanas"
 
 #: modules/cons.py:244
 msgid "Maximize The Checked Windows"
-msgstr "最大化選定的視窗"
+msgstr "Maximiza las ventanas Selecionadas"
 
 #: modules/cons.py:245
 msgid "_Unmaximize Windows"
-msgstr "不最大化視窗 (_U)"
+msgstr "Resta_urar Ventanas"
 
 #: modules/cons.py:245
 msgid "Unmaximize The Checked Windows"
-msgstr "不最大化選定的視窗"
+msgstr "Restaura las Ventanas Selecionadas"
 
 #: modules/cons.py:246
 msgid "_Close Windows"
-msgstr "關閉視窗 (_C)"
+msgstr "_Cerrar Ventanas"
 
 #: modules/cons.py:246
 msgid "Close The Checked Windows"
-msgstr "關閉選定視窗"
+msgstr "Cierra las Ventanas Selecionada"
 
 #: modules/cons.py:247
 msgid "Move _Up"
-msgstr "往上移 (_U)"
+msgstr "S_ubir"
 
 #: modules/cons.py:247 glade/x-tile.glade.h:42
 msgid "Move the Selected Row Up"
-msgstr "將選定列移上去"
+msgstr "Mueve la Fila Seleccionada Arriba"
 
 #: modules/cons.py:248
 msgid "Move _Down"
-msgstr "往下移 (_D)"
+msgstr "B_ajar"
 
 #: modules/cons.py:248 glade/x-tile.glade.h:41
 msgid "Move the Selected Row Down"
-msgstr "將選定列移下來"
+msgstr "Mueve la Fila Seleccionada Abajo"
 
 #: modules/cons.py:249
 msgid "_Remove"
-msgstr "移除 (_R)"
+msgstr "_Eliminar"
 
 #: modules/cons.py:249 glade/x-tile.glade.h:50
 msgid "Remove the Selected Row"
-msgstr "移除選定的列"
+msgstr "Elimina la Fila Seleccionada"
 
 #: modules/cons.py:250
 msgid "Show/Hide _Vertical Buttons"
-msgstr "顯示/隱藏垂直按鈕 (_V)"
+msgstr "Botones _Laterales"
 
 #: modules/cons.py:250
 msgid "Toggle Show/Hide Vertical Buttons"
-msgstr "顯示/隱藏垂直按鈕"
+msgstr "Muestra y Oculta los Botones Laterales"
 
 #: modules/cons.py:251
 msgid "Show/Hide _Toolbar"
-msgstr "顯示/隱藏工具列 (_T)"
+msgstr "Barra de _Herramientas"
 
 #: modules/cons.py:251
 msgid "Toggle Show/Hide Toolbar"
-msgstr "切換顯示/隱藏工具列"
+msgstr "Muestra y Oculta la Barra de Herramientas"
 
 #: modules/cons.py:252
 msgid "_Increase Toolbar Icons Size"
-msgstr "將工具列圖示變大 (_I)"
+msgstr "_Agrandar Iconos"
 
 #: modules/cons.py:252
 msgid "Increase the Size of the Toolbar Icons"
-msgstr "放大工具列圖示"
+msgstr "Aumenta tamaño de los Iconos de la Barra de Herramientas"
 
 #: modules/cons.py:253
 msgid "_Decrease Toolbar Icons Size"
-msgstr "將工具列圖示變小 (_D)"
+msgstr "A_chicar Iconos"
 
 #: modules/cons.py:253
 msgid "Decrease the Size of the Toolbar Icons"
-msgstr "縮小工具列圖示"
+msgstr "Disminuye tamaño de los Iconos de la Barra de Herramientas"
 
 #: modules/cons.py:254
 msgid "X Tile Project Home Page"
-msgstr "X Tile 專案首頁"
+msgstr "Pagina del Proyecto X Tile"
 
 #: modules/cons.py:255 glade/x-tile.glade.h:22
 msgid "About X Tile"
-msgstr "關於 X Tile"
+msgstr "Acerca de X Tile"
 
 #: glade/x-tile.glade.h:1
 msgid ""
@@ -410,59 +422,58 @@ msgid ""
 "MA 02110-1301, USA."
 msgstr ""
 "\n"
-"This program is free software; you can redistribute it and/or modify\n"
-"it under the terms of the GNU General Public License as published by\n"
-"the Free Software Foundation; either version 2 of the License, or\n"
-"(at your option) any later version.\n"
+"Este programa es software libre, puede redistribuirlo y/o modificarlo \n"
+"bajo los términos de la GNU General Public License publicada por \n"
+"la Free Software Foundation, bien de la versión 2 de la Licencia, o \n"
+"(a su elección) cualquier versión posterior. \n"
 "\n"
-"This program is distributed in the hope that it will be useful,\n"
-"but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
-"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n"
-"GNU General Public License for more details.\n"
+"Este programa se distribuye con la esperanza de que sea útil, \n"
+"pero SIN NINGUNA GARANTÍA, incluso sin la garantía implícita de \n"
+"COMERCIALIZACIÓN o IDONEIDAD PARA UN PROPÓSITO PARTICULAR. Véase la \n"
+"Licencia Pública General GNU para más detalles. \n"
 "\n"
-"You should have received a copy of the GNU General Public License\n"
-"along with this program; if not, write to the Free Software\n"
-"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,\n"
-"MA 02110-1301, USA."
+"Debería haber recibido una copia de la Licencia Pública General GNU \n"
+"junto con este programa, si no, escriba a la Free Software \n"
+"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, \n"
+"MA 02110-1301, EE.UU."
 
 #: glade/x-tile.glade.h:16
 msgid " Language "
-msgstr "語言"
+msgstr "Lenguaje"
 
 #: glade/x-tile.glade.h:17
 msgid "1) Tile Some Windows Manually"
-msgstr "1) 手動鋪排某些視窗"
+msgstr "1) Dimensionar las Ventanas Manualmente"
 
 #: glade/x-tile.glade.h:18
 msgid "2) Select Them in the X Tile Windows List"
-msgstr "2) 在 X Tile 視窗列表裡選擇視窗"
+msgstr "2) Selecciona Las Ventanas Dimensionadas en X Tile"
 
 #: glade/x-tile.glade.h:19
 msgid "3) Click the Update Button"
-msgstr "3) 點擊更新按鈕"
+msgstr "3) Haz Clic en Actualizar"
 
 #: glade/x-tile.glade.h:20
 msgid "<b>Custom Tiling Layout</b>"
-msgstr "<b>自訂鋪排版面</b>"
+msgstr "<b>Diseño Personalizado de Mosaico</b>"
 
 #: glade/x-tile.glade.h:21
 msgid "A Gnome Applet to Tile the Opened Windows"
-msgstr "要來鋪排開啟視窗的 Gnome Applet"
+msgstr "Un applet de Gnome para Abrir Ventanas en Mosaico"
 
 #: glade/x-tile.glade.h:23
 msgid "Add Row"
-msgstr "增加列"
+msgstr "Agregar Fila"
 
 #: glade/x-tile.glade.h:24
 msgid "Add an Application Filter"
-msgstr "增加應用程式篩選器"
+msgstr "Agregar un Filtro de Aplicación"
 
 #: glade/x-tile.glade.h:25
 msgid "Cancel"
-msgstr "取消"
+msgstr "Cancelar"
 
 #: glade/x-tile.glade.h:26
-#, fuzzy
 msgid ""
 "Chinese Simplified (zh_CN) Khi-yuan Fan <Fan.khiyuan@gmail.com>\n"
 "Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
@@ -472,43 +483,43 @@ msgid ""
 "Italian (it) Giuseppe Penone <giuspen@gmail.com>\n"
 "Russian (ru) Andriy Kovtun <kovtunos@yandex.ru>"
 msgstr ""
-"漢語(簡體中文) (zh_CN) Khi-yuan Fan <Fan.khiyuan@gmail.com>\n"
-"漢語(繁體中文) (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
-"法語 (fr) Ludovic Troisi <axalis@cegetel.net>\n"
-"德語 (de) J&#xF6;ran Zeller <joeran@zeller.ws>\n"
-"義大利語 (it) Giuseppe Penone <giuspen@gmail.com>\n"
-"俄語 (ru) Andriy Kovtun <kovtunos@yandex.ru>"
+"Cinese Semplificato (zh_CN) Khi-yuan Fan <Fan.khiyuan@gmail.com>\n"
+"Cinese Tradizionale (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
+"Español (es_AR) MeloPixel <melopixel@gmail.com>\n"
+"Francese (fr) Ludovic Troisi <axalis@cegetel.net>\n"
+"Tedesco (de) J&#xF6;ran Zeller <joeran@zeller.ws>\n"
+"Italiano (it) Giuseppe Penone <giuspen@gmail.com>\n"
+"Russo (ru) Andriy Kovtun <kovtunos@yandex.ru>"
 
 #: glade/x-tile.glade.h:33
 msgid "Close"
-msgstr "關閉"
+msgstr "Cerrar"
 
 #: glade/x-tile.glade.h:34
-#, fuzzy
 msgid ""
 "Copyright © 2009-2010\n"
 "Giuseppe Penone <giuspen@gmail.com>\n"
 "Chris Camacho <chris_camacho@yahoo.com>"
 msgstr ""
-"Copyright &#xA9; 2009-2010\n"
+"Copyright © 2009-2010\n"
 "Giuseppe Penone <giuspen@gmail.com>\n"
 "Chris Camacho <chris_camacho@yahoo.com>"
 
 #: glade/x-tile.glade.h:37
 msgid "Do Not List Minimized Windows"
-msgstr "不要列出已經最小化的視窗"
+msgstr "No lista de ventanas Minimizadas"
 
 #: glade/x-tile.glade.h:38
 msgid "Exit After Tile"
-msgstr "鋪排後離開"
+msgstr "Salir Después de Mosaico"
 
 #: glade/x-tile.glade.h:39
 msgid "Height"
-msgstr "高"
+msgstr "Altura"
 
 #: glade/x-tile.glade.h:40
 msgid "Hide the Vertical ButtonBox"
-msgstr "隱藏垂直的按鈕盒"
+msgstr "Ocultar Los Botones Verticales"
 
 #: glade/x-tile.glade.h:43
 msgid "OK"
@@ -516,55 +527,55 @@ msgstr "OK"
 
 #: glade/x-tile.glade.h:44
 msgid "Only Current Workspace"
-msgstr "只有目前工作區"
+msgstr "Sólo en el actual Espacio de Trabajo"
 
 #: glade/x-tile.glade.h:45
 msgid "Override Monitor 1 Tiling Area"
-msgstr "以下面設定取代第一個螢幕的鋪排區域"
+msgstr "Área de monitor 1 Mosaico Personalizado"
 
 #: glade/x-tile.glade.h:46
 msgid "Override Monitor 2 Tiling Area"
-msgstr "以下面設定取代第二個螢幕的鋪排區域"
+msgstr "Área de monitor 2 Mosaico Personalizado"
 
 #: glade/x-tile.glade.h:47
 msgid "Position"
-msgstr "位置"
+msgstr "Posición"
 
 #: glade/x-tile.glade.h:48
 msgid "Preferences"
-msgstr "偏好設定"
+msgstr "Preferencias"
 
 #: glade/x-tile.glade.h:49
 msgid "Remove an Application Filter"
-msgstr "移除應用程式篩選器"
+msgstr "Quitar un Filtro aplicado"
 
 #: glade/x-tile.glade.h:51
 msgid "Rows to Filter"
-msgstr "列轉篩選器"
+msgstr "Filtrar Filas"
 
 #: glade/x-tile.glade.h:53
 msgid "Show Toolbar"
-msgstr "顯示工具列"
+msgstr "Barra de Herramientas"
 
 #: glade/x-tile.glade.h:54
 msgid "Show Windows Sorting Buttons"
-msgstr "顯示視窗排序按鈕"
+msgstr "Mostra la Barra de Herramientas"
 
 #: glade/x-tile.glade.h:55
 msgid "Size"
-msgstr "尺寸"
+msgstr "Tamaño"
 
 #: glade/x-tile.glade.h:56
 msgid "Update"
-msgstr "更新"
+msgstr "Actualizar"
 
 #: glade/x-tile.glade.h:57
 msgid "Use Drag and Drop to Sort the Rows"
-msgstr "使用拖拉來排序列"
+msgstr "Utilice Arrastrar y Soltar para ordenar las Filas"
 
 #: glade/x-tile.glade.h:58
 msgid "Width"
-msgstr "寬"
+msgstr "Ancho"
 
 #: glade/x-tile.glade.h:59
 msgid "X"

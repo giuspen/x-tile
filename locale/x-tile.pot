@@ -8,121 +8,122 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-10-24 00:38+0200\n"
+"POT-Creation-Date: 2011-02-20 14:31+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: x-tile:68 modules/cons.py:255
+#: x-tile:70 modules/cons.py:255
 msgid "_About"
 msgstr ""
 
-#: x-tile:69
+#: x-tile:71
 msgid "_Maximize All"
 msgstr ""
 
-#: x-tile:70
+#: x-tile:72
 msgid "Tile All _Quad"
 msgstr ""
 
-#: x-tile:71
+#: x-tile:73
 msgid "Tile All Triangle _Right"
 msgstr ""
 
-#: x-tile:72
+#: x-tile:74
 msgid "Tile All Triangle _Left"
 msgstr ""
 
-#: x-tile:73
+#: x-tile:75
 msgid "Tile All Triangle _Down"
 msgstr ""
 
-#: x-tile:74
+#: x-tile:76
 msgid "Tile All Triangle _Up"
 msgstr ""
 
-#: x-tile:75
+#: x-tile:77
 msgid "Tile All Custom _2"
 msgstr ""
 
-#: x-tile:76
+#: x-tile:78
 msgid "Tile All Custom _1"
 msgstr ""
 
-#: x-tile:77
+#: x-tile:79
 msgid "Tile All _Horizontally"
 msgstr ""
 
-#: x-tile:78
+#: x-tile:80
 msgid "Tile All _Vertically"
 msgstr ""
 
-#: x-tile:79 modules/cons.py:243
+#: x-tile:81 modules/cons.py:243
 msgid "U_ndo Tiling"
 msgstr ""
 
-#: x-tile:98
+#: x-tile:100
 msgid ""
 "X Tile\n"
 "Tile The Windows Upon Your Desktop"
 msgstr ""
 
-#: modules/core.py:324
+#: modules/core.py:337
 msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr ""
 
-#: modules/core.py:457
+#: modules/core.py:470
 msgid "The Size of the Toolbar Icons is already at the Maximum Value"
 msgstr ""
 
-#: modules/core.py:467
+#: modules/core.py:480
 msgid "The Size of the Toolbar Icons is already at the Minimum Value"
 msgstr ""
 
-#: modules/core.py:475
+#: modules/core.py:488
 msgid "ON"
 msgstr ""
 
-#: modules/core.py:475
+#: modules/core.py:488
 msgid "OFF"
 msgstr ""
 
-#: modules/core.py:476
+#: modules/core.py:489
 #, python-format
 msgid "Version %s  -  Exit After Tile: %s"
 msgstr ""
 
-#: modules/core.py:518 modules/core.py:524
+#: modules/core.py:531 modules/core.py:537
 msgid ""
 "The used shortcut is not available when the Preferences Window is opened"
 msgstr ""
 
-#: modules/core.py:596 modules/core.py:604 modules/core.py:612
+#: modules/core.py:609 modules/core.py:617 modules/core.py:625
 msgid "No Row is Selected"
 msgstr ""
 
-#: modules/core.py:634 modules/core.py:668
+#: modules/core.py:647 modules/core.py:681
 msgid "No Application Selected!"
 msgstr ""
 
-#: modules/core.py:781 modules/core.py:789 modules/core.py:801
+#: modules/core.py:794 modules/core.py:802 modules/core.py:814
 msgid "No Windows Checked"
 msgstr ""
 
-#: modules/core.py:835 modules/core.py:848
+#: modules/core.py:848 modules/core.py:861
 msgid "Edit Custom Tile Settings"
 msgstr ""
 
-#: modules/core.py:917
+#: modules/core.py:930
 msgid ""
 "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
 "Set'"
 msgstr ""
 
-#: modules/core.py:936
+#: modules/core.py:949
 msgid ""
 "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
 "Set'"
@@ -164,7 +165,7 @@ msgstr ""
 msgid "Selected by _Default"
 msgstr ""
 
-#: modules/cons.py:226 glade/x-tile.glade.h:51
+#: modules/cons.py:226 glade/x-tile.glade.h:52
 msgid "Rows to be Selected by Default"
 msgstr ""
 
@@ -328,7 +329,7 @@ msgstr ""
 msgid "Move _Up"
 msgstr ""
 
-#: modules/cons.py:247 glade/x-tile.glade.h:41
+#: modules/cons.py:247 glade/x-tile.glade.h:42
 msgid "Move the Selected Row Up"
 msgstr ""
 
@@ -336,7 +337,7 @@ msgstr ""
 msgid "Move _Down"
 msgstr ""
 
-#: modules/cons.py:248 glade/x-tile.glade.h:40
+#: modules/cons.py:248 glade/x-tile.glade.h:41
 msgid "Move the Selected Row Down"
 msgstr ""
 
@@ -344,7 +345,7 @@ msgstr ""
 msgid "_Remove"
 msgstr ""
 
-#: modules/cons.py:249 glade/x-tile.glade.h:49
+#: modules/cons.py:249 glade/x-tile.glade.h:50
 msgid "Remove the Selected Row"
 msgstr ""
 
@@ -447,107 +448,108 @@ msgstr ""
 msgid ""
 "Chinese Simplified (zh_CN) Khi-yuan Fan <Fan.khiyuan@gmail.com>\n"
 "Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
+"Spanish (es_AR) MeloPixel <melopixel@gmail.com>\n"
 "French (fr) Ludovic Troisi <axalis@cegetel.net>\n"
-"German (de) J&#xF6;ran Zeller <joeran@zeller.ws>\n"
+"German (de) Jöran Zeller <joeran@zeller.ws>\n"
 "Italian (it) Giuseppe Penone <giuspen@gmail.com>\n"
 "Russian (ru) Andriy Kovtun <kovtunos@yandex.ru>"
 msgstr ""
 
-#: glade/x-tile.glade.h:32
+#: glade/x-tile.glade.h:33
 msgid "Close"
 msgstr ""
 
-#: glade/x-tile.glade.h:33
+#: glade/x-tile.glade.h:34
 msgid ""
-"Copyright &#xA9; 2009-2010\n"
+"Copyright © 2009-2010\n"
 "Giuseppe Penone <giuspen@gmail.com>\n"
 "Chris Camacho <chris_camacho@yahoo.com>"
 msgstr ""
 
-#: glade/x-tile.glade.h:36
+#: glade/x-tile.glade.h:37
 msgid "Do Not List Minimized Windows"
 msgstr ""
 
-#: glade/x-tile.glade.h:37
+#: glade/x-tile.glade.h:38
 msgid "Exit After Tile"
 msgstr ""
 
-#: glade/x-tile.glade.h:38
+#: glade/x-tile.glade.h:39
 msgid "Height"
 msgstr ""
 
-#: glade/x-tile.glade.h:39
+#: glade/x-tile.glade.h:40
 msgid "Hide the Vertical ButtonBox"
 msgstr ""
 
-#: glade/x-tile.glade.h:42
+#: glade/x-tile.glade.h:43
 msgid "OK"
 msgstr ""
 
-#: glade/x-tile.glade.h:43
+#: glade/x-tile.glade.h:44
 msgid "Only Current Workspace"
 msgstr ""
 
-#: glade/x-tile.glade.h:44
+#: glade/x-tile.glade.h:45
 msgid "Override Monitor 1 Tiling Area"
 msgstr ""
 
-#: glade/x-tile.glade.h:45
+#: glade/x-tile.glade.h:46
 msgid "Override Monitor 2 Tiling Area"
 msgstr ""
 
-#: glade/x-tile.glade.h:46
+#: glade/x-tile.glade.h:47
 msgid "Position"
 msgstr ""
 
-#: glade/x-tile.glade.h:47
+#: glade/x-tile.glade.h:48
 msgid "Preferences"
 msgstr ""
 
-#: glade/x-tile.glade.h:48
+#: glade/x-tile.glade.h:49
 msgid "Remove an Application Filter"
 msgstr ""
 
-#: glade/x-tile.glade.h:50
+#: glade/x-tile.glade.h:51
 msgid "Rows to Filter"
 msgstr ""
 
-#: glade/x-tile.glade.h:52
+#: glade/x-tile.glade.h:53
 msgid "Show Toolbar"
 msgstr ""
 
-#: glade/x-tile.glade.h:53
+#: glade/x-tile.glade.h:54
 msgid "Show Windows Sorting Buttons"
 msgstr ""
 
-#: glade/x-tile.glade.h:54
+#: glade/x-tile.glade.h:55
 msgid "Size"
 msgstr ""
 
-#: glade/x-tile.glade.h:55
+#: glade/x-tile.glade.h:56
 msgid "Update"
 msgstr ""
 
-#: glade/x-tile.glade.h:56
+#: glade/x-tile.glade.h:57
 msgid "Use Drag and Drop to Sort the Rows"
 msgstr ""
 
-#: glade/x-tile.glade.h:57
+#: glade/x-tile.glade.h:58
 msgid "Width"
 msgstr ""
 
-#: glade/x-tile.glade.h:58
+#: glade/x-tile.glade.h:59
 msgid "X"
 msgstr ""
 
-#: glade/x-tile.glade.h:59
+#: glade/x-tile.glade.h:60
 msgid "X Tile"
 msgstr ""
 
-#: glade/x-tile.glade.h:60
+#: glade/x-tile.glade.h:61
 msgid "Y"
 msgstr ""
 
-#: glade/x-tile.glade.h:61
+#: glade/x-tile.glade.h:62
 msgid "http://www.giuspen.com/x-tile/"
 msgstr ""
