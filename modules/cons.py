@@ -38,7 +38,7 @@ else:
    ICON_PLACE = "/usr/share/pixmaps/x-tile.svg"
    LOCALE_PATH = "/usr/share/locale/"
 
-AVAILABLE_LANGS = ['default', 'de', 'en', 'fr', 'it', 'ru', 'zh_CN', 'zh_TW']
+AVAILABLE_LANGS = ['default', 'de', 'en', 'es_AR', 'fr', 'it', 'ru', 'zh_CN', 'zh_TW']
 
 OVERRIDE_1 = 0
 OVERRIDE_2 = 0
@@ -226,7 +226,7 @@ def get_entries(inst):
    ( "DefaultSel", "gtk-properties", _("Selected by _Default"), "<control>D", _("Rows to be Selected by Default"), inst.dialog_selected_by_default),
    ( "Reload", "Reload Windows List", _("_Reload"), "F5", _("Reload the Windows List"), inst.reload_windows_list),
    ( "QuitApp", "gtk-quit", _("_Quit"), "<control>Q", _("Quit the Application"), inst.quit_application),
-   ( "Preferences", "gtk-preferences", _("_Preferences"), "<control>P", _("Open the Preferences Window"), inst.dialog_preferences),
+   ( "Preferences", "gtk-preferences", _("_Preferences"), "<control><alt>P", _("Open the Preferences Window"), inst.dialog_preferences),
    ( "SelectAll", "Select All", _("Select _All"), "<control>A", _("Select All the Windows in the List"), inst.flag_all_rows),
    ( "DeselectAll", "Deselect All", _("Deselect A_ll"), "<control><shift>A", _("Deselect All the Windows in the List"), inst.unflag_all_rows),
    ( "Vertically", "Tile Vertically", _("Tile _Vertically"), "<control>V", _("Tile Vertically The Checked Windows"), inst.tile_vertically),

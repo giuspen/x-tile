@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <requires lib="gtk+" version="2.16"/>
   <!-- interface-naming-policy project-wide -->
@@ -161,9 +161,8 @@
     <property name="icon">x-tile.svg</property>
     <property name="type_hint">dialog</property>
     <property name="transient_for">window</property>
-    <property name="has_separator">False</property>
     <property name="program_name">X Tile</property>
-    <property name="copyright" translatable="yes">Copyright &#xA9; 2009-2010
+    <property name="copyright" translatable="yes">Copyright © 2009-2010
 Giuseppe Penone &lt;giuspen@gmail.com&gt;
 Chris Camacho &lt;chris_camacho@yahoo.com&gt;</property>
     <property name="comments" translatable="yes">A Gnome Applet to Tile the Opened Windows</property>
@@ -188,8 +187,9 @@ MA 02110-1301, USA.</property>
 Chris Camacho &lt;chris_camacho@yahoo.com&gt;</property>
     <property name="translator_credits" translatable="yes">Chinese Simplified (zh_CN) Khi-yuan Fan &lt;Fan.khiyuan@gmail.com&gt;
 Chinese Traditional (zh_TW) Yan-ren Tsai &lt;elleryq@gmail.com&gt;
+Spanish (es_AR) MeloPixel &lt;melopixel@gmail.com&gt;
 French (fr) Ludovic Troisi &lt;axalis@cegetel.net&gt;
-German (de) J&#xF6;ran Zeller &lt;joeran@zeller.ws&gt;
+German (de) Jöran Zeller &lt;joeran@zeller.ws&gt;
 Italian (it) Giuseppe Penone &lt;giuspen@gmail.com&gt;
 Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
     <property name="artists"></property>
@@ -422,7 +422,7 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                                   <object class="GtkSpinButton" id="spinbutton_x1">
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
-                                    <property name="invisible_char">&#x25CF;</property>
+                                    <property name="invisible_char">●</property>
                                     <property name="adjustment">adjustment_x1</property>
                                   </object>
                                   <packing>
@@ -452,7 +452,7 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                                   <object class="GtkSpinButton" id="spinbutton_y1">
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
-                                    <property name="invisible_char">&#x25CF;</property>
+                                    <property name="invisible_char">●</property>
                                     <property name="adjustment">adjustment_y1</property>
                                   </object>
                                   <packing>
@@ -499,7 +499,7 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                                   <object class="GtkSpinButton" id="spinbutton_w1">
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
-                                    <property name="invisible_char">&#x25CF;</property>
+                                    <property name="invisible_char">●</property>
                                     <property name="adjustment">adjustment_w1</property>
                                   </object>
                                   <packing>
@@ -529,7 +529,7 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                                   <object class="GtkSpinButton" id="spinbutton_h1">
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
-                                    <property name="invisible_char">&#x25CF;</property>
+                                    <property name="invisible_char">●</property>
                                     <property name="adjustment">adjustment_h1</property>
                                   </object>
                                   <packing>
@@ -612,7 +612,7 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                                       <object class="GtkSpinButton" id="spinbutton_x2">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
-                                        <property name="invisible_char">&#x25CF;</property>
+                                        <property name="invisible_char">●</property>
                                         <property name="adjustment">adjustment_x2</property>
                                       </object>
                                       <packing>
@@ -642,7 +642,7 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                                       <object class="GtkSpinButton" id="spinbutton_y2">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
-                                        <property name="invisible_char">&#x25CF;</property>
+                                        <property name="invisible_char">●</property>
                                         <property name="adjustment">adjustment_y2</property>
                                       </object>
                                       <packing>
@@ -689,7 +689,7 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                                       <object class="GtkSpinButton" id="spinbutton_w2">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
-                                        <property name="invisible_char">&#x25CF;</property>
+                                        <property name="invisible_char">●</property>
                                         <property name="adjustment">adjustment_w2</property>
                                       </object>
                                       <packing>
@@ -719,7 +719,7 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                                       <object class="GtkSpinButton" id="spinbutton_h2">
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
-                                        <property name="invisible_char">&#x25CF;</property>
+                                        <property name="invisible_char">●</property>
                                         <property name="adjustment">adjustment_h2</property>
                                       </object>
                                       <packing>
@@ -874,7 +874,6 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
     <property name="default_height">300</property>
     <property name="type_hint">normal</property>
     <property name="transient_for">window</property>
-    <property name="has_separator">False</property>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox2">
         <property name="visible">True</property>
@@ -1011,7 +1010,6 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
     <property name="default_height">300</property>
     <property name="type_hint">normal</property>
     <property name="transient_for">window</property>
-    <property name="has_separator">False</property>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox3">
         <property name="visible">True</property>
@@ -1163,7 +1161,6 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
     <property name="default_height">300</property>
     <property name="type_hint">normal</property>
     <property name="transient_for">window</property>
-    <property name="has_separator">False</property>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox5">
         <property name="visible">True</property>
@@ -1295,7 +1292,6 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
     <property name="border_width">5</property>
     <property name="type_hint">normal</property>
     <property name="transient_for">window</property>
-    <property name="has_separator">False</property>
     <child internal-child="vbox">
       <object class="GtkVBox" id="dialog-vbox6">
         <property name="visible">True</property>
