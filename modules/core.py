@@ -269,6 +269,7 @@ class XTile:
       self.glade.vbox_main.pack_start(self.ui.get_widget("/ToolBar"), False, False)
       self.glade.vbox_main.reorder_child(self.ui.get_widget("/ToolBar"), 1)
       self.ui.get_widget("/ToolBar").set_style(gtk.TOOLBAR_ICONS)
+      support.set_menu_items_toolbar_triangles(self)
       # create a variable pointing to the instance of the InfoModel class
       self.store = store
       # create the view

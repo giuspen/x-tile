@@ -70,10 +70,10 @@ APPLET_MENU_XML = '<popup name="button3">'\
          + '<menuitem name="About" verb="About" label="' + _("_About") + '" pixtype="stock" pixname="gtk-about"/>'\
          + '<menuitem name="All_M" verb="All_M" label="' + _("_Maximize All") + '" pixtype="stock" pixname="Maximize Windows"/>'\
          + '<menuitem name="All_4" verb="All_4" label="' + _("Tile All _Quad") + '" pixtype="stock" pixname="Tile Quad"/>'\
-         + '<menuitem name="All_TR" verb="All_TR" label="' + _("Tile All Triangle _Right") + '" pixtype="stock" pixname="Tile Triangle Right"/>'\
-         + '<menuitem name="All_TL" verb="All_TL" label="' + _("Tile All Triangle _Left") + '" pixtype="stock" pixname="Tile Triangle Left"/>'\
          + '<menuitem name="All_TD" verb="All_TD" label="' + _("Tile All Triangle _Down") + '" pixtype="stock" pixname="Tile Triangle Down"/>'\
          + '<menuitem name="All_TU" verb="All_TU" label="' + _("Tile All Triangle _Up") + '" pixtype="stock" pixname="Tile Triangle Up"/>'\
+         + '<menuitem name="All_TR" verb="All_TR" label="' + _("Tile All Triangle _Right") + '" pixtype="stock" pixname="Tile Triangle Right"/>'\
+         + '<menuitem name="All_TL" verb="All_TL" label="' + _("Tile All Triangle _Left") + '" pixtype="stock" pixname="Tile Triangle Left"/>'\
          + '<menuitem name="All_C2" verb="All_C2" label="' + _("Tile All Custom _2") + '" pixtype="stock" pixname="Custom Exe 2"/>'\
          + '<menuitem name="All_C1" verb="All_C1" label="' + _("Tile All Custom _1") + '" pixtype="stock" pixname="Custom Exe 1"/>'\
          + '<menuitem name="All_H" verb="All_H" label="' + _("Tile All _Horizontally") + '" pixtype="stock" pixname="Tile Horizontally"/>'\

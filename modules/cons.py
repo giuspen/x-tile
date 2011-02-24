@@ -151,10 +151,10 @@ UI_INFO = """
          <menuitem action='UnTile'/>
          <menuitem action='Vertically'/>
          <menuitem action='Horizontally'/>
-         <menuitem action='TriangleUp'/>
-         <menuitem action='TriangleDown'/>
          <menuitem action='TriangleLeft'/>
          <menuitem action='TriangleRight'/>
+         <menuitem action='TriangleUp'/>
+         <menuitem action='TriangleDown'/>
          <menuitem action='Quad'/>
          <separator/>
          <menuitem action='Custom1Set'/>
@@ -191,10 +191,6 @@ UI_INFO = """
       <toolitem action='Horizontally'/>
       <toolitem action='Custom1Exe'/>
       <toolitem action='Custom2Exe'/>
-      <toolitem action='TriangleUp'/>
-      <toolitem action='TriangleDown'/>
-      <toolitem action='TriangleLeft'/>
-      <toolitem action='TriangleRight'/>
       <toolitem action='Quad'/>
       <separator/>
       <toolitem action='Maximize'/>
