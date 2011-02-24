@@ -320,3 +320,41 @@ def dialog_warning(message, parent=None):
    dialog.set_title(_("Warning"))
    dialog.run()
    dialog.destroy()
+
+def set_menu_items_toolbar_triangles(inst):
+   """Set Triangle Tiling menu items on Toolbar"""
+   triangle_menu = gtk.Menu()
+   # triangle right
+   menu_item = gtk.ImageMenuItem(_("Triangle _Right"))
+   menu_item.set_tooltip_text(_("Tile Triangle Right The Checked Windows"))
+   menu_item.set_image(gtk.image_new_from_stock("Tile Triangle Right", gtk.ICON_SIZE_MENU))
+   menu_item.connect("activate", inst.tile_triangle_right)
+   key, mod = gtk.accelerator_parse("<control>Right")
+   menu_item.add_accelerator("activate", inst.ui.get_accel_group(), key, mod, gtk.ACCEL_VISIBLE)
+   menu_item.show()
+   triangle_menu.append(menu_item)
+   # triangle up
+   menu_item = gtk.ImageMenuItem(_("_Triangle Up"))
+   menu_item.set_tooltip_text(_("Tile Triangle Up The Checked Windows"))
+   menu_item.set_image(gtk.image_new_from_stock("Tile Triangle Up", gtk.ICON_SIZE_MENU))
+   menu_item.connect("activate", inst.tile_triangle_up)
+   key, mod = gtk.accelerator_parse("<control>Up")
+   menu_item.add_accelerator("activate", inst.ui.get_accel_group(), key, mod, gtk.ACCEL_VISIBLE)
+   menu_item.show()
+   triangle_menu.append(menu_item)
+   # triangle down
+   menu_item = gtk.ImageMenuItem(_("Triangle _Down"))
+   menu_item.set_tooltip_text(_("Tile Triangle Down The Checked Windows"))
+   menu_item.set_image(gtk.image_new_from_stock("Tile Triangle Down", gtk.ICON_SIZE_MENU))
+   menu_item.connect("activate", inst.tile_triangle_down)
+   key, mod = gtk.accelerator_parse("<control>Down")
+   menu_item.add_accelerator("activate", inst.ui.get_accel_group(), key, mod, gtk.ACCEL_VISIBLE)
+   menu_item.show()
+   triangle_menu.append(menu_item)
+   # toolbutton
+   menu_toolbutton = gtk.MenuToolButton("Tile Triangle Left")
+   menu_toolbutton.set_tooltip_text(_("Tile Triangle Left The Checked Windows"))
+   menu_toolbutton.set_arrow_tooltip_text(_("Tile Triangle Right/Up/Down The Checked Windows"))
+   menu_toolbutton.set_menu(triangle_menu)
+   menu_toolbutton.connect("clicked", inst.tile_triangle_left)
+   inst.ui.get_widget("/ToolBar").insert(menu_toolbutton, 8)
