@@ -3,7 +3,7 @@ Section: applet
 Priority: optional
 Maintainer: Giuseppe Penone <giuspen@gmail.com>
 Package: x-tile
-Version: 1.8.4-1
+Version: 1.8.5-1
 Architecture: all
 Depends: python-gtk2, python-gnome2, python-gnomeapplet
 Conflicts: x-tile-ng

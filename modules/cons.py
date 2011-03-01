@@ -97,6 +97,7 @@ ICONS_FILENAMES = [(GLADE_PATH + 'tile-vertically.svg', 'Tile Vertically'),
 GCONF_DIR = "/apps/x-tile"
 GCONF_LANG = "/apps/x-tile/language"
 GCONF_UNDO = "/apps/x-tile/%s/undo"
+GCONF_LATEST_TILING = "/apps/x-tile/%s/latest_tiling"
 GCONF_CUSTOM_1 = "/apps/x-tile/%s/custom"
 GCONF_CUSTOM_2 = "/apps/x-tile/%s/custom_2"
 GCONF_EXIT_AFTER_TILE = "/apps/x-tile/%s/exit_after_tile"
