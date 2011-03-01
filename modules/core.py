@@ -821,6 +821,7 @@ class XTile:
    
    def tile_vertically(self, *args):
       """Tile the Checked Windows Vertically"""
+      self.gconf_client.set_string(cons.GCONF_LATEST_TILING % glob.screen_index, "v")
       checked_windows_list = self.store.get_checked_windows_list(True)
       tilings.tile_vertically(checked_windows_list, glob.monitors_areas)
       if self.gconf_client.get_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index) == "True": 
@@ -829,6 +830,7 @@ class XTile:
    
    def tile_horizontally(self, *args):
       """Tile the Checked Windows Horizontally"""
+      self.gconf_client.set_string(cons.GCONF_LATEST_TILING % glob.screen_index, "h")
       checked_windows_list = self.store.get_checked_windows_list(True)
       tilings.tile_horizontally(checked_windows_list, glob.monitors_areas)
       if self.gconf_client.get_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index) == "True": 
@@ -837,6 +839,7 @@ class XTile:
    
    def tile_quad(self, *args):
       """Tile the Checked Windows Quad"""
+      self.gconf_client.set_string(cons.GCONF_LATEST_TILING % glob.screen_index, "q")
       checked_windows_list = self.store.get_checked_windows_list(True)
       tilings.tile_quad(checked_windows_list, glob.monitors_areas)
       if self.gconf_client.get_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index) == "True": 
@@ -916,7 +919,7 @@ class XTile:
    
    def invert_tiling(self, *args):
       """Invert the order of the latest tiling operation"""
-      print "ITK"
+      print self.gconf_client.get_string(cons.GCONF_LATEST_TILING % glob.screen_index)
    
    def undo_tiling(self, *args):
       """Undo the Latest Tiling Operation"""
@@ -934,6 +937,7 @@ class XTile:
       if not custom_geoms_str:
          support.dialog_info(_("The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 Set'"), self.glade.window)
          return
+      self.gconf_client.set_string(cons.GCONF_LATEST_TILING % glob.screen_index, "1")
       custom_geoms_vec = custom_geoms_str.split(" ")
       windows_list = self.store.get_checked_windows_list(True)
       windows_list = windows_list[0] + windows_list[1]
@@ -953,6 +957,7 @@ class XTile:
       if not custom_geoms_str:
          support.dialog_info(_("The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 Set'"), self.glade.window)
          return
+      self.gconf_client.set_string(cons.GCONF_LATEST_TILING % glob.screen_index, "2")
       custom_geoms_vec = custom_geoms_str.split(" ")
       windows_list = self.store.get_checked_windows_list(True)
       windows_list = windows_list[0] + windows_list[1]
@@ -968,6 +973,7 @@ class XTile:
     
    def tile_triangle_up(self, *args):
       """Tile 3 Windows in Triangle Up Scheme"""
+      self.gconf_client.set_string(cons.GCONF_LATEST_TILING % glob.screen_index, "u")
       checked_windows_list = self.store.get_checked_windows_list(True)
       tilings.tile_triangle_up(checked_windows_list, glob.monitors_areas)
       if self.gconf_client.get_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index) == "True": 
@@ -976,6 +982,7 @@ class XTile:
       
    def tile_triangle_down(self, *args):
       """Tile 3 Windows in Triangle Down Scheme"""
+      self.gconf_client.set_string(cons.GCONF_LATEST_TILING % glob.screen_index, "d")
       checked_windows_list = self.store.get_checked_windows_list(True)
       tilings.tile_triangle_down(checked_windows_list, glob.monitors_areas)
       if self.gconf_client.get_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index) == "True": 
@@ -984,6 +991,7 @@ class XTile:
       
    def tile_triangle_left(self, *args):
       """Tile 3 Windows in Triangle Left Scheme"""
+      self.gconf_client.set_string(cons.GCONF_LATEST_TILING % glob.screen_index, "l")
       checked_windows_list = self.store.get_checked_windows_list(True)
       tilings.tile_triangle_left(checked_windows_list, glob.monitors_areas)
       if self.gconf_client.get_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index) == "True": 
@@ -992,6 +1000,7 @@ class XTile:
       
    def tile_triangle_right(self, *args):
       """Tile 3 Windows in Triangle Right Scheme"""
+      self.gconf_client.set_string(cons.GCONF_LATEST_TILING % glob.screen_index, "r")
       checked_windows_list = self.store.get_checked_windows_list(True)
       tilings.tile_triangle_right(checked_windows_list, glob.monitors_areas)
       if self.gconf_client.get_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index) == "True": 

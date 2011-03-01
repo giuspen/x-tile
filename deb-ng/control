@@ -3,7 +3,7 @@ Section: accessories
 Priority: optional
 Maintainer: Giuseppe Penone <giuspen@gmail.com>
 Package: x-tile-ng
-Version: 1.8.4-1
+Version: 1.8.5-1
 Architecture: all
 Depends: python-gtk2
 Conflicts: x-tile
