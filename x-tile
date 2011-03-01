@@ -4,7 +4,7 @@
 
 #      x-tile
 #      
-#      Copyright 2009-2010
+#      Copyright 2009-2011
 #      Giuseppe Penone <giuspen@gmail.com>,
 #      Chris Camacho (chris_c) <chris_camacho@yahoo.com>.
 #      
@@ -69,6 +69,7 @@ factory.add_default()
 APPLET_MENU_XML = '<popup name="button3">'\
          + '<menuitem name="About" verb="About" label="' + _("_About") + '" pixtype="stock" pixname="gtk-about"/>'\
          + '<menuitem name="All_M" verb="All_M" label="' + _("_Maximize All") + '" pixtype="stock" pixname="Maximize Windows"/>'\
+         + '<menuitem name="Invert" verb="Invert" label="' + _("_Invert Tiling Order") + '" pixtype="stock" pixname="Invert Tiling"/>'\
          + '<menuitem name="All_4" verb="All_4" label="' + _("Tile All _Quad") + '" pixtype="stock" pixname="Tile Quad"/>'\
          + '<menuitem name="All_TD" verb="All_TD" label="' + _("Tile All Triangle _Down") + '" pixtype="stock" pixname="Tile Triangle Down"/>'\
          + '<menuitem name="All_TU" verb="All_TU" label="' + _("Tile All Triangle _Up") + '" pixtype="stock" pixname="Tile Triangle Up"/>'\
@@ -140,6 +141,10 @@ class XTileApplet(gnomeapplet.Applet):
       """Just Undo the Latest Tiling Operation"""
       self.hide_and_process("x-tile z &")
    
+   def invert_tiling(self, *args):
+      """Invert the Order of the Latest Tiling Operation"""
+      self.hide_and_process("x-tile i &")
+   
    def tile_all_vertically(self, *args):
       """Just tile Vertically all opened windows"""
       self.hide_and_process("x-tile v &")
@@ -205,13 +210,14 @@ if len(sys.argv) == 2:
       x.reload_windows_list()
       gtk.main()
       sys.exit(0)
-   elif arg in ["z", "v", "h", "u", "d", "l", "r", "1", "2", "q", "m"]:
+   elif arg in ["z", "i", "v", "h", "u", "d", "l", "r", "1", "2", "q", "m"]:
       x=core.XTile(core.InfoModel())
       x.launch_application()
-      if arg != "z":
+      if arg not in ["z", "i"]:
          x.reload_windows_list()
          x.flag_all_rows()
       if arg == "z": x.undo_tiling()
+      elif arg == "i": x.invert_tiling()
       elif arg == "v": x.tile_vertically()
       elif arg == "h": x.tile_horizontally()
       elif arg == "u": x.tile_triangle_up()

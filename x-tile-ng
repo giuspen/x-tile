@@ -4,7 +4,7 @@
 
 #      x-tile-ng
 #      
-#      Copyright 2009-2010
+#      Copyright 2009-2011
 #      Giuseppe Penone <giuspen@gmail.com>,
 #      Chris Camacho (chris_c) <chris_camacho@yahoo.com>.
 #      
@@ -74,13 +74,14 @@ if arg == "w":
    x.launch_application()
    x.reload_windows_list()
    gtk.main()
-elif arg in ["z", "v", "h", "u", "d", "l", "r", "1", "2", "q", "m"]:
+elif arg in ["z", "i", "v", "h", "u", "d", "l", "r", "1", "2", "q", "m"]:
    x = core.XTile(core.InfoModel())
    x.launch_application()
-   if arg != "z":
+   if arg not in ["z", "i"]:
       x.reload_windows_list()
       x.flag_all_rows()
    if arg == "z": x.undo_tiling()
+   elif arg == "i": x.invert_tiling()
    elif arg == "v": x.tile_vertically()
    elif arg == "h": x.tile_horizontally()
    elif arg == "u": x.tile_triangle_up()
