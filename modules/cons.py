@@ -2,7 +2,7 @@
 #
 #      cons.py
 #      
-#      Copyright 2009-2010
+#      Copyright 2009-2011
 #      Giuseppe Penone <giuspen@gmail.com>,
 #      Chris Camacho (chris_c) <chris_camacho@yahoo.com>.
 #      
@@ -28,7 +28,7 @@ import gtk, os
 
 
 APP_NAME = "x-tile"
-VERSION = "1.8.4"
+VERSION = "1.8.5"
 if os.path.isdir('glade'):
    GLADE_PATH = "glade/"
    ICON_PLACE = "linux/x-tile.svg"
@@ -87,6 +87,7 @@ ICONS_FILENAMES = [(GLADE_PATH + 'tile-vertically.svg', 'Tile Vertically'),
                    (GLADE_PATH + 'maximize-checked-windows.svg', 'Maximize Windows'),
                    (GLADE_PATH + 'unmaximize-checked-windows.svg', 'Unmaximize Windows'),
                    (GLADE_PATH + 'close-checked-windows.svg', 'Close Windows'),
+                   (GLADE_PATH + 'invert-tiling.svg', 'Invert Tiling'),
                    (GLADE_PATH + 'toolbar.png', 'Toolbar'),
                    (GLADE_PATH + 'vbuttonbox.png', 'VButtons'),
                    (GLADE_PATH + 'help-contents.svg', 'Help Contents'),
@@ -156,6 +157,7 @@ UI_INFO = """
          <menuitem action='TriangleUp'/>
          <menuitem action='TriangleDown'/>
          <menuitem action='Quad'/>
+         <menuitem action='InverTile'/>
          <separator/>
          <menuitem action='Custom1Set'/>
          <menuitem action='Custom2Set'/>
@@ -192,6 +194,7 @@ UI_INFO = """
       <toolitem action='Custom1Exe'/>
       <toolitem action='Custom2Exe'/>
       <toolitem action='Quad'/>
+      <toolitem action='InverTile'/>
       <separator/>
       <toolitem action='Maximize'/>
       <toolitem action='Unmaximize'/>
@@ -237,6 +240,7 @@ def get_entries(inst):
    ( "Custom2Set", "Custom Set 2", _("Custom Tile 2 S_et"), "<alt>2", _("Edit Custom Tile 2 Settings"), inst.tile_custom_2_set),
    ( "Custom2Exe", "Custom Exe 2", _("Custom Tile _2 Run"), "<control>2", _("Execute Custom Tile 2"), inst.tile_custom_2_run),
    ( "UnTile", "gtk-undo", _("U_ndo Tiling"), "<control>Z", _("Undo the Latest Tiling Operation"), inst.undo_tiling),
+   ( "InverTile", "Invert Tiling", _("_Invert Tiling Order"), "<control>I", _("Invert the Order of the Latest Tiling Operation"), inst.invert_tiling),
    ( "Maximize", "Maximize Windows", _("_Maximize Windows"), "<control>M", _("Maximize The Checked Windows"), inst.maximize_checked_windows),
    ( "Unmaximize", "Unmaximize Windows", _("_Unmaximize Windows"), "<control>U", _("Unmaximize The Checked Windows"), inst.unmaximize_checked_windows),
    ( "Close", "Close Windows", _("_Close Windows"), "<control>C", _("Close The Checked Windows"), inst.close_checked_windows),
@@ -264,7 +268,8 @@ def get_applet_menu_verbs(inst):
            ("All_C1", inst.tile_all_custom_1),
            ("All_H", inst.tile_all_horizontally),
            ("All_V", inst.tile_all_vertically),
-           ("Undo", inst.undo_tiling)]
+           ("Undo", inst.undo_tiling),
+           ("Invert", inst.invert_tiling)]
 
 HELP_TEXT = """
 
@@ -296,10 +301,12 @@ OPTIONS
    r => tile all opened windows triangle-right
 
    q => quad tile all opened windows
-      
+   
    1 => custom tile 1 all opened windows
 
    2 => custom tile 2 all opened windows
+
+   i => invert the order of the latest tiling operation
 
    m => maximize all opened windows
 

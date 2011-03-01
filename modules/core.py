@@ -2,7 +2,7 @@
 #
 #      core.py
 #      
-#      Copyright 2009-2010
+#      Copyright 2009-2011
 #      Giuseppe Penone <giuspen@gmail.com>,
 #      Chris Camacho (chris_c) <chris_camacho@yahoo.com>.
 #      
@@ -913,6 +913,10 @@ class XTile:
          cr.show_text(str(i+1))
          if rgb_idx + 1 < len(cons.DRAW_RGBS): rgb_idx += 1
          else: rgb_idx = 0
+   
+   def invert_tiling(self, *args):
+      """Invert the order of the latest tiling operation"""
+      print "ITK"
    
    def undo_tiling(self, *args):
       """Undo the Latest Tiling Operation"""

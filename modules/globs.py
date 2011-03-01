@@ -2,7 +2,7 @@
 #
 #      globs.py
 #      
-#      Copyright 2009-2010
+#      Copyright 2009-2011
 #      Giuseppe Penone <giuspen@gmail.com>,
 #      Chris Camacho (chris_c) <chris_camacho@yahoo.com>.
 #      
