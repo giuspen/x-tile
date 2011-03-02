@@ -939,10 +939,29 @@ class XTile:
       undo_snap_str = self.gconf_client.get_string(cons.GCONF_UNDO % glob.screen_index)
       if not undo_snap_str: return
       undo_snap_vec = undo_snap_str.split(" ")
+      doubleundo_snap_vec = []
       for element in undo_snap_vec:
          win_id, is_maximized, x, y, width, height = element.split(",")
+         # save current state for eventual undo of the undo
+         win_id = int(win_id)
+         if support.is_window_Vmax(win_id) or support.is_window_Hmax(win_id): is_maximized = 1
+         else: is_maximized = 0
+         win_geom = support.get_geom(win_id)
+         doubleundo_snap_vec.append([  str(win_id),
+                                       str(is_maximized),
+                                       str(win_geom[0]),
+                                       str(win_geom[1]),
+                                       str(win_geom[2]),
+                                       str(win_geom[3])  ])
+         # proceed with the undo
          if int(is_maximized) == 1: support.maximize(int(win_id))
-         else: support.moveresize(int(win_id), int(x), int(y), int(width), int(height))
+         else: support.moveresize(win_id, int(x), int(y), int(width), int(height))
+      if doubleundo_snap_vec:
+         doubleundo_snap_str = ""
+         for element in doubleundo_snap_vec:
+            doubleundo_snap_str += ",".join(element) + " "
+         doubleundo_snap_str = doubleundo_snap_str[:-1]
+         self.gconf_client.set_string(cons.GCONF_UNDO % glob.screen_index, doubleundo_snap_str)
       self.check_exit_after_tile()
    
    def tile_custom_1_run(self, *args):
