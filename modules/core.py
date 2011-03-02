@@ -919,7 +919,32 @@ class XTile:
    
    def invert_tiling(self, *args):
       """Invert the order of the latest tiling operation"""
-      print self.gconf_client.get_string(cons.GCONF_LATEST_TILING % glob.screen_index)
+      # get the win_id and win_geom of the latest tiled windows
+      latest_tiling_geoms = []
+      undo_snap_str = self.gconf_client.get_string(cons.GCONF_UNDO % glob.screen_index)
+      if not undo_snap_str: return
+      undo_snap_vec = undo_snap_str.split(" ")
+      for element in undo_snap_vec:
+         win_id, is_maximized, x, y, width, height = element.split(",")
+         win_geom = support.get_geom(int(win_id))
+         latest_tiling_geoms.append({'win_id': win_id, 'win_geom': win_geom})
+      #print "latest_tiling_geoms", latest_tiling_geoms
+      # generate the win_id and win_geom of the next tiled windows
+      next_tiling_geoms = []
+      for i, element in enumerate(latest_tiling_geoms):
+         next_tiling_geoms.append({'win_id': element['win_id'],
+                                   'win_geom': latest_tiling_geoms[-1-i]['win_geom']})
+      #print "next_tiling_geoms", next_tiling_geoms
+      # tile the windows
+      for element in next_tiling_geoms:
+         support.moveresize(int(element['win_id']),
+                            int(element['win_geom'][0]),
+                            int(element['win_geom'][1]),
+                            int(element['win_geom'][2]),
+                            int(element['win_geom'][3]))
+      if self.gconf_client.get_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index) == "True": 
+         glob.alive = False
+         self.quit_application()
    
    def undo_tiling(self, *args):
       """Undo the Latest Tiling Operation"""
@@ -930,6 +955,9 @@ class XTile:
          win_id, is_maximized, x, y, width, height = element.split(",")
          if int(is_maximized) == 1: support.maximize(int(win_id))
          else: support.moveresize(int(win_id), int(x), int(y), int(width), int(height))
+      if self.gconf_client.get_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index) == "True": 
+         glob.alive = False
+         self.quit_application()
    
    def tile_custom_1_run(self, *args):
       """Tile N Windows According to the User Defined Tiling"""
