@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-02-20 14:31+0100\n"
+"POT-Creation-Date: 2011-03-02 18:26+0100\n"
 "PO-Revision-Date: 2010-02-17 21:30+0100\n"
 "Last-Translator: maul <giuspen@gmail.com>\n"
 "Language-Team: Italian\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: x-tile:70 modules/cons.py:255
+#: x-tile:70 modules/cons.py:256
 msgid "_About"
 msgstr "_Informazioni"
 
@@ -25,47 +25,51 @@ msgstr "_Informazioni"
 msgid "_Maximize All"
 msgstr "_Massimizza Tutte"
 
-#: x-tile:72
+#: x-tile:72 modules/cons.py:244
+msgid "_Invert Tiling Order"
+msgstr "_Inverti Ordine Piastrellamento"
+
+#: x-tile:73
 msgid "Tile All _Quad"
 msgstr "Piastrella Tutte _Quad"
 
-#: x-tile:73
-msgid "Tile All Triangle _Right"
-msgstr "Piastrella Tutte Triangolo _Destra"
-
 #: x-tile:74
-msgid "Tile All Triangle _Left"
-msgstr "Piastrella Tutte Triangolo _Sinistra"
-
-#: x-tile:75
 msgid "Tile All Triangle _Down"
 msgstr "Piastrella Tutte Triangolo _Giu'"
 
-#: x-tile:76
+#: x-tile:75
 msgid "Tile All Triangle _Up"
 msgstr "Piastrella Tutte Triangolo S_u"
 
+#: x-tile:76
+msgid "Tile All Triangle _Right"
+msgstr "Piastrella Tutte Triangolo _Destra"
+
 #: x-tile:77
+msgid "Tile All Triangle _Left"
+msgstr "Piastrella Tutte Triangolo _Sinistra"
+
+#: x-tile:78
 msgid "Tile All Custom _2"
 msgstr "Piastrella Tutte Personalizzato _2"
 
-#: x-tile:78
+#: x-tile:79
 msgid "Tile All Custom _1"
 msgstr "Piastrella Tutte Personalizzato _1"
 
-#: x-tile:79
+#: x-tile:80
 msgid "Tile All _Horizontally"
 msgstr "Piastrella Tutte _Orizzontalmente"
 
-#: x-tile:80
+#: x-tile:81
 msgid "Tile All _Vertically"
 msgstr "Piastrella Tutte _Verticalmente"
 
-#: x-tile:81 modules/cons.py:243
+#: x-tile:82 modules/cons.py:243
 msgid "U_ndo Tiling"
 msgstr "_Annulla Piastrellamento"
 
-#: x-tile:100
+#: x-tile:101
 msgid ""
 "X Tile\n"
 "Tile The Windows Upon Your Desktop"
@@ -73,55 +77,55 @@ msgstr ""
 "X Tile\n"
 "Piastrella le finestre sul tuo Desktop"
 
-#: modules/core.py:337
+#: modules/core.py:338
 msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr "La Nuova Lingua Sara' Disponibile Solo Dopo Aver Riavviato X Tile"
 
-#: modules/core.py:470
+#: modules/core.py:471
 msgid "The Size of the Toolbar Icons is already at the Maximum Value"
 msgstr "La Dimensione del Toolbar e' gia' al Massimo Valore"
 
-#: modules/core.py:480
+#: modules/core.py:481
 msgid "The Size of the Toolbar Icons is already at the Minimum Value"
 msgstr "La Dimensione del Toolbar e' gia' al Minimo Valore"
 
-#: modules/core.py:488
+#: modules/core.py:489
 msgid "ON"
 msgstr "ON"
 
-#: modules/core.py:488
+#: modules/core.py:489
 msgid "OFF"
 msgstr "OFF"
 
-#: modules/core.py:489
+#: modules/core.py:490
 #, python-format
 msgid "Version %s  -  Exit After Tile: %s"
 msgstr "Versione %s  -  Esci dopo Tiling: %s"
 
-#: modules/core.py:531 modules/core.py:537
+#: modules/core.py:532 modules/core.py:538
 msgid ""
 "The used shortcut is not available when the Preferences Window is opened"
 msgstr ""
 "Lo shortcut utilizzato non e' disponibile quando la finestra delle "
 "Preferenze e' aperta"
 
-#: modules/core.py:609 modules/core.py:617 modules/core.py:625
+#: modules/core.py:610 modules/core.py:618 modules/core.py:626
 msgid "No Row is Selected"
 msgstr "Nessuna Riga e' Selezionata"
 
-#: modules/core.py:647 modules/core.py:681
+#: modules/core.py:648 modules/core.py:682
 msgid "No Application Selected!"
 msgstr "Nessuna Applicazione e' Selezionata!"
 
-#: modules/core.py:794 modules/core.py:802 modules/core.py:814
+#: modules/core.py:795 modules/core.py:803 modules/core.py:813
 msgid "No Windows Checked"
 msgstr "Nessuna finestra e' Selezionata"
 
-#: modules/core.py:848 modules/core.py:861
+#: modules/core.py:842 modules/core.py:855
 msgid "Edit Custom Tile Settings"
 msgstr "Modifica Impostazioni Piastrellamento Personalizzato"
 
-#: modules/core.py:930
+#: modules/core.py:971
 msgid ""
 "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
 "Set'"
@@ -129,7 +133,7 @@ msgstr ""
 "Il Piastrellamento Personalizzato 1 Non e' Ancora Stato Impostato: Clicca la "
 "Voce di Menu 'Piastrella->Imposta Piastrellamento Personalizzato 1'"
 
-#: modules/core.py:949
+#: modules/core.py:989
 msgid ""
 "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
 "Set'"
@@ -157,7 +161,7 @@ msgstr "_Piastrella"
 msgid "_View"
 msgstr "_Visualizza"
 
-#: modules/cons.py:223 modules/cons.py:254
+#: modules/cons.py:223 modules/cons.py:255
 msgid "_Help"
 msgstr "_Aiuto"
 
@@ -267,7 +271,7 @@ msgstr "Piastrella Triangolo Destra le finestre Selezionate"
 
 #: modules/cons.py:238
 msgid "Tile _Quad"
-msgstr "Piastrella _Quad"
+msgstr "Piastrella Qua_d"
 
 #: modules/cons.py:238
 msgid "Tile into 4 quadrants The Checked Windows"
@@ -275,7 +279,7 @@ msgstr "Piastrella in 4 Quadranti le finestre Selezionate"
 
 #: modules/cons.py:239
 msgid "Custom Tile 1 _Set"
-msgstr "_Imposta Piastrellamento Personalizzato 1"
+msgstr "Imposta Piastrellamento Personali_zzato 1"
 
 #: modules/cons.py:239
 msgid "Edit Custom Tile 1 Settings"
@@ -291,7 +295,7 @@ msgstr "Esegui Piastrellamento Personalizzato 1"
 
 #: modules/cons.py:241
 msgid "Custom Tile 2 S_et"
-msgstr "Im_posta Piastrellamento Personalizzato 2"
+msgstr "Impos_ta Piastrellamento Personalizzato 2"
 
 #: modules/cons.py:241
 msgid "Edit Custom Tile 2 Settings"
@@ -310,90 +314,94 @@ msgid "Undo the Latest Tiling Operation"
 msgstr "Annulla l'Ultima Operazione di Piastrellamento"
 
 #: modules/cons.py:244
+msgid "Invert the Order of the Latest Tiling Operation"
+msgstr "Inverti l'Ordine dell' Ultima Operazione di Piastrellamento"
+
+#: modules/cons.py:245
 msgid "_Maximize Windows"
 msgstr "_Massimizza Finestre"
 
-#: modules/cons.py:244
+#: modules/cons.py:245
 msgid "Maximize The Checked Windows"
 msgstr "Massimizza le finestre Selezionate"
 
-#: modules/cons.py:245
+#: modules/cons.py:246
 msgid "_Unmaximize Windows"
 msgstr "D_emassimizza Finestre"
 
-#: modules/cons.py:245
+#: modules/cons.py:246
 msgid "Unmaximize The Checked Windows"
 msgstr "Demassimizza le Finestre Selezionate"
 
-#: modules/cons.py:246
+#: modules/cons.py:247
 msgid "_Close Windows"
 msgstr "_Chiudi Finestre"
 
-#: modules/cons.py:246
+#: modules/cons.py:247
 msgid "Close The Checked Windows"
 msgstr "Chiudi le Finestre Selezionate"
 
-#: modules/cons.py:247
+#: modules/cons.py:248
 msgid "Move _Up"
 msgstr "Muovi S_u"
 
-#: modules/cons.py:247 glade/x-tile.glade.h:42
+#: modules/cons.py:248 glade/x-tile.glade.h:42
 msgid "Move the Selected Row Up"
 msgstr "Muovi Su la Riga Selezionata"
 
-#: modules/cons.py:248
+#: modules/cons.py:249
 msgid "Move _Down"
 msgstr "Muovi _Giu'"
 
-#: modules/cons.py:248 glade/x-tile.glade.h:41
+#: modules/cons.py:249 glade/x-tile.glade.h:41
 msgid "Move the Selected Row Down"
 msgstr "Muovi Giu' la Riga Selezionata"
 
-#: modules/cons.py:249
+#: modules/cons.py:250
 msgid "_Remove"
 msgstr "_Rimuovi"
 
-#: modules/cons.py:249 glade/x-tile.glade.h:50
+#: modules/cons.py:250 glade/x-tile.glade.h:50
 msgid "Remove the Selected Row"
 msgstr "Rimuovi le Righe Selezionate"
 
-#: modules/cons.py:250
+#: modules/cons.py:251
 msgid "Show/Hide _Vertical Buttons"
 msgstr "Mostra/Nascondi Bottoni _Verticali"
 
-#: modules/cons.py:250
+#: modules/cons.py:251
 msgid "Toggle Show/Hide Vertical Buttons"
 msgstr "Mostra/Nascondi Bottoni Verticali"
 
-#: modules/cons.py:251
+#: modules/cons.py:252
 msgid "Show/Hide _Toolbar"
 msgstr "Mostra/Nascondi _Toolbar"
 
-#: modules/cons.py:251
+#: modules/cons.py:252
 msgid "Toggle Show/Hide Toolbar"
 msgstr "Mostra/Nascondi il Toolbar"
 
-#: modules/cons.py:252
+#: modules/cons.py:253
 msgid "_Increase Toolbar Icons Size"
 msgstr "_Aumenta la Dimensione delle Icone della Toolbar"
 
-#: modules/cons.py:252
+#: modules/cons.py:253
 msgid "Increase the Size of the Toolbar Icons"
 msgstr "Aumenta la Dimensione delle Icone della Toolbar"
 
-#: modules/cons.py:253
+#: modules/cons.py:254
 msgid "_Decrease Toolbar Icons Size"
 msgstr "_Diminuisci la Dimensione delle Icone del Toolbar"
 
-#: modules/cons.py:253
+#: modules/cons.py:254
 msgid "Decrease the Size of the Toolbar Icons"
 msgstr "Diminuisci la Dimensione delle Icone della Toolbar"
 
-#: modules/cons.py:254
+#: modules/cons.py:255
 msgid "X Tile Project Home Page"
 msgstr "Home Page del Progetto X Tile"
 
-#: modules/cons.py:255 glade/x-tile.glade.h:22
+#: modules/cons.py:256 glade/x-tile.glade.h:22
 msgid "About X Tile"
 msgstr "Informazioni su X Tile"
 
@@ -468,7 +476,6 @@ msgid "Cancel"
 msgstr "Annulla"
 
 #: glade/x-tile.glade.h:26
-#, fuzzy
 msgid ""
 "Chinese Simplified (zh_CN) Khi-yuan Fan <Fan.khiyuan@gmail.com>\n"
 "Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
@@ -480,6 +487,7 @@ msgid ""
 msgstr ""
 "Cinese Semplificato (zh_CN) Khi-yuan Fan <Fan.khiyuan@gmail.com>\n"
 "Cinese Tradizionale (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
+"Spagnolo (es_AR) MeloPixel <melopixel@gmail.com>\n"
 "Francese (fr) Ludovic Troisi <axalis@cegetel.net>\n"
 "Tedesco (de) J&#xF6;ran Zeller <joeran@zeller.ws>\n"
 "Italiano (it) Giuseppe Penone <giuspen@gmail.com>\n"
@@ -490,13 +498,12 @@ msgid "Close"
 msgstr "Chiudi"
 
 #: glade/x-tile.glade.h:34
-#, fuzzy
 msgid ""
-"Copyright © 2009-2010\n"
+"Copyright © 2009-2011\n"
 "Giuseppe Penone <giuspen@gmail.com>\n"
 "Chris Camacho <chris_camacho@yahoo.com>"
 msgstr ""
-"Copyright &#xA9; 2009-2010\n"
+"Copyright © 2009-2010\n"
 "Giuseppe Penone <giuspen@gmail.com>\n"
 "Chris Camacho <chris_camacho@yahoo.com>"
 

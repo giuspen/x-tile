@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: x-tile 1.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-02-20 14:31+0100\n"
+"POT-Creation-Date: 2011-03-02 18:26+0100\n"
 "PO-Revision-Date: 2010-06-04 09:01+0200\n"
 "Last-Translator: Jöran Zeller <joeran@zeller.ws>\n"
 "Language-Team: German\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: x-tile:70 modules/cons.py:255
+#: x-tile:70 modules/cons.py:256
 msgid "_About"
 msgstr "_Über"
 
@@ -25,47 +25,51 @@ msgstr "_Über"
 msgid "_Maximize All"
 msgstr "_Maximiere Alles"
 
-#: x-tile:72
+#: x-tile:72 modules/cons.py:244
+msgid "_Invert Tiling Order"
+msgstr ""
+
+#: x-tile:73
 msgid "Tile All _Quad"
 msgstr "Tile _Quadratisch"
 
-#: x-tile:73
-msgid "Tile All Triangle _Right"
-msgstr "Tile Triangel _rechts"
-
 #: x-tile:74
-msgid "Tile All Triangle _Left"
-msgstr "Tile Triangel _links"
-
-#: x-tile:75
 msgid "Tile All Triangle _Down"
 msgstr "Tile Triangel _unten"
 
-#: x-tile:76
+#: x-tile:75
 msgid "Tile All Triangle _Up"
 msgstr "Tile Triangel _oben"
 
+#: x-tile:76
+msgid "Tile All Triangle _Right"
+msgstr "Tile Triangel _rechts"
+
 #: x-tile:77
+msgid "Tile All Triangle _Left"
+msgstr "Tile Triangel _links"
+
+#: x-tile:78
 msgid "Tile All Custom _2"
 msgstr "Tile Schema _2"
 
-#: x-tile:78
+#: x-tile:79
 msgid "Tile All Custom _1"
 msgstr "Tile Schema _1"
 
-#: x-tile:79
+#: x-tile:80
 msgid "Tile All _Horizontally"
 msgstr "Tile _horizontal"
 
-#: x-tile:80
+#: x-tile:81
 msgid "Tile All _Vertically"
 msgstr "Tile _vertikal"
 
-#: x-tile:81 modules/cons.py:243
+#: x-tile:82 modules/cons.py:243
 msgid "U_ndo Tiling"
 msgstr "Tiling rückgä_ngig machen"
 
-#: x-tile:100
+#: x-tile:101
 msgid ""
 "X Tile\n"
 "Tile The Windows Upon Your Desktop"
@@ -73,55 +77,55 @@ msgstr ""
 "X Tile\n"
 "Tile Fenster auf dem Desktop"
 
-#: modules/core.py:337
+#: modules/core.py:338
 msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr "Neue Spracheinstellung erst nach Neustart von X Tile verfügbar"
 
-#: modules/core.py:470
+#: modules/core.py:471
 msgid "The Size of the Toolbar Icons is already at the Maximum Value"
 msgstr "Werkzeugleisten Icons sind schon maximal"
 
-#: modules/core.py:480
+#: modules/core.py:481
 msgid "The Size of the Toolbar Icons is already at the Minimum Value"
 msgstr "Werkzeugleisten Icons sind schon minimal"
 
-#: modules/core.py:488
+#: modules/core.py:489
 msgid "ON"
 msgstr "AN"
 
-#: modules/core.py:488
+#: modules/core.py:489
 msgid "OFF"
 msgstr "AUS"
 
-#: modules/core.py:489
+#: modules/core.py:490
 #, python-format
 msgid "Version %s  -  Exit After Tile: %s"
 msgstr "Version %s  -  Schliessen nach Tiling: %s"
 
-#: modules/core.py:531 modules/core.py:537
+#: modules/core.py:532 modules/core.py:538
 msgid ""
 "The used shortcut is not available when the Preferences Window is opened"
 msgstr ""
 "Das Tastaturkürzel ist nicht anwendbar solange das Einstellungsfenster offen "
 "ist"
 
-#: modules/core.py:609 modules/core.py:617 modules/core.py:625
+#: modules/core.py:610 modules/core.py:618 modules/core.py:626
 msgid "No Row is Selected"
 msgstr "Keine Zeile ausgewählt"
 
-#: modules/core.py:647 modules/core.py:681
+#: modules/core.py:648 modules/core.py:682
 msgid "No Application Selected!"
 msgstr "Keine Anwendung ausgewählt!"
 
-#: modules/core.py:794 modules/core.py:802 modules/core.py:814
+#: modules/core.py:795 modules/core.py:803 modules/core.py:813
 msgid "No Windows Checked"
 msgstr "Keine Fenster ausgewählt"
 
-#: modules/core.py:848 modules/core.py:861
+#: modules/core.py:842 modules/core.py:855
 msgid "Edit Custom Tile Settings"
 msgstr "Persönliche Tiling Schema bearbeiten"
 
-#: modules/core.py:930
+#: modules/core.py:971
 msgid ""
 "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
 "Set'"
@@ -129,7 +133,7 @@ msgstr ""
 "Das persönliche tiling Schema (1) wurde noch nicht übernommen: Im Menü 'Tile-"
 ">Eigenes Schema (1) setzen anklicken'"
 
-#: modules/core.py:949
+#: modules/core.py:989
 msgid ""
 "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
 "Set'"
@@ -157,7 +161,7 @@ msgstr "_Tile"
 msgid "_View"
 msgstr "_Ansicht"
 
-#: modules/cons.py:223 modules/cons.py:254
+#: modules/cons.py:223 modules/cons.py:255
 msgid "_Help"
 msgstr "_Hilfe"
 
@@ -310,90 +314,95 @@ msgid "Undo the Latest Tiling Operation"
 msgstr "Mache die letzte tiling Operation rückgängig"
 
 #: modules/cons.py:244
+#, fuzzy
+msgid "Invert the Order of the Latest Tiling Operation"
+msgstr "Mache die letzte tiling Operation rückgängig"
+
+#: modules/cons.py:245
 msgid "_Maximize Windows"
 msgstr "Fenster maximieren"
 
-#: modules/cons.py:244
+#: modules/cons.py:245
 msgid "Maximize The Checked Windows"
 msgstr "Markierte Fenster maximieren"
 
-#: modules/cons.py:245
+#: modules/cons.py:246
 msgid "_Unmaximize Windows"
 msgstr "Maximierung der Fenster aufheben"
 
-#: modules/cons.py:245
+#: modules/cons.py:246
 msgid "Unmaximize The Checked Windows"
 msgstr "Maximierung markierter Fenster aufheben"
 
-#: modules/cons.py:246
+#: modules/cons.py:247
 msgid "_Close Windows"
 msgstr "Fenster schliessen"
 
-#: modules/cons.py:246
+#: modules/cons.py:247
 msgid "Close The Checked Windows"
 msgstr "Schliesse alle markierten Fenster"
 
-#: modules/cons.py:247
+#: modules/cons.py:248
 msgid "Move _Up"
 msgstr "Verschiebe nach _oben"
 
-#: modules/cons.py:247 glade/x-tile.glade.h:42
+#: modules/cons.py:248 glade/x-tile.glade.h:42
 msgid "Move the Selected Row Up"
 msgstr "Verschiebe die ausgewählte Zeile nach oben"
 
-#: modules/cons.py:248
+#: modules/cons.py:249
 msgid "Move _Down"
 msgstr "Verschiebe nach _unten"
 
-#: modules/cons.py:248 glade/x-tile.glade.h:41
+#: modules/cons.py:249 glade/x-tile.glade.h:41
 msgid "Move the Selected Row Down"
 msgstr "Verschiebe die ausgewählte Zeile nach unten"
 
-#: modules/cons.py:249
+#: modules/cons.py:250
 msgid "_Remove"
 msgstr "_Entferne"
 
-#: modules/cons.py:249 glade/x-tile.glade.h:50
+#: modules/cons.py:250 glade/x-tile.glade.h:50
 msgid "Remove the Selected Row"
 msgstr "Entferne die markierte Zeile"
 
-#: modules/cons.py:250
+#: modules/cons.py:251
 msgid "Show/Hide _Vertical Buttons"
 msgstr "Zeige/Verstecke vertikale Knöpfe"
 
-#: modules/cons.py:250
+#: modules/cons.py:251
 msgid "Toggle Show/Hide Vertical Buttons"
 msgstr "Schalte die vertikalen Knöpfe um"
 
-#: modules/cons.py:251
+#: modules/cons.py:252
 msgid "Show/Hide _Toolbar"
 msgstr "Zeige/Verstecke Werkzeugleiste"
 
-#: modules/cons.py:251
+#: modules/cons.py:252
 msgid "Toggle Show/Hide Toolbar"
 msgstr "Schalte Zeige/Verstecke Werkzeugleiste um"
 
-#: modules/cons.py:252
+#: modules/cons.py:253
 msgid "_Increase Toolbar Icons Size"
 msgstr "_Vergrössere Icons der Werkzeugleiste"
 
-#: modules/cons.py:252
+#: modules/cons.py:253
 msgid "Increase the Size of the Toolbar Icons"
 msgstr "Vergrössere Icons der Werkzeugleiste"
 
-#: modules/cons.py:253
+#: modules/cons.py:254
 msgid "_Decrease Toolbar Icons Size"
 msgstr "_Verkleinere Icons der Werkzeugleiste"
 
-#: modules/cons.py:253
+#: modules/cons.py:254
 msgid "Decrease the Size of the Toolbar Icons"
 msgstr "Verkleinere Icons der Werkzeugleiste"
 
-#: modules/cons.py:254
+#: modules/cons.py:255
 msgid "X Tile Project Home Page"
 msgstr "X Tile Projekt Home Page"
 
-#: modules/cons.py:255 glade/x-tile.glade.h:22
+#: modules/cons.py:256 glade/x-tile.glade.h:22
 msgid "About X Tile"
 msgstr "Über X Tile"
 
@@ -492,7 +501,7 @@ msgstr "Schliessen"
 #: glade/x-tile.glade.h:34
 #, fuzzy
 msgid ""
-"Copyright © 2009-2010\n"
+"Copyright © 2009-2011\n"
 "Giuseppe Penone <giuspen@gmail.com>\n"
 "Chris Camacho <chris_camacho@yahoo.com>"
 msgstr ""

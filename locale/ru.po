@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: X Tile\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-02-20 14:31+0100\n"
+"POT-Creation-Date: 2011-03-02 18:26+0100\n"
 "PO-Revision-Date: 2010-10-24 11:30+0300\n"
 "Last-Translator: Andriy Kovtun <kovtunos@yandex.ru>\n"
 "Language-Team: Russian\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: x-tile:70 modules/cons.py:255
+#: x-tile:70 modules/cons.py:256
 msgid "_About"
 msgstr "О программе"
 
@@ -27,47 +27,51 @@ msgstr "О программе"
 msgid "_Maximize All"
 msgstr "Развернуть все"
 
-#: x-tile:72
+#: x-tile:72 modules/cons.py:244
+msgid "_Invert Tiling Order"
+msgstr ""
+
+#: x-tile:73
 msgid "Tile All _Quad"
 msgstr "Разбить на квадраты"
 
-#: x-tile:73
-msgid "Tile All Triangle _Right"
-msgstr "Разбить все правым треугольником"
-
 #: x-tile:74
-msgid "Tile All Triangle _Left"
-msgstr "Разбить все левым треугольником"
-
-#: x-tile:75
 msgid "Tile All Triangle _Down"
 msgstr "Разбить все нижним треугольником"
 
-#: x-tile:76
+#: x-tile:75
 msgid "Tile All Triangle _Up"
 msgstr "Разбить все верхним треугольником"
 
+#: x-tile:76
+msgid "Tile All Triangle _Right"
+msgstr "Разбить все правым треугольником"
+
 #: x-tile:77
+msgid "Tile All Triangle _Left"
+msgstr "Разбить все левым треугольником"
+
+#: x-tile:78
 msgid "Tile All Custom _2"
 msgstr "Разбить все пользовательской схемой 2"
 
-#: x-tile:78
+#: x-tile:79
 msgid "Tile All Custom _1"
 msgstr "Разбить все пользовательской схемой 1"
 
-#: x-tile:79
+#: x-tile:80
 msgid "Tile All _Horizontally"
 msgstr "Разбить все по горизонтали"
 
-#: x-tile:80
+#: x-tile:81
 msgid "Tile All _Vertically"
 msgstr "Разбить все по вертикали"
 
-#: x-tile:81 modules/cons.py:243
+#: x-tile:82 modules/cons.py:243
 msgid "U_ndo Tiling"
 msgstr "Отменить тайлинг"
 
-#: x-tile:100
+#: x-tile:101
 msgid ""
 "X Tile\n"
 "Tile The Windows Upon Your Desktop"
@@ -75,54 +79,54 @@ msgstr ""
 "X Tile\n"
 "Мозаичное размещение окон на рабочем столе"
 
-#: modules/core.py:337
+#: modules/core.py:338
 msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr "Новый язык будет доступен только после перезапуска X-Tile"
 
-#: modules/core.py:470
+#: modules/core.py:471
 msgid "The Size of the Toolbar Icons is already at the Maximum Value"
 msgstr "Размер иконок панели инструментов максимальный"
 
-#: modules/core.py:480
+#: modules/core.py:481
 msgid "The Size of the Toolbar Icons is already at the Minimum Value"
 msgstr "Размер иконок панели инструментов минимальный"
 
-#: modules/core.py:488
+#: modules/core.py:489
 msgid "ON"
 msgstr "ВКЛ"
 
-#: modules/core.py:488
+#: modules/core.py:489
 msgid "OFF"
 msgstr "ВЫКЛ"
 
-#: modules/core.py:489
+#: modules/core.py:490
 #, python-format
 msgid "Version %s  -  Exit After Tile: %s"
 msgstr "Версия %s  -  Выйти после тайлинга: %s"
 
-#: modules/core.py:531 modules/core.py:537
+#: modules/core.py:532 modules/core.py:538
 msgid ""
 "The used shortcut is not available when the Preferences Window is opened"
 msgstr ""
 "Используемая клавиатурная привязка недоступна, пока открыто окно настройки"
 
-#: modules/core.py:609 modules/core.py:617 modules/core.py:625
+#: modules/core.py:610 modules/core.py:618 modules/core.py:626
 msgid "No Row is Selected"
 msgstr "Строки не выбраны"
 
-#: modules/core.py:647 modules/core.py:681
+#: modules/core.py:648 modules/core.py:682
 msgid "No Application Selected!"
 msgstr "Приложения не выбраны"
 
-#: modules/core.py:794 modules/core.py:802 modules/core.py:814
+#: modules/core.py:795 modules/core.py:803 modules/core.py:813
 msgid "No Windows Checked"
 msgstr "Окна не выбраны"
 
-#: modules/core.py:848 modules/core.py:861
+#: modules/core.py:842 modules/core.py:855
 msgid "Edit Custom Tile Settings"
 msgstr "Настроить пользовательскую схему"
 
-#: modules/core.py:930
+#: modules/core.py:971
 msgid ""
 "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
 "Set'"
@@ -130,7 +134,7 @@ msgstr ""
 "Пользовательская схема 1 не выставлена: Выберите ее в меню 'Разбиение-"
 ">Пользовательская схема 1'"
 
-#: modules/core.py:949
+#: modules/core.py:989
 msgid ""
 "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
 "Set'"
@@ -158,7 +162,7 @@ msgstr "Разбиение"
 msgid "_View"
 msgstr "Вид"
 
-#: modules/cons.py:223 modules/cons.py:254
+#: modules/cons.py:223 modules/cons.py:255
 msgid "_Help"
 msgstr "Помощь"
 
@@ -311,90 +315,95 @@ msgid "Undo the Latest Tiling Operation"
 msgstr "Отменить последнюю операцию тайлинга"
 
 #: modules/cons.py:244
+#, fuzzy
+msgid "Invert the Order of the Latest Tiling Operation"
+msgstr "Отменить последнюю операцию тайлинга"
+
+#: modules/cons.py:245
 msgid "_Maximize Windows"
 msgstr "Развернуть окна"
 
-#: modules/cons.py:244
+#: modules/cons.py:245
 msgid "Maximize The Checked Windows"
 msgstr "Развернуть все выбранные окна"
 
-#: modules/cons.py:245
+#: modules/cons.py:246
 msgid "_Unmaximize Windows"
 msgstr "Убрать разворот окон"
 
-#: modules/cons.py:245
+#: modules/cons.py:246
 msgid "Unmaximize The Checked Windows"
 msgstr "Убрать разворот выделенных окон"
 
-#: modules/cons.py:246
+#: modules/cons.py:247
 msgid "_Close Windows"
 msgstr "Закрыть окна"
 
-#: modules/cons.py:246
+#: modules/cons.py:247
 msgid "Close The Checked Windows"
 msgstr "Закрыть отмеченные окна"
 
-#: modules/cons.py:247
+#: modules/cons.py:248
 msgid "Move _Up"
 msgstr "Передвинуть вверх"
 
-#: modules/cons.py:247 glade/x-tile.glade.h:42
+#: modules/cons.py:248 glade/x-tile.glade.h:42
 msgid "Move the Selected Row Up"
 msgstr "Выбранную строку вверх"
 
-#: modules/cons.py:248
+#: modules/cons.py:249
 msgid "Move _Down"
 msgstr "Передвинуть вниз"
 
-#: modules/cons.py:248 glade/x-tile.glade.h:41
+#: modules/cons.py:249 glade/x-tile.glade.h:41
 msgid "Move the Selected Row Down"
 msgstr "Выбранную строку вниз"
 
-#: modules/cons.py:249
+#: modules/cons.py:250
 msgid "_Remove"
 msgstr "Удалить"
 
-#: modules/cons.py:249 glade/x-tile.glade.h:50
+#: modules/cons.py:250 glade/x-tile.glade.h:50
 msgid "Remove the Selected Row"
 msgstr "Удалить выделенную строку"
 
-#: modules/cons.py:250
+#: modules/cons.py:251
 msgid "Show/Hide _Vertical Buttons"
 msgstr "Показать/Скрыть вертикальные кнопки"
 
-#: modules/cons.py:250
+#: modules/cons.py:251
 msgid "Toggle Show/Hide Vertical Buttons"
 msgstr "Показать/Скрыть вертикальные кнопки"
 
-#: modules/cons.py:251
+#: modules/cons.py:252
 msgid "Show/Hide _Toolbar"
 msgstr "Показать/скрыть панель инструментов"
 
-#: modules/cons.py:251
+#: modules/cons.py:252
 msgid "Toggle Show/Hide Toolbar"
 msgstr "Показать/Скрыть панель инструментов"
 
-#: modules/cons.py:252
+#: modules/cons.py:253
 msgid "_Increase Toolbar Icons Size"
 msgstr "Увеличить иконки панели инструментов"
 
-#: modules/cons.py:252
+#: modules/cons.py:253
 msgid "Increase the Size of the Toolbar Icons"
 msgstr "Увеличить иконки панели инструментов"
 
-#: modules/cons.py:253
+#: modules/cons.py:254
 msgid "_Decrease Toolbar Icons Size"
 msgstr "Уменьшить иконки панели инструментов"
 
-#: modules/cons.py:253
+#: modules/cons.py:254
 msgid "Decrease the Size of the Toolbar Icons"
 msgstr "Уменьшить иконки панели инструментов"
 
-#: modules/cons.py:254
+#: modules/cons.py:255
 msgid "X Tile Project Home Page"
 msgstr "Домашняя страница проекта X Tile"
 
-#: modules/cons.py:255 glade/x-tile.glade.h:22
+#: modules/cons.py:256 glade/x-tile.glade.h:22
 msgid "About X Tile"
 msgstr "О программе X Tile"
 
@@ -497,7 +506,7 @@ msgstr "Закрыть"
 #: glade/x-tile.glade.h:34
 #, fuzzy
 msgid ""
-"Copyright © 2009-2010\n"
+"Copyright © 2009-2011\n"
 "Giuseppe Penone <giuspen@gmail.com>\n"
 "Chris Camacho <chris_camacho@yahoo.com>"
 msgstr ""
