@@ -3,13 +3,14 @@
 # Copyright (C) 2010 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Automatically generated, 2010.
-# Yan-ren Tsai <elleryq@gmail.com>, 2010.
+# Yan-ren Tsai <elleryq@gmail.com>, 2010, 2011.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-03-02 18:26+0100\n"
-"PO-Revision-Date: 2010-10-25 05:38+0800\n"
+"PO-Revision-Date: 2011-03-04 04:09+0800\n"
 "Last-Translator: Yan-ren Tsai <elleryq@gmail.com>\n"
 "Language-Team: zh_TW <elleryq@gmail.com>\n"
 "Language: \n"
@@ -27,7 +28,7 @@ msgstr "最大化全部 (_M)"
 
 #: x-tile:72 modules/cons.py:244
 msgid "_Invert Tiling Order"
-msgstr ""
+msgstr "將鋪排順序顛倒 (_I)"
 
 #: x-tile:73
 msgid "Tile All _Quad"
@@ -308,9 +309,8 @@ msgid "Undo the Latest Tiling Operation"
 msgstr "復原最後一次鋪排的動作"
 
 #: modules/cons.py:244
-#, fuzzy
 msgid "Invert the Order of the Latest Tiling Operation"
-msgstr "復原最後一次鋪排的動作"
+msgstr "將最後一次鋪排的動作顛倒"
 
 #: modules/cons.py:245
 msgid "_Maximize Windows"
@@ -471,7 +471,6 @@ msgid "Cancel"
 msgstr "取消"
 
 #: glade/x-tile.glade.h:26
-#, fuzzy
 msgid ""
 "Chinese Simplified (zh_CN) Khi-yuan Fan <Fan.khiyuan@gmail.com>\n"
 "Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
@@ -483,8 +482,9 @@ msgid ""
 msgstr ""
 "漢語(簡體中文) (zh_CN) Khi-yuan Fan <Fan.khiyuan@gmail.com>\n"
 "漢語(繁體中文) (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
+"西班牙語 (es_AR) MeloPixel <melopixel@gmail.com>\n"
 "法語 (fr) Ludovic Troisi <axalis@cegetel.net>\n"
-"德語 (de) J&#xF6;ran Zeller <joeran@zeller.ws>\n"
+"德語 (de) Jöran Zeller <joeran@zeller.ws>\n"
 "義大利語 (it) Giuseppe Penone <giuspen@gmail.com>\n"
 "俄語 (ru) Andriy Kovtun <kovtunos@yandex.ru>"
 
@@ -493,13 +493,12 @@ msgid "Close"
 msgstr "關閉"
 
 #: glade/x-tile.glade.h:34
-#, fuzzy
 msgid ""
 "Copyright © 2009-2011\n"
 "Giuseppe Penone <giuspen@gmail.com>\n"
 "Chris Camacho <chris_camacho@yahoo.com>"
 msgstr ""
-"Copyright &#xA9; 2009-2010\n"
+"Copyright © 2009-2011\n"
 "Giuseppe Penone <giuspen@gmail.com>\n"
 "Chris Camacho <chris_camacho@yahoo.com>"
 
