@@ -489,7 +489,7 @@ msgstr ""
 "Cinese Tradizionale (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
 "Spagnolo (es_AR) MeloPixel <melopixel@gmail.com>\n"
 "Francese (fr) Ludovic Troisi <axalis@cegetel.net>\n"
-"Tedesco (de) J&#xF6;ran Zeller <joeran@zeller.ws>\n"
+"Tedesco (de) Jöran Zeller <joeran@zeller.ws>\n"
 "Italiano (it) Giuseppe Penone <giuspen@gmail.com>\n"
 "Russo (ru) Andriy Kovtun <kovtunos@yandex.ru>"
 
