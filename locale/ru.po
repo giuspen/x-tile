@@ -9,17 +9,17 @@ msgstr ""
 "Project-Id-Version: X Tile\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-03-02 18:26+0100\n"
-"PO-Revision-Date: 2010-10-24 11:30+0300\n"
+"PO-Revision-Date: 2011-03-03 16:35+0300\n"
 "Last-Translator: Andriy Kovtun <kovtunos@yandex.ru>\n"
 "Language-Team: Russian\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: x-tile:70 modules/cons.py:256
+#: x-tile:70
+#: modules/cons.py:256
 msgid "_About"
 msgstr "О программе"
 
@@ -27,9 +27,10 @@ msgstr "О программе"
 msgid "_Maximize All"
 msgstr "Развернуть все"
 
-#: x-tile:72 modules/cons.py:244
+#: x-tile:72
+#: modules/cons.py:244
 msgid "_Invert Tiling Order"
-msgstr ""
+msgstr "Инвертировать порядок тайлинга"
 
 #: x-tile:73
 msgid "Tile All _Quad"
@@ -67,7 +68,8 @@ msgstr "Разбить все по горизонтали"
 msgid "Tile All _Vertically"
 msgstr "Разбить все по вертикали"
 
-#: x-tile:82 modules/cons.py:243
+#: x-tile:82
+#: modules/cons.py:243
 msgid "U_ndo Tiling"
 msgstr "Отменить тайлинг"
 
@@ -104,43 +106,40 @@ msgstr "ВЫКЛ"
 msgid "Version %s  -  Exit After Tile: %s"
 msgstr "Версия %s  -  Выйти после тайлинга: %s"
 
-#: modules/core.py:532 modules/core.py:538
-msgid ""
-"The used shortcut is not available when the Preferences Window is opened"
-msgstr ""
-"Используемая клавиатурная привязка недоступна, пока открыто окно настройки"
+#: modules/core.py:532
+#: modules/core.py:538
+msgid "The used shortcut is not available when the Preferences Window is opened"
+msgstr "Используемая клавиатурная привязка недоступна, пока открыто окно настройки"
 
-#: modules/core.py:610 modules/core.py:618 modules/core.py:626
+#: modules/core.py:610
+#: modules/core.py:618
+#: modules/core.py:626
 msgid "No Row is Selected"
 msgstr "Строки не выбраны"
 
-#: modules/core.py:648 modules/core.py:682
+#: modules/core.py:648
+#: modules/core.py:682
 msgid "No Application Selected!"
 msgstr "Приложения не выбраны"
 
-#: modules/core.py:795 modules/core.py:803 modules/core.py:813
+#: modules/core.py:795
+#: modules/core.py:803
+#: modules/core.py:813
 msgid "No Windows Checked"
 msgstr "Окна не выбраны"
 
-#: modules/core.py:842 modules/core.py:855
+#: modules/core.py:842
+#: modules/core.py:855
 msgid "Edit Custom Tile Settings"
 msgstr "Настроить пользовательскую схему"
 
 #: modules/core.py:971
-msgid ""
-"The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
-"Set'"
-msgstr ""
-"Пользовательская схема 1 не выставлена: Выберите ее в меню 'Разбиение-"
-">Пользовательская схема 1'"
+msgid "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 Set'"
+msgstr "Пользовательская схема 1 не выставлена: Выберите ее в меню 'Разбиение->Пользовательская схема 1'"
 
 #: modules/core.py:989
-msgid ""
-"The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
-"Set'"
-msgstr ""
-"Пользовательская схема2  не выставлена: Выберите ее в меню 'Разбиение-"
-">Пользовательская схема 2'"
+msgid "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 Set'"
+msgstr "Пользовательская схема2  не выставлена: Выберите ее в меню 'Разбиение->Пользовательская схема 2'"
 
 #: modules/cons.py:218
 msgid "_File"
@@ -162,7 +161,8 @@ msgstr "Разбиение"
 msgid "_View"
 msgstr "Вид"
 
-#: modules/cons.py:223 modules/cons.py:255
+#: modules/cons.py:223
+#: modules/cons.py:255
 msgid "_Help"
 msgstr "Помощь"
 
@@ -178,7 +178,8 @@ msgstr "Фильтровать строки"
 msgid "Selected by _Default"
 msgstr "Выбраны по умолчанию"
 
-#: modules/cons.py:226 glade/x-tile.glade.h:52
+#: modules/cons.py:226
+#: glade/x-tile.glade.h:52
 msgid "Rows to be Selected by Default"
 msgstr "Строки выбраны по умолчанию"
 
@@ -315,9 +316,8 @@ msgid "Undo the Latest Tiling Operation"
 msgstr "Отменить последнюю операцию тайлинга"
 
 #: modules/cons.py:244
-#, fuzzy
 msgid "Invert the Order of the Latest Tiling Operation"
-msgstr "Отменить последнюю операцию тайлинга"
+msgstr "Инвертировать порядок последней операции тайлинга"
 
 #: modules/cons.py:245
 msgid "_Maximize Windows"
@@ -347,7 +347,8 @@ msgstr "Закрыть отмеченные окна"
 msgid "Move _Up"
 msgstr "Передвинуть вверх"
 
-#: modules/cons.py:248 glade/x-tile.glade.h:42
+#: modules/cons.py:248
+#: glade/x-tile.glade.h:42
 msgid "Move the Selected Row Up"
 msgstr "Выбранную строку вверх"
 
@@ -355,7 +356,8 @@ msgstr "Выбранную строку вверх"
 msgid "Move _Down"
 msgstr "Передвинуть вниз"
 
-#: modules/cons.py:249 glade/x-tile.glade.h:41
+#: modules/cons.py:249
+#: glade/x-tile.glade.h:41
 msgid "Move the Selected Row Down"
 msgstr "Выбранную строку вниз"
 
@@ -363,7 +365,8 @@ msgstr "Выбранную строку вниз"
 msgid "_Remove"
 msgstr "Удалить"
 
-#: modules/cons.py:250 glade/x-tile.glade.h:50
+#: modules/cons.py:250
+#: glade/x-tile.glade.h:50
 msgid "Remove the Selected Row"
 msgstr "Удалить выделенную строку"
 
@@ -403,7 +406,8 @@ msgstr "Уменьшить иконки панели инструментов"
 msgid "X Tile Project Home Page"
 msgstr "Домашняя страница проекта X Tile"
 
-#: modules/cons.py:256 glade/x-tile.glade.h:22
+#: modules/cons.py:256
+#: glade/x-tile.glade.h:22
 msgid "About X Tile"
 msgstr "О программе X Tile"
 
@@ -482,7 +486,6 @@ msgid "Cancel"
 msgstr "Отмена"
 
 #: glade/x-tile.glade.h:26
-#, fuzzy
 msgid ""
 "Chinese Simplified (zh_CN) Khi-yuan Fan <Fan.khiyuan@gmail.com>\n"
 "Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
@@ -494,8 +497,9 @@ msgid ""
 msgstr ""
 "Китайский (zh_CN) Khi-yuan Fan <Fan.khiyuan@gmail.com>\n"
 "Китайский (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
+"Испанский (es_AR) MeloPixel <melopixel@gmail.com>\n"
 "Французский (fr) Ludovic Troisi <axalis@cegetel.net>\n"
-"Немецкий (de) J&#xF6;ran Zeller <joeran@zeller.ws>\n"
+"Немецкий (de) Jöran Zeller <joeran@zeller.ws>\n"
 "Итальянский (it) Giuseppe Penone <giuspen@gmail.com>\n"
 "Русский (ru) Andriy Kovtun <kovtunos@yandex.ru>"
 
@@ -504,13 +508,12 @@ msgid "Close"
 msgstr "Закрыть"
 
 #: glade/x-tile.glade.h:34
-#, fuzzy
 msgid ""
 "Copyright © 2009-2011\n"
 "Giuseppe Penone <giuspen@gmail.com>\n"
 "Chris Camacho <chris_camacho@yahoo.com>"
 msgstr ""
-"Copyright &#xA9; 2009-2010\n"
+"Copyright © 2009-2011\n"
 "Giuseppe Penone <giuspen@gmail.com>\n"
 "Chris Camacho <chris_camacho@yahoo.com>"
 
@@ -601,3 +604,4 @@ msgstr "Y"
 #: glade/x-tile.glade.h:62
 msgid "http://www.giuspen.com/x-tile/"
 msgstr "http://www.giuspen.com/x-tile/"
+
