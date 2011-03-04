@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-03-02 18:26+0100\n"
-"PO-Revision-Date: 2010-03-06 20:34+0200\n"
+"PO-Revision-Date: 2011-03-03 11:05+0100\n"
 "Last-Translator: Ludovic Troisi <axalis@cegetel.net>\n"
 "Language-Team: X Tile\n"
 "Language: fr\n"
@@ -17,7 +17,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: x-tile:70 modules/cons.py:256
+#: x-tile:70
+#: modules/cons.py:256
 msgid "_About"
 msgstr "À _propos"
 
@@ -25,9 +26,10 @@ msgstr "À _propos"
 msgid "_Maximize All"
 msgstr "Tout _maximiser"
 
-#: x-tile:72 modules/cons.py:244
+#: x-tile:72
+#: modules/cons.py:244
 msgid "_Invert Tiling Order"
-msgstr ""
+msgstr "_Inverser l'ordre de répartition"
 
 #: x-tile:73
 msgid "Tile All _Quad"
@@ -65,7 +67,8 @@ msgstr "Tout répartir _horizontalement"
 msgid "Tile All _Vertically"
 msgstr "Tout répartir ve_rticalement"
 
-#: x-tile:82 modules/cons.py:243
+#: x-tile:82
+#: modules/cons.py:243
 msgid "U_ndo Tiling"
 msgstr "A_nnuler la répartition"
 
@@ -102,44 +105,40 @@ msgstr "DÉSACTIVÉ"
 msgid "Version %s  -  Exit After Tile: %s"
 msgstr "Version %s  -  Fermer après répartition : %s"
 
-#: modules/core.py:532 modules/core.py:538
-msgid ""
-"The used shortcut is not available when the Preferences Window is opened"
-msgstr ""
-"Le raccourci clavier utilisé n'est pas disponible lorsque la fenêtre de "
-"préférences est ouverte"
+#: modules/core.py:532
+#: modules/core.py:538
+msgid "The used shortcut is not available when the Preferences Window is opened"
+msgstr "Le raccourci clavier utilisé n'est pas disponible lorsque la fenêtre de préférences est ouverte"
 
-#: modules/core.py:610 modules/core.py:618 modules/core.py:626
+#: modules/core.py:610
+#: modules/core.py:618
+#: modules/core.py:626
 msgid "No Row is Selected"
 msgstr "Aucune ligne n'a été sélectionnée"
 
-#: modules/core.py:648 modules/core.py:682
+#: modules/core.py:648
+#: modules/core.py:682
 msgid "No Application Selected!"
 msgstr "Aucune application sélectionnée !"
 
-#: modules/core.py:795 modules/core.py:803 modules/core.py:813
+#: modules/core.py:795
+#: modules/core.py:803
+#: modules/core.py:813
 msgid "No Windows Checked"
 msgstr "Aucune fenêtre n'a été sélectionnée"
 
-#: modules/core.py:842 modules/core.py:855
+#: modules/core.py:842
+#: modules/core.py:855
 msgid "Edit Custom Tile Settings"
 msgstr "Éditer la répartition personnalisée"
 
 #: modules/core.py:971
-msgid ""
-"The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
-"Set'"
-msgstr ""
-"La répartition personnalisée 1 n'est pas définie: Cliquez sur le menu 'Tile-"
-">Configurer la répartition personnalisée 1'"
+msgid "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 Set'"
+msgstr "La répartition personnalisée 1 n'est pas définie: Cliquez sur le menu 'Tile->Configurer la répartition personnalisée 1'"
 
 #: modules/core.py:989
-msgid ""
-"The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
-"Set'"
-msgstr ""
-"La répartition personnalisée 2 n'est pas définie: Cliquez sur le menu 'Tile-"
-">Configurer la répartition personnalisée 2'"
+msgid "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 Set'"
+msgstr "La répartition personnalisée 2 n'est pas définie: Cliquez sur le menu 'Tile->Configurer la répartition personnalisée 2'"
 
 #: modules/cons.py:218
 msgid "_File"
@@ -161,7 +160,8 @@ msgstr "_Répartir"
 msgid "_View"
 msgstr "_Affichage"
 
-#: modules/cons.py:223 modules/cons.py:255
+#: modules/cons.py:223
+#: modules/cons.py:255
 msgid "_Help"
 msgstr "Aid_e"
 
@@ -177,7 +177,8 @@ msgstr "Filtre les lignes"
 msgid "Selected by _Default"
 msgstr "Sélectionnée par _défaut"
 
-#: modules/cons.py:226 glade/x-tile.glade.h:52
+#: modules/cons.py:226
+#: glade/x-tile.glade.h:52
 msgid "Rows to be Selected by Default"
 msgstr "Lignes à être sélectionné par défaut"
 
@@ -259,8 +260,7 @@ msgstr "Répartir en triangle à partir de la _gauche"
 
 #: modules/cons.py:236
 msgid "Tile Triangle Left The Checked Windows"
-msgstr ""
-"Répartit selon un triangle les fenêtres sélectionnées à partir de la gauche"
+msgstr "Répartit selon un triangle les fenêtres sélectionnées à partir de la gauche"
 
 #: modules/cons.py:237
 msgid "Triangle _Right"
@@ -268,8 +268,7 @@ msgstr "Répartir en triangle à partir de la dr_oite"
 
 #: modules/cons.py:237
 msgid "Tile Triangle Right The Checked Windows"
-msgstr ""
-"Répartit selon un triangle les fenêtres sélectionnées à partir de la droite"
+msgstr "Répartit selon un triangle les fenêtres sélectionnées à partir de la droite"
 
 #: modules/cons.py:238
 msgid "Tile _Quad"
@@ -316,9 +315,8 @@ msgid "Undo the Latest Tiling Operation"
 msgstr "Annule la dernière opération de répartition"
 
 #: modules/cons.py:244
-#, fuzzy
 msgid "Invert the Order of the Latest Tiling Operation"
-msgstr "Annule la dernière opération de répartition"
+msgstr "Inverse l'ordre de la dernière opération de répartition"
 
 #: modules/cons.py:245
 msgid "_Maximize Windows"
@@ -348,7 +346,8 @@ msgstr "Ferme les fenêtres sélectionnées"
 msgid "Move _Up"
 msgstr "Déplacer vers le _haut"
 
-#: modules/cons.py:248 glade/x-tile.glade.h:42
+#: modules/cons.py:248
+#: glade/x-tile.glade.h:42
 msgid "Move the Selected Row Up"
 msgstr "Déplace la ligne sélectionnée vers le haut"
 
@@ -356,7 +355,8 @@ msgstr "Déplace la ligne sélectionnée vers le haut"
 msgid "Move _Down"
 msgstr "Déplacer vers le _bas"
 
-#: modules/cons.py:249 glade/x-tile.glade.h:41
+#: modules/cons.py:249
+#: glade/x-tile.glade.h:41
 msgid "Move the Selected Row Down"
 msgstr "Déplace la ligne sélectionnée vers le bas"
 
@@ -364,7 +364,8 @@ msgstr "Déplace la ligne sélectionnée vers le bas"
 msgid "_Remove"
 msgstr "_Supprimer"
 
-#: modules/cons.py:250 glade/x-tile.glade.h:50
+#: modules/cons.py:250
+#: glade/x-tile.glade.h:50
 msgid "Remove the Selected Row"
 msgstr "Supprime la ligne sélectionnée (Retour arrière)"
 
@@ -404,7 +405,8 @@ msgstr "Diminue la taille de la barre d'outils"
 msgid "X Tile Project Home Page"
 msgstr "Page d'accueil de X Tile"
 
-#: modules/cons.py:256 glade/x-tile.glade.h:22
+#: modules/cons.py:256
+#: glade/x-tile.glade.h:22
 msgid "About X Tile"
 msgstr "Informations à propos de X Tile"
 
@@ -466,9 +468,7 @@ msgstr "<b>Mise en page personnalisée</b>"
 
 #: glade/x-tile.glade.h:21
 msgid "A Gnome Applet to Tile the Opened Windows"
-msgstr ""
-"Une applet GNOME pour répartir les fenêtres actives sur l'espace de travail "
-"selon un pavage"
+msgstr "Une applet GNOME pour répartir les fenêtres actives sur l'espace de travail selon un pavage"
 
 #: glade/x-tile.glade.h:23
 msgid "Add Row"
@@ -483,7 +483,6 @@ msgid "Cancel"
 msgstr "Annuler"
 
 #: glade/x-tile.glade.h:26
-#, fuzzy
 msgid ""
 "Chinese Simplified (zh_CN) Khi-yuan Fan <Fan.khiyuan@gmail.com>\n"
 "Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
@@ -495,8 +494,9 @@ msgid ""
 msgstr ""
 "Chinois simplifié (zh_CN) Khi-yuan Fan <Fan.khiyuan@gmail.com>\n"
 "Chinois traditionnel (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
+"Espagnol (es_AR) MeloPixel <melopixel@gmail.com>\n"
 "Français (fr) Ludovic Troisi <axalis@cegetel.net>\n"
-"Allemand (de) J&#xF6;ran Zeller <joeran@zeller.ws>\n"
+"Allemand (de) Jöran Zeller <joeran@zeller.ws>\n"
 "Italien (it) Giuseppe Penone <giuspen@gmail.com>\n"
 "Russe (ru) Andriy Kovtun <kovtunos@yandex.ru>"
 
@@ -505,13 +505,12 @@ msgid "Close"
 msgstr "Fermer"
 
 #: glade/x-tile.glade.h:34
-#, fuzzy
 msgid ""
 "Copyright © 2009-2011\n"
 "Giuseppe Penone <giuspen@gmail.com>\n"
 "Chris Camacho <chris_camacho@yahoo.com>"
 msgstr ""
-"Copyright &#xA9; 2009-2010\n"
+"Copyright © 2009-2011\n"
 "Giuseppe Penone <giuspen@gmail.com>\n"
 "Chris Camacho <chris_camacho@yahoo.com>"
 
@@ -602,3 +601,4 @@ msgstr "Y"
 #: glade/x-tile.glade.h:62
 msgid "http://www.giuspen.com/x-tile/"
 msgstr "http://www.giuspen.com/x-tile/"
+
