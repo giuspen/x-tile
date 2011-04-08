@@ -1,6 +1,0 @@
-#!/bin/sh
-if pidof gnome-panel
-then
-   killall gnome-panel
-fi
-# End automatically added section
