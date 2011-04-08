@@ -20,12 +20,12 @@ configure-stamp:
 
 build: build-stamp
 
-build-stamp: configure-stamp  
+build-stamp: configure-stamp
 	dh_testdir
 
 	touch $@
 
-clean: 
+clean:
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp configure-stamp
@@ -34,7 +34,7 @@ clean:
 	rm -rf debian/x-tile
 	rm -rf debian/x-tile-ng
 
-	dh_clean 
+	dh_clean
 
 install: build
 	dh_testdir
@@ -54,7 +54,7 @@ install: build
 binary-indep: install
 	dh_testdir
 	dh_testroot
-	dh_installchangelogs 
+	dh_installchangelogs
 	dh_installdocs
 	dh_installexamples
 	dh_installman
