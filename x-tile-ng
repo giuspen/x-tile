@@ -74,7 +74,7 @@ if arg == "w":
    x.launch_application()
    x.reload_windows_list()
    gtk.main()
-elif arg in ["z", "i", "v", "h", "u", "d", "l", "r", "1", "2", "q", "m"]:
+elif arg in ["z", "i", "v", "h", "u", "d", "l", "r", "1", "2", "q", "g", "m"]:
    x = core.XTile(core.InfoModel())
    x.launch_application()
    if arg not in ["z", "i"]:
@@ -89,6 +89,7 @@ elif arg in ["z", "i", "v", "h", "u", "d", "l", "r", "1", "2", "q", "m"]:
    elif arg == "l": x.tile_triangle_left()
    elif arg == "r": x.tile_triangle_right()
    elif arg == "q": x.tile_quad()
+   elif arg == "g": x.dialog_grid()
    elif arg == "1": x.tile_custom_1_run()
    elif arg == "2": x.tile_custom_2_run()
    elif arg == "m": x.maximize_checked_windows()
