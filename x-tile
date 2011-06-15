@@ -71,6 +71,7 @@ APPLET_MENU_XML = '<popup name="button3">'\
          + '<menuitem name="All_M" verb="All_M" label="' + _("_Maximize All") + '" pixtype="stock" pixname="Maximize Windows"/>'\
          + '<menuitem name="Invert" verb="Invert" label="' + _("_Invert Tiling Order") + '" pixtype="stock" pixname="Invert Tiling"/>'\
          + '<menuitem name="All_4" verb="All_4" label="' + _("Tile All _Quad") + '" pixtype="stock" pixname="Tile Quad"/>'\
+         + '<menuitem name="All_G" verb="All_G" label="' + _("Tile All _Grid") + '" pixtype="stock" pixname="Tile Grid"/>'\
          + '<menuitem name="All_TD" verb="All_TD" label="' + _("Tile All Triangle _Down") + '" pixtype="stock" pixname="Tile Triangle Down"/>'\
          + '<menuitem name="All_TU" verb="All_TU" label="' + _("Tile All Triangle _Up") + '" pixtype="stock" pixname="Tile Triangle Up"/>'\
          + '<menuitem name="All_TR" verb="All_TR" label="' + _("Tile All Triangle _Right") + '" pixtype="stock" pixname="Tile Triangle Right"/>'\
@@ -173,6 +174,10 @@ class XTileApplet(gnomeapplet.Applet):
       """Just tile Quad all opened windows"""
       self.hide_and_process("x-tile q &")
       
+   def tile_all_grid(self, *args):
+      """Just tile Grid all opened windows"""
+      self.hide_and_process("x-tile g &")
+      
    def tile_all_custom_1(self, *args):
       """Just tile Custom 1 all opened windows"""
       self.hide_and_process("x-tile 1 &")
@@ -210,7 +215,7 @@ if len(sys.argv) == 2:
       x.reload_windows_list()
       gtk.main()
       sys.exit(0)
-   elif arg in ["z", "i", "v", "h", "u", "d", "l", "r", "1", "2", "q", "m"]:
+   elif arg in ["z", "i", "v", "h", "u", "d", "l", "r", "1", "2", "q", "g", "m"]:
       x=core.XTile(core.InfoModel())
       x.launch_application()
       if arg not in ["z", "i"]:
@@ -225,6 +230,7 @@ if len(sys.argv) == 2:
       elif arg == "l": x.tile_triangle_left()
       elif arg == "r": x.tile_triangle_right()
       elif arg == "q": x.tile_quad()
+      elif arg == "g": x.tile_grid()
       elif arg == "1": x.tile_custom_1_run()
       elif arg == "2": x.tile_custom_2_run()
       elif arg == "m": x.maximize_checked_windows()

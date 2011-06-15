@@ -269,7 +269,6 @@ class XTile:
       self.glade.vbox_main.pack_start(self.ui.get_widget("/ToolBar"), False, False)
       self.glade.vbox_main.reorder_child(self.ui.get_widget("/ToolBar"), 1)
       self.ui.get_widget("/ToolBar").set_style(gtk.TOOLBAR_ICONS)
-      support.set_menu_items_toolbar_triangles(self)
       # create a variable pointing to the instance of the InfoModel class
       self.store = store
       # create the view
@@ -424,6 +423,11 @@ class XTile:
             cons.Y2 = glob.monitors_areas[1][1]
             cons.W2 = glob.monitors_areas[1][2]
             cons.H2 = glob.monitors_areas[1][3]
+      # grid parameters
+      grid_rows = self.gconf_client.get_int(cons.GCONF_GRID_ROWS % glob.screen_index)
+      if grid_rows: cons.GRID_ROWS = grid_rows
+      grid_cols = self.gconf_client.get_int(cons.GCONF_GRID_COLS % glob.screen_index)
+      if grid_cols: cons.GRID_COLS = grid_cols
 
       key = self.gconf_client.get_int(cons.GCONF_TOOLBAR_ICON_SIZE % glob.screen_index)
       if key not in cons.ICONS_SIZE: self.gconf_client.set_int(cons.GCONF_TOOLBAR_ICON_SIZE % glob.screen_index, 3)
@@ -757,6 +761,45 @@ class XTile:
       keyname = gtk.gdk.keyval_name(event.keyval)
       if keyname == "Return": self.glade.processadddialog_button_ok.clicked()
    
+   def dialog_grid(self, *args):
+      """Open the Grid Dialog"""
+      dialog = gtk.Dialog(title=_("Grid Details"),
+                                  parent=self.glade.window,
+                                  flags=gtk.DIALOG_MODAL|gtk.DIALOG_DESTROY_WITH_PARENT,
+                                  buttons=(gtk.STOCK_CANCEL, gtk.RESPONSE_REJECT,
+                                  gtk.STOCK_OK, gtk.RESPONSE_ACCEPT) )
+      dialog.set_position(gtk.WIN_POS_CENTER_ON_PARENT)
+      content_area = dialog.get_content_area()
+      hbox_rows = gtk.HBox()
+      label_rows = gtk.Label(_("Rows"))
+      spinbutton_rows = gtk.SpinButton()
+      adj_rows = spinbutton_rows.get_adjustment()
+      adj_rows.set_all(cons.GRID_ROWS, 1, 100, 1, 0, 0)
+      hbox_rows.pack_start(label_rows)
+      hbox_rows.pack_start(spinbutton_rows)
+      hbox_cols = gtk.HBox()
+      label_cols = gtk.Label(_("Columns"))
+      spinbutton_cols = gtk.SpinButton()
+      adj_cols = spinbutton_cols.get_adjustment()
+      adj_cols.set_all(cons.GRID_COLS, 1, 100, 1, 0, 0)
+      hbox_cols.pack_start(label_cols)
+      hbox_cols.pack_start(spinbutton_cols)
+      content_area.pack_start(hbox_rows)
+      content_area.pack_start(hbox_cols)
+      def on_key_press_enter_password_dialog(widget, event):
+         if gtk.gdk.keyval_name(event.keyval) == "Return":
+            button_box = dialog.get_action_area()
+            buttons = button_box.get_children()
+            buttons[0].clicked() # first is the ok button
+      dialog.connect("key_press_event", on_key_press_enter_password_dialog)
+      dialog.show_all()
+      response = dialog.run()
+      cons.GRID_ROWS = int(spinbutton_rows.get_value())
+      cons.GRID_COLS = int(spinbutton_cols.get_value())
+      dialog.destroy()
+      if response != gtk.RESPONSE_ACCEPT: return
+      self.tile_grid()
+
    def quit_application(self, *args):
       """Hide the window"""
       actual_win_size = list(self.glade.window.get_size())
@@ -834,6 +877,13 @@ class XTile:
       self.gconf_client.set_string(cons.GCONF_LATEST_TILING % glob.screen_index, "q")
       checked_windows_list = self.store.get_checked_windows_list(True)
       tilings.tile_quad(checked_windows_list, glob.monitors_areas)
+      self.check_exit_after_tile()
+   
+   def tile_grid(self):
+      """Tile the Checked Windows in a rows by cols grid"""
+      self.gconf_client.set_string(cons.GCONF_LATEST_TILING % glob.screen_index, "g")
+      checked_windows_list = self.store.get_checked_windows_list(True)
+      tilings.tile_grid(cons.GRID_ROWS, cons.GRID_COLS, checked_windows_list, glob.monitors_areas)
       self.check_exit_after_tile()
    
    def tile_custom_1_set(self, *args):
