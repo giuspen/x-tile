@@ -163,8 +163,8 @@ def tile_grid_on_area(rows, cols, windows_list, x, y, w, h):
    step_h = (h / rows)
    step_w = (w / cols)
    for index,checked_window in enumerate(windows_list):
-      xo = step_w*(index%rows)
-      yo = step_h*(index/rows)
+      xo = step_w*(index%cols)
+      yo = step_h*(index/cols)
       support.moveresize(checked_window, x+xo, y+yo, step_w , step_h)
 
 def tile_triangle_up_on_area(windows_list, x, y, w, h):
