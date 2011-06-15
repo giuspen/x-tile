@@ -798,6 +798,8 @@ class XTile:
       cons.GRID_COLS = int(spinbutton_cols.get_value())
       dialog.destroy()
       if response != gtk.RESPONSE_ACCEPT: return
+      self.gconf_client.set_int(cons.GCONF_GRID_ROWS % glob.screen_index, cons.GRID_ROWS)
+      self.gconf_client.set_int(cons.GCONF_GRID_COLS % glob.screen_index, cons.GRID_COLS)
       self.tile_grid()
 
    def quit_application(self, *args):
