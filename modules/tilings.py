@@ -66,6 +66,19 @@ def tile_quad(windows_list, monitors_areas):
                         monitors_areas[1][0], monitors_areas[1][1],
                         monitors_areas[1][2], monitors_areas[1][3])
 
+def tile_grid(rows, cols, windows_list, monitors_areas):
+   """Tile the Given Windows in a rows by cols grid"""
+   number_of_windows = len(windows_list[0])
+   number_of_windows2 = len(windows_list[1])
+   if number_of_windows >= 2:
+      tile_grid_on_area(rows, cols, windows_list[0],
+                        monitors_areas[0][0], monitors_areas[0][1],
+                        monitors_areas[0][2], monitors_areas[0][3])
+   if number_of_windows2 >= 2:
+      tile_grid_on_area(rows, cols, windows_list[1],
+                        monitors_areas[1][0], monitors_areas[1][1],
+                        monitors_areas[1][2], monitors_areas[1][3])
+
 def tile_triangle_up(windows_list, monitors_areas):
    """Tile 3 Windows in Triangle Up Scheme"""
    number_of_windows = len(windows_list[0])
@@ -143,6 +156,16 @@ def tile_quad_on_area(windows_list, x, y, w, h):
       if index > 1: yo = h/2 
       else: yo = 0
       support.moveresize(checked_window, (x + xo), (y + yo), w/2 , h/2)
+
+def tile_grid_on_area(rows, cols, windows_list, x, y, w, h):
+   """Tile the Given Windows Grid on the Given Area"""
+   if len(windows_list) > rows*cols: windows_list = windows_list[0:rows*cols]
+   step_h = (h / rows)
+   step_w = (w / cols)
+   for index,checked_window in enumerate(windows_list):
+      xo = step_w*(index%rows)
+      yo = step_h*(index/rows)
+      support.moveresize(checked_window, x+xo, y+yo, step_w , step_h)
 
 def tile_triangle_up_on_area(windows_list, x, y, w, h):
    """Tile 3 Windows in Triangle Up Scheme on the Given Area"""

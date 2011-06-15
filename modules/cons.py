@@ -28,7 +28,7 @@ import gtk, os
 
 
 APP_NAME = "x-tile"
-VERSION = "1.8.6"
+VERSION = "1.9"
 if os.path.isdir('glade'):
    GLADE_PATH = "glade/"
    ICON_PLACE = "linux/x-tile.svg"
@@ -50,6 +50,8 @@ X2 = 0
 Y2 = 0
 W2 = 10
 H2 = 10
+GRID_ROWS = 2
+GRID_COLS = 2
 
 WINNAMES_BLACKLIST = ["x-nautilus-desktop"]
 
@@ -75,6 +77,7 @@ ICONS_SIZE = {1: gtk.ICON_SIZE_MENU, 2: gtk.ICON_SIZE_SMALL_TOOLBAR, 3: gtk.ICON
 ICONS_FILENAMES = [(GLADE_PATH + 'tile-vertically.svg', 'Tile Vertically'),
                    (GLADE_PATH + 'tile-horizontally.svg', 'Tile Horizontally'),
                    (GLADE_PATH + 'tile-quad.svg', 'Tile Quad'),
+                   (GLADE_PATH + 'tile-grid.svg', 'Tile Grid'),
                    (GLADE_PATH + 'tile-custom-1-set.svg', 'Custom Set 1'),
                    (GLADE_PATH + 'tile-custom-1-exe.svg', 'Custom Exe 1'),
                    (GLADE_PATH + 'tile-custom-2-set.svg', 'Custom Set 2'),
@@ -122,6 +125,8 @@ GCONF_W2 = "/apps/x-tile/%s/w_2"
 GCONF_H2 = "/apps/x-tile/%s/h_2"
 GCONF_OVERRIDE_1 = "/apps/x-tile/%s/override_1"
 GCONF_OVERRIDE_2 = "/apps/x-tile/%s/override_2"
+GCONF_GRID_ROWS = "/apps/x-tile/%s/grid_rows"
+GCONF_GRID_COLS = "/apps/x-tile/%s/grid_cols"
 
 UI_INFO = """
 <ui>
@@ -158,6 +163,7 @@ UI_INFO = """
          <menuitem action='TriangleUp'/>
          <menuitem action='TriangleDown'/>
          <menuitem action='Quad'/>
+         <menuitem action='Grid'/>
          <menuitem action='InverTile'/>
          <separator/>
          <menuitem action='Custom1Set'/>
@@ -192,9 +198,9 @@ UI_INFO = """
       <toolitem action='UnTile'/>
       <toolitem action='Vertically'/>
       <toolitem action='Horizontally'/>
+      <toolitem action='Grid'/>
       <toolitem action='Custom1Exe'/>
       <toolitem action='Custom2Exe'/>
-      <toolitem action='Quad'/>
       <toolitem action='InverTile'/>
       <separator/>
       <toolitem action='Maximize'/>
@@ -236,6 +242,7 @@ def get_entries(inst):
    ( "TriangleLeft", "Tile Triangle Left", _("Triangle _Left"), "<control>Left", _("Tile Triangle Left The Checked Windows"), inst.tile_triangle_left),
    ( "TriangleRight", "Tile Triangle Right", _("Triangle _Right"), "<control>Right", _("Tile Triangle Right The Checked Windows"), inst.tile_triangle_right),
    ( "Quad", "Tile Quad", _("Tile _Quad"), "<control>4", _("Tile into 4 quadrants The Checked Windows"), inst.tile_quad),
+   ( "Grid", "Tile Grid", _("Tile _Grid"), "<control>G", _("Tile into an arbitrary grid The Checked Windows"), inst.dialog_grid),
    ( "Custom1Set", "Custom Set 1", _("Custom Tile 1 _Set"), "<alt>1", _("Edit Custom Tile 1 Settings"), inst.tile_custom_1_set),
    ( "Custom1Exe", "Custom Exe 1", _("Custom Tile _1 Run"), "<control>1", _("Execute Custom Tile 1"), inst.tile_custom_1_run),
    ( "Custom2Set", "Custom Set 2", _("Custom Tile 2 S_et"), "<alt>2", _("Edit Custom Tile 2 Settings"), inst.tile_custom_2_set),
@@ -261,6 +268,7 @@ def get_applet_menu_verbs(inst):
    return [("About", inst.dialog_about),
            ("All_M", inst.maximize_all),
            ("All_4", inst.tile_all_quad),
+           ("All_G", inst.tile_all_grid),
            ("All_TR", inst.tile_all_triangle_right),
            ("All_TL", inst.tile_all_triangle_left),
            ("All_TD", inst.tile_all_triangle_down),
@@ -302,6 +310,8 @@ OPTIONS
    r => tile all opened windows triangle-right
 
    q => quad tile all opened windows
+   
+   g => tile all opened windows in an arbitrary grid
    
    1 => custom tile 1 all opened windows
 
