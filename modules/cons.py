@@ -40,6 +40,8 @@ else:
 
 AVAILABLE_LANGS = ['default', 'de', 'en', 'es_AR', 'fr', 'it', 'ru', 'zh_CN', 'zh_TW']
 
+CMD_LINE_ACTIONS = ["z", "i", "v", "h", "u", "d", "l", "r", "1", "2", "q", "g", "m", "M", "c"]
+
 OVERRIDE_1 = 0
 OVERRIDE_2 = 0
 X1 = 0
@@ -272,7 +274,10 @@ def get_applet_menu_verbs(inst):
    return [
             ("About", inst.dialog_about),
             
+            ("All_C", inst.close_all),
+            ("All_U", inst.unmaximize_all),
             ("All_M", inst.maximize_all),
+            
             ("Invert", inst.invert_tiling),
             
             ("All_4", inst.tile_all_quad),
@@ -305,32 +310,36 @@ DESCRIPTION
 OPTIONS
 
    w => open the x-tile main window without using the panel
-
+   
    z => undo the latest tiling operation
-
+   
    v => tile all opened windows vertically
-
+   
    h => tile all opened windows horizontally
-
+   
    u => tile all opened windows triangle-up
-
+   
    d => tile all opened windows triangle-down
-
+   
    l => tile all opened windows triangle-left
-
+   
    r => tile all opened windows triangle-right
-
+   
    q => quad tile all opened windows
    
    g => tile all opened windows in an arbitrary grid
    
    1 => custom tile 1 all opened windows
-
+   
    2 => custom tile 2 all opened windows
-
+   
    i => invert the order of the latest tiling operation
-
+   
    m => maximize all opened windows
+   
+   M => unmaximize all opened windows
+   
+   c => close all opened windows
 
 SEE ALSO
    http://www.giuspen.com/x-tile
