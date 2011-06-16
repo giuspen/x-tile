@@ -7,72 +7,84 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-02 18:26+0100\n"
+"POT-Creation-Date: 2011-06-16 14:02+0200\n"
 "PO-Revision-Date: 2011-03-03 11:05+0100\n"
 "Last-Translator: Ludovic Troisi <axalis@cegetel.net>\n"
 "Language-Team: X Tile\n"
-"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: x-tile:70
-#: modules/cons.py:256
+#: x-tile:70 modules/cons.py:269
 msgid "_About"
 msgstr "À _propos"
 
-#: x-tile:71
+#: x-tile:72
+#, fuzzy
+msgid "Close All"
+msgstr "Fermer"
+
+#: x-tile:73
+#, fuzzy
+msgid "_Unmaximize All"
+msgstr "Tout _maximiser"
+
+#: x-tile:74
 msgid "_Maximize All"
 msgstr "Tout _maximiser"
 
-#: x-tile:72
-#: modules/cons.py:244
-msgid "_Invert Tiling Order"
-msgstr "_Inverser l'ordre de répartition"
-
-#: x-tile:73
+#: x-tile:76
 msgid "Tile All _Quad"
 msgstr "Tout répartir en _quartiers"
 
-#: x-tile:74
+#: x-tile:78
 msgid "Tile All Triangle _Down"
 msgstr "Tout répartir en triangle à partir du _bas"
 
-#: x-tile:75
+#: x-tile:79
 msgid "Tile All Triangle _Up"
 msgstr "Tout répartir en triangle à partir du h_aut"
 
-#: x-tile:76
+#: x-tile:80
 msgid "Tile All Triangle _Right"
 msgstr "Tout répartir en triangle à partir de la dr_oite"
 
-#: x-tile:77
+#: x-tile:81
 msgid "Tile All Triangle _Left"
 msgstr "Tout répartir en triangle à partir de la _gauche"
 
-#: x-tile:78
+#: x-tile:83
 msgid "Tile All Custom _2"
 msgstr "Tout répartir en personnalisée _2"
 
-#: x-tile:79
+#: x-tile:84
 msgid "Tile All Custom _1"
 msgstr "Tout répartir en personnalisée _1"
 
-#: x-tile:80
+#: x-tile:86
+#, fuzzy
+msgid "Tile All _Grid"
+msgstr "Tout répartir en _quartiers"
+
+#: x-tile:87
 msgid "Tile All _Horizontally"
 msgstr "Tout répartir _horizontalement"
 
-#: x-tile:81
+#: x-tile:88
 msgid "Tile All _Vertically"
 msgstr "Tout répartir ve_rticalement"
 
-#: x-tile:82
-#: modules/cons.py:243
+#: x-tile:90 modules/cons.py:257
+msgid "_Invert Tiling Order"
+msgstr "_Inverser l'ordre de répartition"
+
+#: x-tile:91 modules/cons.py:256
 msgid "U_ndo Tiling"
 msgstr "A_nnuler la répartition"
 
-#: x-tile:101
+#: x-tile:110
 msgid ""
 "X Tile\n"
 "Tile The Windows Upon Your Desktop"
@@ -80,333 +92,356 @@ msgstr ""
 "X Tile\n"
 "Répartit vos fenêtres sur l'espace de travail selon un pavage"
 
-#: modules/core.py:338
+#: modules/core.py:337
 msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr "La nouvelle langue sera chargée une fois X Tile relancé"
 
-#: modules/core.py:471
+#: modules/core.py:475
 msgid "The Size of the Toolbar Icons is already at the Maximum Value"
 msgstr "La taille de la barre d'outils est déjà à sa valeur maximale"
 
-#: modules/core.py:481
+#: modules/core.py:485
 msgid "The Size of the Toolbar Icons is already at the Minimum Value"
 msgstr "La taille de la barre d'outils est déjà à sa valeur minimale"
 
-#: modules/core.py:489
+#: modules/core.py:493
 msgid "ON"
 msgstr "ACTIVÉ"
 
-#: modules/core.py:489
+#: modules/core.py:493
 msgid "OFF"
 msgstr "DÉSACTIVÉ"
 
-#: modules/core.py:490
+#: modules/core.py:494
 #, python-format
 msgid "Version %s  -  Exit After Tile: %s"
 msgstr "Version %s  -  Fermer après répartition : %s"
 
-#: modules/core.py:532
-#: modules/core.py:538
-msgid "The used shortcut is not available when the Preferences Window is opened"
-msgstr "Le raccourci clavier utilisé n'est pas disponible lorsque la fenêtre de préférences est ouverte"
+#: modules/core.py:536 modules/core.py:542
+msgid ""
+"The used shortcut is not available when the Preferences Window is opened"
+msgstr ""
+"Le raccourci clavier utilisé n'est pas disponible lorsque la fenêtre de "
+"préférences est ouverte"
 
-#: modules/core.py:610
-#: modules/core.py:618
-#: modules/core.py:626
+#: modules/core.py:614 modules/core.py:622 modules/core.py:630
 msgid "No Row is Selected"
 msgstr "Aucune ligne n'a été sélectionnée"
 
-#: modules/core.py:648
-#: modules/core.py:682
+#: modules/core.py:652 modules/core.py:686
 msgid "No Application Selected!"
 msgstr "Aucune application sélectionnée !"
 
-#: modules/core.py:795
-#: modules/core.py:803
-#: modules/core.py:813
+#: modules/core.py:766
+msgid "Grid Details"
+msgstr ""
+
+#: modules/core.py:774
+#, fuzzy
+msgid "Rows"
+msgstr "_Ligne"
+
+#: modules/core.py:781
+msgid "Columns"
+msgstr ""
+
+#: modules/core.py:840 modules/core.py:848 modules/core.py:858
 msgid "No Windows Checked"
 msgstr "Aucune fenêtre n'a été sélectionnée"
 
-#: modules/core.py:842
-#: modules/core.py:855
+#: modules/core.py:894 modules/core.py:907
 msgid "Edit Custom Tile Settings"
 msgstr "Éditer la répartition personnalisée"
 
-#: modules/core.py:971
-msgid "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 Set'"
-msgstr "La répartition personnalisée 1 n'est pas définie: Cliquez sur le menu 'Tile->Configurer la répartition personnalisée 1'"
+#: modules/core.py:1023
+msgid ""
+"The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
+"Set'"
+msgstr ""
+"La répartition personnalisée 1 n'est pas définie: Cliquez sur le menu 'Tile-"
+">Configurer la répartition personnalisée 1'"
 
-#: modules/core.py:989
-msgid "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 Set'"
-msgstr "La répartition personnalisée 2 n'est pas définie: Cliquez sur le menu 'Tile->Configurer la répartition personnalisée 2'"
+#: modules/core.py:1041
+msgid ""
+"The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
+"Set'"
+msgstr ""
+"La répartition personnalisée 2 n'est pas définie: Cliquez sur le menu 'Tile-"
+">Configurer la répartition personnalisée 2'"
 
-#: modules/cons.py:218
+#: modules/cons.py:230
 msgid "_File"
 msgstr "_Fichier"
 
-#: modules/cons.py:219
+#: modules/cons.py:231
 msgid "_Edit"
 msgstr "É_dition"
 
-#: modules/cons.py:220
+#: modules/cons.py:232
 msgid "_Row"
 msgstr "_Ligne"
 
-#: modules/cons.py:221
+#: modules/cons.py:233
 msgid "_Tile"
 msgstr "_Répartir"
 
-#: modules/cons.py:222
+#: modules/cons.py:234
 msgid "_View"
 msgstr "_Affichage"
 
-#: modules/cons.py:223
-#: modules/cons.py:255
+#: modules/cons.py:235 modules/cons.py:268
 msgid "_Help"
 msgstr "Aid_e"
 
-#: modules/cons.py:225
+#: modules/cons.py:237
 msgid "_Filter"
 msgstr "_Filtrer"
 
-#: modules/cons.py:225
+#: modules/cons.py:237
 msgid "Filter Rows"
 msgstr "Filtre les lignes"
 
-#: modules/cons.py:226
+#: modules/cons.py:238
 msgid "Selected by _Default"
 msgstr "Sélectionnée par _défaut"
 
-#: modules/cons.py:226
-#: glade/x-tile.glade.h:52
+#: modules/cons.py:238 glade/x-tile.glade.h:52
 msgid "Rows to be Selected by Default"
 msgstr "Lignes à être sélectionné par défaut"
 
-#: modules/cons.py:227
+#: modules/cons.py:239
 msgid "_Reload"
 msgstr "_Recharger"
 
-#: modules/cons.py:227
+#: modules/cons.py:239
 msgid "Reload the Windows List"
 msgstr "Recharge la liste des fenêtres"
 
-#: modules/cons.py:228
+#: modules/cons.py:240
 msgid "_Quit"
 msgstr "_Quitter"
 
-#: modules/cons.py:228
+#: modules/cons.py:240
 msgid "Quit the Application"
 msgstr "Quitte l'application"
 
-#: modules/cons.py:229
+#: modules/cons.py:241
 msgid "_Preferences"
 msgstr "_Préférences"
 
-#: modules/cons.py:229
+#: modules/cons.py:241
 msgid "Open the Preferences Window"
 msgstr "Ouvre la fenêtre de préférences"
 
-#: modules/cons.py:230
+#: modules/cons.py:242
 msgid "Select _All"
 msgstr "_Tout sélectionner"
 
-#: modules/cons.py:230
+#: modules/cons.py:242
 msgid "Select All the Windows in the List"
 msgstr "Sélectionne toutes les fenêtres de la liste"
 
-#: modules/cons.py:231
+#: modules/cons.py:243
 msgid "Deselect A_ll"
 msgstr "Tout _désélectionner"
 
-#: modules/cons.py:231
+#: modules/cons.py:243
 msgid "Deselect All the Windows in the List"
 msgstr "Désélectionne toutes les fenêtres de la liste"
 
-#: modules/cons.py:232
+#: modules/cons.py:244
 msgid "Tile _Vertically"
 msgstr "Répartir _verticalement"
 
-#: modules/cons.py:232
+#: modules/cons.py:244
 msgid "Tile Vertically The Checked Windows"
 msgstr "Répartit verticalement les fenêtres sélectionnées"
 
-#: modules/cons.py:233
+#: modules/cons.py:245
 msgid "Tile _Horizontally"
 msgstr "Répartir _horizontalement"
 
-#: modules/cons.py:233
+#: modules/cons.py:245
 msgid "Tile Horizontally The Checked Windows"
 msgstr "Répartit horizontalement les fenêtres sélectionnées"
 
-#: modules/cons.py:234
+#: modules/cons.py:246
 msgid "_Triangle Up"
 msgstr "Répartir en triangle à partir du h_aut"
 
-#: modules/cons.py:234
+#: modules/cons.py:246
 msgid "Tile Triangle Up The Checked Windows"
 msgstr "Répartit selon un triangle les fenêtres sélectionnées à partir du haut"
 
-#: modules/cons.py:235
+#: modules/cons.py:247
 msgid "Triangle _Down"
 msgstr "Répartir en triangle à partir du _bas"
 
-#: modules/cons.py:235
+#: modules/cons.py:247
 msgid "Tile Triangle Down The Checked Windows"
 msgstr "Répartit selon un triangle les fenêtres sélectionnées à partir du bas"
 
-#: modules/cons.py:236
+#: modules/cons.py:248
 msgid "Triangle _Left"
 msgstr "Répartir en triangle à partir de la _gauche"
 
-#: modules/cons.py:236
+#: modules/cons.py:248
 msgid "Tile Triangle Left The Checked Windows"
-msgstr "Répartit selon un triangle les fenêtres sélectionnées à partir de la gauche"
+msgstr ""
+"Répartit selon un triangle les fenêtres sélectionnées à partir de la gauche"
 
-#: modules/cons.py:237
+#: modules/cons.py:249
 msgid "Triangle _Right"
 msgstr "Répartir en triangle à partir de la dr_oite"
 
-#: modules/cons.py:237
+#: modules/cons.py:249
 msgid "Tile Triangle Right The Checked Windows"
-msgstr "Répartit selon un triangle les fenêtres sélectionnées à partir de la droite"
+msgstr ""
+"Répartit selon un triangle les fenêtres sélectionnées à partir de la droite"
 
-#: modules/cons.py:238
+#: modules/cons.py:250
 msgid "Tile _Quad"
 msgstr "Répartir en _quartiers"
 
-#: modules/cons.py:238
+#: modules/cons.py:250
 msgid "Tile into 4 quadrants The Checked Windows"
 msgstr "Répartit selon quatre quartiers les fenêtres sélectionnées"
 
-#: modules/cons.py:239
+#: modules/cons.py:251
+#, fuzzy
+msgid "Tile _Grid"
+msgstr "Répartir en _quartiers"
+
+#: modules/cons.py:251
+#, fuzzy
+msgid "Tile into an arbitrary grid The Checked Windows"
+msgstr "Répartit selon quatre quartiers les fenêtres sélectionnées"
+
+#: modules/cons.py:252
 msgid "Custom Tile 1 _Set"
 msgstr "_Configurer la répartition personnalisée 1"
 
-#: modules/cons.py:239
+#: modules/cons.py:252
 msgid "Edit Custom Tile 1 Settings"
 msgstr "Paramétrages de la répartition personnalisée 1"
 
-#: modules/cons.py:240
+#: modules/cons.py:253
 msgid "Custom Tile _1 Run"
 msgstr "Lancer la répartition personnalisée 1"
 
-#: modules/cons.py:240
+#: modules/cons.py:253
 msgid "Execute Custom Tile 1"
 msgstr "Exécuter la répartition personnalisée 1"
 
-#: modules/cons.py:241
+#: modules/cons.py:254
 msgid "Custom Tile 2 S_et"
 msgstr "C_onfigurer la répartition personnalisée 2"
 
-#: modules/cons.py:241
+#: modules/cons.py:254
 msgid "Edit Custom Tile 2 Settings"
 msgstr "Paramétrages de la répartition personnalisée 1"
 
-#: modules/cons.py:242
+#: modules/cons.py:255
 msgid "Custom Tile _2 Run"
 msgstr "Lancer la répartition personnalisée 2"
 
-#: modules/cons.py:242
+#: modules/cons.py:255
 msgid "Execute Custom Tile 2"
 msgstr "Exécuter la répartition personnalisée 2"
 
-#: modules/cons.py:243
+#: modules/cons.py:256
 msgid "Undo the Latest Tiling Operation"
 msgstr "Annule la dernière opération de répartition"
 
-#: modules/cons.py:244
+#: modules/cons.py:257
 msgid "Invert the Order of the Latest Tiling Operation"
 msgstr "Inverse l'ordre de la dernière opération de répartition"
 
-#: modules/cons.py:245
+#: modules/cons.py:258
 msgid "_Maximize Windows"
 msgstr "_Maximiser les fenêtres"
 
-#: modules/cons.py:245
+#: modules/cons.py:258
 msgid "Maximize The Checked Windows"
 msgstr "Maximise les fenêtres sélectionnées"
 
-#: modules/cons.py:246
+#: modules/cons.py:259
 msgid "_Unmaximize Windows"
 msgstr "_Restaurer les fenêtres"
 
-#: modules/cons.py:246
+#: modules/cons.py:259
 msgid "Unmaximize The Checked Windows"
 msgstr "Restaure les fenêtres sélectionnées"
 
-#: modules/cons.py:247
+#: modules/cons.py:260
 msgid "_Close Windows"
 msgstr "_Fermer les fenêtres"
 
-#: modules/cons.py:247
+#: modules/cons.py:260
 msgid "Close The Checked Windows"
 msgstr "Ferme les fenêtres sélectionnées"
 
-#: modules/cons.py:248
+#: modules/cons.py:261
 msgid "Move _Up"
 msgstr "Déplacer vers le _haut"
 
-#: modules/cons.py:248
-#: glade/x-tile.glade.h:42
+#: modules/cons.py:261 glade/x-tile.glade.h:42
 msgid "Move the Selected Row Up"
 msgstr "Déplace la ligne sélectionnée vers le haut"
 
-#: modules/cons.py:249
+#: modules/cons.py:262
 msgid "Move _Down"
 msgstr "Déplacer vers le _bas"
 
-#: modules/cons.py:249
-#: glade/x-tile.glade.h:41
+#: modules/cons.py:262 glade/x-tile.glade.h:41
 msgid "Move the Selected Row Down"
 msgstr "Déplace la ligne sélectionnée vers le bas"
 
-#: modules/cons.py:250
+#: modules/cons.py:263
 msgid "_Remove"
 msgstr "_Supprimer"
 
-#: modules/cons.py:250
-#: glade/x-tile.glade.h:50
+#: modules/cons.py:263 glade/x-tile.glade.h:50
 msgid "Remove the Selected Row"
 msgstr "Supprime la ligne sélectionnée (Retour arrière)"
 
-#: modules/cons.py:251
+#: modules/cons.py:264
 msgid "Show/Hide _Vertical Buttons"
 msgstr "Afficher/Masquer la barre de boutons _verticale"
 
-#: modules/cons.py:251
+#: modules/cons.py:264
 msgid "Toggle Show/Hide Vertical Buttons"
 msgstr "Affiche/Masque la barre de boutons verticale"
 
-#: modules/cons.py:252
+#: modules/cons.py:265
 msgid "Show/Hide _Toolbar"
 msgstr "Afficher/Masquer la barre d'_outils"
 
-#: modules/cons.py:252
+#: modules/cons.py:265
 msgid "Toggle Show/Hide Toolbar"
 msgstr "Affiche/Masque la barre d'outils"
 
-#: modules/cons.py:253
+#: modules/cons.py:266
 msgid "_Increase Toolbar Icons Size"
 msgstr "_Augmenter la taille de la barre d'outils"
 
-#: modules/cons.py:253
+#: modules/cons.py:266
 msgid "Increase the Size of the Toolbar Icons"
 msgstr "Augmente la taille de la barre d'outils"
 
-#: modules/cons.py:254
+#: modules/cons.py:267
 msgid "_Decrease Toolbar Icons Size"
 msgstr "_Diminuer la taille de la barre d'outils"
 
-#: modules/cons.py:254
+#: modules/cons.py:267
 msgid "Decrease the Size of the Toolbar Icons"
 msgstr "Diminue la taille de la barre d'outils"
 
-#: modules/cons.py:255
+#: modules/cons.py:268
 msgid "X Tile Project Home Page"
 msgstr "Page d'accueil de X Tile"
 
-#: modules/cons.py:256
-#: glade/x-tile.glade.h:22
+#: modules/cons.py:269 glade/x-tile.glade.h:22
 msgid "About X Tile"
 msgstr "Informations à propos de X Tile"
 
@@ -468,7 +503,9 @@ msgstr "<b>Mise en page personnalisée</b>"
 
 #: glade/x-tile.glade.h:21
 msgid "A Gnome Applet to Tile the Opened Windows"
-msgstr "Une applet GNOME pour répartir les fenêtres actives sur l'espace de travail selon un pavage"
+msgstr ""
+"Une applet GNOME pour répartir les fenêtres actives sur l'espace de travail "
+"selon un pavage"
 
 #: glade/x-tile.glade.h:23
 msgid "Add Row"
@@ -601,4 +638,3 @@ msgstr "Y"
 #: glade/x-tile.glade.h:62
 msgid "http://www.giuspen.com/x-tile/"
 msgstr "http://www.giuspen.com/x-tile/"
-
