@@ -69,6 +69,8 @@ factory.add_default()
 APPLET_MENU_XML = '<popup name="button3">'\
          + '<menuitem name="About" verb="About" label="' + _("_About") + '" pixtype="stock" pixname="gtk-about"/>'\
          + '<separator/>'\
+         + '<menuitem name="All_C" verb="All_C" label="' + _("Close All") + '" pixtype="stock" pixname="Close Windows"/>'\
+         + '<menuitem name="All_U" verb="All_U" label="' + _("_Unmaximize All") + '" pixtype="stock" pixname="Unmaximize Windows"/>'\
          + '<menuitem name="All_M" verb="All_M" label="' + _("_Maximize All") + '" pixtype="stock" pixname="Maximize Windows"/>'\
          + '<separator/>'\
          + '<menuitem name="Invert" verb="Invert" label="' + _("_Invert Tiling Order") + '" pixtype="stock" pixname="Invert Tiling"/>'\
@@ -196,6 +198,14 @@ class XTileApplet(gnomeapplet.Applet):
    def maximize_all(self, *args):
       """Maximize all opened windows"""
       self.hide_and_process("x-tile m &")
+   
+   def unmaximize_all(self, *args):
+      """Unmaximize all opened windows"""
+      self.hide_and_process("x-tile M &")
+   
+   def close_all(self, *args):
+      """Close all opened windows"""
+      self.hide_and_process("x-tile c &")
       
    def dialog_about(self, *args):
       """Show the About Dialog and hide it when a button is pressed"""
@@ -222,7 +232,7 @@ if len(sys.argv) == 2:
       x.reload_windows_list()
       gtk.main()
       sys.exit(0)
-   elif arg in ["z", "i", "v", "h", "u", "d", "l", "r", "1", "2", "q", "g", "m"]:
+   elif arg in cons.CMD_LINE_ACTIONS:
       x=core.XTile(core.InfoModel())
       x.launch_application()
       if arg not in ["z", "i"]:
@@ -241,6 +251,8 @@ if len(sys.argv) == 2:
       elif arg == "1": x.tile_custom_1_run()
       elif arg == "2": x.tile_custom_2_run()
       elif arg == "m": x.maximize_checked_windows()
+      elif arg == "M": x.unmaximize_checked_windows()
+      elif arg == "c": x.close_checked_windows()
       sys.exit(0)
    elif arg == "dbg":
       # the applet is reproduced in a little window
