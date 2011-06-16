@@ -156,20 +156,24 @@ UI_INFO = """
       
       <menu action='TileMenu'>
          <menuitem action='UnTile'/>
+         <separator/>
          <menuitem action='Vertically'/>
          <menuitem action='Horizontally'/>
-         <menuitem action='TriangleLeft'/>
-         <menuitem action='TriangleRight'/>
-         <menuitem action='TriangleUp'/>
-         <menuitem action='TriangleDown'/>
-         <menuitem action='Quad'/>
          <menuitem action='Grid'/>
-         <menuitem action='InverTile'/>
          <separator/>
          <menuitem action='Custom1Set'/>
          <menuitem action='Custom2Set'/>
          <menuitem action='Custom1Exe'/>
          <menuitem action='Custom2Exe'/>
+         <separator/>
+         <menuitem action='TriangleLeft'/>
+         <menuitem action='TriangleRight'/>
+         <menuitem action='TriangleUp'/>
+         <menuitem action='TriangleDown'/>
+         <separator/>
+         <menuitem action='Quad'/>
+         <separator/>
+         <menuitem action='InverTile'/>
          <separator/>
          <menuitem action='Maximize'/>
          <menuitem action='Unmaximize'/>
@@ -265,20 +269,27 @@ def get_entries(inst):
 
 def get_applet_menu_verbs(inst):
    """Returns the Menu Verbs Given the Class Instance"""
-   return [("About", inst.dialog_about),
-           ("All_M", inst.maximize_all),
-           ("All_4", inst.tile_all_quad),
-           ("All_G", inst.tile_all_grid),
-           ("All_TR", inst.tile_all_triangle_right),
-           ("All_TL", inst.tile_all_triangle_left),
-           ("All_TD", inst.tile_all_triangle_down),
-           ("All_TU", inst.tile_all_triangle_up),
-           ("All_C2", inst.tile_all_custom_2),
-           ("All_C1", inst.tile_all_custom_1),
-           ("All_H", inst.tile_all_horizontally),
-           ("All_V", inst.tile_all_vertically),
-           ("Undo", inst.undo_tiling),
-           ("Invert", inst.invert_tiling)]
+   return [
+            ("About", inst.dialog_about),
+            
+            ("All_M", inst.maximize_all),
+            ("Invert", inst.invert_tiling),
+            
+            ("All_4", inst.tile_all_quad),
+            ("All_TR", inst.tile_all_triangle_right),
+            ("All_TL", inst.tile_all_triangle_left),
+            ("All_TD", inst.tile_all_triangle_down),
+            ("All_TU", inst.tile_all_triangle_up),
+            
+            ("All_C2", inst.tile_all_custom_2),
+            ("All_C1", inst.tile_all_custom_1),
+            
+            ("All_G", inst.tile_all_grid),
+            ("All_H", inst.tile_all_horizontally),
+            ("All_V", inst.tile_all_vertically),
+            
+            ("Undo", inst.undo_tiling),
+           ]
 
 HELP_TEXT = """
 
