@@ -302,7 +302,7 @@ NAME
    X Tile - Tile the Windows upon your Desktop
 
 SYNOPSIS
-   x-tile OPTION
+   x-tile OPTION [grid rows] [grid columns]
 
 DESCRIPTION
    This manual page briefly documents the command line arguments
@@ -327,7 +327,7 @@ OPTIONS
    
    q => quad tile all opened windows
    
-   g => tile all opened windows in an arbitrary grid
+   g => tile all opened windows in a grid having number of rows and columns the given arguments
    
    1 => custom tile 1 all opened windows
    

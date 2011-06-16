@@ -246,7 +246,14 @@ if len(sys.argv) == 2:
       elif arg == "l": x.tile_triangle_left()
       elif arg == "r": x.tile_triangle_right()
       elif arg == "q": x.tile_quad()
-      elif arg == "g": x.dialog_grid()
+      elif arg == "g":
+      if len(sys.argv) >= 4:
+         try:
+            cons.GRID_ROWS = int(sys.argv[2])
+            cons.GRID_COLS = int(sys.argv[3])
+            x.tile_grid()
+         except: print "bad arguments"
+      else: x.dialog_grid()
       elif arg == "1": x.tile_custom_1_run()
       elif arg == "2": x.tile_custom_2_run()
       elif arg == "m": x.maximize_checked_windows()
