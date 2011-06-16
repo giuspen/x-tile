@@ -73,8 +73,6 @@ APPLET_MENU_XML = '<popup name="button3">'\
          + '<menuitem name="All_U" verb="All_U" label="' + _("_Unmaximize All") + '" pixtype="stock" pixname="Unmaximize Windows"/>'\
          + '<menuitem name="All_M" verb="All_M" label="' + _("_Maximize All") + '" pixtype="stock" pixname="Maximize Windows"/>'\
          + '<separator/>'\
-         + '<menuitem name="Invert" verb="Invert" label="' + _("_Invert Tiling Order") + '" pixtype="stock" pixname="Invert Tiling"/>'\
-         + '<separator/>'\
          + '<menuitem name="All_4" verb="All_4" label="' + _("Tile All _Quad") + '" pixtype="stock" pixname="Tile Quad"/>'\
          + '<separator/>'\
          + '<menuitem name="All_TD" verb="All_TD" label="' + _("Tile All Triangle _Down") + '" pixtype="stock" pixname="Tile Triangle Down"/>'\
@@ -89,6 +87,7 @@ APPLET_MENU_XML = '<popup name="button3">'\
          + '<menuitem name="All_H" verb="All_H" label="' + _("Tile All _Horizontally") + '" pixtype="stock" pixname="Tile Horizontally"/>'\
          + '<menuitem name="All_V" verb="All_V" label="' + _("Tile All _Vertically") + '" pixtype="stock" pixname="Tile Vertically"/>'\
          + '<separator/>'\
+         + '<menuitem name="Invert" verb="Invert" label="' + _("_Invert Tiling Order") + '" pixtype="stock" pixname="Invert Tiling"/>'\
          + '<menuitem name="Undo" verb="Undo" label="' + _("U_ndo Tiling") + '" pixtype="stock" pixname="gtk-undo"/>'\
          +'</popup>'
 

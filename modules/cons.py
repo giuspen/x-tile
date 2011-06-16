@@ -158,6 +158,7 @@ UI_INFO = """
       
       <menu action='TileMenu'>
          <menuitem action='UnTile'/>
+         <menuitem action='InverTile'/>
          <separator/>
          <menuitem action='Vertically'/>
          <menuitem action='Horizontally'/>
@@ -174,8 +175,6 @@ UI_INFO = """
          <menuitem action='TriangleDown'/>
          <separator/>
          <menuitem action='Quad'/>
-         <separator/>
-         <menuitem action='InverTile'/>
          <separator/>
          <menuitem action='Maximize'/>
          <menuitem action='Unmaximize'/>
@@ -202,12 +201,13 @@ UI_INFO = """
       <toolitem action='Reload'/>
       <separator/>
       <toolitem action='UnTile'/>
+      <toolitem action='InverTile'/>
+      <separator/>
       <toolitem action='Vertically'/>
       <toolitem action='Horizontally'/>
       <toolitem action='Grid'/>
       <toolitem action='Custom1Exe'/>
       <toolitem action='Custom2Exe'/>
-      <toolitem action='InverTile'/>
       <separator/>
       <toolitem action='Maximize'/>
       <toolitem action='Unmaximize'/>
