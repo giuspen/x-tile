@@ -2,68 +2,83 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-02 18:26+0100\n"
+"POT-Creation-Date: 2011-06-16 14:02+0200\n"
 "PO-Revision-Date: 2011-03-03 22:31+0800\n"
 "Last-Translator: Khi-yuan Fan <Fan.Khiyuan@gmail.com>\n"
 "Language-Team: zh_CN <Fan.khiyuan@gmail.com>\\nMIME-Version: 1.0\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 
-#: x-tile:70 modules/cons.py:256
+#: x-tile:70 modules/cons.py:269
 msgid "_About"
 msgstr "关于 (_A)"
 
-#: x-tile:71
+#: x-tile:72
+#, fuzzy
+msgid "Close All"
+msgstr "关闭"
+
+#: x-tile:73
+#, fuzzy
+msgid "_Unmaximize All"
+msgstr "全部最大化 (_M)"
+
+#: x-tile:74
 msgid "_Maximize All"
 msgstr "全部最大化 (_M)"
 
-#: x-tile:72 modules/cons.py:244
-msgid "_Invert Tiling Order"
-msgstr "倒置排列次序(_I)"
-
-#: x-tile:73
+#: x-tile:76
 msgid "Tile All _Quad"
 msgstr "平铺四个窗口 (_Q)"
 
-#: x-tile:74
+#: x-tile:78
 msgid "Tile All Triangle _Down"
 msgstr "平铺三个窗口，下边最大 (_D)"
 
-#: x-tile:75
+#: x-tile:79
 msgid "Tile All Triangle _Up"
 msgstr "平铺三个窗口，上边最大 (_U)"
 
-#: x-tile:76
+#: x-tile:80
 msgid "Tile All Triangle _Right"
 msgstr "平铺三个窗口，右边最大 (_R)"
 
-#: x-tile:77
+#: x-tile:81
 msgid "Tile All Triangle _Left"
 msgstr "平铺三个窗口，左边最大 (_L)"
 
-#: x-tile:78
+#: x-tile:83
 msgid "Tile All Custom _2"
 msgstr "平铺所有自定2 (_2)"
 
-#: x-tile:79
+#: x-tile:84
 msgid "Tile All Custom _1"
 msgstr "平铺所有自定1 (_1)"
 
-#: x-tile:80
+#: x-tile:86
+#, fuzzy
+msgid "Tile All _Grid"
+msgstr "平铺四个窗口 (_Q)"
+
+#: x-tile:87
 msgid "Tile All _Horizontally"
 msgstr "水平排列所有窗口 (_H)"
 
-#: x-tile:81
+#: x-tile:88
 msgid "Tile All _Vertically"
 msgstr "垂直排列全部窗口 (_V)"
 
-#: x-tile:82 modules/cons.py:243
+#: x-tile:90 modules/cons.py:257
+msgid "_Invert Tiling Order"
+msgstr "倒置排列次序(_I)"
+
+#: x-tile:91 modules/cons.py:256
 msgid "U_ndo Tiling"
 msgstr "撤销排列 (_N)"
 
-#: x-tile:101
+#: x-tile:110
 msgid ""
 "X Tile\n"
 "Tile The Windows Upon Your Desktop"
@@ -71,325 +86,348 @@ msgstr ""
 "X Tile\n"
 "在你的桌面排列窗口"
 
-#: modules/core.py:338
+#: modules/core.py:337
 msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr "新语言将在重启 X Tile 后生效。"
 
-#: modules/core.py:471
+#: modules/core.py:475
 msgid "The Size of the Toolbar Icons is already at the Maximum Value"
 msgstr "工具栏图标的尺寸已经是最大的了。"
 
-#: modules/core.py:481
+#: modules/core.py:485
 msgid "The Size of the Toolbar Icons is already at the Minimum Value"
 msgstr "工具栏图标的尺寸已经是最小的了。"
 
-#: modules/core.py:489
+#: modules/core.py:493
 msgid "ON"
 msgstr "ON"
 
-#: modules/core.py:489
+#: modules/core.py:493
 msgid "OFF"
 msgstr "OFF"
 
-#: modules/core.py:490
+#: modules/core.py:494
 #, python-format
 msgid "Version %s  -  Exit After Tile: %s"
 msgstr "版本:%s  - 在排列后退出: %s"
 
-#: modules/core.py:532 modules/core.py:538
+#: modules/core.py:536 modules/core.py:542
 msgid ""
 "The used shortcut is not available when the Preferences Window is opened"
 msgstr "当首选项窗口开启时，使用的快捷方式无效。"
 
-#: modules/core.py:610 modules/core.py:618 modules/core.py:626
+#: modules/core.py:614 modules/core.py:622 modules/core.py:630
 msgid "No Row is Selected"
 msgstr "没有选定任何列"
 
-#: modules/core.py:648 modules/core.py:682
+#: modules/core.py:652 modules/core.py:686
 msgid "No Application Selected!"
 msgstr "没有选择应用程序!"
 
-#: modules/core.py:795 modules/core.py:803 modules/core.py:813
+#: modules/core.py:766
+msgid "Grid Details"
+msgstr ""
+
+#: modules/core.py:774
+#, fuzzy
+msgid "Rows"
+msgstr "列(_R)"
+
+#: modules/core.py:781
+msgid "Columns"
+msgstr ""
+
+#: modules/core.py:840 modules/core.py:848 modules/core.py:858
 msgid "No Windows Checked"
 msgstr "没有选择窗口"
 
-#: modules/core.py:842 modules/core.py:855
+#: modules/core.py:894 modules/core.py:907
 msgid "Edit Custom Tile Settings"
 msgstr "编辑自定排列设定"
 
-#: modules/core.py:971
+#: modules/core.py:1023
 msgid ""
 "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
 "Set'"
 msgstr "自定排列1尚未设置：点击菜单 '排列->自定排列1' 进行设置。"
 
-#: modules/core.py:989
+#: modules/core.py:1041
 msgid ""
 "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
 "Set'"
 msgstr "自定排列2尚未设置：点击菜单 '排列->自定排列2' 进行设置。"
 
-#: modules/cons.py:218
+#: modules/cons.py:230
 msgid "_File"
 msgstr "文件 (_F)"
 
-#: modules/cons.py:219
+#: modules/cons.py:231
 msgid "_Edit"
 msgstr "编辑 (_E)"
 
-#: modules/cons.py:220
+#: modules/cons.py:232
 msgid "_Row"
 msgstr "列(_R)"
 
-#: modules/cons.py:221
+#: modules/cons.py:233
 msgid "_Tile"
 msgstr "排列 (_T)"
 
-#: modules/cons.py:222
+#: modules/cons.py:234
 msgid "_View"
 msgstr "查看 (_V)"
 
-#: modules/cons.py:223 modules/cons.py:255
+#: modules/cons.py:235 modules/cons.py:268
 msgid "_Help"
 msgstr "帮助 (_H)"
 
-#: modules/cons.py:225
+#: modules/cons.py:237
 msgid "_Filter"
 msgstr "筛选 (_F)"
 
-#: modules/cons.py:225
+#: modules/cons.py:237
 msgid "Filter Rows"
 msgstr "过滤列"
 
-#: modules/cons.py:226
+#: modules/cons.py:238
 msgid "Selected by _Default"
 msgstr "预设选定 (_D)"
 
-#: modules/cons.py:226 glade/x-tile.glade.h:52
+#: modules/cons.py:238 glade/x-tile.glade.h:52
 msgid "Rows to be Selected by Default"
 msgstr "预设选定的列"
 
-#: modules/cons.py:227
+#: modules/cons.py:239
 msgid "_Reload"
 msgstr "重载"
 
-#: modules/cons.py:227
+#: modules/cons.py:239
 msgid "Reload the Windows List"
 msgstr "重新载入窗口列表"
 
-#: modules/cons.py:228
+#: modules/cons.py:240
 msgid "_Quit"
 msgstr "退出 (_Q)"
 
-#: modules/cons.py:228
+#: modules/cons.py:240
 msgid "Quit the Application"
 msgstr "退出应用程序"
 
-#: modules/cons.py:229
+#: modules/cons.py:241
 msgid "_Preferences"
 msgstr "首选项 (_P)"
 
-#: modules/cons.py:229
+#: modules/cons.py:241
 msgid "Open the Preferences Window"
 msgstr "打开首选项设置窗口"
 
-#: modules/cons.py:230
+#: modules/cons.py:242
 msgid "Select _All"
 msgstr "全选 (_A)"
 
-#: modules/cons.py:230
+#: modules/cons.py:242
 msgid "Select All the Windows in the List"
 msgstr "全选列表內窗口"
 
-#: modules/cons.py:231
+#: modules/cons.py:243
 msgid "Deselect A_ll"
 msgstr "取消全选 (_L)"
 
-#: modules/cons.py:231
+#: modules/cons.py:243
 msgid "Deselect All the Windows in the List"
 msgstr "取消选择列表上所有窗口"
 
-#: modules/cons.py:232
+#: modules/cons.py:244
 msgid "Tile _Vertically"
 msgstr "垂直排列 (_V)"
 
-#: modules/cons.py:232
+#: modules/cons.py:244
 msgid "Tile Vertically The Checked Windows"
 msgstr "垂直排列选定的窗口"
 
-#: modules/cons.py:233
+#: modules/cons.py:245
 msgid "Tile _Horizontally"
 msgstr "水平排列 (_H)"
 
-#: modules/cons.py:233
+#: modules/cons.py:245
 msgid "Tile Horizontally The Checked Windows"
 msgstr "水平排列选定的窗口"
 
-#: modules/cons.py:234
+#: modules/cons.py:246
 msgid "_Triangle Up"
 msgstr "三分，上边最大 (_T)"
 
-#: modules/cons.py:234
+#: modules/cons.py:246
 msgid "Tile Triangle Up The Checked Windows"
 msgstr "平铺三个选定的窗口，上边最大"
 
-#: modules/cons.py:235
+#: modules/cons.py:247
 msgid "Triangle _Down"
 msgstr "三分，下边最大 (_D)"
 
-#: modules/cons.py:235
+#: modules/cons.py:247
 msgid "Tile Triangle Down The Checked Windows"
 msgstr "平铺三个选定的窗口，下边最大"
 
-#: modules/cons.py:236
+#: modules/cons.py:248
 msgid "Triangle _Left"
 msgstr "三分，左边最大 (_L)"
 
-#: modules/cons.py:236
+#: modules/cons.py:248
 msgid "Tile Triangle Left The Checked Windows"
 msgstr "平铺三个选定的窗口，左边最大"
 
-#: modules/cons.py:237
+#: modules/cons.py:249
 msgid "Triangle _Right"
 msgstr "三分，右边最大 (_R)"
 
-#: modules/cons.py:237
+#: modules/cons.py:249
 msgid "Tile Triangle Right The Checked Windows"
 msgstr "平铺三个选定的窗口，右边最大"
 
-#: modules/cons.py:238
+#: modules/cons.py:250
 msgid "Tile _Quad"
 msgstr "四等分 (_Q)"
 
-#: modules/cons.py:238
+#: modules/cons.py:250
 msgid "Tile into 4 quadrants The Checked Windows"
 msgstr "将选定窗口平铺到四个象限"
 
-#: modules/cons.py:239
+#: modules/cons.py:251
+#, fuzzy
+msgid "Tile _Grid"
+msgstr "四等分 (_Q)"
+
+#: modules/cons.py:251
+#, fuzzy
+msgid "Tile into an arbitrary grid The Checked Windows"
+msgstr "将选定窗口平铺到四个象限"
+
+#: modules/cons.py:252
 msgid "Custom Tile 1 _Set"
 msgstr "自定义排列1 (_S)"
 
-#: modules/cons.py:239
+#: modules/cons.py:252
 msgid "Edit Custom Tile 1 Settings"
 msgstr "编辑自定排列1设定"
 
-#: modules/cons.py:240
+#: modules/cons.py:253
 msgid "Custom Tile _1 Run"
 msgstr "运行自定排列1 (_1)"
 
-#: modules/cons.py:240
+#: modules/cons.py:253
 msgid "Execute Custom Tile 1"
 msgstr "运行自定排列1"
 
-#: modules/cons.py:241
+#: modules/cons.py:254
 msgid "Custom Tile 2 S_et"
 msgstr "自定义排列2 (_E)"
 
-#: modules/cons.py:241
+#: modules/cons.py:254
 msgid "Edit Custom Tile 2 Settings"
 msgstr "编辑自定排列2设定"
 
-#: modules/cons.py:242
+#: modules/cons.py:255
 msgid "Custom Tile _2 Run"
 msgstr "运行自定排列2 (_2)"
 
-#: modules/cons.py:242
+#: modules/cons.py:255
 msgid "Execute Custom Tile 2"
 msgstr "运行自定排列2"
 
-#: modules/cons.py:243
+#: modules/cons.py:256
 msgid "Undo the Latest Tiling Operation"
 msgstr "撤消最后一次排列操作"
 
-#: modules/cons.py:244
+#: modules/cons.py:257
 msgid "Invert the Order of the Latest Tiling Operation"
 msgstr "倒置最后一次排列操作"
 
-#: modules/cons.py:245
+#: modules/cons.py:258
 msgid "_Maximize Windows"
 msgstr "最大化窗口 (_M)"
 
-#: modules/cons.py:245
+#: modules/cons.py:258
 msgid "Maximize The Checked Windows"
 msgstr "最大化选定窗口"
 
-#: modules/cons.py:246
+#: modules/cons.py:259
 msgid "_Unmaximize Windows"
 msgstr "取消窗口最大化 (_U)"
 
-#: modules/cons.py:246
+#: modules/cons.py:259
 msgid "Unmaximize The Checked Windows"
 msgstr "取消选定窗口最大化"
 
-#: modules/cons.py:247
+#: modules/cons.py:260
 msgid "_Close Windows"
 msgstr "关闭窗口 (_C)"
 
-#: modules/cons.py:247
+#: modules/cons.py:260
 msgid "Close The Checked Windows"
 msgstr "关闭选定窗口"
 
-#: modules/cons.py:248
+#: modules/cons.py:261
 msgid "Move _Up"
 msgstr "上移 (_U)"
 
-#: modules/cons.py:248 glade/x-tile.glade.h:42
+#: modules/cons.py:261 glade/x-tile.glade.h:42
 msgid "Move the Selected Row Up"
 msgstr "上移选定列"
 
-#: modules/cons.py:249
+#: modules/cons.py:262
 msgid "Move _Down"
 msgstr "下移 (_D)"
 
-#: modules/cons.py:249 glade/x-tile.glade.h:41
+#: modules/cons.py:262 glade/x-tile.glade.h:41
 msgid "Move the Selected Row Down"
 msgstr "下移选定列"
 
-#: modules/cons.py:250
+#: modules/cons.py:263
 msgid "_Remove"
 msgstr "移除 (_R)"
 
-#: modules/cons.py:250 glade/x-tile.glade.h:50
+#: modules/cons.py:263 glade/x-tile.glade.h:50
 msgid "Remove the Selected Row"
 msgstr "移除选定列"
 
-#: modules/cons.py:251
+#: modules/cons.py:264
 msgid "Show/Hide _Vertical Buttons"
 msgstr "显示/隐藏垂直按鈕 (_V)"
 
-#: modules/cons.py:251
+#: modules/cons.py:264
 msgid "Toggle Show/Hide Vertical Buttons"
 msgstr "显示/隐藏竖直按鈕"
 
-#: modules/cons.py:252
+#: modules/cons.py:265
 msgid "Show/Hide _Toolbar"
 msgstr "显示/隐藏工具栏 (_T)"
 
-#: modules/cons.py:252
+#: modules/cons.py:265
 msgid "Toggle Show/Hide Toolbar"
 msgstr "切换显示/隐藏工具栏"
 
-#: modules/cons.py:253
+#: modules/cons.py:266
 msgid "_Increase Toolbar Icons Size"
 msgstr "放大工具栏图标 (_I)"
 
-#: modules/cons.py:253
+#: modules/cons.py:266
 msgid "Increase the Size of the Toolbar Icons"
 msgstr "放大工具栏图标"
 
-#: modules/cons.py:254
+#: modules/cons.py:267
 msgid "_Decrease Toolbar Icons Size"
 msgstr "缩小工具栏图标 (_D)"
 
-#: modules/cons.py:254
+#: modules/cons.py:267
 msgid "Decrease the Size of the Toolbar Icons"
 msgstr "缩小工具栏图标"
 
-#: modules/cons.py:255
+#: modules/cons.py:268
 msgid "X Tile Project Home Page"
 msgstr "X Tile 项目首页"
 
-#: modules/cons.py:256 glade/x-tile.glade.h:22
+#: modules/cons.py:269 glade/x-tile.glade.h:22
 msgid "About X Tile"
 msgstr "关于 X Tile"
 
