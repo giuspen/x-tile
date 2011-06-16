@@ -68,18 +68,25 @@ factory.add_default()
 
 APPLET_MENU_XML = '<popup name="button3">'\
          + '<menuitem name="About" verb="About" label="' + _("_About") + '" pixtype="stock" pixname="gtk-about"/>'\
+         + '<separator/>'\
          + '<menuitem name="All_M" verb="All_M" label="' + _("_Maximize All") + '" pixtype="stock" pixname="Maximize Windows"/>'\
+         + '<separator/>'\
          + '<menuitem name="Invert" verb="Invert" label="' + _("_Invert Tiling Order") + '" pixtype="stock" pixname="Invert Tiling"/>'\
+         + '<separator/>'\
          + '<menuitem name="All_4" verb="All_4" label="' + _("Tile All _Quad") + '" pixtype="stock" pixname="Tile Quad"/>'\
+         + '<separator/>'\
          + '<menuitem name="All_TD" verb="All_TD" label="' + _("Tile All Triangle _Down") + '" pixtype="stock" pixname="Tile Triangle Down"/>'\
          + '<menuitem name="All_TU" verb="All_TU" label="' + _("Tile All Triangle _Up") + '" pixtype="stock" pixname="Tile Triangle Up"/>'\
          + '<menuitem name="All_TR" verb="All_TR" label="' + _("Tile All Triangle _Right") + '" pixtype="stock" pixname="Tile Triangle Right"/>'\
          + '<menuitem name="All_TL" verb="All_TL" label="' + _("Tile All Triangle _Left") + '" pixtype="stock" pixname="Tile Triangle Left"/>'\
-         + '<menuitem name="All_G" verb="All_G" label="' + _("Tile All _Grid") + '" pixtype="stock" pixname="Tile Grid"/>'\
+         + '<separator/>'\
          + '<menuitem name="All_C2" verb="All_C2" label="' + _("Tile All Custom _2") + '" pixtype="stock" pixname="Custom Exe 2"/>'\
          + '<menuitem name="All_C1" verb="All_C1" label="' + _("Tile All Custom _1") + '" pixtype="stock" pixname="Custom Exe 1"/>'\
+         + '<separator/>'\
+         + '<menuitem name="All_G" verb="All_G" label="' + _("Tile All _Grid") + '" pixtype="stock" pixname="Tile Grid"/>'\
          + '<menuitem name="All_H" verb="All_H" label="' + _("Tile All _Horizontally") + '" pixtype="stock" pixname="Tile Horizontally"/>'\
          + '<menuitem name="All_V" verb="All_V" label="' + _("Tile All _Vertically") + '" pixtype="stock" pixname="Tile Vertically"/>'\
+         + '<separator/>'\
          + '<menuitem name="Undo" verb="Undo" label="' + _("U_ndo Tiling") + '" pixtype="stock" pixname="gtk-undo"/>'\
          +'</popup>'
 
