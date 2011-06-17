@@ -9,29 +9,27 @@ msgstr ""
 "Project-Id-Version: X Tile\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-06-16 14:02+0200\n"
-"PO-Revision-Date: 2011-03-03 16:35+0300\n"
+"PO-Revision-Date: 2011-06-17 10:07+0300\n"
 "Last-Translator: Andriy Kovtun <kovtunos@yandex.ru>\n"
 "Language-Team: Russian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: \n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: x-tile:70 modules/cons.py:269
+#: x-tile:70
+#: modules/cons.py:269
 msgid "_About"
 msgstr "О программе"
 
 #: x-tile:72
-#, fuzzy
 msgid "Close All"
-msgstr "Закрыть"
+msgstr "Закрыть все"
 
 #: x-tile:73
-#, fuzzy
 msgid "_Unmaximize All"
-msgstr "Развернуть все"
+msgstr "Убрать разворот всех окон"
 
 #: x-tile:74
 msgid "_Maximize All"
@@ -66,9 +64,8 @@ msgid "Tile All Custom _1"
 msgstr "Разбить все пользовательской схемой 1"
 
 #: x-tile:86
-#, fuzzy
 msgid "Tile All _Grid"
-msgstr "Разбить на квадраты"
+msgstr "Разбить по сетке"
 
 #: x-tile:87
 msgid "Tile All _Horizontally"
@@ -78,11 +75,13 @@ msgstr "Разбить все по горизонтали"
 msgid "Tile All _Vertically"
 msgstr "Разбить все по вертикали"
 
-#: x-tile:90 modules/cons.py:257
+#: x-tile:90
+#: modules/cons.py:257
 msgid "_Invert Tiling Order"
 msgstr "Инвертировать порядок тайлинга"
 
-#: x-tile:91 modules/cons.py:256
+#: x-tile:91
+#: modules/cons.py:256
 msgid "U_ndo Tiling"
 msgstr "Отменить тайлинг"
 
@@ -119,56 +118,52 @@ msgstr "ВЫКЛ"
 msgid "Version %s  -  Exit After Tile: %s"
 msgstr "Версия %s  -  Выйти после тайлинга: %s"
 
-#: modules/core.py:536 modules/core.py:542
-msgid ""
-"The used shortcut is not available when the Preferences Window is opened"
-msgstr ""
-"Используемая клавиатурная привязка недоступна, пока открыто окно настройки"
+#: modules/core.py:536
+#: modules/core.py:542
+msgid "The used shortcut is not available when the Preferences Window is opened"
+msgstr "Используемая клавиатурная привязка недоступна, пока открыто окно настройки"
 
-#: modules/core.py:614 modules/core.py:622 modules/core.py:630
+#: modules/core.py:614
+#: modules/core.py:622
+#: modules/core.py:630
 msgid "No Row is Selected"
 msgstr "Строки не выбраны"
 
-#: modules/core.py:652 modules/core.py:686
+#: modules/core.py:652
+#: modules/core.py:686
 msgid "No Application Selected!"
 msgstr "Приложения не выбраны"
 
 #: modules/core.py:766
 msgid "Grid Details"
-msgstr ""
+msgstr "Настройки сетки"
 
 #: modules/core.py:774
-#, fuzzy
 msgid "Rows"
-msgstr "Строка"
+msgstr "Строки"
 
 #: modules/core.py:781
 msgid "Columns"
-msgstr ""
+msgstr "Столбцы"
 
-#: modules/core.py:840 modules/core.py:848 modules/core.py:858
+#: modules/core.py:840
+#: modules/core.py:848
+#: modules/core.py:858
 msgid "No Windows Checked"
 msgstr "Окна не выбраны"
 
-#: modules/core.py:894 modules/core.py:907
+#: modules/core.py:894
+#: modules/core.py:907
 msgid "Edit Custom Tile Settings"
 msgstr "Настроить пользовательскую схему"
 
 #: modules/core.py:1023
-msgid ""
-"The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
-"Set'"
-msgstr ""
-"Пользовательская схема 1 не выставлена: Выберите ее в меню 'Разбиение-"
-">Пользовательская схема 1'"
+msgid "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 Set'"
+msgstr "Пользовательская схема 1 не выставлена: Выберите ее в меню 'Разбиение->Пользовательская схема 1'"
 
 #: modules/core.py:1041
-msgid ""
-"The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
-"Set'"
-msgstr ""
-"Пользовательская схема2  не выставлена: Выберите ее в меню 'Разбиение-"
-">Пользовательская схема 2'"
+msgid "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 Set'"
+msgstr "Пользовательская схема2  не выставлена: Выберите ее в меню 'Разбиение->Пользовательская схема 2'"
 
 #: modules/cons.py:230
 msgid "_File"
@@ -190,7 +185,8 @@ msgstr "Разбиение"
 msgid "_View"
 msgstr "Вид"
 
-#: modules/cons.py:235 modules/cons.py:268
+#: modules/cons.py:235
+#: modules/cons.py:268
 msgid "_Help"
 msgstr "Помощь"
 
@@ -206,7 +202,8 @@ msgstr "Фильтровать строки"
 msgid "Selected by _Default"
 msgstr "Выбраны по умолчанию"
 
-#: modules/cons.py:238 glade/x-tile.glade.h:52
+#: modules/cons.py:238
+#: glade/x-tile.glade.h:52
 msgid "Rows to be Selected by Default"
 msgstr "Строки выбраны по умолчанию"
 
@@ -307,14 +304,12 @@ msgid "Tile into 4 quadrants The Checked Windows"
 msgstr "Разбить выделенные окна на 4 квадрата"
 
 #: modules/cons.py:251
-#, fuzzy
 msgid "Tile _Grid"
-msgstr "Разбить на квадраты"
+msgstr "Разбить по сетке"
 
 #: modules/cons.py:251
-#, fuzzy
 msgid "Tile into an arbitrary grid The Checked Windows"
-msgstr "Разбить выделенные окна на 4 квадрата"
+msgstr "Разбить выделенные окна по сетке"
 
 #: modules/cons.py:252
 msgid "Custom Tile 1 _Set"
@@ -384,7 +379,8 @@ msgstr "Закрыть отмеченные окна"
 msgid "Move _Up"
 msgstr "Передвинуть вверх"
 
-#: modules/cons.py:261 glade/x-tile.glade.h:42
+#: modules/cons.py:261
+#: glade/x-tile.glade.h:42
 msgid "Move the Selected Row Up"
 msgstr "Выбранную строку вверх"
 
@@ -392,7 +388,8 @@ msgstr "Выбранную строку вверх"
 msgid "Move _Down"
 msgstr "Передвинуть вниз"
 
-#: modules/cons.py:262 glade/x-tile.glade.h:41
+#: modules/cons.py:262
+#: glade/x-tile.glade.h:41
 msgid "Move the Selected Row Down"
 msgstr "Выбранную строку вниз"
 
@@ -400,7 +397,8 @@ msgstr "Выбранную строку вниз"
 msgid "_Remove"
 msgstr "Удалить"
 
-#: modules/cons.py:263 glade/x-tile.glade.h:50
+#: modules/cons.py:263
+#: glade/x-tile.glade.h:50
 msgid "Remove the Selected Row"
 msgstr "Удалить выделенную строку"
 
@@ -440,7 +438,8 @@ msgstr "Уменьшить иконки панели инструментов"
 msgid "X Tile Project Home Page"
 msgstr "Домашняя страница проекта X Tile"
 
-#: modules/cons.py:269 glade/x-tile.glade.h:22
+#: modules/cons.py:269
+#: glade/x-tile.glade.h:22
 msgid "About X Tile"
 msgstr "О программе X Tile"
 
@@ -637,3 +636,4 @@ msgstr "Y"
 #: glade/x-tile.glade.h:62
 msgid "http://www.giuspen.com/x-tile/"
 msgstr "http://www.giuspen.com/x-tile/"
+
