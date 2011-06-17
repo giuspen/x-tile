@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: 1.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-06-16 14:02+0200\n"
-"PO-Revision-Date: 2011-03-04 04:09+0800\n"
+"PO-Revision-Date: 2011-06-17 16:48+0800\n"
 "Last-Translator: Yan-ren Tsai <elleryq@gmail.com>\n"
 "Language-Team: zh_TW <elleryq@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -23,14 +23,12 @@ msgid "_About"
 msgstr "關於 (_A)"
 
 #: x-tile:72
-#, fuzzy
 msgid "Close All"
-msgstr "關閉"
+msgstr "關閉所有"
 
 #: x-tile:73
-#, fuzzy
 msgid "_Unmaximize All"
-msgstr "最大化全部 (_M)"
+msgstr "不最大化全部 (_U)"
 
 #: x-tile:74
 msgid "_Maximize All"
@@ -65,9 +63,8 @@ msgid "Tile All Custom _1"
 msgstr "平舖所有自訂1 (_1)"
 
 #: x-tile:86
-#, fuzzy
 msgid "Tile All _Grid"
-msgstr "平鋪所有視窗為4個 (_Q)"
+msgstr "平鋪所有為格框 (_G)"
 
 #: x-tile:87
 msgid "Tile All _Horizontally"
@@ -133,16 +130,15 @@ msgstr "沒有選擇任何應用程式!"
 
 #: modules/core.py:766
 msgid "Grid Details"
-msgstr ""
+msgstr "格框詳情"
 
 #: modules/core.py:774
-#, fuzzy
 msgid "Rows"
-msgstr "列(_R)"
+msgstr "列"
 
 #: modules/core.py:781
 msgid "Columns"
-msgstr ""
+msgstr "欄"
 
 #: modules/core.py:840 modules/core.py:848 modules/core.py:858
 msgid "No Windows Checked"
@@ -301,14 +297,12 @@ msgid "Tile into 4 quadrants The Checked Windows"
 msgstr "將選定的視窗平鋪到四個象限"
 
 #: modules/cons.py:251
-#, fuzzy
 msgid "Tile _Grid"
-msgstr "平鋪為4個 (_Q)"
+msgstr "平鋪為格框 (_G)"
 
 #: modules/cons.py:251
-#, fuzzy
 msgid "Tile into an arbitrary grid The Checked Windows"
-msgstr "將選定的視窗平鋪到四個象限"
+msgstr "平鋪選定的視窗為一個任意格框"
 
 #: modules/cons.py:252
 msgid "Custom Tile 1 _Set"
