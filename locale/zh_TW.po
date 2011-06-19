@@ -301,7 +301,7 @@ msgid "Tile _Grid"
 msgstr "平鋪為格框 (_G)"
 
 #: modules/cons.py:251
-msgid "Tile into an arbitrary grid The Checked Windows"
+msgid "Tile into an Arbitrary Grid The Checked Windows"
 msgstr "平鋪選定的視窗為一個任意格框"
 
 #: modules/cons.py:252

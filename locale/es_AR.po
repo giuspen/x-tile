@@ -313,7 +313,7 @@ msgid "Tile _Grid"
 msgstr "Mosaico Cuadricula"
 
 #: modules/cons.py:251
-msgid "Tile into an arbitrary grid The Checked Windows"
+msgid "Tile into an Arbitrary Grid The Checked Windows"
 msgstr "Muestra las Ventanas en Modo Cuadricula"
 
 #: modules/cons.py:252

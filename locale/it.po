@@ -306,7 +306,7 @@ msgid "Tile _Grid"
 msgstr "Piastrella _Griglia"
 
 #: modules/cons.py:251
-msgid "Tile into an arbitrary grid The Checked Windows"
+msgid "Tile into an Arbitrary Grid The Checked Windows"
 msgstr "Piastrella in una Griglia arbitraria le finestre Selezionate"
 
 #: modules/cons.py:252

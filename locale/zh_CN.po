@@ -300,7 +300,7 @@ msgstr "四等分 (_Q)"
 
 #: modules/cons.py:251
 #, fuzzy
-msgid "Tile into an arbitrary grid The Checked Windows"
+msgid "Tile into an Arbitrary Grid The Checked Windows"
 msgstr "将选定窗口平铺到四个象限"
 
 #: modules/cons.py:252
