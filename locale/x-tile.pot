@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-16 14:02+0200\n"
+"POT-Creation-Date: 2011-06-19 16:23+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -297,7 +298,7 @@ msgid "Tile _Grid"
 msgstr ""
 
 #: modules/cons.py:251
-msgid "Tile into an arbitrary grid The Checked Windows"
+msgid "Tile into an Arbitrary Grid The Checked Windows"
 msgstr ""
 
 #: modules/cons.py:252

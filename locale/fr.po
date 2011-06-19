@@ -308,7 +308,7 @@ msgid "Tile _Grid"
 msgstr "Répartir en _Grille"
 
 #: modules/cons.py:251
-msgid "Tile into an arbitrary grid The Checked Windows"
+msgid "Tile into an Arbitrary Grid The Checked Windows"
 msgstr "Répartit arbitrairement en grille les fenêtres sélectionnées"
 
 #: modules/cons.py:252

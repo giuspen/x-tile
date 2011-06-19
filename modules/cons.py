@@ -248,7 +248,7 @@ def get_entries(inst):
    ( "TriangleLeft", "Tile Triangle Left", _("Triangle _Left"), "<control>Left", _("Tile Triangle Left The Checked Windows"), inst.tile_triangle_left),
    ( "TriangleRight", "Tile Triangle Right", _("Triangle _Right"), "<control>Right", _("Tile Triangle Right The Checked Windows"), inst.tile_triangle_right),
    ( "Quad", "Tile Quad", _("Tile _Quad"), "<control>4", _("Tile into 4 quadrants The Checked Windows"), inst.tile_quad),
-   ( "Grid", "Tile Grid", _("Tile _Grid"), "<control>G", _("Tile into an arbitrary grid The Checked Windows"), inst.dialog_grid),
+   ( "Grid", "Tile Grid", _("Tile _Grid"), "<control>G", _("Tile into an Arbitrary Grid The Checked Windows"), inst.dialog_grid),
    ( "Custom1Set", "Custom Set 1", _("Custom Tile 1 _Set"), "<alt>1", _("Edit Custom Tile 1 Settings"), inst.tile_custom_1_set),
    ( "Custom1Exe", "Custom Exe 1", _("Custom Tile _1 Run"), "<control>1", _("Execute Custom Tile 1"), inst.tile_custom_1_run),
    ( "Custom2Set", "Custom Set 2", _("Custom Tile 2 S_et"), "<alt>2", _("Edit Custom Tile 2 Settings"), inst.tile_custom_2_set),

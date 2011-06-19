@@ -306,7 +306,7 @@ msgid "Tile _Grid"
 msgstr "Tile _Raster"
 
 #: modules/cons.py:251
-msgid "Tile into an arbitrary grid The Checked Windows"
+msgid "Tile into an Arbitrary Grid The Checked Windows"
 msgstr "Tile die markierten Fenster in ein beliebiges Raster"
 
 #: modules/cons.py:252
