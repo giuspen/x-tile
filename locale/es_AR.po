@@ -11,17 +11,16 @@ msgstr ""
 "PO-Revision-Date: 2011-06-16 16:25-0300\n"
 "Last-Translator: MeloPixel <melopixel@gmail.com>\n"
 "Language-Team: Spanish <MeloPixel>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Language: Spanish\n"
 "X-Poedit-Country: ARGENTINA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: x-tile:70
-#: modules/cons.py:269
+#: x-tile:70 modules/cons.py:269
 msgid "_About"
 msgstr "_Acerca de"
 
@@ -77,13 +76,11 @@ msgstr "_Horizontal"
 msgid "Tile All _Vertically"
 msgstr "_Vertical"
 
-#: x-tile:90
-#: modules/cons.py:257
+#: x-tile:90 modules/cons.py:257
 msgid "_Invert Tiling Order"
 msgstr "_Invertir Orden"
 
-#: x-tile:91
-#: modules/cons.py:256
+#: x-tile:91 modules/cons.py:256
 msgid "U_ndo Tiling"
 msgstr "_Deshacer"
 
@@ -101,11 +98,15 @@ msgstr "El nuevo idioma no estará disponible hasta que Reinicie X Tile"
 
 #: modules/core.py:475
 msgid "The Size of the Toolbar Icons is already at the Maximum Value"
-msgstr "El tamaño de los Iconos de la Barra de Herramientas ya está en su Valor Máximo"
+msgstr ""
+"El tamaño de los Iconos de la Barra de Herramientas ya está en su Valor "
+"Máximo"
 
 #: modules/core.py:485
 msgid "The Size of the Toolbar Icons is already at the Minimum Value"
-msgstr "El tamaño de los Iconos de la Barra de Herramientas ya está en su Valor Mínimo"
+msgstr ""
+"El tamaño de los Iconos de la Barra de Herramientas ya está en su Valor "
+"Mínimo"
 
 #: modules/core.py:493
 msgid "ON"
@@ -120,19 +121,18 @@ msgstr "Desactivado"
 msgid "Version %s  -  Exit After Tile: %s"
 msgstr "Versión %s  -  Salida después de Mosaico: %s"
 
-#: modules/core.py:536
-#: modules/core.py:542
-msgid "The used shortcut is not available when the Preferences Window is opened"
-msgstr "El atajo utilizado no está disponible cuando la Ventana de Preferencias se abre"
+#: modules/core.py:536 modules/core.py:542
+msgid ""
+"The used shortcut is not available when the Preferences Window is opened"
+msgstr ""
+"El atajo utilizado no está disponible cuando la Ventana de Preferencias se "
+"abre"
 
-#: modules/core.py:614
-#: modules/core.py:622
-#: modules/core.py:630
+#: modules/core.py:614 modules/core.py:622 modules/core.py:630
 msgid "No Row is Selected"
 msgstr "No hay Filas Seleccionadas"
 
-#: modules/core.py:652
-#: modules/core.py:686
+#: modules/core.py:652 modules/core.py:686
 msgid "No Application Selected!"
 msgstr "No hay ninguna Aplicación Seleccionada!"
 
@@ -148,24 +148,29 @@ msgstr "Fila"
 msgid "Columns"
 msgstr "Columnas"
 
-#: modules/core.py:840
-#: modules/core.py:848
-#: modules/core.py:858
+#: modules/core.py:840 modules/core.py:848 modules/core.py:858
 msgid "No Windows Checked"
 msgstr "No hay Ventanas Seleccionadas"
 
-#: modules/core.py:894
-#: modules/core.py:907
+#: modules/core.py:894 modules/core.py:907
 msgid "Edit Custom Tile Settings"
 msgstr "Editar configuración Personalizada de Mosaico"
 
 #: modules/core.py:1023
-msgid "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 Set'"
-msgstr "El Mosaico Personalizado 1 No de ha establecido: Haz Clic en el Menú -> Mosaico Personalizado 1"
+msgid ""
+"The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
+"Set'"
+msgstr ""
+"El Mosaico Personalizado 1 No de ha establecido: Haz Clic en el Menú -> "
+"Mosaico Personalizado 1"
 
 #: modules/core.py:1041
-msgid "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 Set'"
-msgstr "El Mosaico Personalizado 2 No de ha establecido: Haz Clic en el Menú -> Mosaico Personalizado 2"
+msgid ""
+"The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
+"Set'"
+msgstr ""
+"El Mosaico Personalizado 2 No de ha establecido: Haz Clic en el Menú -> "
+"Mosaico Personalizado 2"
 
 #: modules/cons.py:230
 msgid "_File"
@@ -187,8 +192,7 @@ msgstr "_Mosaico"
 msgid "_View"
 msgstr "_Ver"
 
-#: modules/cons.py:235
-#: modules/cons.py:268
+#: modules/cons.py:235 modules/cons.py:268
 msgid "_Help"
 msgstr "_Ayuda"
 
@@ -204,8 +208,7 @@ msgstr "Filtrar Filas"
 msgid "Selected by _Default"
 msgstr "Seleccionar por _Defecto"
 
-#: modules/cons.py:238
-#: glade/x-tile.glade.h:52
+#: modules/cons.py:238 glade/x-tile.glade.h:52
 msgid "Rows to be Selected by Default"
 msgstr "Filas para seleccionar por defecto"
 
@@ -381,8 +384,7 @@ msgstr "Cierra las Ventanas Seleccionada"
 msgid "Move _Up"
 msgstr "S_ubir"
 
-#: modules/cons.py:261
-#: glade/x-tile.glade.h:42
+#: modules/cons.py:261 glade/x-tile.glade.h:42
 msgid "Move the Selected Row Up"
 msgstr "Mueve la Fila Seleccionada Arriba"
 
@@ -390,8 +392,7 @@ msgstr "Mueve la Fila Seleccionada Arriba"
 msgid "Move _Down"
 msgstr "B_ajar"
 
-#: modules/cons.py:262
-#: glade/x-tile.glade.h:41
+#: modules/cons.py:262 glade/x-tile.glade.h:41
 msgid "Move the Selected Row Down"
 msgstr "Mueve la Fila Seleccionada Abajo"
 
@@ -399,8 +400,7 @@ msgstr "Mueve la Fila Seleccionada Abajo"
 msgid "_Remove"
 msgstr "_Eliminar"
 
-#: modules/cons.py:263
-#: glade/x-tile.glade.h:50
+#: modules/cons.py:263 glade/x-tile.glade.h:50
 msgid "Remove the Selected Row"
 msgstr "Elimina la Fila Seleccionada"
 
@@ -440,8 +440,7 @@ msgstr "Disminuye tamaño de los Iconos de la Barra de Herramientas"
 msgid "X Tile Project Home Page"
 msgstr "Pagina del Proyecto X Tile"
 
-#: modules/cons.py:269
-#: glade/x-tile.glade.h:22
+#: modules/cons.py:269 glade/x-tile.glade.h:22
 msgid "About X Tile"
 msgstr "Acerca de X Tile"
 
@@ -634,4 +633,3 @@ msgstr "Y"
 #: glade/x-tile.glade.h:62
 msgid "http://www.giuspen.com/x-tile/"
 msgstr "http://www.giuspen.com/x-tile/"
-

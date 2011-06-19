@@ -11,10 +11,10 @@ msgstr ""
 "PO-Revision-Date: 2011-03-03 11:05+0100\n"
 "Last-Translator: Ludovic Troisi <axalis@cegetel.net>\n"
 "Language-Team: X Tile\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: x-tile:70 modules/cons.py:269
@@ -22,14 +22,12 @@ msgid "_About"
 msgstr "À _propos"
 
 #: x-tile:72
-#, fuzzy
 msgid "Close All"
-msgstr "Fermer"
+msgstr "Tout Fermer"
 
 #: x-tile:73
-#, fuzzy
 msgid "_Unmaximize All"
-msgstr "Tout _maximiser"
+msgstr "Tout _Diminuer"
 
 #: x-tile:74
 msgid "_Maximize All"
@@ -64,9 +62,8 @@ msgid "Tile All Custom _1"
 msgstr "Tout répartir en personnalisée _1"
 
 #: x-tile:86
-#, fuzzy
 msgid "Tile All _Grid"
-msgstr "Tout répartir en _quartiers"
+msgstr "Tout répartir en _Grille"
 
 #: x-tile:87
 msgid "Tile All _Horizontally"
@@ -134,16 +131,15 @@ msgstr "Aucune application sélectionnée !"
 
 #: modules/core.py:766
 msgid "Grid Details"
-msgstr ""
+msgstr "Détails de la grille"
 
 #: modules/core.py:774
-#, fuzzy
 msgid "Rows"
-msgstr "_Ligne"
+msgstr "Lignes"
 
 #: modules/core.py:781
 msgid "Columns"
-msgstr ""
+msgstr "Colonnes"
 
 #: modules/core.py:840 modules/core.py:848 modules/core.py:858
 msgid "No Windows Checked"
@@ -308,14 +304,12 @@ msgid "Tile into 4 quadrants The Checked Windows"
 msgstr "Répartit selon quatre quartiers les fenêtres sélectionnées"
 
 #: modules/cons.py:251
-#, fuzzy
 msgid "Tile _Grid"
-msgstr "Répartir en _quartiers"
+msgstr "Répartir en _Grille"
 
 #: modules/cons.py:251
-#, fuzzy
 msgid "Tile into an arbitrary grid The Checked Windows"
-msgstr "Répartit selon quatre quartiers les fenêtres sélectionnées"
+msgstr "Répartit arbitrairement en grille les fenêtres sélectionnées"
 
 #: modules/cons.py:252
 msgid "Custom Tile 1 _Set"
