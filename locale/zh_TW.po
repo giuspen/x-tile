@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-16 14:02+0200\n"
+"POT-Creation-Date: 2011-06-22 22:18+0200\n"
 "PO-Revision-Date: 2011-06-17 16:48+0800\n"
 "Last-Translator: Yan-ren Tsai <elleryq@gmail.com>\n"
 "Language-Team: zh_TW <elleryq@gmail.com>\n"
@@ -196,7 +196,7 @@ msgstr "篩選列"
 msgid "Selected by _Default"
 msgstr "預設選定的"
 
-#: modules/cons.py:238 glade/x-tile.glade.h:52
+#: modules/cons.py:238 glade/x-tile.glade.h:51
 msgid "Rows to be Selected by Default"
 msgstr "預設選定的列"
 
@@ -372,7 +372,7 @@ msgstr "關閉選定視窗"
 msgid "Move _Up"
 msgstr "往上移 (_U)"
 
-#: modules/cons.py:261 glade/x-tile.glade.h:42
+#: modules/cons.py:261 glade/x-tile.glade.h:41
 msgid "Move the Selected Row Up"
 msgstr "將選定列移上去"
 
@@ -380,7 +380,7 @@ msgstr "將選定列移上去"
 msgid "Move _Down"
 msgstr "往下移 (_D)"
 
-#: modules/cons.py:262 glade/x-tile.glade.h:41
+#: modules/cons.py:262 glade/x-tile.glade.h:40
 msgid "Move the Selected Row Down"
 msgstr "將選定列移下來"
 
@@ -388,7 +388,7 @@ msgstr "將選定列移下來"
 msgid "_Remove"
 msgstr "移除 (_R)"
 
-#: modules/cons.py:263 glade/x-tile.glade.h:50
+#: modules/cons.py:263 glade/x-tile.glade.h:49
 msgid "Remove the Selected Row"
 msgstr "移除選定的列"
 
@@ -504,7 +504,6 @@ msgstr "取消"
 
 #: glade/x-tile.glade.h:26
 msgid ""
-"Chinese Simplified (zh_CN) Khi-yuan Fan <Fan.khiyuan@gmail.com>\n"
 "Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
 "Spanish (es_AR) MeloPixel <melopixel@gmail.com>\n"
 "French (fr) Ludovic Troisi <axalis@cegetel.net>\n"
@@ -512,7 +511,6 @@ msgid ""
 "Italian (it) Giuseppe Penone <giuspen@gmail.com>\n"
 "Russian (ru) Andriy Kovtun <kovtunos@yandex.ru>"
 msgstr ""
-"漢語(簡體中文) (zh_CN) Khi-yuan Fan <Fan.khiyuan@gmail.com>\n"
 "漢語(繁體中文) (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
 "西班牙語 (es_AR) MeloPixel <melopixel@gmail.com>\n"
 "法語 (fr) Ludovic Troisi <axalis@cegetel.net>\n"
@@ -520,11 +518,11 @@ msgstr ""
 "義大利語 (it) Giuseppe Penone <giuspen@gmail.com>\n"
 "俄語 (ru) Andriy Kovtun <kovtunos@yandex.ru>"
 
-#: glade/x-tile.glade.h:33
+#: glade/x-tile.glade.h:32
 msgid "Close"
 msgstr "關閉"
 
-#: glade/x-tile.glade.h:34
+#: glade/x-tile.glade.h:33
 msgid ""
 "Copyright © 2009-2011\n"
 "Giuseppe Penone <giuspen@gmail.com>\n"
@@ -534,90 +532,90 @@ msgstr ""
 "Giuseppe Penone <giuspen@gmail.com>\n"
 "Chris Camacho <chris_camacho@yahoo.com>"
 
-#: glade/x-tile.glade.h:37
+#: glade/x-tile.glade.h:36
 msgid "Do Not List Minimized Windows"
 msgstr "不要列出已經最小化的視窗"
 
-#: glade/x-tile.glade.h:38
+#: glade/x-tile.glade.h:37
 msgid "Exit After Tile"
 msgstr "鋪排後離開"
 
-#: glade/x-tile.glade.h:39
+#: glade/x-tile.glade.h:38
 msgid "Height"
 msgstr "高"
 
-#: glade/x-tile.glade.h:40
+#: glade/x-tile.glade.h:39
 msgid "Hide the Vertical ButtonBox"
 msgstr "隱藏垂直的按鈕盒"
 
-#: glade/x-tile.glade.h:43
+#: glade/x-tile.glade.h:42
 msgid "OK"
 msgstr "OK"
 
-#: glade/x-tile.glade.h:44
+#: glade/x-tile.glade.h:43
 msgid "Only Current Workspace"
 msgstr "只有目前工作區"
 
-#: glade/x-tile.glade.h:45
+#: glade/x-tile.glade.h:44
 msgid "Override Monitor 1 Tiling Area"
 msgstr "以下面設定取代第一個螢幕的鋪排區域"
 
-#: glade/x-tile.glade.h:46
+#: glade/x-tile.glade.h:45
 msgid "Override Monitor 2 Tiling Area"
 msgstr "以下面設定取代第二個螢幕的鋪排區域"
 
-#: glade/x-tile.glade.h:47
+#: glade/x-tile.glade.h:46
 msgid "Position"
 msgstr "位置"
 
-#: glade/x-tile.glade.h:48
+#: glade/x-tile.glade.h:47
 msgid "Preferences"
 msgstr "偏好設定"
 
-#: glade/x-tile.glade.h:49
+#: glade/x-tile.glade.h:48
 msgid "Remove an Application Filter"
 msgstr "移除應用程式篩選器"
 
-#: glade/x-tile.glade.h:51
+#: glade/x-tile.glade.h:50
 msgid "Rows to Filter"
 msgstr "列轉篩選器"
 
-#: glade/x-tile.glade.h:53
+#: glade/x-tile.glade.h:52
 msgid "Show Toolbar"
 msgstr "顯示工具列"
 
-#: glade/x-tile.glade.h:54
+#: glade/x-tile.glade.h:53
 msgid "Show Windows Sorting Buttons"
 msgstr "顯示視窗排序按鈕"
 
-#: glade/x-tile.glade.h:55
+#: glade/x-tile.glade.h:54
 msgid "Size"
 msgstr "尺寸"
 
-#: glade/x-tile.glade.h:56
+#: glade/x-tile.glade.h:55
 msgid "Update"
 msgstr "更新"
 
-#: glade/x-tile.glade.h:57
+#: glade/x-tile.glade.h:56
 msgid "Use Drag and Drop to Sort the Rows"
 msgstr "使用拖拉來排序列"
 
-#: glade/x-tile.glade.h:58
+#: glade/x-tile.glade.h:57
 msgid "Width"
 msgstr "寬"
 
-#: glade/x-tile.glade.h:59
+#: glade/x-tile.glade.h:58
 msgid "X"
 msgstr "X"
 
-#: glade/x-tile.glade.h:60
+#: glade/x-tile.glade.h:59
 msgid "X Tile"
 msgstr "X Tile"
 
-#: glade/x-tile.glade.h:61
+#: glade/x-tile.glade.h:60
 msgid "Y"
 msgstr "Y"
 
-#: glade/x-tile.glade.h:62
+#: glade/x-tile.glade.h:61
 msgid "http://www.giuspen.com/x-tile/"
 msgstr "http://www.giuspen.com/x-tile/"
