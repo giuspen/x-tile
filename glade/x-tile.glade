@@ -17,7 +17,7 @@
     <property name="copyright" translatable="yes">Copyright © 2009-2011
 Giuseppe Penone &lt;giuspen@gmail.com&gt;
 Chris Camacho &lt;chris_camacho@yahoo.com&gt;</property>
-    <property name="comments" translatable="yes">A Gnome Applet to Tile the Opened Windows</property>
+    <property name="comments" translatable="yes">Tile the Windows Upon your X Desktop</property>
     <property name="website">http://www.giuspen.com/x-tile/</property>
     <property name="website_label" translatable="yes">http://www.giuspen.com/x-tile/</property>
     <property name="license" translatable="yes">
