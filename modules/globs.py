@@ -24,7 +24,7 @@
 #      Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 #      MA 02110-1301, USA.
 
-import gtk
+from gi.repository import Gtk
 import ctypes, ctypes.util
 import cons, support, core
 
@@ -125,12 +125,12 @@ class GlobalsObject(object):
         self.size_hints_return = XSizeHints()
         self.screen_index = support.get_root_screen_index()
         self.str2_atom = self.x11.XInternAtom(self.disp, "STRING", False)
-        self.num_monitors = gtk.gdk.screen_get_default().get_n_monitors()
+        self.num_monitors = Gdk.Screen.get_default().get_n_monitors()
 
     def read_monitors_areas(self):
         """Read Monitor(s) Area(s)"""
         strut_windows = support.enumerate_strut_windows(self.disp, self.root)
-        screen = gtk.gdk.screen_get_default()
+        screen = Gdk.Screen.get_default()
         self.num_monitors = screen.get_n_monitors()
         self.monitors_areas = []
         drawing_area_size = [0, 0]
@@ -141,4 +141,4 @@ class GlobalsObject(object):
             if rect.y + rect.height > drawing_area_size[1]: drawing_area_size[1] = rect.y + rect.height
             for strut_win in strut_windows:
                 self.monitors_areas[-1] = support.subtract_areas(self.monitors_areas[-1], strut_win)
-        self.drawing_rect = gtk.gdk.Rectangle(0, 0, drawing_area_size[0]/cons.DRAW_SCALE, drawing_area_size[1]/cons.DRAW_SCALE)
+        self.drawing_rect = (0, 0, drawing_area_size[0]/cons.DRAW_SCALE, drawing_area_size[1]/cons.DRAW_SCALE)
