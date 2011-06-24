@@ -2,9 +2,6 @@
 
 # for linux install: "python setup.py install --prefix=/usr --exec-prefix=/usr -f"
 
-# after the installation, run in the terminal "killall gnome-panel" in order to restart
-# the gnome panel and see the changes with no need to reboot
-
 from distutils.core import setup
 from distutils.dist import Distribution
 from distutils.cmd import Command
@@ -29,12 +26,10 @@ MO_DIR = os.path.join('build', 'mo')
 
 class XTileDist(Distribution):
    global_options = Distribution.global_options + [
-      ("without-gettext", None, "Don't build/install gettext .mo files"),
-      ("no-panel-applet", None, "no gnome dependences and no panel applet") ]
+      ("without-gettext", None, "Don't build/install gettext .mo files") ]
    
    def __init__ (self, *args):
       self.without_gettext = False
-      self.no_panel_applet = False
       Distribution.__init__(self, *args)
 
 
@@ -113,10 +108,7 @@ class Uninstall(Command):
 
 class Install(install):
    def run(self):
-      if self.distribution.no_panel_applet:
-         self.distribution.scripts=['x-tile-ng']
-      else:
-         self.distribution.scripts=['x-tile']
+      self.distribution.scripts=['x-tile2']
       install.run(self)
 
 
@@ -127,12 +119,8 @@ class InstallData(install_data):
       install_data.run(self)
 
    def _find_desktop_file(self):
-      if self.distribution.no_panel_applet:
-         return [("share/applications", ["linux/x-tile-ng.desktop"] )]
-      else:
-         return [("share/applications", ["linux/x-tile.desktop"] ),
-                 ("lib/bonobo/servers", ["linux/x-tile.server"] ) ]
-
+      return [("share/applications", ["linux/x-tile2.desktop"] )]
+   
    def _find_mo_files (self):
       data_files = []
       if not self.distribution.without_gettext:
@@ -145,8 +133,8 @@ class InstallData(install_data):
 
 setup(
    name = "X Tile",
-   description = "X Tile Gnome Applet",
-   long_description = "A gnome applet for your panel (or optionally a standalone application) that allows you to select a number of windows and tile them in different ways",
+   description = "Tile the Windows Upon Your X Desktop",
+   long_description = "Allows you to select a number of windows and tile them in different ways",
    version = cons.VERSION,
    author = "Giuseppe Penone & Chris Camacho",
    author_email = "giuspen@gmail.com & chris_camacho@yahoo.com",
