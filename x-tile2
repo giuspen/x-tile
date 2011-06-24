@@ -26,7 +26,7 @@
 #      Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 #      MA 02110-1301, USA.
 
-from gi.repository import Gtk, GConf
+from gi.repository import Gtk, GConf, GdkPixbuf
 import sys, os, gettext, ctypes, ctypes.util, locale
 import __builtin__
 
@@ -62,7 +62,7 @@ except: print "libc.prctl not available, the process name will be python and not
 factory = Gtk.IconFactory()
 for filename, stock_name in cons.ICONS_FILENAMES:
     pixbuf = GdkPixbuf.Pixbuf.new_from_file(filename)
-    iconset = Gtk.IconSet(pixbuf)
+    iconset = Gtk.IconSet.new_from_pixbuf(pixbuf)
     factory.add(stock_name, iconset)
 factory.add_default()
 
