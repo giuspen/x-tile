@@ -1,11 +1,11 @@
 # -*- coding: UTF-8 -*-
 #
 #      cons.py
-#      
+#
 #      Copyright 2009-2011
 #      Giuseppe Penone <giuspen@gmail.com>,
 #      Chris Camacho (chris_c) <chris_camacho@yahoo.com>.
-#      
+#
 #      plus many thanks to  http://tronche.com/gui/x/xlib/
 #                      and  http://tripie.sweb.cz/utils/wmctrl/
 #
@@ -13,12 +13,12 @@
 #      it under the terms of the GNU General Public License as published by
 #      the Free Software Foundation; either version 2 of the License, or
 #      (at your option) any later version.
-#      
+#
 #      This program is distributed in the hope that it will be useful,
 #      but WITHOUT ANY WARRANTY; without even the implied warranty of
 #      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #      GNU General Public License for more details.
-#      
+#
 #      You should have received a copy of the GNU General Public License
 #      along with this program; if not, write to the Free Software
 #      Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
@@ -28,15 +28,15 @@ import gtk, os
 
 
 APP_NAME = "x-tile"
-VERSION = "1.9"
+VERSION = "2.0"
 if os.path.isdir('glade'):
-   GLADE_PATH = "glade/"
-   ICON_PLACE = "linux/x-tile.svg"
-   LOCALE_PATH = "locale/"
+    GLADE_PATH = "glade/"
+    ICON_PLACE = "linux/x-tile.svg"
+    LOCALE_PATH = "locale/"
 else:
-   GLADE_PATH = "/usr/share/x-tile/glade/"
-   ICON_PLACE = "/usr/share/pixmaps/x-tile.svg"
-   LOCALE_PATH = "/usr/share/locale/"
+    GLADE_PATH = "/usr/share/x-tile/glade/"
+    ICON_PLACE = "/usr/share/pixmaps/x-tile.svg"
+    LOCALE_PATH = "/usr/share/locale/"
 
 AVAILABLE_LANGS = ['default', 'de', 'en', 'es_AR', 'fr', 'it', 'ru', 'zh_TW']
 
@@ -132,169 +132,169 @@ GCONF_GRID_COLS = "/apps/x-tile/%s/grid_cols"
 
 UI_INFO = """
 <ui>
-   <menubar name='MenuBar'>
-      <menu action='FileMenu'>
-         <menuitem action='Filter'/>
-         <menuitem action='DefaultSel'/>
-         <menuitem action='Reload'/>
-         <separator/>
-         <menuitem action='QuitApp'/>
-      </menu>
-      
-      <menu action='EditMenu'>
-         <menuitem action='Preferences'/>
-         <separator/>
-         <menuitem action='SelectAll'/>
-         <menuitem action='DeselectAll'/>
-         <separator/>
-      </menu>
-      
-      <menu action='RowMenu'>
-         <menuitem action='RowUp'/>
-         <menuitem action='RowDown'/>
-         <separator/>
-         <menuitem action='RowDelete'/>
-      </menu>
-      
-      <menu action='TileMenu'>
-         <menuitem action='UnTile'/>
-         <menuitem action='InverTile'/>
-         <separator/>
-         <menuitem action='Vertically'/>
-         <menuitem action='Horizontally'/>
-         <menuitem action='Grid'/>
-         <separator/>
-         <menuitem action='Custom1Set'/>
-         <menuitem action='Custom2Set'/>
-         <menuitem action='Custom1Exe'/>
-         <menuitem action='Custom2Exe'/>
-         <separator/>
-         <menuitem action='TriangleLeft'/>
-         <menuitem action='TriangleRight'/>
-         <menuitem action='TriangleUp'/>
-         <menuitem action='TriangleDown'/>
-         <separator/>
-         <menuitem action='Quad'/>
-         <separator/>
-         <menuitem action='Maximize'/>
-         <menuitem action='Unmaximize'/>
-         <menuitem action='Close'/>
-      </menu>
-      
-      <menu action='ViewMenu'>
-         <menuitem action='ShowHideVButtons'/>
-         <menuitem action='ShowHideToolbar'/>
-         <separator/>
-         <menuitem action='IncreaseToolbarIconsSize'/>
-         <menuitem action='DecreaseToolbarIconsSize'/>
-      </menu>
+    <menubar name='MenuBar'>
+        <menu action='FileMenu'>
+            <menuitem action='Filter'/>
+            <menuitem action='DefaultSel'/>
+            <menuitem action='Reload'/>
+            <separator/>
+            <menuitem action='QuitApp'/>
+        </menu>
 
-      <menu action='HelpMenu'>
-         <menuitem action='Help'/>
-         <separator/>
-         <menuitem action='About'/>
-      </menu>
-   </menubar>
+        <menu action='EditMenu'>
+            <menuitem action='Preferences'/>
+            <separator/>
+            <menuitem action='SelectAll'/>
+            <menuitem action='DeselectAll'/>
+            <separator/>
+        </menu>
 
-   <toolbar name='ToolBar'>
-      <toolitem action='SelectAll'/>
-      <toolitem action='Reload'/>
-      <separator/>
-      <toolitem action='UnTile'/>
-      <toolitem action='InverTile'/>
-      <separator/>
-      <toolitem action='Vertically'/>
-      <toolitem action='Horizontally'/>
-      <toolitem action='Grid'/>
-      <toolitem action='Custom1Exe'/>
-      <toolitem action='Custom2Exe'/>
-      <separator/>
-      <toolitem action='Maximize'/>
-      <toolitem action='Unmaximize'/>
-      <toolitem action='Close'/>
-   </toolbar>
-   
-   <popup name='ListMenu'>
-      <menuitem action='RowUp'/>
-      <menuitem action='RowDown'/>
-      <separator/>
-      <menuitem action='RowDelete'/>
-   </popup>
+        <menu action='RowMenu'>
+            <menuitem action='RowUp'/>
+            <menuitem action='RowDown'/>
+            <separator/>
+            <menuitem action='RowDelete'/>
+        </menu>
+
+        <menu action='TileMenu'>
+            <menuitem action='UnTile'/>
+            <menuitem action='InverTile'/>
+            <separator/>
+            <menuitem action='Vertically'/>
+            <menuitem action='Horizontally'/>
+            <menuitem action='Grid'/>
+            <separator/>
+            <menuitem action='Custom1Set'/>
+            <menuitem action='Custom2Set'/>
+            <menuitem action='Custom1Exe'/>
+            <menuitem action='Custom2Exe'/>
+            <separator/>
+            <menuitem action='TriangleLeft'/>
+            <menuitem action='TriangleRight'/>
+            <menuitem action='TriangleUp'/>
+            <menuitem action='TriangleDown'/>
+            <separator/>
+            <menuitem action='Quad'/>
+            <separator/>
+            <menuitem action='Maximize'/>
+            <menuitem action='Unmaximize'/>
+            <menuitem action='Close'/>
+        </menu>
+
+        <menu action='ViewMenu'>
+            <menuitem action='ShowHideVButtons'/>
+            <menuitem action='ShowHideToolbar'/>
+            <separator/>
+            <menuitem action='IncreaseToolbarIconsSize'/>
+            <menuitem action='DecreaseToolbarIconsSize'/>
+        </menu>
+
+        <menu action='HelpMenu'>
+            <menuitem action='Help'/>
+            <separator/>
+            <menuitem action='About'/>
+        </menu>
+    </menubar>
+
+    <toolbar name='ToolBar'>
+        <toolitem action='SelectAll'/>
+        <toolitem action='Reload'/>
+        <separator/>
+        <toolitem action='UnTile'/>
+        <toolitem action='InverTile'/>
+        <separator/>
+        <toolitem action='Vertically'/>
+        <toolitem action='Horizontally'/>
+        <toolitem action='Grid'/>
+        <toolitem action='Custom1Exe'/>
+        <toolitem action='Custom2Exe'/>
+        <separator/>
+        <toolitem action='Maximize'/>
+        <toolitem action='Unmaximize'/>
+        <toolitem action='Close'/>
+    </toolbar>
+
+    <popup name='ListMenu'>
+        <menuitem action='RowUp'/>
+        <menuitem action='RowDown'/>
+        <separator/>
+        <menuitem action='RowDelete'/>
+    </popup>
 </ui>
 """
 
 def get_entries(inst):
-   """Returns the Menu Entries Given the Class Instance"""
-   return [
-   # name, stock id, label
-   ( "FileMenu", None, _("_File") ),
-   ( "EditMenu", None, _("_Edit") ),
-   ( "RowMenu", None, _("_Row") ),
-   ( "TileMenu", None, _("_Tile") ),
-   ( "ViewMenu", None, _("_View") ),
-   ( "HelpMenu", None, _("_Help") ),
-   # name, stock id, label, accelerator, tooltip, callback
-   ( "Filter", "gtk-properties", _("_Filter"), "<control>F", _("Filter Rows"), inst.dialog_filter),
-   ( "DefaultSel", "gtk-properties", _("Selected by _Default"), "<control>D", _("Rows to be Selected by Default"), inst.dialog_selected_by_default),
-   ( "Reload", "Reload Windows List", _("_Reload"), "F5", _("Reload the Windows List"), inst.reload_windows_list),
-   ( "QuitApp", "gtk-quit", _("_Quit"), "<control>Q", _("Quit the Application"), inst.quit_application),
-   ( "Preferences", "gtk-preferences", _("_Preferences"), "<control><alt>P", _("Open the Preferences Window"), inst.dialog_preferences),
-   ( "SelectAll", "Select All", _("Select _All"), "<control>A", _("Select All the Windows in the List"), inst.flag_all_rows),
-   ( "DeselectAll", "Deselect All", _("Deselect A_ll"), "<control><shift>A", _("Deselect All the Windows in the List"), inst.unflag_all_rows),
-   ( "Vertically", "Tile Vertically", _("Tile _Vertically"), "<control>V", _("Tile Vertically The Checked Windows"), inst.tile_vertically),
-   ( "Horizontally", "Tile Horizontally", _("Tile _Horizontally"), "<control>H", _("Tile Horizontally The Checked Windows"), inst.tile_horizontally),
-   ( "TriangleUp", "Tile Triangle Up", _("_Triangle Up"), "<control>Up", _("Tile Triangle Up The Checked Windows"), inst.tile_triangle_up),
-   ( "TriangleDown", "Tile Triangle Down", _("Triangle _Down"), "<control>Down", _("Tile Triangle Down The Checked Windows"), inst.tile_triangle_down),
-   ( "TriangleLeft", "Tile Triangle Left", _("Triangle _Left"), "<control>Left", _("Tile Triangle Left The Checked Windows"), inst.tile_triangle_left),
-   ( "TriangleRight", "Tile Triangle Right", _("Triangle _Right"), "<control>Right", _("Tile Triangle Right The Checked Windows"), inst.tile_triangle_right),
-   ( "Quad", "Tile Quad", _("Tile _Quad"), "<control>4", _("Tile into 4 quadrants The Checked Windows"), inst.tile_quad),
-   ( "Grid", "Tile Grid", _("Tile _Grid"), "<control>G", _("Tile into an Arbitrary Grid The Checked Windows"), inst.dialog_grid),
-   ( "Custom1Set", "Custom Set 1", _("Custom Tile 1 _Set"), "<alt>1", _("Edit Custom Tile 1 Settings"), inst.tile_custom_1_set),
-   ( "Custom1Exe", "Custom Exe 1", _("Custom Tile _1 Run"), "<control>1", _("Execute Custom Tile 1"), inst.tile_custom_1_run),
-   ( "Custom2Set", "Custom Set 2", _("Custom Tile 2 S_et"), "<alt>2", _("Edit Custom Tile 2 Settings"), inst.tile_custom_2_set),
-   ( "Custom2Exe", "Custom Exe 2", _("Custom Tile _2 Run"), "<control>2", _("Execute Custom Tile 2"), inst.tile_custom_2_run),
-   ( "UnTile", "gtk-undo", _("U_ndo Tiling"), "<control>Z", _("Undo the Latest Tiling Operation"), inst.undo_tiling),
-   ( "InverTile", "Invert Tiling", _("_Invert Tiling Order"), "<control>I", _("Invert the Order of the Latest Tiling Operation"), inst.invert_tiling),
-   ( "Maximize", "Maximize Windows", _("_Maximize Windows"), "<control>M", _("Maximize The Checked Windows"), inst.maximize_checked_windows),
-   ( "Unmaximize", "Unmaximize Windows", _("_Unmaximize Windows"), "<control>U", _("Unmaximize The Checked Windows"), inst.unmaximize_checked_windows),
-   ( "Close", "Close Windows", _("_Close Windows"), "<control>C", _("Close The Checked Windows"), inst.close_checked_windows),
-   ( "RowUp", "gtk-go-up", _("Move _Up"), "<alt>Up", _("Move the Selected Row Up"), inst.on_button_row_up_clicked),
-   ( "RowDown", "gtk-go-down", _("Move _Down"), "<alt>Down", _("Move the Selected Row Down"), inst.on_button_row_down_clicked),
-   ( "RowDelete", "gtk-remove", _("_Remove"), "Delete", _("Remove the Selected Row"), inst.on_button_row_delete_clicked),
-   ( "ShowHideVButtons", "VButtons", _("Show/Hide _Vertical Buttons"), None, _("Toggle Show/Hide Vertical Buttons"), inst.show_hide_vertical_buttons),
-   ( "ShowHideToolbar", "Toolbar", _("Show/Hide _Toolbar"), None, _("Toggle Show/Hide Toolbar"), inst.show_hide_toolbar),
-   ( "IncreaseToolbarIconsSize", "gtk-add", _("_Increase Toolbar Icons Size"), None, _("Increase the Size of the Toolbar Icons"), inst.toolbar_icons_size_increase),
-   ( "DecreaseToolbarIconsSize", "gtk-remove", _("_Decrease Toolbar Icons Size"), None, _("Decrease the Size of the Toolbar Icons"), inst.toolbar_icons_size_decrease),
-   ( "Help", "Help Contents", _("_Help"), None, _("X Tile Project Home Page"), inst.on_help_menu_item_activated),
-   ( "About", "gtk-about", _("_About"), None, _("About X Tile"), inst.dialog_about),
-   ]
+    """Returns the Menu Entries Given the Class Instance"""
+    return [
+    # name, stock id, label
+    ( "FileMenu", None, _("_File") ),
+    ( "EditMenu", None, _("_Edit") ),
+    ( "RowMenu", None, _("_Row") ),
+    ( "TileMenu", None, _("_Tile") ),
+    ( "ViewMenu", None, _("_View") ),
+    ( "HelpMenu", None, _("_Help") ),
+    # name, stock id, label, accelerator, tooltip, callback
+    ( "Filter", "gtk-properties", _("_Filter"), "<control>F", _("Filter Rows"), inst.dialog_filter),
+    ( "DefaultSel", "gtk-properties", _("Selected by _Default"), "<control>D", _("Rows to be Selected by Default"), inst.dialog_selected_by_default),
+    ( "Reload", "Reload Windows List", _("_Reload"), "F5", _("Reload the Windows List"), inst.reload_windows_list),
+    ( "QuitApp", "gtk-quit", _("_Quit"), "<control>Q", _("Quit the Application"), inst.quit_application),
+    ( "Preferences", "gtk-preferences", _("_Preferences"), "<control><alt>P", _("Open the Preferences Window"), inst.dialog_preferences),
+    ( "SelectAll", "Select All", _("Select _All"), "<control>A", _("Select All the Windows in the List"), inst.flag_all_rows),
+    ( "DeselectAll", "Deselect All", _("Deselect A_ll"), "<control><shift>A", _("Deselect All the Windows in the List"), inst.unflag_all_rows),
+    ( "Vertically", "Tile Vertically", _("Tile _Vertically"), "<control>V", _("Tile Vertically The Checked Windows"), inst.tile_vertically),
+    ( "Horizontally", "Tile Horizontally", _("Tile _Horizontally"), "<control>H", _("Tile Horizontally The Checked Windows"), inst.tile_horizontally),
+    ( "TriangleUp", "Tile Triangle Up", _("_Triangle Up"), "<control>Up", _("Tile Triangle Up The Checked Windows"), inst.tile_triangle_up),
+    ( "TriangleDown", "Tile Triangle Down", _("Triangle _Down"), "<control>Down", _("Tile Triangle Down The Checked Windows"), inst.tile_triangle_down),
+    ( "TriangleLeft", "Tile Triangle Left", _("Triangle _Left"), "<control>Left", _("Tile Triangle Left The Checked Windows"), inst.tile_triangle_left),
+    ( "TriangleRight", "Tile Triangle Right", _("Triangle _Right"), "<control>Right", _("Tile Triangle Right The Checked Windows"), inst.tile_triangle_right),
+    ( "Quad", "Tile Quad", _("Tile _Quad"), "<control>4", _("Tile into 4 quadrants The Checked Windows"), inst.tile_quad),
+    ( "Grid", "Tile Grid", _("Tile _Grid"), "<control>G", _("Tile into an Arbitrary Grid The Checked Windows"), inst.dialog_grid),
+    ( "Custom1Set", "Custom Set 1", _("Custom Tile 1 _Set"), "<alt>1", _("Edit Custom Tile 1 Settings"), inst.tile_custom_1_set),
+    ( "Custom1Exe", "Custom Exe 1", _("Custom Tile _1 Run"), "<control>1", _("Execute Custom Tile 1"), inst.tile_custom_1_run),
+    ( "Custom2Set", "Custom Set 2", _("Custom Tile 2 S_et"), "<alt>2", _("Edit Custom Tile 2 Settings"), inst.tile_custom_2_set),
+    ( "Custom2Exe", "Custom Exe 2", _("Custom Tile _2 Run"), "<control>2", _("Execute Custom Tile 2"), inst.tile_custom_2_run),
+    ( "UnTile", "gtk-undo", _("U_ndo Tiling"), "<control>Z", _("Undo the Latest Tiling Operation"), inst.undo_tiling),
+    ( "InverTile", "Invert Tiling", _("_Invert Tiling Order"), "<control>I", _("Invert the Order of the Latest Tiling Operation"), inst.invert_tiling),
+    ( "Maximize", "Maximize Windows", _("_Maximize Windows"), "<control>M", _("Maximize The Checked Windows"), inst.maximize_checked_windows),
+    ( "Unmaximize", "Unmaximize Windows", _("_Unmaximize Windows"), "<control>U", _("Unmaximize The Checked Windows"), inst.unmaximize_checked_windows),
+    ( "Close", "Close Windows", _("_Close Windows"), "<control>C", _("Close The Checked Windows"), inst.close_checked_windows),
+    ( "RowUp", "gtk-go-up", _("Move _Up"), "<alt>Up", _("Move the Selected Row Up"), inst.on_button_row_up_clicked),
+    ( "RowDown", "gtk-go-down", _("Move _Down"), "<alt>Down", _("Move the Selected Row Down"), inst.on_button_row_down_clicked),
+    ( "RowDelete", "gtk-remove", _("_Remove"), "Delete", _("Remove the Selected Row"), inst.on_button_row_delete_clicked),
+    ( "ShowHideVButtons", "VButtons", _("Show/Hide _Vertical Buttons"), None, _("Toggle Show/Hide Vertical Buttons"), inst.show_hide_vertical_buttons),
+    ( "ShowHideToolbar", "Toolbar", _("Show/Hide _Toolbar"), None, _("Toggle Show/Hide Toolbar"), inst.show_hide_toolbar),
+    ( "IncreaseToolbarIconsSize", "gtk-add", _("_Increase Toolbar Icons Size"), None, _("Increase the Size of the Toolbar Icons"), inst.toolbar_icons_size_increase),
+    ( "DecreaseToolbarIconsSize", "gtk-remove", _("_Decrease Toolbar Icons Size"), None, _("Decrease the Size of the Toolbar Icons"), inst.toolbar_icons_size_decrease),
+    ( "Help", "Help Contents", _("_Help"), None, _("X Tile Project Home Page"), inst.on_help_menu_item_activated),
+    ( "About", "gtk-about", _("_About"), None, _("About X Tile"), inst.dialog_about),
+    ]
 
 def get_applet_menu_verbs(inst):
-   """Returns the Menu Verbs Given the Class Instance"""
-   return [
-            ("About", inst.dialog_about),
-            
-            ("All_C", inst.close_all),
-            ("All_U", inst.unmaximize_all),
-            ("All_M", inst.maximize_all),
-            
-            ("Invert", inst.invert_tiling),
-            
-            ("All_4", inst.tile_all_quad),
-            ("All_TR", inst.tile_all_triangle_right),
-            ("All_TL", inst.tile_all_triangle_left),
-            ("All_TD", inst.tile_all_triangle_down),
-            ("All_TU", inst.tile_all_triangle_up),
-            
-            ("All_C2", inst.tile_all_custom_2),
-            ("All_C1", inst.tile_all_custom_1),
-            
-            ("All_G", inst.tile_all_grid),
-            ("All_H", inst.tile_all_horizontally),
-            ("All_V", inst.tile_all_vertically),
-            
-            ("Undo", inst.undo_tiling),
-           ]
+    """Returns the Menu Verbs Given the Class Instance"""
+    return [
+             ("About", inst.dialog_about),
+
+             ("All_C", inst.close_all),
+             ("All_U", inst.unmaximize_all),
+             ("All_M", inst.maximize_all),
+
+             ("Invert", inst.invert_tiling),
+
+             ("All_4", inst.tile_all_quad),
+             ("All_TR", inst.tile_all_triangle_right),
+             ("All_TL", inst.tile_all_triangle_left),
+             ("All_TD", inst.tile_all_triangle_down),
+             ("All_TU", inst.tile_all_triangle_up),
+
+             ("All_C2", inst.tile_all_custom_2),
+             ("All_C1", inst.tile_all_custom_1),
+
+             ("All_G", inst.tile_all_grid),
+             ("All_H", inst.tile_all_horizontally),
+             ("All_V", inst.tile_all_vertically),
+
+             ("Undo", inst.undo_tiling),
+            ]
 
 HELP_TEXT = """
 
@@ -310,35 +310,35 @@ DESCRIPTION
 OPTIONS
 
    w => open the x-tile main window without using the panel
-   
+
    z => undo the latest tiling operation
-   
+
    v => tile all opened windows vertically
-   
+
    h => tile all opened windows horizontally
-   
+
    u => tile all opened windows triangle-up
-   
+
    d => tile all opened windows triangle-down
-   
+
    l => tile all opened windows triangle-left
-   
+
    r => tile all opened windows triangle-right
-   
+
    q => quad tile all opened windows
-   
+
    g => tile all opened windows in a grid having number of rows and columns the given arguments
-   
+
    1 => custom tile 1 all opened windows
-   
+
    2 => custom tile 2 all opened windows
-   
+
    i => invert the order of the latest tiling operation
-   
+
    m => maximize all opened windows
-   
+
    M => unmaximize all opened windows
-   
+
    c => close all opened windows
 
 SEE ALSO
