@@ -263,16 +263,16 @@ class XTile:
         self.glade.window.add_accel_group(self.ui.get_accel_group())
         self.ui.add_ui_from_string(cons.UI_INFO)
         # menubar add
-        self.glade.vbox_main.pack_start(self.ui.get_widget("/MenuBar", True, True, 0), False, False)
+        self.glade.vbox_main.pack_start(self.ui.get_widget("/MenuBar"), False, False, 0)
         self.glade.vbox_main.reorder_child(self.ui.get_widget("/MenuBar"), 0)
         # toolbar add
-        self.glade.vbox_main.pack_start(self.ui.get_widget("/ToolBar", True, True, 0), False, False)
+        self.glade.vbox_main.pack_start(self.ui.get_widget("/ToolBar"), False, False, 0)
         self.glade.vbox_main.reorder_child(self.ui.get_widget("/ToolBar"), 1)
-        self.ui.get_widget("/ToolBar").set_style(Gtk.TOOLBAR_ICONS)
+        self.ui.get_widget("/ToolBar").set_style(Gtk.ToolbarStyle.ICONS)
         # create a variable pointing to the instance of the InfoModel class
         self.store = store
         # create the view
-        self.view = Gtk.TreeView(store.get_model())
+        self.view = Gtk.TreeView.new_with_model(store.get_model())
         self.view.set_headers_visible(False)
         self.renderer_checkbox = Gtk.CellRendererToggle()
         self.renderer_checkbox.set_property('activatable', True)
@@ -374,8 +374,8 @@ class XTile:
     def init_from_gconf(self):
         """Init the geometry and the spinbuttons"""
         glob.read_monitors_areas()
-        self.glade.drawingarea.set_property("width-request", glob.drawing_rect.width)
-        self.glade.drawingarea.set_property("height-request", glob.drawing_rect.height)
+        self.glade.drawingarea.set_property("width-request", glob.drawing_rect[2])
+        self.glade.drawingarea.set_property("height-request", glob.drawing_rect[3])
         self.custom_geoms_1 = []
         custom_geoms_str = self.gconf_client.get_string(cons.GCONF_CUSTOM_1 % glob.screen_index)
         if custom_geoms_str:
