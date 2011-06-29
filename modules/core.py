@@ -24,7 +24,7 @@
 #      Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 #      MA 02110-1301, USA.
 
-from gi.repository import Gtk, GConf, GObject, Gdk
+from gi.repository import Gtk, GConf, GObject, Gdk, GdkPixbuf
 import sys, ctypes, webbrowser, time
 import cons, support, tilings
 
@@ -86,13 +86,6 @@ class InfoModel:
                     print "class "+title
             else: title = ctypes.string_at(glob.ret_pointer)
             if title in cons.WINNAMES_BLACKLIST: continue
-            if Gdk.window_lookup(client) == appletobj.glade.window.window: continue # we do not show our own window
-            if appletobj.glade.configwindow.window != None and Gdk.window_lookup(client) == appletobj.glade.configwindow.window:
-                continue # nor the pref window!
-            if appletobj.glade.filterdialog.window != None and Gdk.window_lookup(client) == appletobj.glade.filterdialog.window:
-                continue # nor the filter window!
-            if appletobj.glade.whitedialog.window != None and Gdk.window_lookup(client) == appletobj.glade.whitedialog.window:
-                continue # nor the white window!
             pxb = support.get_icon(client)
             if pxb: pxb = pxb.scale_simple(24, 24, GdkPixbuf.InterpType.BILINEAR)
             support.get_property("_NET_WM_PID", client, glob.XA_CARDINAL)
@@ -104,15 +97,18 @@ class InfoModel:
                 pid = glob.ret_pointer[0]
                 process_name = support.get_process_name(pid)
             # filter based on process name - NB beppie I'd like something better for this but dont know what!
+            if process_name == cons.APP_NAME: continue
             self.process_picklist.add(process_name)
             if process_name not in self.process_blacklist: # user filter
-                win_curr_monitor = screen.get_monitor_at_window(Gdk.window_foreign_new(client))
-                if win_curr_monitor == 0: cell_background = 'white'
-                else: cell_background = 'gray'
+                #win_curr_monitor = screen.get_monitor_at_window(Gdk.window_foreign_new(client))
+                #if win_curr_monitor == 0: cell_background = 'white'
+                #else: cell_background = 'gray'
+                cell_background = 'white'
                 if process_name not in self.process_whitelist: flagged = False
                 else: flagged = True
-                if win_curr_monitor == 0: self.liststore.prepend([flagged, client, title, pxb, False, cell_background])
-                else: self.liststore.append([flagged, client, title, pxb, False, cell_background])
+                #if win_curr_monitor == 0: self.liststore.prepend([flagged, client, title, pxb, False, cell_background])
+                #else: self.liststore.append([flagged, client, title, pxb, False, cell_background])
+                self.liststore.append([flagged, client, title, pxb, False, cell_background])
                 rows_num += 1
         if rows_num == 2:
             iter = self.liststore.get_iter_first()
@@ -554,9 +550,9 @@ class XTile:
         """Unflags All Rows"""
         self.store.unflag_all_rows()
 
-    def make_pixbuf(self, treeviewcolumn, cell, model, iter):
+    def make_pixbuf(self, treeviewcolumn, cell, tree_model, tree_iter, data):
         """Function to associate the pixbuf to the cell renderer"""
-        pixbuf = model[iter][3]
+        pixbuf = tree_model[tree_iter][3]
         cell.set_property('pixbuf', pixbuf)
 
     def on_window_delete_event(self, widget, event, data=None):
@@ -654,7 +650,7 @@ class XTile:
         self.store.process_blacklist.remove(model[iter][0])
         self.filter_list_update()
 
-    def dialog_filter(self, action):
+    def dialog_filter(self, action, data):
         """Application's Filter Dialog"""
         self.filter_list_exist_or_create()
         self.filter_list_update()
@@ -715,7 +711,7 @@ class XTile:
         """If The List Was Never Used, this will Create It"""
         if not "filter_liststore" in dir(self):
             self.filter_liststore = Gtk.ListStore(str)
-            self.filter_treeview = Gtk.TreeView(self.filter_liststore)
+            self.filter_treeview = Gtk.TreeView.new_with_model(self.filter_liststore)
             self.filter_treeview.set_headers_visible(False)
             self.filter_renderer_text = Gtk.CellRendererText()
             self.filter_column = Gtk.TreeViewColumn("Application", self.filter_renderer_text, text=0)
@@ -728,7 +724,7 @@ class XTile:
         """If The List Was Never Used, this will Create It"""
         if not "white_liststore" in dir(self):
             self.white_liststore = Gtk.ListStore(str)
-            self.white_treeview = Gtk.TreeView(self.white_liststore)
+            self.white_treeview = Gtk.TreeView.new_with_model(self.white_liststore)
             self.white_treeview.set_headers_visible(False)
             self.white_renderer_text = Gtk.CellRendererText()
             self.white_column = Gtk.TreeViewColumn("Application", self.white_renderer_text, text=0)
@@ -741,7 +737,7 @@ class XTile:
         """If The List Was Never Used, this will Create It"""
         if not "process_add_liststore" in dir(self):
             self.process_add_liststore = Gtk.ListStore(str)
-            self.process_add_treeview = Gtk.TreeView(self.process_add_liststore)
+            self.process_add_treeview = Gtk.TreeView.new_with_model(self.process_add_liststore)
             self.process_add_treeview.set_headers_visible(False)
             self.process_add_renderer_text = Gtk.CellRendererText()
             self.process_add_column = Gtk.TreeViewColumn("Application", self.process_add_renderer_text, text=0)
