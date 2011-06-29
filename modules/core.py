@@ -97,7 +97,9 @@ class InfoModel:
                 pid = glob.ret_pointer[0]
                 process_name = support.get_process_name(pid)
             # filter based on process name - NB beppie I'd like something better for this but dont know what!
-            if process_name == cons.APP_NAME: continue
+            if len(process_name) > 7 and process_name[-7:] == "x-tile2": continue
+            if process_name in cons.PROCESSES_BLACKLIST: continue
+            #print process_name
             self.process_picklist.add(process_name)
             if process_name not in self.process_blacklist: # user filter
                 #win_curr_monitor = screen.get_monitor_at_window(Gdk.window_foreign_new(client))
@@ -650,7 +652,7 @@ class XTile:
         self.store.process_blacklist.remove(model[iter][0])
         self.filter_list_update()
 
-    def dialog_filter(self, action, data):
+    def dialog_filter(self, *args):
         """Application's Filter Dialog"""
         self.filter_list_exist_or_create()
         self.filter_list_update()
@@ -684,7 +686,7 @@ class XTile:
         self.store.process_whitelist.remove(model[iter][0])
         self.white_list_update()
 
-    def dialog_selected_by_default(self, action):
+    def dialog_selected_by_default(self, *args):
         """Dialog to select a list of windows to be flagged by Default"""
         self.white_list_exist_or_create()
         self.white_list_update()
@@ -750,7 +752,7 @@ class XTile:
     def on_mouse_button_clicked_process_add(self, widget, event):
         """Catches mouse buttons clicks"""
         if event.button != 1: return
-        if event.type == Gdk._2BUTTON_PRESS: self.glade.processadddialog_button_ok.clicked()
+        if event.type == Gdk.EventType._2BUTTON_PRESS: self.glade.processadddialog_button_ok.clicked()
 
     def on_key_press_processadddialog(self, widget, event):
         """Catches AnchorHandle Dialog key presses"""
