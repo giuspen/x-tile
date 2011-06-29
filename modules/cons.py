@@ -56,7 +56,8 @@ H2 = 10
 GRID_ROWS = 2
 GRID_COLS = 2
 
-WINNAMES_BLACKLIST = ["x-nautilus-desktop"]
+WINNAMES_BLACKLIST = ["x-nautilus-desktop", "pcmanfm"]
+PROCESSES_BLACKLIST = ["lxpanel"]
 
 DRAW_SCALE = 4
 DRAW_RGBS = (
