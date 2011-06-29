@@ -102,15 +102,17 @@ class InfoModel:
             #print process_name
             self.process_picklist.add(process_name)
             if process_name not in self.process_blacklist: # user filter
-                #win_curr_monitor = screen.get_monitor_at_window(Gdk.window_foreign_new(client))
-                #if win_curr_monitor == 0: cell_background = 'white'
-                #else: cell_background = 'gray'
-                cell_background = 'white'
+                if glob.num_monitors > 1:
+                    win_geom = support.get_geom(win_id)
+                    win_curr_monitor = screen.get_monitor_at_point(win_geom[0]+win_geom[2]/2,
+                                                                   win_geom[1]+win_geom[3]/2)
+                else: win_curr_monitor = 0
+                cell_background = 'white' if win_curr_monitor == 0 else 'gray'
                 if process_name not in self.process_whitelist: flagged = False
                 else: flagged = True
-                #if win_curr_monitor == 0: self.liststore.prepend([flagged, client, title, pxb, False, cell_background])
-                #else: self.liststore.append([flagged, client, title, pxb, False, cell_background])
-                self.liststore.append([flagged, client, title, pxb, False, cell_background])
+                row_to_insert = [flagged, client, title, pxb, False, cell_background]
+                if win_curr_monitor == 0: self.liststore.insert(0, row_to_insert)
+                else: self.liststore.append(row_to_insert)
                 rows_num += 1
         if rows_num == 2:
             iter = self.liststore.get_iter_first()
@@ -772,14 +774,14 @@ class XTile:
         label_rows = Gtk.Label(label=_("Rows"))
         spinbutton_rows = Gtk.SpinButton()
         adj_rows = spinbutton_rows.get_adjustment()
-        adj_rows.set_all(cons.GRID_ROWS, 1, 100, 1, 0, 0)
+        adj_rows.configure(cons.GRID_ROWS, 1, 100, 1, 0, 0)
         hbox_rows.pack_start(label_rows, True, True, 0)
         hbox_rows.pack_start(spinbutton_rows, True, True, 0)
         hbox_cols = Gtk.HBox()
         label_cols = Gtk.Label(label=_("Columns"))
         spinbutton_cols = Gtk.SpinButton()
         adj_cols = spinbutton_cols.get_adjustment()
-        adj_cols.set_all(cons.GRID_COLS, 1, 100, 1, 0, 0)
+        adj_cols.configure(cons.GRID_COLS, 1, 100, 1, 0, 0)
         hbox_cols.pack_start(label_cols, True, True, 0)
         hbox_cols.pack_start(spinbutton_cols, True, True, 0)
         content_area.pack_start(hbox_rows, True, True, 0)
@@ -942,7 +944,7 @@ class XTile:
 
     def custom_geoms_draw(self, custom_geoms):
         """Draw Custom Geometries"""
-        cr = self.glade.drawingarea.window.cairo_create()
+        cr = self.glade.drawingarea.get_window().cairo_create()
         rgb_idx = 0
         for i, win_geom in enumerate(custom_geoms):
             cr.set_source_rgb(*cons.DRAW_RGBS[rgb_idx])
