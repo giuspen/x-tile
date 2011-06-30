@@ -77,7 +77,7 @@ def get_property(prop_name, window, data_type):  #128*256 longs (128kb) should b
     """   gets an x property puts in global return variables
           property name, window, return data type atom   """
     prop_atom = glob.x11.XInternAtom(glob.disp, prop_name, False)
-    glob.x11.XGetWindowProperty(glob.disp, window, prop_atom, 0, 128*256, False, data_type,
+    glob.x11.XGetWindowProperty(glob.disp, window, prop_atom, 0, (~0L), False, data_type,
                            ctypes.byref(glob.ret_type), ctypes.byref(glob.ret_format), ctypes.byref(glob.num_items),
                            ctypes.byref(glob.bytes_after), ctypes.byref(glob.ret_pointer))
 
@@ -89,7 +89,7 @@ def get_icon(win):
     """   this returns a Gdk.pixbuf of the windows icon
           converts argb into rgba in the process   """
     get_property("_NET_WM_ICON", win, glob.XA_CARDINAL)
-    if not glob.ret_pointer : return None
+    if not glob.ret_pointer: return None
     w = glob.ret_pointer[0]
     h = glob.ret_pointer[1]
     s = w*h
@@ -98,10 +98,10 @@ def get_icon(win):
     while i<s:
         argb = glob.ret_pointer[i+2]
         i += 1
-        buff = buff + ("%c" % ((argb >> 16) & 0xff))
-        buff = buff + ("%c" % ((argb >> 8) & 0xff))
-        buff = buff + ("%c" % (argb & 0xff))
-        buff = buff + ("%c" % ((argb >> 24) & 0xff))
+        buff += "%c" % ((argb >> 16) & 0xff)
+        buff += "%c" % ((argb >> 8) & 0xff)
+        buff += "%c" % (argb & 0xff)
+        buff += "%c" % ((argb >> 24) & 0xff)
     pxbuf = GdkPixbuf.Pixbuf.new_from_data(buff,
                                            GdkPixbuf.Colorspace.RGB,
                                            True,
