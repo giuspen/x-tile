@@ -279,24 +279,6 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkCheckButton" id="show_vbuttons_checkbutton">
-                    <property name="label" translatable="yes">Show Windows Sorting Buttons</property>
-                    <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="receives_default">False</property>
-                    <property name="use_action_appearance">False</property>
-                    <property name="active">True</property>
-                    <property name="draw_indicator">True</property>
-                    <signal name="toggled" handler="show_hide_vertical_buttons" swapped="no"/>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">True</property>
-                    <property name="padding">2</property>
-                    <property name="position">7</property>
-                  </packing>
-                </child>
-                <child>
                   <object class="GtkCheckButton" id="show_toolbar_checkbutton">
                     <property name="label" translatable="yes">Show Toolbar</property>
                     <property name="visible">True</property>
@@ -311,7 +293,7 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                     <property name="expand">False</property>
                     <property name="fill">True</property>
                     <property name="padding">2</property>
-                    <property name="position">8</property>
+                    <property name="position">7</property>
                   </packing>
                 </child>
               </object>
@@ -1663,134 +1645,23 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
           <placeholder/>
         </child>
         <child>
-          <object class="GtkHBox" id="hbox2">
+          <object class="GtkFrame" id="frame1">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="label_xalign">0</property>
             <child>
-              <object class="GtkVButtonBox" id="vbuttonbox_updown">
-                <property name="can_focus">False</property>
-                <property name="layout_style">start</property>
-                <child>
-                  <object class="GtkButton" id="button1">
-                    <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="receives_default">True</property>
-                    <property name="tooltip_text" translatable="yes">Move the Selected Row Up</property>
-                    <property name="use_action_appearance">False</property>
-                    <signal name="clicked" handler="on_button_row_up_clicked" swapped="no"/>
-                    <child>
-                      <object class="GtkImage" id="image13">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="stock">gtk-go-up</property>
-                      </object>
-                    </child>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">False</property>
-                    <property name="position">0</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkButton" id="button2">
-                    <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="receives_default">True</property>
-                    <property name="tooltip_text" translatable="yes">Move the Selected Row Down</property>
-                    <property name="use_action_appearance">False</property>
-                    <signal name="clicked" handler="on_button_row_down_clicked" swapped="no"/>
-                    <child>
-                      <object class="GtkImage" id="image14">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="stock">gtk-go-down</property>
-                      </object>
-                    </child>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">False</property>
-                    <property name="position">1</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkButton" id="button3">
-                    <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="receives_default">True</property>
-                    <property name="tooltip_text" translatable="yes">Remove the Selected Row</property>
-                    <property name="use_action_appearance">False</property>
-                    <signal name="clicked" handler="on_button_row_delete_clicked" swapped="no"/>
-                    <child>
-                      <object class="GtkImage" id="image15">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="stock">gtk-remove</property>
-                      </object>
-                    </child>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">False</property>
-                    <property name="position">2</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkButton" id="button4">
-                    <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="receives_default">True</property>
-                    <property name="tooltip_text" translatable="yes">Hide the Vertical ButtonBox</property>
-                    <property name="use_action_appearance">False</property>
-                    <signal name="clicked" handler="show_hide_vertical_buttons" swapped="no"/>
-                    <child>
-                      <object class="GtkImage" id="image18">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="stock">gtk-close</property>
-                      </object>
-                    </child>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">False</property>
-                    <property name="position">3</property>
-                  </packing>
-                </child>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">0</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkFrame" id="frame1">
+              <object class="GtkScrolledWindow" id="scrolledwindow">
                 <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label_xalign">0</property>
+                <property name="can_focus">True</property>
+                <property name="hscrollbar_policy">automatic</property>
+                <property name="vscrollbar_policy">automatic</property>
                 <child>
-                  <object class="GtkScrolledWindow" id="scrolledwindow">
-                    <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="tooltip_text" translatable="yes">Use Drag and Drop to Sort the Rows</property>
-                    <property name="hscrollbar_policy">automatic</property>
-                    <property name="vscrollbar_policy">automatic</property>
-                    <child>
-                      <placeholder/>
-                    </child>
-                  </object>
-                </child>
-                <child type="label_item">
                   <placeholder/>
                 </child>
               </object>
-              <packing>
-                <property name="expand">True</property>
-                <property name="fill">True</property>
-                <property name="position">2</property>
-              </packing>
+            </child>
+            <child type="label_item">
+              <placeholder/>
             </child>
           </object>
           <packing>
