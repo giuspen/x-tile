@@ -574,7 +574,6 @@ class XTile:
         self.glade.current_workspace_checkbutton.set_active(self.gconf_client.get_string(cons.GCONF_ONLY_CURR_DESK % glob.screen_index) == "True")
         self.glade.do_not_list_minimized_checkbutton.set_active(self.gconf_client.get_string(cons.GCONF_NOT_MINIMIZED % glob.screen_index) == "True")
         self.glade.show_toolbar_checkbutton.set_active(self.gconf_client.get_string(cons.GCONF_SHOW_TOOLBAR % glob.screen_index) == "True")
-        self.glade.show_vbuttons_checkbutton.set_active(self.gconf_client.get_string(cons.GCONF_SHOW_VBUTTONS % glob.screen_index) == "True")
         self.no_toggling_signals = False
         self.glade.configwindow.show_all()
 
@@ -821,9 +820,6 @@ class XTile:
         show_toolbar = self.gconf_client.get_string(cons.GCONF_SHOW_TOOLBAR % glob.screen_index)
         if show_toolbar == None: self.gconf_client.set_string(cons.GCONF_SHOW_TOOLBAR % glob.screen_index, "True")
         elif show_toolbar == "False": self.ui.get_widget("/ToolBar").hide()
-        show_vbuttons = self.gconf_client.get_string(cons.GCONF_SHOW_VBUTTONS % glob.screen_index)
-        if show_vbuttons == None: self.gconf_client.set_string(cons.GCONF_SHOW_VBUTTONS % glob.screen_index, "False")
-        elif show_vbuttons == "False": self.glade.vbuttonbox_updown.hide()
         self.window_position_restore()
 
     def reload_windows_list(self, *args):
@@ -1085,16 +1081,6 @@ class XTile:
             else:
                 self.ui.get_widget("/ToolBar").show()
                 self.gconf_client.set_string(cons.GCONF_SHOW_TOOLBAR % glob.screen_index, "True")
-
-    def show_hide_vertical_buttons(self, menuitem, data=None):
-        """Show/Hide the Toolbar"""
-        if not self.no_toggling_signals:
-            if self.glade.vbuttonbox_updown.get_property('visible') == True:
-                self.glade.vbuttonbox_updown.hide()
-                self.gconf_client.set_string(cons.GCONF_SHOW_VBUTTONS % glob.screen_index, "False")
-            else:
-                self.glade.vbuttonbox_updown.show()
-                self.gconf_client.set_string(cons.GCONF_SHOW_VBUTTONS % glob.screen_index, "True")
 
     def check_exit_after_tile(self):
         """Check if the Exit After Tile is Active and Eventually Quit"""

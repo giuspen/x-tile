@@ -117,7 +117,6 @@ GCONF_WIN_SIZE_H = "/apps/x-tile/%s/win_size_h"
 GCONF_WIN_POSITION_X = "/apps/x-tile/%s/win_position_x"
 GCONF_WIN_POSITION_Y = "/apps/x-tile/%s/win_position_y"
 GCONF_SHOW_TOOLBAR = "/apps/x-tile/%s/show_toolbar"
-GCONF_SHOW_VBUTTONS = "/apps/x-tile/%s/show_vbuttons"
 GCONF_X1 = "/apps/x-tile/%s/x_1"
 GCONF_Y1 = "/apps/x-tile/%s/y_1"
 GCONF_W1 = "/apps/x-tile/%s/w_1"
@@ -183,7 +182,6 @@ UI_INFO = """
         </menu>
 
         <menu action='ViewMenu'>
-            <menuitem action='ShowHideVButtons'/>
             <menuitem action='ShowHideToolbar'/>
             <separator/>
             <menuitem action='IncreaseToolbarIconsSize'/>
@@ -262,7 +260,6 @@ def get_entries(inst):
     ( "RowUp", "gtk-go-up", _("Move _Up"), "<alt>Up", _("Move the Selected Row Up"), inst.on_button_row_up_clicked),
     ( "RowDown", "gtk-go-down", _("Move _Down"), "<alt>Down", _("Move the Selected Row Down"), inst.on_button_row_down_clicked),
     ( "RowDelete", "gtk-remove", _("_Remove"), "Delete", _("Remove the Selected Row"), inst.on_button_row_delete_clicked),
-    ( "ShowHideVButtons", "VButtons", _("Show/Hide _Vertical Buttons"), None, _("Toggle Show/Hide Vertical Buttons"), inst.show_hide_vertical_buttons),
     ( "ShowHideToolbar", "Toolbar", _("Show/Hide _Toolbar"), None, _("Toggle Show/Hide Toolbar"), inst.show_hide_toolbar),
     ( "IncreaseToolbarIconsSize", "gtk-add", _("_Increase Toolbar Icons Size"), None, _("Increase the Size of the Toolbar Icons"), inst.toolbar_icons_size_increase),
     ( "DecreaseToolbarIconsSize", "gtk-remove", _("_Decrease Toolbar Icons Size"), None, _("Decrease the Size of the Toolbar Icons"), inst.toolbar_icons_size_decrease),
