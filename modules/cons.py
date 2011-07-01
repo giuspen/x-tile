@@ -95,7 +95,6 @@ ICONS_FILENAMES = [(GLADE_PATH + 'tile-vertically.svg', 'Tile Vertically'),
                    (GLADE_PATH + 'close-checked-windows.svg', 'Close Windows'),
                    (GLADE_PATH + 'invert-tiling.svg', 'Invert Tiling'),
                    (GLADE_PATH + 'toolbar.png', 'Toolbar'),
-                   (GLADE_PATH + 'vbuttonbox.png', 'VButtons'),
                    (GLADE_PATH + 'help-contents.svg', 'Help Contents'),
                    (GLADE_PATH + 'checkbox_checked.svg', 'Select All'),
                    (GLADE_PATH + 'checkbox_unchecked.svg', 'Deselect All')]
@@ -129,6 +128,8 @@ GCONF_OVERRIDE_1 = "/apps/x-tile/%s/override_1"
 GCONF_OVERRIDE_2 = "/apps/x-tile/%s/override_2"
 GCONF_GRID_ROWS = "/apps/x-tile/%s/grid_rows"
 GCONF_GRID_COLS = "/apps/x-tile/%s/grid_cols"
+GCONF_SYSTRAY_ENABLE = "/apps/x-tile/%s/systray_enable"
+GCONF_SYSTRAY_START = "/apps/x-tile/%s/systray_start"
 
 UI_INFO = """
 <ui>
@@ -139,6 +140,7 @@ UI_INFO = """
             <menuitem action='Reload'/>
             <separator/>
             <menuitem action='QuitApp'/>
+            <menuitem action='ExitApp'/>
         </menu>
 
         <menu action='EditMenu'>
@@ -212,7 +214,11 @@ UI_INFO = """
         <toolitem action='Unmaximize'/>
         <toolitem action='Close'/>
     </toolbar>
-
+    
+    <popup name='SysTrayMenu'>
+        <menuitem action='ExitApp'/>
+    </popup>
+    
     <popup name='ListMenu'>
         <menuitem action='RowUp'/>
         <menuitem action='RowDown'/>
@@ -237,6 +243,7 @@ def get_entries(inst):
     ( "DefaultSel", "gtk-properties", _("Selected by _Default"), "<control>D", _("Rows to be Selected by Default"), inst.dialog_selected_by_default),
     ( "Reload", "Reload Windows List", _("_Reload"), "F5", _("Reload the Windows List"), inst.reload_windows_list),
     ( "QuitApp", "gtk-quit", _("_Quit"), "<control>Q", _("Quit the Application"), inst.quit_application),
+    ( "ExitApp", "Quit App", _("_Exit CherryTree"), "<control><shift>Q", _("Exit from CherryTree"), inst.quit_application_totally),
     ( "Preferences", "gtk-preferences", _("_Preferences"), "<control><alt>P", _("Open the Preferences Window"), inst.dialog_preferences),
     ( "SelectAll", "Select All", _("Select _All"), "<control>A", _("Select All the Windows in the List"), inst.flag_all_rows),
     ( "DeselectAll", "Deselect All", _("Deselect A_ll"), "<control><shift>A", _("Deselect All the Windows in the List"), inst.unflag_all_rows),

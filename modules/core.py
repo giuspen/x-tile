@@ -332,7 +332,48 @@ class XTile:
             self.country_lang = new_lang
             support.dialog_info(_("The New Language will be Available Only After Restarting X Tile"), self.glade.window)
             self.gconf_client.set_string(cons.GCONF_LANG, new_lang)
+    
+    def status_icon_enable(self):
+        """Creates the Stats Icon"""
+        self.status_icon = gtk.StatusIcon()
+        self.status_icon.set_from_stock("Tile Quad")
+        self.status_icon.connect('button-press-event', self.on_mouse_button_clicked_systray)
+        self.status_icon.set_tooltip(_("Windows Tiling Upon your X Desktop"))
+    
+    def on_mouse_button_clicked_systray(self, widget, event):
+        """Catches mouse buttons clicks upon the system tray icon"""
+        if event.button == 1:
+            if self.glade.window.get_property('visible'): self.glade.window.hide()
+            else:
+                self.glade.window.show()
+                self.glade.window.deiconify()
+        elif event.button == 3: self.ui.get_widget("/SysTrayMenu").popup(None, None, None, event.button, event.time)
+    
+    def on_checkbutton_systray_docking_toggled(self, checkbutton):
+        """SysTray Toggled Handling"""
+        if checkbutton.get_active():
+            if "status_icon" in dir(self): self.status_icon.set_property('visible', True)
+            else: self.status_icon_enable()
+            self.ui.get_widget("/MenuBar/FileMenu/ExitApp").set_property('visible', True)
+            self.glade.checkbutton_start_minimized.set_sensitive(True)
+            if self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) != "True":
+                self.gconf_client.set_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index, "True")
+        else:
+            if "status_icon" in dir(self): self.status_icon.set_property('visible', False)
+            self.ui.get_widget("/MenuBar/FileMenu/ExitApp").set_property('visible', False)
+            self.glade.checkbutton_start_minimized.set_sensitive(False)
+            if self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) != "False":
+                self.gconf_client.set_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index, "False")
 
+    def on_checkbutton_start_minimized_toggled(self, checkbutton):
+        """Start Minimized on SysTray Toggled Handling"""
+        if checkbutton.get_active():
+            if self.gconf_client.get_string(cons.GCONF_SYSTRAY_START % glob.screen_index) != "True":
+                self.gconf_client.set_string(cons.GCONF_SYSTRAY_START % glob.screen_index, "True")
+        else:
+            if self.gconf_client.get_string(cons.GCONF_SYSTRAY_START % glob.screen_index) != "False":
+                self.gconf_client.set_string(cons.GCONF_SYSTRAY_START % glob.screen_index, "False")
+    
     def on_checkbutton_override_monitor_1_area_toggled(self, checkbutton):
         """Override Area 1 Checkbox was Toggled"""
         if checkbutton.get_active(): cons.OVERRIDE_1 = 1
@@ -392,6 +433,13 @@ class XTile:
             self.gconf_client.set_string(cons.GCONF_NOT_MINIMIZED % glob.screen_index, "True")
         if self.gconf_client.get_string(cons.GCONF_ONLY_CURR_DESK % glob.screen_index) == None:
             self.gconf_client.set_string(cons.GCONF_ONLY_CURR_DESK % glob.screen_index, "False")
+        # systray handling
+        if self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) == None:
+            self.gconf_client.set_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index, "True")
+        if self.gconf_client.get_string(cons.GCONF_SYSTRAY_START % glob.screen_index) == None:
+            self.gconf_client.set_string(cons.GCONF_SYSTRAY_START % glob.screen_index, "False")
+        if self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) == "True":
+            self.status_icon_enable()
         # monitor 1 handling
         if self.gconf_client.get_int(cons.GCONF_OVERRIDE_1 % glob.screen_index) == 1:
             cons.OVERRIDE_1 = 1
@@ -573,6 +621,8 @@ class XTile:
         self.glade.exit_after_tile_checkbutton.set_active(self.gconf_client.get_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index) == "True")
         self.glade.current_workspace_checkbutton.set_active(self.gconf_client.get_string(cons.GCONF_ONLY_CURR_DESK % glob.screen_index) == "True")
         self.glade.do_not_list_minimized_checkbutton.set_active(self.gconf_client.get_string(cons.GCONF_NOT_MINIMIZED % glob.screen_index) == "True")
+        self.glade.checkbutton_systray_docking.set_active(self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) == "True")
+        self.glade.checkbutton_start_minimized.set_active(self.gconf_client.get_string(cons.GCONF_SYSTRAY_START % glob.screen_index) == "True")
         self.glade.show_toolbar_checkbutton.set_active(self.gconf_client.get_string(cons.GCONF_SHOW_TOOLBAR % glob.screen_index) == "True")
         self.no_toggling_signals = False
         self.glade.configwindow.show_all()
@@ -797,8 +847,9 @@ class XTile:
         self.gconf_client.set_int(cons.GCONF_GRID_COLS % glob.screen_index, cons.GRID_COLS)
         self.tile_grid()
 
-    def quit_application(self, *args):
-        """Hide the window"""
+    def quit_application_totally(self, *args):
+        """The process is Shut Down"""
+        if "status_icon" in dir(self): self.status_icon.set_visible(False)
         actual_win_size = list(self.glade.window.get_size())
         actual_win_pos = list(self.glade.window.get_position())
         if actual_win_size != self.win_size_n_pos['win_size']:
@@ -810,7 +861,12 @@ class XTile:
             self.gconf_client.set_int(cons.GCONF_WIN_POSITION_X % glob.screen_index, self.win_size_n_pos['win_position'][0])
             self.gconf_client.set_int(cons.GCONF_WIN_POSITION_Y % glob.screen_index, self.win_size_n_pos['win_position'][1])
         self.glade.window.destroy()
-        if len(sys.argv) > 1 and sys.argv[1] == "w": gtk.main_quit()
+        gtk.main_quit()
+
+    def quit_application(self, *args):
+        """Hide the window"""
+        #self.glade.window.hide()
+        self.quit_application_totally()
 
     def launch_application(self):
         """Show the main window and all child widgets"""
