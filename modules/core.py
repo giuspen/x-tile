@@ -68,10 +68,10 @@ class InfoModel:
             else:
                 print "DEBUG warning _NET_WM_DESKTOP improperly set"
                 workspace_num = curr_workspace_num
-            if self.gconf_client.get_string(cons.GCONF_ONLY_CURR_DESK % glob.screen_index) == "True"\
+            if self.gconf_client.get_string(cons.GCONF_ONLY_CURR_DESK % glob.screen_index) == cons.STR_TRUE\
             and (workspace_num != curr_workspace_num or not support.is_window_in_curr_viewport(desktop_width, desktop_height, client)):
                 continue
-            if self.gconf_client.get_string(cons.GCONF_NOT_MINIMIZED % glob.screen_index) == "True"\
+            if self.gconf_client.get_string(cons.GCONF_NOT_MINIMIZED % glob.screen_index) == cons.STR_TRUE\
             and support.is_window_hidden(client):
                 continue
             support.get_property("_NET_WM_NAME", client, glob.str_atom)
@@ -356,23 +356,23 @@ class XTile:
             else: self.status_icon_enable()
             self.ui.get_widget("/MenuBar/FileMenu/ExitApp").set_property('visible', True)
             self.glade.checkbutton_start_minimized.set_sensitive(True)
-            if self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) != "True":
-                self.gconf_client.set_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index, "True")
+            if self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) != cons.STR_TRUE:
+                self.gconf_client.set_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index, cons.STR_TRUE)
         else:
             if "status_icon" in dir(self): self.status_icon.set_property('visible', False)
             self.ui.get_widget("/MenuBar/FileMenu/ExitApp").set_property('visible', False)
             self.glade.checkbutton_start_minimized.set_sensitive(False)
-            if self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) != "False":
-                self.gconf_client.set_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index, "False")
+            if self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) != cons.STR_FALSE:
+                self.gconf_client.set_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index, cons.STR_FALSE)
 
     def on_checkbutton_start_minimized_toggled(self, checkbutton):
         """Start Minimized on SysTray Toggled Handling"""
         if checkbutton.get_active():
-            if self.gconf_client.get_string(cons.GCONF_SYSTRAY_START % glob.screen_index) != "True":
-                self.gconf_client.set_string(cons.GCONF_SYSTRAY_START % glob.screen_index, "True")
+            if self.gconf_client.get_string(cons.GCONF_SYSTRAY_START % glob.screen_index) != cons.STR_TRUE:
+                self.gconf_client.set_string(cons.GCONF_SYSTRAY_START % glob.screen_index, cons.STR_TRUE)
         else:
-            if self.gconf_client.get_string(cons.GCONF_SYSTRAY_START % glob.screen_index) != "False":
-                self.gconf_client.set_string(cons.GCONF_SYSTRAY_START % glob.screen_index, "False")
+            if self.gconf_client.get_string(cons.GCONF_SYSTRAY_START % glob.screen_index) != cons.STR_FALSE:
+                self.gconf_client.set_string(cons.GCONF_SYSTRAY_START % glob.screen_index, cons.STR_FALSE)
     
     def on_checkbutton_override_monitor_1_area_toggled(self, checkbutton):
         """Override Area 1 Checkbox was Toggled"""
@@ -428,18 +428,20 @@ class XTile:
                 x, y, width, height = custom_geom.split(",")
                 self.custom_geoms_2.append([int(x), int(y), int(width), int(height)])
         if self.gconf_client.get_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index) == None:
-            self.gconf_client.set_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index, "True")
+            self.gconf_client.set_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index, cons.STR_TRUE)
         if self.gconf_client.get_string(cons.GCONF_NOT_MINIMIZED % glob.screen_index) == None:
-            self.gconf_client.set_string(cons.GCONF_NOT_MINIMIZED % glob.screen_index, "True")
+            self.gconf_client.set_string(cons.GCONF_NOT_MINIMIZED % glob.screen_index, cons.STR_TRUE)
         if self.gconf_client.get_string(cons.GCONF_ONLY_CURR_DESK % glob.screen_index) == None:
-            self.gconf_client.set_string(cons.GCONF_ONLY_CURR_DESK % glob.screen_index, "False")
+            self.gconf_client.set_string(cons.GCONF_ONLY_CURR_DESK % glob.screen_index, cons.STR_FALSE)
         # systray handling
         if self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) == None:
-            self.gconf_client.set_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index, "True")
+            self.gconf_client.set_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index, cons.STR_TRUE)
         if self.gconf_client.get_string(cons.GCONF_SYSTRAY_START % glob.screen_index) == None:
-            self.gconf_client.set_string(cons.GCONF_SYSTRAY_START % glob.screen_index, "False")
-        if self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) == "True":
+            self.gconf_client.set_string(cons.GCONF_SYSTRAY_START % glob.screen_index, cons.STR_FALSE)
+        if self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) == cons.STR_TRUE:
             self.status_icon_enable()
+            self.ui.get_widget("/MenuBar/FileMenu/ExitApp").set_property('visible', True)
+        else: self.ui.get_widget("/MenuBar/FileMenu/ExitApp").set_property('visible', False)
         # monitor 1 handling
         if self.gconf_client.get_int(cons.GCONF_OVERRIDE_1 % glob.screen_index) == 1:
             cons.OVERRIDE_1 = 1
@@ -534,7 +536,7 @@ class XTile:
 
     def update_statusbar(self):
         """Update the Statusbar after checking checkbuttons"""
-        ON_OFF = {"True":_("ON"), "False":_("OFF")}
+        ON_OFF = {cons.STR_TRUE:_("ON"), cons.STR_FALSE:_("OFF")}
         statusbar_str = _("Version %s  -  Exit After Tile: %s") %\
                          (cons.VERSION,
                           ON_OFF[self.gconf_client.get_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index)])
@@ -553,25 +555,25 @@ class XTile:
     def toggle_exit_after_tile(self, *args):
         """Toggles the flag Exit After Tile"""
         if not self.no_toggling_signals:
-            if self.gconf_client.get_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index) == "True":
-                self.gconf_client.set_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index, "False")
-            else: self.gconf_client.set_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index, "True")
+            if self.gconf_client.get_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index) == cons.STR_TRUE:
+                self.gconf_client.set_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index, cons.STR_FALSE)
+            else: self.gconf_client.set_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index, cons.STR_TRUE)
             self.update_statusbar()
 
     def toggle_do_not_list_minimized(self, *args):
         """Toggles the flag Do Not List Minimized Windows in List"""
         if not self.no_toggling_signals:
-            if self.gconf_client.get_string(cons.GCONF_NOT_MINIMIZED % glob.screen_index) == "True":
-                self.gconf_client.set_string(cons.GCONF_NOT_MINIMIZED % glob.screen_index, "False")
-            else: self.gconf_client.set_string(cons.GCONF_NOT_MINIMIZED % glob.screen_index, "True")
+            if self.gconf_client.get_string(cons.GCONF_NOT_MINIMIZED % glob.screen_index) == cons.STR_TRUE:
+                self.gconf_client.set_string(cons.GCONF_NOT_MINIMIZED % glob.screen_index, cons.STR_FALSE)
+            else: self.gconf_client.set_string(cons.GCONF_NOT_MINIMIZED % glob.screen_index, cons.STR_TRUE)
             self.store.load_model(self)
 
     def toggle_only_curr_workspace(self, *args):
         """Toggles the flag Only Current Workspace Windows in List"""
         if not self.no_toggling_signals:
-            if self.gconf_client.get_string(cons.GCONF_ONLY_CURR_DESK % glob.screen_index) == "True":
-                self.gconf_client.set_string(cons.GCONF_ONLY_CURR_DESK % glob.screen_index, "False")
-            else: self.gconf_client.set_string(cons.GCONF_ONLY_CURR_DESK % glob.screen_index, "True")
+            if self.gconf_client.get_string(cons.GCONF_ONLY_CURR_DESK % glob.screen_index) == cons.STR_TRUE:
+                self.gconf_client.set_string(cons.GCONF_ONLY_CURR_DESK % glob.screen_index, cons.STR_FALSE)
+            else: self.gconf_client.set_string(cons.GCONF_ONLY_CURR_DESK % glob.screen_index, cons.STR_TRUE)
             self.store.load_model(self)
 
     def toggle_exit_after_tile_keyboard(self):
@@ -618,12 +620,12 @@ class XTile:
         """Open the Config Window"""
         if self.glade.configwindow.get_property("visible") == True: return
         self.no_toggling_signals = True
-        self.glade.exit_after_tile_checkbutton.set_active(self.gconf_client.get_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index) == "True")
-        self.glade.current_workspace_checkbutton.set_active(self.gconf_client.get_string(cons.GCONF_ONLY_CURR_DESK % glob.screen_index) == "True")
-        self.glade.do_not_list_minimized_checkbutton.set_active(self.gconf_client.get_string(cons.GCONF_NOT_MINIMIZED % glob.screen_index) == "True")
-        self.glade.checkbutton_systray_docking.set_active(self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) == "True")
-        self.glade.checkbutton_start_minimized.set_active(self.gconf_client.get_string(cons.GCONF_SYSTRAY_START % glob.screen_index) == "True")
-        self.glade.show_toolbar_checkbutton.set_active(self.gconf_client.get_string(cons.GCONF_SHOW_TOOLBAR % glob.screen_index) == "True")
+        self.glade.exit_after_tile_checkbutton.set_active(self.gconf_client.get_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index) == cons.STR_TRUE)
+        self.glade.current_workspace_checkbutton.set_active(self.gconf_client.get_string(cons.GCONF_ONLY_CURR_DESK % glob.screen_index) == cons.STR_TRUE)
+        self.glade.do_not_list_minimized_checkbutton.set_active(self.gconf_client.get_string(cons.GCONF_NOT_MINIMIZED % glob.screen_index) == cons.STR_TRUE)
+        self.glade.checkbutton_systray_docking.set_active(self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) == cons.STR_TRUE)
+        self.glade.checkbutton_start_minimized.set_active(self.gconf_client.get_string(cons.GCONF_SYSTRAY_START % glob.screen_index) == cons.STR_TRUE)
+        self.glade.show_toolbar_checkbutton.set_active(self.gconf_client.get_string(cons.GCONF_SHOW_TOOLBAR % glob.screen_index) == cons.STR_TRUE)
         self.no_toggling_signals = False
         self.glade.configwindow.show_all()
 
@@ -874,8 +876,10 @@ class XTile:
         self.update_statusbar()
         self.glade.window.show_all()
         show_toolbar = self.gconf_client.get_string(cons.GCONF_SHOW_TOOLBAR % glob.screen_index)
-        if show_toolbar == None: self.gconf_client.set_string(cons.GCONF_SHOW_TOOLBAR % glob.screen_index, "True")
-        elif show_toolbar == "False": self.ui.get_widget("/ToolBar").hide()
+        if show_toolbar == None: self.gconf_client.set_string(cons.GCONF_SHOW_TOOLBAR % glob.screen_index, cons.STR_TRUE)
+        elif show_toolbar == cons.STR_FALSE: self.ui.get_widget("/ToolBar").hide()
+        if self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) == cons.STR_FALSE:
+            self.ui.get_widget("/MenuBar/FileMenu/ExitApp").set_property('visible', False)
         self.window_position_restore()
 
     def reload_windows_list(self, *args):
@@ -1133,14 +1137,14 @@ class XTile:
         if not self.no_toggling_signals:
             if self.ui.get_widget("/ToolBar").get_property('visible') == True:
                 self.ui.get_widget("/ToolBar").hide()
-                self.gconf_client.set_string(cons.GCONF_SHOW_TOOLBAR % glob.screen_index, "False")
+                self.gconf_client.set_string(cons.GCONF_SHOW_TOOLBAR % glob.screen_index, cons.STR_FALSE)
             else:
                 self.ui.get_widget("/ToolBar").show()
-                self.gconf_client.set_string(cons.GCONF_SHOW_TOOLBAR % glob.screen_index, "True")
+                self.gconf_client.set_string(cons.GCONF_SHOW_TOOLBAR % glob.screen_index, cons.STR_TRUE)
 
     def check_exit_after_tile(self):
         """Check if the Exit After Tile is Active and Eventually Quit"""
-        if self.gconf_client.get_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index) == "True":
+        if self.gconf_client.get_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index) == cons.STR_TRUE:
             glob.alive = False
             self.quit_application()
 

@@ -58,6 +58,9 @@ GRID_COLS = 2
 WINNAMES_BLACKLIST = ["x-nautilus-desktop", "pcmanfm"]
 PROCESSES_BLACKLIST = ["lxpanel"]
 
+STR_TRUE = "True"
+STR_FALSE = "False"
+
 DRAW_SCALE = 4
 DRAW_RGBS = (
                (1, 0, 0), # red
@@ -95,6 +98,7 @@ ICONS_FILENAMES = [(GLADE_PATH + 'tile-vertically.svg', 'Tile Vertically'),
                    (GLADE_PATH + 'close-checked-windows.svg', 'Close Windows'),
                    (GLADE_PATH + 'invert-tiling.svg', 'Invert Tiling'),
                    (GLADE_PATH + 'toolbar.png', 'Toolbar'),
+                   (GLADE_PATH + 'quit-app.svg', 'Quit App'),
                    (GLADE_PATH + 'help-contents.svg', 'Help Contents'),
                    (GLADE_PATH + 'checkbox_checked.svg', 'Select All'),
                    (GLADE_PATH + 'checkbox_unchecked.svg', 'Deselect All')]
@@ -242,8 +246,8 @@ def get_entries(inst):
     ( "Filter", "gtk-properties", _("_Filter"), "<control>F", _("Filter Rows"), inst.dialog_filter),
     ( "DefaultSel", "gtk-properties", _("Selected by _Default"), "<control>D", _("Rows to be Selected by Default"), inst.dialog_selected_by_default),
     ( "Reload", "Reload Windows List", _("_Reload"), "F5", _("Reload the Windows List"), inst.reload_windows_list),
-    ( "QuitApp", "gtk-quit", _("_Quit"), "<control>Q", _("Quit the Application"), inst.quit_application),
-    ( "ExitApp", "Quit App", _("_Exit CherryTree"), "<control><shift>Q", _("Exit from CherryTree"), inst.quit_application_totally),
+    ( "QuitApp", "Quit App", _("_Quit"), "<control>Q", _("Quit the Application"), inst.quit_application),
+    ( "ExitApp", "Quit App", _("_Exit X Tile"), "<control><shift>Q", _("Exit from X Tile"), inst.quit_application_totally),
     ( "Preferences", "gtk-preferences", _("_Preferences"), "<control><alt>P", _("Open the Preferences Window"), inst.dialog_preferences),
     ( "SelectAll", "Select All", _("Select _All"), "<control>A", _("Select All the Windows in the List"), inst.flag_all_rows),
     ( "DeselectAll", "Deselect All", _("Deselect A_ll"), "<control><shift>A", _("Deselect All the Windows in the List"), inst.unflag_all_rows),
