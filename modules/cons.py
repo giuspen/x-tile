@@ -38,7 +38,7 @@ else:
     ICON_PLACE = "/usr/share/pixmaps/x-tile.svg"
     LOCALE_PATH = "/usr/share/locale/"
 
-AVAILABLE_LANGS = ['default', 'de', 'en', 'es_AR', 'fr', 'it', 'ru', 'zh_TW']
+AVAILABLE_LANGS = ['default', 'de', 'en', 'es_AR', 'fr', 'it', 'ru', 'zh_CN', 'zh_TW']
 
 CMD_LINE_ACTIONS = ["z", "i", "v", "h", "u", "d", "l", "r", "1", "2", "q", "g", "m", "M", "c"]
 
@@ -55,7 +55,8 @@ H2 = 10
 GRID_ROWS = 2
 GRID_COLS = 2
 
-WINNAMES_BLACKLIST = ["x-nautilus-desktop"]
+WINNAMES_BLACKLIST = ["x-nautilus-desktop", "pcmanfm"]
+PROCESSES_BLACKLIST = ["lxpanel"]
 
 DRAW_SCALE = 4
 DRAW_RGBS = (
