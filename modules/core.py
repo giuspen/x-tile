@@ -86,13 +86,6 @@ class InfoModel:
                     print "class "+title
             else: title = ctypes.string_at(glob.ret_pointer)
             if title in cons.WINNAMES_BLACKLIST: continue
-            if gtk.gdk.window_lookup(client) == appletobj.glade.window.window: continue # we do not show our own window
-            if appletobj.glade.configwindow.window != None and gtk.gdk.window_lookup(client) == appletobj.glade.configwindow.window:
-                continue # nor the pref window!
-            if appletobj.glade.filterdialog.window != None and gtk.gdk.window_lookup(client) == appletobj.glade.filterdialog.window:
-                continue # nor the filter window!
-            if appletobj.glade.whitedialog.window != None and gtk.gdk.window_lookup(client) == appletobj.glade.whitedialog.window:
-                continue # nor the white window!
             pxb = support.get_icon(client)
             if pxb: pxb = pxb.scale_simple(24, 24, gtk.gdk.INTERP_BILINEAR)
             support.get_property("_NET_WM_PID", client, glob.XA_CARDINAL)
@@ -104,6 +97,9 @@ class InfoModel:
                 pid = glob.ret_pointer[0]
                 process_name = support.get_process_name(pid)
             # filter based on process name - NB beppie I'd like something better for this but dont know what!
+            if len(process_name) > 7 and process_name[-7:] == "x-tile2": continue
+            if process_name in cons.PROCESSES_BLACKLIST: continue
+            #print process_name
             self.process_picklist.add(process_name)
             if process_name not in self.process_blacklist: # user filter
                 win_curr_monitor = screen.get_monitor_at_window(gtk.gdk.window_foreign_new(client))
