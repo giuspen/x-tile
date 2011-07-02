@@ -10,7 +10,7 @@ Package: x-tile2
 Architecture: all
 XS-Python-Version: >=2.4
 XB-Python-Version: >=2.4
-Depends: python-gtk2
+Depends: python-gtk2, python-gconf
 Conflicts: x-tile, x-tile-ng
 Description: X Tile
  Allows you to select a number of windows and tile them in different ways
