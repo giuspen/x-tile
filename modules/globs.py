@@ -142,4 +142,3 @@ class GlobalsObject(object):
             for strut_win in strut_windows:
                 self.monitors_areas[-1] = support.subtract_areas(self.monitors_areas[-1], strut_win)
         self.drawing_rect = gtk.gdk.Rectangle(0, 0, drawing_area_size[0]/cons.DRAW_SCALE, drawing_area_size[1]/cons.DRAW_SCALE)
-        print self.monitors_areas

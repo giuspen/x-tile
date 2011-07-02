@@ -221,6 +221,29 @@ UI_INFO = """
     
     <popup name='SysTrayMenu'>
         <menuitem action='ExitApp'/>
+        <separator/>
+        <menuitem action='All_About'/>
+        <separator/>
+        <menuitem action='All_C'/>
+        <menuitem action='All_U'/>
+        <menuitem action='All_M'/>
+        <separator/>
+        <menuitem action='All_4'/>
+        <separator/>
+        <menuitem action='All_TD'/>
+        <menuitem action='All_TU'/>
+        <menuitem action='All_TR'/>
+        <menuitem action='All_TL'/>
+        <separator/>
+        <menuitem action='All_C2'/>
+        <menuitem action='All_C1'/>
+        <separator/>
+        <menuitem action='All_G'/>
+        <menuitem action='All_H'/>
+        <menuitem action='All_V'/>
+        <separator/>
+        <menuitem action='All_Invert'/>
+        <menuitem action='All_Undo'/>
     </popup>
     
     <popup name='ListMenu'>
@@ -276,34 +299,23 @@ def get_entries(inst):
     ( "DecreaseToolbarIconsSize", "gtk-remove", _("_Decrease Toolbar Icons Size"), None, _("Decrease the Size of the Toolbar Icons"), inst.toolbar_icons_size_decrease),
     ( "Help", "Help Contents", _("_Help"), None, _("X Tile Project Home Page"), inst.on_help_menu_item_activated),
     ( "About", "gtk-about", _("_About"), None, _("About X Tile"), inst.dialog_about),
+    ( "All_About", "gtk-about", _("_About"), None, _("_About"), inst.dialog_about_all),
+    ( "All_C", "Close Windows", _("Close All"), None, _("Close All"), inst.close_all),
+    ( "All_U", "Unmaximize Windows", _("_Unmaximize All"), None, _("_Unmaximize All"), inst.unmaximize_all),
+    ( "All_M", "Maximize Windows", _("_Maximize All"), None, _("_Maximize All"), inst.maximize_all),
+    ( "All_4", "Tile Quad", _("Tile All _Quad"), None, _("Tile All _Quad"), inst.tile_all_quad),
+    ( "All_TD", "Tile Triangle Down", _("Tile All Triangle _Down"), None, _("Tile All Triangle _Down"), inst.tile_all_triangle_down),
+    ( "All_TU", "Tile Triangle Up", _("Tile All Triangle _Up"), None, _("Tile All Triangle _Up"), inst.tile_all_triangle_up),
+    ( "All_TR", "Tile Triangle Right", _("Tile All Triangle _Right"), None, _("Tile All Triangle _Right"), inst.tile_all_triangle_right),
+    ( "All_TL", "Tile Triangle Left", _("Tile All Triangle _Left"), None, _("Tile All Triangle _Left"), inst.tile_all_triangle_left),
+    ( "All_C2", "Custom Exe 2", _("Tile All Custom _2"), None, _("Tile All Custom _2"), inst.tile_all_custom_2),
+    ( "All_C1", "Custom Exe 1", _("Tile All Custom _1"), None, _("Tile All Custom _1"), inst.tile_all_custom_1),
+    ( "All_G", "Tile Grid", _("Tile All _Grid"), None, _("Tile All _Grid"), inst.tile_all_grid),
+    ( "All_H", "Tile Horizontally", _("Tile All _Horizontally"), None, _("Tile All _Horizontally"), inst.tile_all_horizontally),
+    ( "All_V", "Tile Vertically", _("Tile All _Vertically"), None, _("Tile All _Vertically"), inst.tile_all_vertically),
+    ( "All_Invert", "Invert Tiling", _("_Invert Tiling Order"), None, _("_Invert Tiling Order"), inst.invert_tiling_all),
+    ( "All_Undo", "gtk-undo", _("U_ndo Tiling"), None, _("U_ndo Tiling"), inst.undo_tiling_all),
     ]
-
-def get_applet_menu_verbs(inst):
-    """Returns the Menu Verbs Given the Class Instance"""
-    return [
-             ("About", inst.dialog_about),
-
-             ("All_C", inst.close_all),
-             ("All_U", inst.unmaximize_all),
-             ("All_M", inst.maximize_all),
-
-             ("Invert", inst.invert_tiling),
-
-             ("All_4", inst.tile_all_quad),
-             ("All_TR", inst.tile_all_triangle_right),
-             ("All_TL", inst.tile_all_triangle_left),
-             ("All_TD", inst.tile_all_triangle_down),
-             ("All_TU", inst.tile_all_triangle_up),
-
-             ("All_C2", inst.tile_all_custom_2),
-             ("All_C1", inst.tile_all_custom_1),
-
-             ("All_G", inst.tile_all_grid),
-             ("All_H", inst.tile_all_horizontally),
-             ("All_V", inst.tile_all_vertically),
-
-             ("Undo", inst.undo_tiling),
-            ]
 
 HELP_TEXT = """
 
