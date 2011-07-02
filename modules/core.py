@@ -898,7 +898,10 @@ class XTile:
         if self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) == cons.STR_FALSE:
             self.ui.get_widget("/MenuBar/FileMenu/ExitApp").set_property('visible', False)
         self.window_position_restore()
-        self.win_alive = True
+        if self.gconf_client.get_string(cons.GCONF_SYSTRAY_START % glob.screen_index) == cons.STR_TRUE:
+            self.glade.window.hide()
+            self.win_alive = False
+        else: self.win_alive = True
 
     def reload_windows_list(self, *args):
         """Reloads the Windows List"""
