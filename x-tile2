@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
-"""X Tile No Gnome module"""
+"""X Tile main module"""
 
-#      x-tile-ng
+#      x-tile2
 #      
 #      Copyright 2009-2011
 #      Giuseppe Penone <giuspen@gmail.com>,
