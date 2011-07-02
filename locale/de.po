@@ -26,11 +26,8 @@ msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr "Neue Spracheinstellung erst nach Neustart von X Tile verfügbar"
 
 #: modules/core.py:341 glade/x-tile.glade.h:52
-#, fuzzy
 msgid "Tile the Windows Upon your X Desktop"
-msgstr ""
-"X Tile\n"
-"Tile Fenster auf dem Desktop"
+msgstr "Tile Fenster auf deinem X Desktop"
 
 #: modules/core.py:529
 msgid "The Size of the Toolbar Icons is already at the Maximum Value"
@@ -161,14 +158,12 @@ msgid "Quit the Application"
 msgstr "_Beenden der Anwendung"
 
 #: modules/cons.py:273
-#, fuzzy
 msgid "_Exit X Tile"
-msgstr "Schliessen nach tiling"
+msgstr "_Verlasse X Tile"
 
 #: modules/cons.py:273
-#, fuzzy
 msgid "Exit from X Tile"
-msgstr "Schliessen nach tiling"
+msgstr "Verlasse X Tile"
 
 #: modules/cons.py:274
 msgid "_Preferences"
@@ -391,122 +386,108 @@ msgid "About X Tile"
 msgstr "Über X Tile"
 
 #: modules/cons.py:303
-#, fuzzy
 msgid "_Close All"
-msgstr "Alle schliessen"
+msgstr "_Alle schliessen"
 
 #: modules/cons.py:303
-#, fuzzy
 msgid "Close All Windows"
-msgstr "Fenster schliessen"
+msgstr "Alle Fenster schliessen"
 
 #: modules/cons.py:304
 msgid "_Unmaximize All"
 msgstr "Alles _demaximieren"
 
 #: modules/cons.py:304
-#, fuzzy
 msgid "Unmaximize All Windows"
-msgstr "Maximierung der Fenster aufheben"
+msgstr "Maximierung aller Fenster aufheben"
 
 #: modules/cons.py:305
 msgid "_Maximize All"
 msgstr "_Maximiere Alles"
 
 #: modules/cons.py:305
-#, fuzzy
 msgid "Maximize All Windows"
-msgstr "Fenster maximieren"
+msgstr "Alle Fenster maximieren"
 
 #: modules/cons.py:306
 msgid "Tile All _Quad"
 msgstr "Tile _Quadratisch"
 
 #: modules/cons.py:306
-#, fuzzy
 msgid "Tile All Windows Quad"
-msgstr "Tile _Quadratisch"
+msgstr "Tile alle Fenster Quadratisch"
 
 #: modules/cons.py:307
 msgid "Tile All Triangle _Down"
 msgstr "Tile Triangel _unten"
 
 #: modules/cons.py:307
-#, fuzzy
 msgid "Tile All Windows Triangle Down"
-msgstr "Tile Triangel _unten"
+msgstr "Tile alle Fenster Triangel unten"
 
 #: modules/cons.py:308
 msgid "Tile All Triangle _Up"
 msgstr "Tile Triangel _oben"
 
 #: modules/cons.py:308
-#, fuzzy
 msgid "Tile All Windows Triangle Up"
-msgstr "Tile Triangel _oben"
+msgstr "Tile alle Fenster Triangel oben"
 
 #: modules/cons.py:309
 msgid "Tile All Triangle _Right"
 msgstr "Tile Triangel _rechts"
 
 #: modules/cons.py:309
-#, fuzzy
 msgid "Tile All Windows Triangle Right"
-msgstr "Tile Triangel _rechts"
+msgstr "Tile alle Fenster Triangel rechts"
 
 #: modules/cons.py:310
 msgid "Tile All Triangle _Left"
 msgstr "Tile Triangel _links"
 
 #: modules/cons.py:310
-#, fuzzy
 msgid "Tile All Windows Triangle Left"
-msgstr "Tile Triangel _links"
+msgstr "Tile alle Fenster Triangel links"
 
 #: modules/cons.py:311
 msgid "Tile All Custom _2"
 msgstr "Tile Schema _2"
 
 #: modules/cons.py:311
-#, fuzzy
 msgid "Tile All Windows Custom 2"
-msgstr "Tile Schema _2"
+msgstr "Tile alle Fenster Schema 2"
 
 #: modules/cons.py:312
 msgid "Tile All Custom _1"
 msgstr "Tile Schema _1"
 
 #: modules/cons.py:312
-#, fuzzy
 msgid "Tile All Windows Custom 1"
-msgstr "Tile Schema _1"
+msgstr "Tile alle Fenster Schema 1"
 
 #: modules/cons.py:313
 msgid "Tile All _Grid"
 msgstr "Tile alle in _Raster"
 
 #: modules/cons.py:313
-#, fuzzy
 msgid "Tile All Windows Grid"
-msgstr "Tile alle in _Raster"
+msgstr "Tile alle Fenster in Raster"
 
 #: modules/cons.py:314
 msgid "Tile All _Horizontally"
 msgstr "Tile _horizontal"
 
 #: modules/cons.py:314
-#, fuzzy
 msgid "Tile All Windows Horizontally"
-msgstr "Tile _horizontal"
+msgstr "Tile alle Fenster horizontal"
 
 #: modules/cons.py:315
 msgid "Tile All _Vertically"
 msgstr "Tile _vertikal"
 
 #: modules/cons.py:315
-#, fuzzy
 msgid "Tile All Windows Vertically"
-msgstr "Tile _vertikal"
+msgstr "Tile alle Fenster vertikal"
 
 #: glade/x-tile.glade.h:1
 msgid ""
@@ -612,7 +593,7 @@ msgstr "Zeige keine minimierten Fenster an"
 
 #: glade/x-tile.glade.h:37
 msgid "Enable System Tray Docking"
-msgstr ""
+msgstr "Docken zu System Tray"
 
 #: glade/x-tile.glade.h:38
 msgid "Exit After Tile"
@@ -664,7 +645,7 @@ msgstr "Grösse"
 
 #: glade/x-tile.glade.h:51
 msgid "Start Minimized on the System Tray"
-msgstr ""
+msgstr "Starte minimiert im System Tray"
 
 #: glade/x-tile.glade.h:53
 msgid "Update"
