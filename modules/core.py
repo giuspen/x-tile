@@ -346,6 +346,7 @@ class XTile:
             else:
                 self.window_position_restore()
                 self.glade.window.show()
+                self.reload_windows_list()
                 self.win_on_screen = True
         elif event.button == 3: self.ui.get_widget("/SysTrayMenu").popup(None, None, None, event.button, event.time)
     
