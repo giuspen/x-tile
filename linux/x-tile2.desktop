@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=X Tile
-Comment=Windows Tiling Upon your X Desktop
+Comment=Tile the Windows Upon your X Desktop
 Exec=x-tile2
 Icon=/usr/share/pixmaps/x-tile.svg
 Terminal=false
