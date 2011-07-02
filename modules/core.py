@@ -25,7 +25,7 @@
 #      MA 02110-1301, USA.
 
 import gtk, gobject, gconf
-import sys, ctypes, webbrowser, time
+import sys, ctypes, webbrowser, time, subprocess
 import cons, support, tilings
 
 
@@ -342,14 +342,11 @@ class XTile:
     def on_mouse_button_clicked_systray(self, widget, event):
         """Catches mouse buttons clicks upon the system tray icon"""
         if event.button == 1:
-            if self.win_alive:
-                self.save_win_pos_n_size()
-                self.glade.window.hide()
-                self.win_alive = False
+            if self.win_on_screen: self.window_hide()
             else:
                 self.window_position_restore()
                 self.glade.window.show()
-                self.win_alive = True
+                self.win_on_screen = True
         elif event.button == 3: self.ui.get_widget("/SysTrayMenu").popup(None, None, None, event.button, event.time)
     
     def on_checkbutton_systray_docking_toggled(self, checkbutton):
@@ -879,13 +876,16 @@ class XTile:
             self.gconf_client.set_int(cons.GCONF_WIN_POSITION_X % glob.screen_index, self.win_size_n_pos['win_position'][0])
             self.gconf_client.set_int(cons.GCONF_WIN_POSITION_Y % glob.screen_index, self.win_size_n_pos['win_position'][1])
     
+    def window_hide(self):
+        """Hide the Window"""
+        self.save_win_pos_n_size()
+        self.glade.window.hide()
+        self.win_on_screen = False
+    
     def quit_application(self, *args):
         """Hide the window"""
         if not self.systray_on: self.quit_application_totally()
-        else:
-            self.save_win_pos_n_size()
-            self.glade.window.hide()
-            self.win_alive = False
+        else: self.window_hide()
 
     def launch_application(self):
         """Show the main window and all child widgets"""
@@ -900,8 +900,8 @@ class XTile:
         self.window_position_restore()
         if self.gconf_client.get_string(cons.GCONF_SYSTRAY_START % glob.screen_index) == cons.STR_TRUE:
             self.glade.window.hide()
-            self.win_alive = False
-        else: self.win_alive = True
+            self.win_on_screen = False
+        else: self.win_on_screen = True
 
     def reload_windows_list(self, *args):
         """Reloads the Windows List"""
@@ -1162,17 +1162,90 @@ class XTile:
             else:
                 self.ui.get_widget("/ToolBar").show()
                 self.gconf_client.set_string(cons.GCONF_SHOW_TOOLBAR % glob.screen_index, cons.STR_TRUE)
-
+    
     def check_exit_after_tile(self):
         """Check if the Exit After Tile is Active and Eventually Quit"""
         if self.gconf_client.get_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index) == cons.STR_TRUE:
             self.quit_application()
-
+    
     def dialog_about(self, menuitem, data=None):
         """Show the About Dialog and hide it when a button is pressed"""
         self.glade.aboutdialog.run()
         self.glade.aboutdialog.hide()
-
+    
     def on_help_menu_item_activated(self, menuitem, data=None):
         """Show the application's Instructions"""
         webbrowser.open("http://www.giuspen.com/x-tile/")
+    
+    def hide_and_process(self, command_str):
+        """Hide the X Tile Window if Visible, then Process the Command"""
+        if self.win_on_screen: self.window_hide()
+        subprocess.call(command_str, shell=True)
+    
+    def undo_tiling_all(self, *args):
+        """Just Undo the Latest Tiling Operation"""
+        self.hide_and_process("x-tile2 z &")
+    
+    def invert_tiling_all(self, *args):
+        """Invert the Order of the Latest Tiling Operation"""
+        self.hide_and_process("x-tile2 i &")
+    
+    def tile_all_vertically(self, *args):
+        """Just tile Vertically all opened windows"""
+        self.hide_and_process("x-tile2 v &")
+    
+    def tile_all_horizontally(self, *args):
+        """Just tile Horizontally all opened windows"""
+        self.hide_and_process("x-tile2 h &")
+    
+    def tile_all_triangle_up(self, *args):
+        """Just tile Triangle Up all opened windows"""
+        self.hide_and_process("x-tile2 u &")
+    
+    def tile_all_triangle_down(self, *args):
+        """Just tile Triangle Down all opened windows"""
+        self.hide_and_process("x-tile2 d &")
+    
+    def tile_all_triangle_left(self, *args):
+        """Just tile Triangle Left all opened windows"""
+        self.hide_and_process("x-tile2 l &")
+    
+    def tile_all_triangle_right(self, *args):
+        """Just tile Triangle Right all opened windows"""
+        self.hide_and_process("x-tile2 r &")
+    
+    def tile_all_quad(self, *args):
+        """Just tile Quad all opened windows"""
+        self.hide_and_process("x-tile2 q &")
+    
+    def tile_all_grid(self, *args):
+        """Just tile Grid all opened windows"""
+        self.hide_and_process("x-tile2 g &")
+    
+    def tile_all_custom_1(self, *args):
+        """Just tile Custom 1 all opened windows"""
+        self.hide_and_process("x-tile2 1 &")
+    
+    def tile_all_custom_2(self, *args):
+        """Just tile Custom 2 all opened windows"""
+        self.hide_and_process("x-tile2 2 &")
+    
+    def maximize_all(self, *args):
+        """Maximize all opened windows"""
+        self.hide_and_process("x-tile2 m &")
+    
+    def unmaximize_all(self, *args):
+        """Unmaximize all opened windows"""
+        self.hide_and_process("x-tile2 M &")
+    
+    def close_all(self, *args):
+        """Close all opened windows"""
+        self.hide_and_process("x-tile2 c &")
+    
+    def dialog_about_all(self, *args):
+        """Show the About Dialog and hide it when a button is pressed"""
+        glade = GladeWidgetsWrapper(cons.GLADE_PATH + 'x-tile.glade', self)
+        glade.aboutdialog.set_version(cons.VERSION)
+        glade.aboutdialog.run()
+        glade.aboutdialog.destroy()
+        del glade
