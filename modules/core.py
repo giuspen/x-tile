@@ -250,7 +250,6 @@ class XTile:
         retrieves and stores the information about the running desktop self.geometry"""
         # instantiate the Glade Widgets Wrapper
         self.glade = GladeWidgetsWrapper(cons.GLADE_PATH + 'x-tile.glade', self)
-        glob.alive = True # this is necessary for the use as an applet
         # ui manager
         actions = gtk.ActionGroup("Actions")
         actions.add_actions(cons.get_entries(self))
@@ -343,27 +342,34 @@ class XTile:
     def on_mouse_button_clicked_systray(self, widget, event):
         """Catches mouse buttons clicks upon the system tray icon"""
         if event.button == 1:
-            if self.glade.window.get_property('visible'): self.glade.window.hide()
+            if self.win_alive:
+                self.save_win_pos_n_size()
+                self.glade.window.hide()
+                self.win_alive = False
             else:
+                self.window_position_restore()
                 self.glade.window.show()
-                self.glade.window.deiconify()
+                self.win_alive = True
         elif event.button == 3: self.ui.get_widget("/SysTrayMenu").popup(None, None, None, event.button, event.time)
     
     def on_checkbutton_systray_docking_toggled(self, checkbutton):
         """SysTray Toggled Handling"""
         if checkbutton.get_active():
-            if "status_icon" in dir(self): self.status_icon.set_property('visible', True)
-            else: self.status_icon_enable()
+            if not self.systray_on: self.status_icon_enable()
             self.ui.get_widget("/MenuBar/FileMenu/ExitApp").set_property('visible', True)
             self.glade.checkbutton_start_minimized.set_sensitive(True)
             if self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) != cons.STR_TRUE:
                 self.gconf_client.set_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index, cons.STR_TRUE)
+            self.systray_on = True
         else:
-            if "status_icon" in dir(self): self.status_icon.set_property('visible', False)
+            if self.systray_on:
+                self.status_icon.set_property('visible', False)
+                del self.status_icon
             self.ui.get_widget("/MenuBar/FileMenu/ExitApp").set_property('visible', False)
             self.glade.checkbutton_start_minimized.set_sensitive(False)
             if self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) != cons.STR_FALSE:
                 self.gconf_client.set_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index, cons.STR_FALSE)
+            self.systray_on = False
 
     def on_checkbutton_start_minimized_toggled(self, checkbutton):
         """Start Minimized on SysTray Toggled Handling"""
@@ -440,8 +446,11 @@ class XTile:
             self.gconf_client.set_string(cons.GCONF_SYSTRAY_START % glob.screen_index, cons.STR_FALSE)
         if self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) == cons.STR_TRUE:
             self.status_icon_enable()
+            self.systray_on = True
             self.ui.get_widget("/MenuBar/FileMenu/ExitApp").set_property('visible', True)
-        else: self.ui.get_widget("/MenuBar/FileMenu/ExitApp").set_property('visible', False)
+        else:
+            self.systray_on = False
+            self.ui.get_widget("/MenuBar/FileMenu/ExitApp").set_property('visible', False)
         # monitor 1 handling
         if self.gconf_client.get_int(cons.GCONF_OVERRIDE_1 % glob.screen_index) == 1:
             cons.OVERRIDE_1 = 1
@@ -607,7 +616,6 @@ class XTile:
 
     def on_window_delete_event(self, widget, event, data=None):
         """Before close the application: no checks needed"""
-        glob.alive = False
         self.quit_application()
         return True # do not propogate the delete event
 
@@ -851,7 +859,15 @@ class XTile:
 
     def quit_application_totally(self, *args):
         """The process is Shut Down"""
-        if "status_icon" in dir(self): self.status_icon.set_visible(False)
+        if self.systray_on:
+            self.status_icon.set_property('visible', False)
+            del self.status_icon
+        self.save_win_pos_n_size()
+        self.glade.window.destroy()
+        gtk.main_quit()
+    
+    def save_win_pos_n_size(self):
+        """Destroy the window"""
         actual_win_size = list(self.glade.window.get_size())
         actual_win_pos = list(self.glade.window.get_position())
         if actual_win_size != self.win_size_n_pos['win_size']:
@@ -862,13 +878,14 @@ class XTile:
             self.win_size_n_pos['win_position'] = actual_win_pos
             self.gconf_client.set_int(cons.GCONF_WIN_POSITION_X % glob.screen_index, self.win_size_n_pos['win_position'][0])
             self.gconf_client.set_int(cons.GCONF_WIN_POSITION_Y % glob.screen_index, self.win_size_n_pos['win_position'][1])
-        self.glade.window.destroy()
-        gtk.main_quit()
-
+    
     def quit_application(self, *args):
         """Hide the window"""
-        #self.glade.window.hide()
-        self.quit_application_totally()
+        if not self.systray_on: self.quit_application_totally()
+        else:
+            self.save_win_pos_n_size()
+            self.glade.window.hide()
+            self.win_alive = False
 
     def launch_application(self):
         """Show the main window and all child widgets"""
@@ -881,6 +898,7 @@ class XTile:
         if self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) == cons.STR_FALSE:
             self.ui.get_widget("/MenuBar/FileMenu/ExitApp").set_property('visible', False)
         self.window_position_restore()
+        self.win_alive = True
 
     def reload_windows_list(self, *args):
         """Reloads the Windows List"""
@@ -1145,7 +1163,6 @@ class XTile:
     def check_exit_after_tile(self):
         """Check if the Exit After Tile is Active and Eventually Quit"""
         if self.gconf_client.get_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index) == cons.STR_TRUE:
-            glob.alive = False
             self.quit_application()
 
     def dialog_about(self, menuitem, data=None):
