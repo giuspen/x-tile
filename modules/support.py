@@ -194,12 +194,12 @@ def subtract_areas(white_area, black_area):
     else:
         # width > height => this is a top or bottom panel
         if black_area[1] == white_area[1]:
+            # this is a bottom panel
+            white_area[3] -= black_area[3]
+        else:
             # this is a top panel
             white_area[1] += black_area[3]
             white_area[3] -= black_area[3] # this was not taken into account previously
-        else:
-            # this is a bottom panel
-            white_area[3] -= black_area[3]
     return white_area
 
 def enumerate_strut_windows(display, rootwindow):
