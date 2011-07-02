@@ -290,6 +290,7 @@ class XTile:
         for n in range(4): self.view.append_column(self.columns[n])
         if glob.num_monitors < 2: self.columns[1].set_visible(False)
         self.view.set_reorderable(True) # allow drag and drop reordering of rows
+        self.view.set_tooltip_text(_("Use Drag and Drop to Sort the Rows"))
         self.view.connect('button-press-event', self.on_mouse_button_clicked_list)
         self.no_toggling_signals = False
         self.viewselection = self.view.get_selection()
@@ -337,7 +338,7 @@ class XTile:
         self.status_icon = gtk.StatusIcon()
         self.status_icon.set_from_stock("Tile Quad")
         self.status_icon.connect('button-press-event', self.on_mouse_button_clicked_systray)
-        self.status_icon.set_tooltip(_("Windows Tiling Upon your X Desktop"))
+        self.status_icon.set_tooltip(_("Tile the Windows Upon your X Desktop"))
     
     def on_mouse_button_clicked_systray(self, widget, event):
         """Catches mouse buttons clicks upon the system tray icon"""
