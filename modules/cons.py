@@ -323,7 +323,7 @@ NAME
    X Tile - Tile the Windows upon your Desktop
 
 SYNOPSIS
-   x-tile2 OPTION [grid rows] [grid columns]
+   x-tile OPTION [grid rows] [grid columns]
 
 DESCRIPTION
    This manual page briefly documents the command line arguments

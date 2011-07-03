@@ -1,9 +1,11 @@
+
 [Desktop Entry]
 Name=X Tile
 Comment=Tile the Windows Upon your X Desktop
-Exec=x-tile2
+Exec=x-tile
 Icon=/usr/share/pixmaps/x-tile.svg
 Terminal=false
 Type=Application
 StartupNotify=true
 Categories=GTK;Utility;
+Name[en_US]=x-tile

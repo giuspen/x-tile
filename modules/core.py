@@ -97,7 +97,7 @@ class InfoModel:
                 pid = glob.ret_pointer[0]
                 process_name = support.get_process_name(pid)
             # filter based on process name - NB beppie I'd like something better for this but dont know what!
-            if len(process_name) > 7 and process_name[-7:] == "x-tile2": continue
+            if len(process_name) > 7 and process_name[-7:] == "x-tile": continue
             if process_name in cons.PROCESSES_BLACKLIST: continue
             #print process_name
             self.process_picklist.add(process_name)
@@ -1186,63 +1186,63 @@ class XTile:
     
     def undo_tiling_all(self, *args):
         """Just Undo the Latest Tiling Operation"""
-        self.hide_and_process("x-tile2 z &")
+        self.hide_and_process("x-tile z &")
     
     def invert_tiling_all(self, *args):
         """Invert the Order of the Latest Tiling Operation"""
-        self.hide_and_process("x-tile2 i &")
+        self.hide_and_process("x-tile i &")
     
     def tile_all_vertically(self, *args):
         """Just tile Vertically all opened windows"""
-        self.hide_and_process("x-tile2 v &")
+        self.hide_and_process("x-tile v &")
     
     def tile_all_horizontally(self, *args):
         """Just tile Horizontally all opened windows"""
-        self.hide_and_process("x-tile2 h &")
+        self.hide_and_process("x-tile h &")
     
     def tile_all_triangle_up(self, *args):
         """Just tile Triangle Up all opened windows"""
-        self.hide_and_process("x-tile2 u &")
+        self.hide_and_process("x-tile u &")
     
     def tile_all_triangle_down(self, *args):
         """Just tile Triangle Down all opened windows"""
-        self.hide_and_process("x-tile2 d &")
+        self.hide_and_process("x-tile d &")
     
     def tile_all_triangle_left(self, *args):
         """Just tile Triangle Left all opened windows"""
-        self.hide_and_process("x-tile2 l &")
+        self.hide_and_process("x-tile l &")
     
     def tile_all_triangle_right(self, *args):
         """Just tile Triangle Right all opened windows"""
-        self.hide_and_process("x-tile2 r &")
+        self.hide_and_process("x-tile r &")
     
     def tile_all_quad(self, *args):
         """Just tile Quad all opened windows"""
-        self.hide_and_process("x-tile2 q &")
+        self.hide_and_process("x-tile q &")
     
     def tile_all_grid(self, *args):
         """Just tile Grid all opened windows"""
-        self.hide_and_process("x-tile2 g &")
+        self.hide_and_process("x-tile g &")
     
     def tile_all_custom_1(self, *args):
         """Just tile Custom 1 all opened windows"""
-        self.hide_and_process("x-tile2 1 &")
+        self.hide_and_process("x-tile 1 &")
     
     def tile_all_custom_2(self, *args):
         """Just tile Custom 2 all opened windows"""
-        self.hide_and_process("x-tile2 2 &")
+        self.hide_and_process("x-tile 2 &")
     
     def maximize_all(self, *args):
         """Maximize all opened windows"""
-        self.hide_and_process("x-tile2 m &")
+        self.hide_and_process("x-tile m &")
     
     def unmaximize_all(self, *args):
         """Unmaximize all opened windows"""
-        self.hide_and_process("x-tile2 M &")
+        self.hide_and_process("x-tile M &")
     
     def close_all(self, *args):
         """Close all opened windows"""
-        self.hide_and_process("x-tile2 c &")
+        self.hide_and_process("x-tile c &")
     
     def dialog_about_all(self, *args):
         """Show the About Dialog and hide it when a button is pressed"""

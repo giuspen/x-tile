@@ -108,7 +108,7 @@ class Uninstall(Command):
 
 class Install(install):
     def run(self):
-        self.distribution.scripts=['x-tile2']
+        self.distribution.scripts=['x-tile']
         install.run(self)
 
 
@@ -119,7 +119,7 @@ class InstallData(install_data):
         install_data.run(self)
 
     def _find_desktop_file(self):
-        return [("share/applications", ["linux/x-tile2.desktop"] )]
+        return [("share/applications", ["linux/x-tile.desktop"] )]
 
     def _find_mo_files (self):
         data_files = []

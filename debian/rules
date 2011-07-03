@@ -31,7 +31,7 @@ clean:
 	rm -f build-stamp configure-stamp
 
 	rm -rf build
-	rm -rf debian/x-tile2
+	rm -rf debian/x-tile
 
 	dh_clean
 
