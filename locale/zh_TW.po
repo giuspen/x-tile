@@ -7,10 +7,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.6\n"
+"Project-Id-Version: 2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-07-02 22:37+0200\n"
-"PO-Revision-Date: 2011-06-17 16:48+0800\n"
+"PO-Revision-Date: 2011-07-03 15:30+0800\n"
 "Last-Translator: Yan-ren Tsai <elleryq@gmail.com>\n"
 "Language-Team: zh_TW <elleryq@gmail.com>\n"
 "Language: \n"
@@ -27,11 +27,8 @@ msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr "新的語言在重新啟動 X Tile 後才會生效。"
 
 #: modules/core.py:341 glade/x-tile.glade.h:52
-#, fuzzy
 msgid "Tile the Windows Upon your X Desktop"
-msgstr ""
-"X Tile\n"
-"在你的桌面排列視窗"
+msgstr "在你的X桌面上排列視窗"
 
 #: modules/core.py:529
 msgid "The Size of the Toolbar Icons is already at the Maximum Value"
@@ -156,14 +153,12 @@ msgid "Quit the Application"
 msgstr "離開應用程式"
 
 #: modules/cons.py:273
-#, fuzzy
 msgid "_Exit X Tile"
-msgstr "鋪排後離開"
+msgstr "離開X Tile(_E)"
 
 #: modules/cons.py:273
-#, fuzzy
 msgid "Exit from X Tile"
-msgstr "鋪排後離開"
+msgstr "從X Tile離開"
 
 #: modules/cons.py:274
 msgid "_Preferences"
@@ -386,122 +381,108 @@ msgid "About X Tile"
 msgstr "關於 X Tile"
 
 #: modules/cons.py:303
-#, fuzzy
 msgid "_Close All"
-msgstr "關閉所有"
+msgstr "關閉所有(_C)"
 
 #: modules/cons.py:303
-#, fuzzy
 msgid "Close All Windows"
-msgstr "關閉視窗 (_C)"
+msgstr "關閉所有視窗"
 
 #: modules/cons.py:304
 msgid "_Unmaximize All"
 msgstr "不最大化全部 (_U)"
 
 #: modules/cons.py:304
-#, fuzzy
 msgid "Unmaximize All Windows"
-msgstr "不最大化視窗 (_U)"
+msgstr "不最大化所有視窗"
 
 #: modules/cons.py:305
 msgid "_Maximize All"
 msgstr "最大化全部 (_M)"
 
 #: modules/cons.py:305
-#, fuzzy
 msgid "Maximize All Windows"
-msgstr "最大化視窗 (_M)"
+msgstr "最大化所有視窗"
 
 #: modules/cons.py:306
 msgid "Tile All _Quad"
 msgstr "平鋪所有視窗為4個 (_Q)"
 
 #: modules/cons.py:306
-#, fuzzy
 msgid "Tile All Windows Quad"
-msgstr "平鋪所有視窗為4個 (_Q)"
+msgstr "平鋪所有視窗為4個"
 
 #: modules/cons.py:307
 msgid "Tile All Triangle _Down"
 msgstr "平舖所有視窗為三等份，最大的在下 (_D)"
 
 #: modules/cons.py:307
-#, fuzzy
 msgid "Tile All Windows Triangle Down"
-msgstr "平舖所有視窗為三等份，最大的在下 (_D)"
+msgstr "平舖所有視窗為三等份，最大的在下"
 
 #: modules/cons.py:308
 msgid "Tile All Triangle _Up"
 msgstr "平舖所有視窗為三等份，最大的在上 (_U)"
 
 #: modules/cons.py:308
-#, fuzzy
 msgid "Tile All Windows Triangle Up"
-msgstr "平舖所有視窗為三等份，最大的在上 (_U)"
+msgstr "平舖所有視窗為三等份，最大的在上"
 
 #: modules/cons.py:309
 msgid "Tile All Triangle _Right"
 msgstr "平舖所有視窗為三等份，最大的在右 (_R)"
 
 #: modules/cons.py:309
-#, fuzzy
 msgid "Tile All Windows Triangle Right"
-msgstr "平舖所有視窗為三等份，最大的在右 (_R)"
+msgstr "平舖所有視窗為三等份，最大的在右"
 
 #: modules/cons.py:310
 msgid "Tile All Triangle _Left"
 msgstr "平舖所有視窗為三等份，最大的在左 (_L)"
 
 #: modules/cons.py:310
-#, fuzzy
 msgid "Tile All Windows Triangle Left"
-msgstr "平舖所有視窗為三等份，最大的在左 (_L)"
+msgstr "平舖所有視窗為三等份，最大的在左"
 
 #: modules/cons.py:311
 msgid "Tile All Custom _2"
 msgstr "平舖所有自訂2 (_2)"
 
 #: modules/cons.py:311
-#, fuzzy
 msgid "Tile All Windows Custom 2"
-msgstr "平舖所有自訂2 (_2)"
+msgstr "平舖所有自訂2"
 
 #: modules/cons.py:312
 msgid "Tile All Custom _1"
 msgstr "平舖所有自訂1 (_1)"
 
 #: modules/cons.py:312
-#, fuzzy
 msgid "Tile All Windows Custom 1"
-msgstr "平舖所有自訂1 (_1)"
+msgstr "平舖所有自訂1"
 
 #: modules/cons.py:313
 msgid "Tile All _Grid"
 msgstr "平鋪所有為格框 (_G)"
 
 #: modules/cons.py:313
-#, fuzzy
 msgid "Tile All Windows Grid"
-msgstr "平鋪所有為格框 (_G)"
+msgstr "平鋪所有為格框"
 
 #: modules/cons.py:314
 msgid "Tile All _Horizontally"
-msgstr "水平鋪排全部視窗 (_H)"
+msgstr "水平鋪排所有視窗 (_H)"
 
 #: modules/cons.py:314
-#, fuzzy
 msgid "Tile All Windows Horizontally"
-msgstr "水平鋪排全部視窗 (_H)"
+msgstr "水平鋪排所有視窗"
 
 #: modules/cons.py:315
 msgid "Tile All _Vertically"
 msgstr "垂直鋪排全部視窗 (_V)"
 
 #: modules/cons.py:315
-#, fuzzy
 msgid "Tile All Windows Vertically"
-msgstr "垂直鋪排全部視窗 (_V)"
+msgstr "垂直鋪排所有視窗"
 
 #: glade/x-tile.glade.h:1
 msgid ""
@@ -607,7 +588,7 @@ msgstr "不要列出已經最小化的視窗"
 
 #: glade/x-tile.glade.h:37
 msgid "Enable System Tray Docking"
-msgstr ""
+msgstr "啟用系統匣停駐"
 
 #: glade/x-tile.glade.h:38
 msgid "Exit After Tile"
@@ -659,7 +640,7 @@ msgstr "尺寸"
 
 #: glade/x-tile.glade.h:51
 msgid "Start Minimized on the System Tray"
-msgstr ""
+msgstr "啟動時最小化到系統匣"
 
 #: glade/x-tile.glade.h:53
 msgid "Update"
