@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: 1.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-07-02 22:37+0200\n"
-"PO-Revision-Date: 2011-06-26 21:17+0800\n"
+"PO-Revision-Date: 2011-07-03 22:58+0800\n"
 "Last-Translator: Fan.Khiyuan <Fan.Khiyuan@gmail.com>\n"
 "Language-Team: Fan.khiyuan@gmail.com\n"
 "Language: \n"
@@ -20,12 +20,12 @@ msgstr "使用拖拉来排序行"
 msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr "新语言将在重启 X Tile 后生效。"
 
-#: modules/core.py:341 glade/x-tile.glade.h:52
-#, fuzzy
+#: modules/core.py:341
+#: glade/x-tile.glade.h:52
 msgid "Tile the Windows Upon your X Desktop"
 msgstr ""
 "X Tile\n"
-"在你的桌面排列窗口"
+"在你的X桌面排列窗口"
 
 #: modules/core.py:529
 msgid "The Size of the Toolbar Icons is already at the Maximum Value"
@@ -48,16 +48,19 @@ msgstr "OFF"
 msgid "Version %s  -  Exit After Tile: %s"
 msgstr "版本:%s  - 在排列后退出: %s"
 
-#: modules/core.py:590 modules/core.py:596
-msgid ""
-"The used shortcut is not available when the Preferences Window is opened"
+#: modules/core.py:590
+#: modules/core.py:596
+msgid "The used shortcut is not available when the Preferences Window is opened"
 msgstr "当首选项窗口开启时，使用的快捷方式无效。"
 
-#: modules/core.py:668 modules/core.py:676 modules/core.py:684
+#: modules/core.py:668
+#: modules/core.py:676
+#: modules/core.py:684
 msgid "No Row is Selected"
 msgstr "没有选定任何行"
 
-#: modules/core.py:706 modules/core.py:740
+#: modules/core.py:706
+#: modules/core.py:740
 msgid "No Application Selected!"
 msgstr "没有选择应用程序!"
 
@@ -73,24 +76,23 @@ msgstr "行"
 msgid "Columns"
 msgstr "列"
 
-#: modules/core.py:915 modules/core.py:923 modules/core.py:933
+#: modules/core.py:915
+#: modules/core.py:923
+#: modules/core.py:933
 msgid "No Windows Checked"
 msgstr "没有选择窗口"
 
-#: modules/core.py:969 modules/core.py:982
+#: modules/core.py:969
+#: modules/core.py:982
 msgid "Edit Custom Tile Settings"
 msgstr "编辑自定排列设定"
 
 #: modules/core.py:1098
-msgid ""
-"The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
-"Set'"
+msgid "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 Set'"
 msgstr "自定排列1尚未设置：点击菜单 '排列->自定排列1' 进行设置。"
 
 #: modules/core.py:1116
-msgid ""
-"The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
-"Set'"
+msgid "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 Set'"
 msgstr "自定排列2尚未设置：点击菜单 '排列->自定排列2' 进行设置。"
 
 #: modules/cons.py:262
@@ -113,7 +115,8 @@ msgstr "排列 (_T)"
 msgid "_View"
 msgstr "查看 (_V)"
 
-#: modules/cons.py:267 modules/cons.py:300
+#: modules/cons.py:267
+#: modules/cons.py:300
 msgid "_Help"
 msgstr "帮助 (_H)"
 
@@ -129,7 +132,8 @@ msgstr "过滤行"
 msgid "Selected by _Default"
 msgstr "预设选定 (_D)"
 
-#: modules/cons.py:270 glade/x-tile.glade.h:48
+#: modules/cons.py:270
+#: glade/x-tile.glade.h:48
 msgid "Rows to be Selected by Default"
 msgstr "预设选定的行"
 
@@ -150,14 +154,12 @@ msgid "Quit the Application"
 msgstr "退出应用程序"
 
 #: modules/cons.py:273
-#, fuzzy
 msgid "_Exit X Tile"
-msgstr "排列后退出"
+msgstr "退出 X Tile(_E)"
 
 #: modules/cons.py:273
-#, fuzzy
 msgid "Exit from X Tile"
-msgstr "排列后退出"
+msgstr "自 X Tile 退出"
 
 #: modules/cons.py:274
 msgid "_Preferences"
@@ -244,9 +246,8 @@ msgid "Tile _Grid"
 msgstr "平铺网格(_G)"
 
 #: modules/cons.py:284
-#, fuzzy
 msgid "Tile into an Arbitrary Grid The Checked Windows"
-msgstr "将选定窗口平铺到随意网格"
+msgstr "平铺选定窗口到任意网格"
 
 #: modules/cons.py:285
 msgid "Custom Tile 1 _Set"
@@ -280,19 +281,23 @@ msgstr "运行自定排列2 (_2)"
 msgid "Execute Custom Tile 2"
 msgstr "运行自定排列2"
 
-#: modules/cons.py:289 modules/cons.py:317
+#: modules/cons.py:289
+#: modules/cons.py:317
 msgid "U_ndo Tiling"
 msgstr "撤销排列 (_N)"
 
-#: modules/cons.py:289 modules/cons.py:317
+#: modules/cons.py:289
+#: modules/cons.py:317
 msgid "Undo the Latest Tiling Operation"
 msgstr "撤消最后一次排列操作"
 
-#: modules/cons.py:290 modules/cons.py:316
+#: modules/cons.py:290
+#: modules/cons.py:316
 msgid "_Invert Tiling Order"
 msgstr "倒置排列次序(_I)"
 
-#: modules/cons.py:290 modules/cons.py:316
+#: modules/cons.py:290
+#: modules/cons.py:316
 msgid "Invert the Order of the Latest Tiling Operation"
 msgstr "倒置最后一次排列操作"
 
@@ -372,131 +377,120 @@ msgstr "缩小工具栏图标"
 msgid "X Tile Project Home Page"
 msgstr "X Tile 项目首页"
 
-#: modules/cons.py:301 modules/cons.py:302
+#: modules/cons.py:301
+#: modules/cons.py:302
 msgid "_About"
 msgstr "关于 (_A)"
 
-#: modules/cons.py:301 modules/cons.py:302 glade/x-tile.glade.h:21
+#: modules/cons.py:301
+#: modules/cons.py:302
+#: glade/x-tile.glade.h:21
 msgid "About X Tile"
 msgstr "关于 X Tile"
 
 #: modules/cons.py:303
-#, fuzzy
 msgid "_Close All"
-msgstr "关闭全部"
+msgstr "关闭全部(_C)"
 
 #: modules/cons.py:303
-#, fuzzy
 msgid "Close All Windows"
-msgstr "关闭窗口 (_C)"
+msgstr "关闭所有窗口"
 
 #: modules/cons.py:304
 msgid "_Unmaximize All"
-msgstr "取消全部最大化 (_M)"
+msgstr "全部取消最大化 (_M)"
 
 #: modules/cons.py:304
-#, fuzzy
 msgid "Unmaximize All Windows"
-msgstr "取消窗口最大化 (_U)"
+msgstr "所有窗口取消最大化"
 
 #: modules/cons.py:305
 msgid "_Maximize All"
 msgstr "全部最大化 (_M)"
 
 #: modules/cons.py:305
-#, fuzzy
 msgid "Maximize All Windows"
-msgstr "最大化窗口 (_M)"
+msgstr "所有窗口最大化"
 
 #: modules/cons.py:306
 msgid "Tile All _Quad"
-msgstr "平铺四个窗口 (_Q)"
+msgstr "四分平铺全部 (_Q)"
 
 #: modules/cons.py:306
-#, fuzzy
 msgid "Tile All Windows Quad"
-msgstr "平铺四个窗口 (_Q)"
+msgstr "四分平铺所有窗口"
 
 #: modules/cons.py:307
 msgid "Tile All Triangle _Down"
-msgstr "平铺三个窗口，下边最大 (_D)"
+msgstr "三分平铺全部，下边最大 (_D)"
 
 #: modules/cons.py:307
-#, fuzzy
 msgid "Tile All Windows Triangle Down"
-msgstr "平铺三个窗口，下边最大 (_D)"
+msgstr "三分平铺全部窗口，下边最大 "
 
 #: modules/cons.py:308
 msgid "Tile All Triangle _Up"
-msgstr "平铺三个窗口，上边最大 (_U)"
+msgstr "三分平铺全部，上边最大 (_U)"
 
 #: modules/cons.py:308
-#, fuzzy
 msgid "Tile All Windows Triangle Up"
-msgstr "平铺三个窗口，上边最大 (_U)"
+msgstr "三分平铺全部窗口，上边最大"
 
 #: modules/cons.py:309
 msgid "Tile All Triangle _Right"
-msgstr "平铺三个窗口，右边最大 (_R)"
+msgstr "三分平铺全部，右边最大 (_R)"
 
 #: modules/cons.py:309
-#, fuzzy
 msgid "Tile All Windows Triangle Right"
-msgstr "平铺三个窗口，右边最大 (_R)"
+msgstr "三分平铺全部窗口，右边最大"
 
 #: modules/cons.py:310
 msgid "Tile All Triangle _Left"
-msgstr "平铺三个窗口，左边最大 (_L)"
+msgstr "三分平铺全部，左边最大 (_L)"
 
 #: modules/cons.py:310
-#, fuzzy
 msgid "Tile All Windows Triangle Left"
-msgstr "平铺三个窗口，左边最大 (_L)"
+msgstr "三分平铺全部窗口，左边最大"
 
 #: modules/cons.py:311
 msgid "Tile All Custom _2"
-msgstr "平铺所有自定2 (_2)"
+msgstr "全部按自定2平铺 (_2)"
 
 #: modules/cons.py:311
-#, fuzzy
 msgid "Tile All Windows Custom 2"
-msgstr "平铺所有自定2 (_2)"
+msgstr "全部窗口按自定2平铺"
 
 #: modules/cons.py:312
 msgid "Tile All Custom _1"
-msgstr "平铺所有自定1 (_1)"
+msgstr "全部按照自定1平铺 (_1)"
 
 #: modules/cons.py:312
-#, fuzzy
 msgid "Tile All Windows Custom 1"
-msgstr "平铺所有自定1 (_1)"
+msgstr "全部窗口按自定1平铺"
 
 #: modules/cons.py:313
 msgid "Tile All _Grid"
-msgstr "平铺四个网格 (_G)"
+msgstr "平铺所有网格 (_G)"
 
 #: modules/cons.py:313
-#, fuzzy
 msgid "Tile All Windows Grid"
-msgstr "平铺四个网格 (_G)"
+msgstr "平铺所有窗口至网格"
 
 #: modules/cons.py:314
 msgid "Tile All _Horizontally"
 msgstr "水平排列所有窗口 (_H)"
 
 #: modules/cons.py:314
-#, fuzzy
 msgid "Tile All Windows Horizontally"
-msgstr "水平排列所有窗口 (_H)"
+msgstr "水平排列所有窗口"
 
 #: modules/cons.py:315
 msgid "Tile All _Vertically"
 msgstr "垂直排列全部窗口 (_V)"
 
 #: modules/cons.py:315
-#, fuzzy
 msgid "Tile All Windows Vertically"
-msgstr "垂直排列全部窗口 (_V)"
+msgstr "垂直排列全部窗口"
 
 #: glade/x-tile.glade.h:1
 msgid ""
@@ -603,7 +597,7 @@ msgstr "不列出最小化的窗口"
 
 #: glade/x-tile.glade.h:37
 msgid "Enable System Tray Docking"
-msgstr ""
+msgstr "激活系统托盘区停靠"
 
 #: glade/x-tile.glade.h:38
 msgid "Exit After Tile"
@@ -655,7 +649,7 @@ msgstr "尺寸"
 
 #: glade/x-tile.glade.h:51
 msgid "Start Minimized on the System Tray"
-msgstr ""
+msgstr "启动后最小化于系统托盘"
 
 #: glade/x-tile.glade.h:53
 msgid "Update"
@@ -680,3 +674,4 @@ msgstr "Y"
 #: glade/x-tile.glade.h:58
 msgid "http://www.giuspen.com/x-tile/"
 msgstr "http://www.giuspen.com/x-tile/"
+
