@@ -644,7 +644,7 @@ msgid "Size"
 msgstr "Dimensione"
 
 #: glade/x-tile.glade.h:51
-msgid "Start Minimized on the System Tray"
+msgid "Start Minimized in the System Tray"
 msgstr "Avvia Minimizzato su System Tray"
 
 #: glade/x-tile.glade.h:53

@@ -297,7 +297,7 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                 </child>
                 <child>
                   <object class="GtkCheckButton" id="checkbutton_start_minimized">
-                    <property name="label" translatable="yes">Start Minimized on the System Tray</property>
+                    <property name="label" translatable="yes">Start Minimized in the System Tray</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
