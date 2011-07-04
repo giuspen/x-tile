@@ -655,7 +655,7 @@ msgid "Size"
 msgstr "Размер"
 
 #: glade/x-tile.glade.h:51
-msgid "Start Minimized on the System Tray"
+msgid "Start Minimized in the System Tray"
 msgstr "Свернуть в системный лоток при запуске"
 
 #: glade/x-tile.glade.h:53
