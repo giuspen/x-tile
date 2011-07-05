@@ -97,7 +97,7 @@ class InfoModel:
                 pid = glob.ret_pointer[0]
                 process_name = support.get_process_name(pid)
             # filter based on process name - NB beppie I'd like something better for this but dont know what!
-            if len(process_name) > 7 and process_name[-7:] == "x-tile": continue
+            if len(process_name) > 6 and process_name[-6:] == "x-tile": continue
             if process_name in cons.PROCESSES_BLACKLIST: continue
             #print process_name
             self.process_picklist.add(process_name)
