@@ -103,7 +103,7 @@ class InfoModel:
             self.process_picklist.add(process_name)
             if process_name not in self.process_blacklist: # user filter
                 win_curr_monitor = screen.get_monitor_at_window(gtk.gdk.window_foreign_new(client))
-                if win_curr_monitor == 0: cell_background = 'white'
+                if win_curr_monitor == 0: cell_background = None
                 else: cell_background = 'gray'
                 if process_name not in self.process_whitelist: flagged = False
                 else: flagged = True
