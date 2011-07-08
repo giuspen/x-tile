@@ -900,7 +900,7 @@ class XTile:
         elif show_toolbar == cons.STR_FALSE: self.ui.get_widget("/ToolBar").hide()
         if self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) == cons.STR_FALSE:
             self.ui.get_widget("/MenuBar/FileMenu/ExitApp").set_property('visible', False)
-        if self.gconf_client.get_string(cons.GCONF_SYSTRAY_START % glob.screen_index) == cons.STR_TRUE:
+        elif self.gconf_client.get_string(cons.GCONF_SYSTRAY_START % glob.screen_index) == cons.STR_TRUE:
             self.glade.window.hide()
             self.win_on_screen = False
         else: self.win_on_screen = True
