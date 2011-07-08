@@ -202,6 +202,25 @@ def subtract_areas(white_area, black_area):
             white_area[3] -= black_area[3]
     return white_area
 
+def translate_coords(win, x, y):
+    """
+    Bool XTranslateCoordinates(display, src_w, dest_w, src_x, src_y, dest_x_return, 
+                               dest_y_return, child_return)
+      Display *display;
+      Window src_w, dest_w;
+      int src_x, src_y;
+      int *dest_x_return, *dest_y_return;
+      Window *child_return;
+    """
+    child_return = ctypes.c_ulong()
+    dest_x_return = ctypes.c_int()
+    dest_y_return = ctypes.c_int()
+    glob.x11.XTranslateCoordinates(glob.disp, win, glob.root, x, y,
+                                   ctypes.byref(dest_x_return),
+                                   ctypes.byref(dest_y_return),
+                                   ctypes.byref(child_return))
+    return dest_x_return.value, dest_y_return.value
+
 def enumerate_strut_windows(display, rootwindow):
     """Retrieve the Strut Windows (the panels)"""
     strut_windows = []
@@ -218,7 +237,7 @@ def enumerate_strut_windows(display, rootwindow):
     if glob.num_items.value:
         glob.x11.XGetGeometry(display, rootwindow, ctypes.byref(dummy), ctypes.byref(x_return), ctypes.byref(y_return),
                               ctypes.byref(width_return), ctypes.byref(height_return), ctypes.byref(dummy), ctypes.byref(dummy) )
-        struct_origin = gtk.gdk.window_foreign_new(rootwindow).get_origin()
+        struct_origin = translate_coords(rootwindow, x_return.value, y_return.value)
         strut_windows.append([struct_origin[0], struct_origin[1], width_return.value, height_return.value])
     status = glob.x11.XQueryTree(display, rootwindow, ctypes.byref(rootr), ctypes.byref(parent), ctypes.byref(children), ctypes.byref(noOfChildren) )
     if noOfChildren.value:
