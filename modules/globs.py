@@ -130,6 +130,7 @@ class GlobalsObject(object):
     def read_monitors_areas(self):
         """Read Monitor(s) Area(s)"""
         strut_windows = support.enumerate_strut_windows(self.disp, self.root)
+        #print strut_windows
         screen = gtk.gdk.screen_get_default()
         self.num_monitors = screen.get_n_monitors()
         self.monitors_areas = []

@@ -218,7 +218,8 @@ def enumerate_strut_windows(display, rootwindow):
     if glob.num_items.value:
         glob.x11.XGetGeometry(display, rootwindow, ctypes.byref(dummy), ctypes.byref(x_return), ctypes.byref(y_return),
                               ctypes.byref(width_return), ctypes.byref(height_return), ctypes.byref(dummy), ctypes.byref(dummy) )
-        strut_windows.append([x_return.value, y_return.value, width_return.value, height_return.value])
+        struct_origin = gtk.gdk.window_foreign_new(rootwindow).get_origin()
+        strut_windows.append([struct_origin[0], struct_origin[1], width_return.value, height_return.value])
     status = glob.x11.XQueryTree(display, rootwindow, ctypes.byref(rootr), ctypes.byref(parent), ctypes.byref(children), ctypes.byref(noOfChildren) )
     if noOfChildren.value:
         for i in range(0, noOfChildren.value):
