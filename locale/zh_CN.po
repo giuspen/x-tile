@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-02 22:37+0200\n"
+"POT-Creation-Date: 2011-07-08 16:31+0200\n"
 "PO-Revision-Date: 2011-07-03 22:58+0800\n"
 "Last-Translator: Fan.Khiyuan <Fan.Khiyuan@gmail.com>\n"
 "Language-Team: Fan.khiyuan@gmail.com\n"
@@ -20,8 +20,7 @@ msgstr "使用拖拉来排序行"
 msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr "新语言将在重启 X Tile 后生效。"
 
-#: modules/core.py:341
-#: glade/x-tile.glade.h:52
+#: modules/core.py:341 glade/x-tile.glade.h:53
 msgid "Tile the Windows Upon your X Desktop"
 msgstr ""
 "X Tile\n"
@@ -48,19 +47,16 @@ msgstr "OFF"
 msgid "Version %s  -  Exit After Tile: %s"
 msgstr "版本:%s  - 在排列后退出: %s"
 
-#: modules/core.py:590
-#: modules/core.py:596
-msgid "The used shortcut is not available when the Preferences Window is opened"
+#: modules/core.py:590 modules/core.py:596
+msgid ""
+"The used shortcut is not available when the Preferences Window is opened"
 msgstr "当首选项窗口开启时，使用的快捷方式无效。"
 
-#: modules/core.py:668
-#: modules/core.py:676
-#: modules/core.py:684
+#: modules/core.py:668 modules/core.py:676 modules/core.py:684
 msgid "No Row is Selected"
 msgstr "没有选定任何行"
 
-#: modules/core.py:706
-#: modules/core.py:740
+#: modules/core.py:706 modules/core.py:740
 msgid "No Application Selected!"
 msgstr "没有选择应用程序!"
 
@@ -76,23 +72,24 @@ msgstr "行"
 msgid "Columns"
 msgstr "列"
 
-#: modules/core.py:915
-#: modules/core.py:923
-#: modules/core.py:933
+#: modules/core.py:915 modules/core.py:923 modules/core.py:933
 msgid "No Windows Checked"
 msgstr "没有选择窗口"
 
-#: modules/core.py:969
-#: modules/core.py:982
+#: modules/core.py:969 modules/core.py:982
 msgid "Edit Custom Tile Settings"
 msgstr "编辑自定排列设定"
 
 #: modules/core.py:1098
-msgid "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 Set'"
+msgid ""
+"The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
+"Set'"
 msgstr "自定排列1尚未设置：点击菜单 '排列->自定排列1' 进行设置。"
 
 #: modules/core.py:1116
-msgid "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 Set'"
+msgid ""
+"The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
+"Set'"
 msgstr "自定排列2尚未设置：点击菜单 '排列->自定排列2' 进行设置。"
 
 #: modules/cons.py:262
@@ -115,8 +112,7 @@ msgstr "排列 (_T)"
 msgid "_View"
 msgstr "查看 (_V)"
 
-#: modules/cons.py:267
-#: modules/cons.py:300
+#: modules/cons.py:267 modules/cons.py:300
 msgid "_Help"
 msgstr "帮助 (_H)"
 
@@ -132,8 +128,7 @@ msgstr "过滤行"
 msgid "Selected by _Default"
 msgstr "预设选定 (_D)"
 
-#: modules/cons.py:270
-#: glade/x-tile.glade.h:48
+#: modules/cons.py:270 glade/x-tile.glade.h:49
 msgid "Rows to be Selected by Default"
 msgstr "预设选定的行"
 
@@ -281,23 +276,19 @@ msgstr "运行自定排列2 (_2)"
 msgid "Execute Custom Tile 2"
 msgstr "运行自定排列2"
 
-#: modules/cons.py:289
-#: modules/cons.py:317
+#: modules/cons.py:289 modules/cons.py:317
 msgid "U_ndo Tiling"
 msgstr "撤销排列 (_N)"
 
-#: modules/cons.py:289
-#: modules/cons.py:317
+#: modules/cons.py:289 modules/cons.py:317
 msgid "Undo the Latest Tiling Operation"
 msgstr "撤消最后一次排列操作"
 
-#: modules/cons.py:290
-#: modules/cons.py:316
+#: modules/cons.py:290 modules/cons.py:316
 msgid "_Invert Tiling Order"
 msgstr "倒置排列次序(_I)"
 
-#: modules/cons.py:290
-#: modules/cons.py:316
+#: modules/cons.py:290 modules/cons.py:316
 msgid "Invert the Order of the Latest Tiling Operation"
 msgstr "倒置最后一次排列操作"
 
@@ -377,14 +368,11 @@ msgstr "缩小工具栏图标"
 msgid "X Tile Project Home Page"
 msgstr "X Tile 项目首页"
 
-#: modules/cons.py:301
-#: modules/cons.py:302
+#: modules/cons.py:301 modules/cons.py:302
 msgid "_About"
 msgstr "关于 (_A)"
 
-#: modules/cons.py:301
-#: modules/cons.py:302
-#: glade/x-tile.glade.h:21
+#: modules/cons.py:301 modules/cons.py:302 glade/x-tile.glade.h:21
 msgid "About X Tile"
 msgstr "关于 X Tile"
 
@@ -562,26 +550,27 @@ msgstr "取消"
 msgid ""
 "Chinese Simplified (zh_CN) Khiyuan Fan <Fan.Khiyuan@gmail.com>\n"
 "Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
+"Czech (cs) Pavel Fric <fripohled@blogspot.com\n"
 "Spanish (es_AR) MeloPixel <melopixel@gmail.com>\n"
 "French (fr) Ludovic Troisi <axalis@cegetel.net>\n"
 "German (de) Jöran Zeller <joeran@zeller.ws>\n"
 "Italian (it) Giuseppe Penone <giuspen@gmail.com>\n"
 "Russian (ru) Andriy Kovtun <kovtunos@yandex.ru>"
 msgstr ""
-"Chinese Simplified (zh_CN) Khiyuan Fan <Fan.Khiyuan@gmail.com>\n"
 "汉语(简体中文) (zh_CN) Khi-yuan Fan <Fan.khiyuan@gmail.com>\n"
 "汉语(繁体中文) (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
+"Czech (cs) Pavel Fric <fripohled@blogspot.com\n"
 "西班牙语 (es_AR) MeloPixel <melopixel@gmail.com>\n"
 "法语 (fr) Ludovic Troisi <axalis@cegetel.net>\n"
 "德语 (de) Jöran Zeller <joeran@zeller.ws>\n"
 "意大利语 (it) Giuseppe Penone <giuspen@gmail.com>\n"
 "俄语 (ru) Andriy Kovtun <kovtunos@yandex.ru>"
 
-#: glade/x-tile.glade.h:32
+#: glade/x-tile.glade.h:33
 msgid "Close"
 msgstr "关闭"
 
-#: glade/x-tile.glade.h:33
+#: glade/x-tile.glade.h:34
 msgid ""
 "Copyright © 2009-2011\n"
 "Giuseppe Penone <giuspen@gmail.com>\n"
@@ -591,87 +580,86 @@ msgstr ""
 "Giuseppe Penone <giuspen@gmail.com>\n"
 "Chris Camacho <chris_camacho@yahoo.com>"
 
-#: glade/x-tile.glade.h:36
+#: glade/x-tile.glade.h:37
 msgid "Do Not List Minimized Windows"
 msgstr "不列出最小化的窗口"
 
-#: glade/x-tile.glade.h:37
+#: glade/x-tile.glade.h:38
 msgid "Enable System Tray Docking"
 msgstr "激活系统托盘区停靠"
 
-#: glade/x-tile.glade.h:38
+#: glade/x-tile.glade.h:39
 msgid "Exit After Tile"
 msgstr "排列后退出"
 
-#: glade/x-tile.glade.h:39
+#: glade/x-tile.glade.h:40
 msgid "Height"
 msgstr "高"
 
-#: glade/x-tile.glade.h:40
+#: glade/x-tile.glade.h:41
 msgid "OK"
 msgstr "OK"
 
-#: glade/x-tile.glade.h:41
+#: glade/x-tile.glade.h:42
 msgid "Only Current Workspace"
 msgstr "只对当前工作区"
 
-#: glade/x-tile.glade.h:42
+#: glade/x-tile.glade.h:43
 msgid "Override Monitor 1 Tiling Area"
 msgstr "取代第一个屏幕的排列区域"
 
-#: glade/x-tile.glade.h:43
+#: glade/x-tile.glade.h:44
 msgid "Override Monitor 2 Tiling Area"
 msgstr "取代第二个屏幕的排列区域"
 
-#: glade/x-tile.glade.h:44
+#: glade/x-tile.glade.h:45
 msgid "Position"
 msgstr "位置"
 
-#: glade/x-tile.glade.h:45
+#: glade/x-tile.glade.h:46
 msgid "Preferences"
 msgstr "首选项"
 
-#: glade/x-tile.glade.h:46
+#: glade/x-tile.glade.h:47
 msgid "Remove an Application Filter"
 msgstr "移除过滤器中应用程序"
 
-#: glade/x-tile.glade.h:47
+#: glade/x-tile.glade.h:48
 msgid "Rows to Filter"
 msgstr "过滤器列表"
 
-#: glade/x-tile.glade.h:49
+#: glade/x-tile.glade.h:50
 msgid "Show Toolbar"
 msgstr "显示工具栏"
 
-#: glade/x-tile.glade.h:50
+#: glade/x-tile.glade.h:51
 msgid "Size"
 msgstr "尺寸"
 
-#: glade/x-tile.glade.h:51
+#: glade/x-tile.glade.h:52
 msgid "Start Minimized in the System Tray"
 msgstr "启动后最小化于系统托盘"
 
-#: glade/x-tile.glade.h:53
+#: glade/x-tile.glade.h:54
 msgid "Update"
 msgstr "更新"
 
-#: glade/x-tile.glade.h:54
+#: glade/x-tile.glade.h:55
 msgid "Width"
 msgstr "宽"
 
-#: glade/x-tile.glade.h:55
+#: glade/x-tile.glade.h:56
 msgid "X"
 msgstr "X"
 
-#: glade/x-tile.glade.h:56
+#: glade/x-tile.glade.h:57
 msgid "X Tile"
 msgstr "X Tile"
 
-#: glade/x-tile.glade.h:57
+#: glade/x-tile.glade.h:58
 msgid "Y"
 msgstr "Y"
 
-#: glade/x-tile.glade.h:58
+#: glade/x-tile.glade.h:59
 msgid "http://www.giuspen.com/x-tile/"
 msgstr "http://www.giuspen.com/x-tile/"
-

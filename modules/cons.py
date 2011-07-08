@@ -38,7 +38,7 @@ else:
     ICON_PLACE = "/usr/share/pixmaps/x-tile.svg"
     LOCALE_PATH = "/usr/share/locale/"
 
-AVAILABLE_LANGS = ['default', 'de', 'en', 'es_AR', 'fr', 'it', 'ru', 'zh_CN', 'zh_TW']
+AVAILABLE_LANGS = ['default', 'cs', 'de', 'en', 'es_AR', 'fr', 'it', 'ru', 'zh_CN', 'zh_TW']
 
 CMD_LINE_ACTIONS = ["z", "i", "v", "h", "u", "d", "l", "r", "1", "2", "q", "g", "m", "M", "c"]
 

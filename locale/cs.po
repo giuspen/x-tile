@@ -1,500 +1,493 @@
-# Spanish translations for PACKAGE package.
-# Copyright (C) 2011 THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# giuspen <giuspen@gmail.com>, 2011.
+# Czech translations for x-tile package.
+# Copyright (C) 2010 THE x-tile'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the x-tile package.
+# maul <giuspen@gmail.com>, 2010.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: x-tile 1.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-07-08 16:31+0200\n"
-"PO-Revision-Date: 2011-07-05 12:57-0300\n"
-"Last-Translator: MeloPixel <melopixel@gmail.com>\n"
-"Language-Team: Spanish <MeloPixel>\n"
-"Language: \n"
+"PO-Revision-Date: 2010-06-04 09:01+0200\n"
+"Last-Translator: Pavel Fric <pavelfric@seznam.cz>\n"
+"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-Language: Spanish\n"
-"X-Poedit-Country: ARGENTINA\n"
-"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Lokalize 1.2\n"
 
 #: modules/core.py:293
 msgid "Use Drag and Drop to Sort the Rows"
-msgstr "Utilice Arrastrar y Soltar para ordenar las Filas"
+msgstr "Použít Táhni a pusť pro roztřídění řádků"
 
 #: modules/core.py:333
 msgid "The New Language will be Available Only After Restarting X Tile"
-msgstr "El nuevo idioma no estará disponible hasta que Reinicie X Tile"
+msgstr "Nové jazykové nastavení bude dostupné až po novém spuštění X Tile"
 
 #: modules/core.py:341 glade/x-tile.glade.h:53
 msgid "Tile the Windows Upon your X Desktop"
-msgstr "Mosaico de Windows Sobre su escritorio X"
+msgstr "Vydláždit okno na vašem X Desktop"
 
 #: modules/core.py:529
 msgid "The Size of the Toolbar Icons is already at the Maximum Value"
-msgstr ""
-"El tamaño de los Iconos de la Barra de Herramientas ya está en su Valor "
-"Máximo"
+msgstr "Ikony v nástrojovém pruhu jsou již tak velké, jak jen je to možné"
 
 #: modules/core.py:539
 msgid "The Size of the Toolbar Icons is already at the Minimum Value"
-msgstr ""
-"El tamaño de los Iconos de la Barra de Herramientas ya está en su Valor "
-"Mínimo"
+msgstr "Ikony v nástrojovém pruhu jsou již tak malé, jak jen je to možné"
 
 #: modules/core.py:547
 msgid "ON"
-msgstr "Activado"
+msgstr "Zapnuto"
 
 #: modules/core.py:547
 msgid "OFF"
-msgstr "Desactivado"
+msgstr "Vypnuto"
 
 #: modules/core.py:548
 #, python-format
 msgid "Version %s  -  Exit After Tile: %s"
-msgstr "Versión %s  -  Salida después de Mosaico: %s"
+msgstr "Verze %s  -  Zavřít po vydláždění: %s"
 
 #: modules/core.py:590 modules/core.py:596
 msgid ""
 "The used shortcut is not available when the Preferences Window is opened"
 msgstr ""
-"El atajo utilizado no está disponible cuando la Ventana de Preferencias se "
-"abre"
+"Použitá klávesová zkratka není dostupná, dokud je otevřeno okno s nastavením"
 
 #: modules/core.py:668 modules/core.py:676 modules/core.py:684
 msgid "No Row is Selected"
-msgstr "No hay Filas Seleccionadas"
+msgstr "Není vybrán žádný řádek"
 
 #: modules/core.py:706 modules/core.py:740
 msgid "No Application Selected!"
-msgstr "No hay ninguna Aplicación Seleccionada!"
+msgstr "Není vybrán žádný program!"
 
 #: modules/core.py:820
 msgid "Grid Details"
-msgstr "Detallar Cuadricula"
+msgstr "Podrobnosti k mřížce"
 
 #: modules/core.py:828
 msgid "Rows"
-msgstr "Fila"
+msgstr "Řádky"
 
 #: modules/core.py:835
 msgid "Columns"
-msgstr "Columnas"
+msgstr "Sloupce"
 
 #: modules/core.py:915 modules/core.py:923 modules/core.py:933
 msgid "No Windows Checked"
-msgstr "No hay Ventanas Seleccionadas"
+msgstr "Není vybráno žádné okno"
 
 #: modules/core.py:969 modules/core.py:982
 msgid "Edit Custom Tile Settings"
-msgstr "Editar configuración Personalizada de Mosaico"
+msgstr "Upravit vlastní nastavení dláždění"
 
 #: modules/core.py:1098
 msgid ""
 "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
 "Set'"
 msgstr ""
-"El Mosaico Personalizado 1 No de ha establecido: Haz Clic en el Menú -> "
-"Mosaico Personalizado 1"
+"Vlastní nastavení dláždění (1) ještě nebylo převzato: Klepněte v nabídce na "
+"'Dlaždice->Vlastní nastavení dláždění (1)'"
 
 #: modules/core.py:1116
 msgid ""
 "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
 "Set'"
 msgstr ""
-"El Mosaico Personalizado 2 No de ha establecido: Haz Clic en el Menú -> "
-"Mosaico Personalizado 2"
+"Vlastní nastavení dláždění (2) ještě nebylo převzato: Klepněte v nabídce na "
+"'Dlaždice->Vlastní nastavení dláždění (2)'"
 
 #: modules/cons.py:262
 msgid "_File"
-msgstr "_Archivo"
+msgstr "_Soubor"
 
 #: modules/cons.py:263
 msgid "_Edit"
-msgstr "_Editar"
+msgstr "Ú_pravy"
 
 #: modules/cons.py:264
 msgid "_Row"
-msgstr "_Fila"
+msgstr "Řá_dek"
 
 #: modules/cons.py:265
 msgid "_Tile"
-msgstr "_Mosaico"
+msgstr "_Dlaždice"
 
 #: modules/cons.py:266
 msgid "_View"
-msgstr "_Ver"
+msgstr "_Pohled"
 
 #: modules/cons.py:267 modules/cons.py:300
 msgid "_Help"
-msgstr "_Ayuda"
+msgstr "_Nápověda"
 
 #: modules/cons.py:269
 msgid "_Filter"
-msgstr "_Filtro"
+msgstr "_Filtr"
 
 #: modules/cons.py:269
 msgid "Filter Rows"
-msgstr "Filtrar Filas"
+msgstr "Filtrovat řádky"
 
 #: modules/cons.py:270
 msgid "Selected by _Default"
-msgstr "Seleccionar por _Defecto"
+msgstr "Vždy vybráno"
 
 #: modules/cons.py:270 glade/x-tile.glade.h:49
 msgid "Rows to be Selected by Default"
-msgstr "Filas para seleccionar por defecto"
+msgstr "Řádky, které mají být vybrány vždy"
 
 #: modules/cons.py:271
 msgid "_Reload"
-msgstr "_Actualizar"
+msgstr "_Nahrát znovu"
 
 #: modules/cons.py:271
 msgid "Reload the Windows List"
-msgstr "Actualiza la Lista de Ventanas"
+msgstr "Nahrát seznam oken znovu"
 
 #: modules/cons.py:272
 msgid "_Quit"
-msgstr "_Salir"
+msgstr "_Ukončit"
 
 #: modules/cons.py:272
 msgid "Quit the Application"
-msgstr "Salir de Aplicación"
+msgstr "Ukončit program"
 
 #: modules/cons.py:273
 msgid "_Exit X Tile"
-msgstr "Salir D_espués de Mosaico"
+msgstr "_Opustit X Tile"
 
 #: modules/cons.py:273
 msgid "Exit from X Tile"
-msgstr "Salir Después del Mosaico"
+msgstr "Opustit X Tile"
 
 #: modules/cons.py:274
 msgid "_Preferences"
-msgstr "_Preferencias"
+msgstr "_Nastavení"
 
 #: modules/cons.py:274
 msgid "Open the Preferences Window"
-msgstr "Abre las Preferencias de Ventanas"
+msgstr "Otevřít okno s nastavením"
 
 #: modules/cons.py:275
 msgid "Select _All"
-msgstr "M_arcar Todo"
+msgstr "Vybrat vš_e"
 
 #: modules/cons.py:275
 msgid "Select All the Windows in the List"
-msgstr "Tilda Todas las Ventanas de la Lista "
+msgstr "Vybrat všechna okna v seznamu"
 
 #: modules/cons.py:276
 msgid "Deselect A_ll"
-msgstr "Desmarcar _todo"
+msgstr "Zrušit výběr u _všeho"
 
 #: modules/cons.py:276
 msgid "Deselect All the Windows in the List"
-msgstr "Des-tilda Todas las Ventanas de la Lista "
+msgstr "Zrušit výběr u všech oken v seznamu"
 
 #: modules/cons.py:277
 msgid "Tile _Vertically"
-msgstr "Mosaico _Vertical"
+msgstr "Vydláždit _svisle"
 
 #: modules/cons.py:277
 msgid "Tile Vertically The Checked Windows"
-msgstr "Muestra las Ventanas en modo  Mosaico Vertical"
+msgstr "Vydláždit vybraná okna svisle"
 
 #: modules/cons.py:278
 msgid "Tile _Horizontally"
-msgstr "Mosaico _Horizontal"
+msgstr "Vydláždit _vodorovně"
 
 #: modules/cons.py:278
 msgid "Tile Horizontally The Checked Windows"
-msgstr "Muestra las Ventanas en modo Mosaico Horizontal"
+msgstr "Vydláždit vybraná okna vodorovně"
 
 #: modules/cons.py:279
 msgid "_Triangle Up"
-msgstr "_Triangulo Arriba"
+msgstr "_Trojúhelník nahoru"
 
 #: modules/cons.py:279
 msgid "Tile Triangle Up The Checked Windows"
-msgstr "Muestra las Ventanas en Modo Triangular hacia Arriba"
+msgstr "Vydláždit vybraná okna trojúhelníkově nahoru"
 
 #: modules/cons.py:280
 msgid "Triangle _Down"
-msgstr "Triangulo _Abajo"
+msgstr "Trojúhelník _dolů"
 
 #: modules/cons.py:280
 msgid "Tile Triangle Down The Checked Windows"
-msgstr "Muestra las Ventanas en Modo Triangular hacia Abajo"
+msgstr "Vydláždit vybraná okna trojúhelníkově dolů"
 
 #: modules/cons.py:281
 msgid "Triangle _Left"
-msgstr "Triangulo _Izquierda"
+msgstr "Trojúhelník _vlevo"
 
 #: modules/cons.py:281
 msgid "Tile Triangle Left The Checked Windows"
-msgstr "Muestra las Ventanas en Modo Triangular hacia la Izquierda"
+msgstr "Vydláždit vybraná okna trojúhelníkově vlevo"
 
 #: modules/cons.py:282
 msgid "Triangle _Right"
-msgstr "Triangulo _Derecha"
+msgstr "Trojúhelník v_pravo"
 
 #: modules/cons.py:282
 msgid "Tile Triangle Right The Checked Windows"
-msgstr "Muestra las Ventanas en Modo Triangular hacia la Derecha"
+msgstr "Vydláždit vybraná okna trojúhelníkově vpravo"
 
 #: modules/cons.py:283
 msgid "Tile _Quad"
-msgstr "Mosaico Cuadricula"
+msgstr "Vydláždit _čtvercově"
 
 #: modules/cons.py:283
 msgid "Tile into 4 quadrants The Checked Windows"
-msgstr "Muestra las Ventanas en Modo Cuadricula"
+msgstr "Vydláždit vybraná okna do čtyř čtverců"
 
 #: modules/cons.py:284
 msgid "Tile _Grid"
-msgstr "Mosaico Cuadricula"
+msgstr "Vydláždit v _mřížce"
 
 #: modules/cons.py:284
 msgid "Tile into an Arbitrary Grid The Checked Windows"
-msgstr "Muestra las Ventanas en Modo Cuadricula"
+msgstr "Vydláždit vybraná okna do libovolné mřížky"
 
 #: modules/cons.py:285
 msgid "Custom Tile 1 _Set"
-msgstr "Ajuste Per_sonalizado 1"
+msgstr "Vlastní _nastavení dláždění (1)"
 
 #: modules/cons.py:285
 msgid "Edit Custom Tile 1 Settings"
-msgstr "Edita la configuración de Mosaico Personalizado 1"
+msgstr "Upravit vlastní nastavení dláždění (1)"
 
 #: modules/cons.py:286
 msgid "Custom Tile _1 Run"
-msgstr "Personalizado _1"
+msgstr "Provedení vlastního nastavení dláždění (_1)"
 
 #: modules/cons.py:286
 msgid "Execute Custom Tile 1"
-msgstr "Ejecuta el ajuste del Mosaico Personalizado 1"
+msgstr "Provést vlastní nastavení dláždění (1)"
 
 #: modules/cons.py:287
 msgid "Custom Tile 2 S_et"
-msgstr "Ajuste P_ersonalizado 2"
+msgstr "Vlastní na_stavení dláždění (2)"
 
 #: modules/cons.py:287
 msgid "Edit Custom Tile 2 Settings"
-msgstr "Edita la configuración de Mosaico Personalizado 2"
+msgstr "Upravit vlastní nastavení dláždění (2)"
 
 #: modules/cons.py:288
 msgid "Custom Tile _2 Run"
-msgstr "Personalizado _2"
+msgstr "Provedení vlastního nastavení dláždění (_2)"
 
 #: modules/cons.py:288
 msgid "Execute Custom Tile 2"
-msgstr "Ejecuta el ajuste del Mosaico Personalizado 2"
+msgstr "Provést vlastní nastavení dláždění (2)"
 
 #: modules/cons.py:289 modules/cons.py:317
 msgid "U_ndo Tiling"
-msgstr "_Deshacer"
+msgstr "Dláždění _zpět"
 
 #: modules/cons.py:289 modules/cons.py:317
 msgid "Undo the Latest Tiling Operation"
-msgstr "Deshacer el Ultimo Mosaico Aplicado"
+msgstr "Vrátit poslední dláždící operaci zpět"
 
 #: modules/cons.py:290 modules/cons.py:316
 msgid "_Invert Tiling Order"
-msgstr "_Invertir Orden"
+msgstr "_Obrátit pořadí dláždění"
 
 #: modules/cons.py:290 modules/cons.py:316
 msgid "Invert the Order of the Latest Tiling Operation"
-msgstr "Invertir el orden de la última operación"
+msgstr "Obrátit pořadí poslední dláždící operace"
 
 #: modules/cons.py:291
 msgid "_Maximize Windows"
-msgstr "_Maximizar Ventanas"
+msgstr "_Zvětšit okna"
 
 #: modules/cons.py:291
 msgid "Maximize The Checked Windows"
-msgstr "Maximiza las ventanas Seleccionadas"
+msgstr "Zvětšit označená okna"
 
 #: modules/cons.py:292
 msgid "_Unmaximize Windows"
-msgstr "Resta_urar Ventanas"
+msgstr "Z_rušit zvětšení oken"
 
 #: modules/cons.py:292
 msgid "Unmaximize The Checked Windows"
-msgstr "Restaura las Ventanas Seleccionadas"
+msgstr "Zrušit zvětšení označených oken"
 
 #: modules/cons.py:293
 msgid "_Close Windows"
-msgstr "_Cerrar Ventanas"
+msgstr "_Zavřít okna"
 
 #: modules/cons.py:293
 msgid "Close The Checked Windows"
-msgstr "Cierra las Ventanas Seleccionada"
+msgstr "Zavřít všechna označená okna"
 
 #: modules/cons.py:294
 msgid "Move _Up"
-msgstr "S_ubir"
+msgstr "Posunout _nahoru"
 
 #: modules/cons.py:294
 msgid "Move the Selected Row Up"
-msgstr "Mueve la Fila Seleccionada Arriba"
+msgstr "Posunout označený řádek nahoru"
 
 #: modules/cons.py:295
 msgid "Move _Down"
-msgstr "B_ajar"
+msgstr "Posunout _dolů"
 
 #: modules/cons.py:295
 msgid "Move the Selected Row Down"
-msgstr "Mueve la Fila Seleccionada Abajo"
+msgstr "Posunout označený řádek dolů"
 
 #: modules/cons.py:296
 msgid "_Remove"
-msgstr "_Eliminar"
+msgstr "_Odstranit"
 
 #: modules/cons.py:296
 msgid "Remove the Selected Row"
-msgstr "Elimina la Fila Seleccionada"
+msgstr "Odstranit označený řádek"
 
 #: modules/cons.py:297
 msgid "Show/Hide _Toolbar"
-msgstr "Barra de _Herramientas"
+msgstr "Ukázat/Skrýt _nástrojový pruh"
 
 #: modules/cons.py:297
 msgid "Toggle Show/Hide Toolbar"
-msgstr "Muestra y Oculta la Barra de Herramientas"
+msgstr "Ukázat/Skrýt nástrojový pruh"
 
 #: modules/cons.py:298
 msgid "_Increase Toolbar Icons Size"
-msgstr "_Agrandar Iconos"
+msgstr "Z_většit velikost ikon v nástrojovém pruhu"
 
 #: modules/cons.py:298
 msgid "Increase the Size of the Toolbar Icons"
-msgstr "Aumenta tamaño de los Iconos de la Barra de Herramientas"
+msgstr "Zvětšit velikost ikon v nástrojovém pruhu"
 
 #: modules/cons.py:299
 msgid "_Decrease Toolbar Icons Size"
-msgstr "A_chicar Iconos"
+msgstr "Z_menšit velikost ikon v nástrojovém pruhu"
 
 #: modules/cons.py:299
 msgid "Decrease the Size of the Toolbar Icons"
-msgstr "Disminuye tamaño de los Iconos de la Barra de Herramientas"
+msgstr "Zmenšit velikost ikon v nástrojovém pruhu"
 
 #: modules/cons.py:300
 msgid "X Tile Project Home Page"
-msgstr "Pagina del Proyecto X Tile"
+msgstr "Stránky projektu X Tile"
 
 #: modules/cons.py:301 modules/cons.py:302
 msgid "_About"
-msgstr "_Acerca de"
+msgstr "_O programu"
 
 #: modules/cons.py:301 modules/cons.py:302 glade/x-tile.glade.h:21
 msgid "About X Tile"
-msgstr "Acerca de X Tile"
+msgstr "O X Tile"
 
 #: modules/cons.py:303
 msgid "_Close All"
-msgstr "_Cerrar Todo"
+msgstr "_Zavřít vše"
 
 #: modules/cons.py:303
 msgid "Close All Windows"
-msgstr "Cerrar Ventanas"
+msgstr "Zavřít všechna okna"
 
 #: modules/cons.py:304
 msgid "_Unmaximize All"
-msgstr "_Restaurar Todo"
+msgstr "Z_rušit zvětšení u všeho"
 
 #: modules/cons.py:304
 msgid "Unmaximize All Windows"
-msgstr "Restaurar Ventanas"
+msgstr "Zrušit zvětšení u všech oken"
 
 #: modules/cons.py:305
 msgid "_Maximize All"
-msgstr "_Maximizar Todo"
+msgstr "_Zvětšit vše"
 
 #: modules/cons.py:305
 msgid "Maximize All Windows"
-msgstr "Maximizar Ventanas"
+msgstr "Zvětšit všechna okna"
 
 #: modules/cons.py:306
 msgid "Tile All _Quad"
-msgstr "_Cuadricula"
+msgstr "Vydláždit vše _čtvercově"
 
 #: modules/cons.py:306
 msgid "Tile All Windows Quad"
-msgstr "Cuadricula"
+msgstr "Vydláždit všechna okna čtvercově"
 
 #: modules/cons.py:307
 msgid "Tile All Triangle _Down"
-msgstr "Triangular A_bajo"
+msgstr "Vydláždit vše trojúhelníkově _dolů"
 
 #: modules/cons.py:307
 msgid "Tile All Windows Triangle Down"
-msgstr "Triangular Abajo"
+msgstr "Vydláždit všechna okna trojúhelníkově dolů"
 
 #: modules/cons.py:308
 msgid "Tile All Triangle _Up"
-msgstr "Triangular _Arriba"
+msgstr "Vydláždit vše trojúhelníkově _nahoru"
 
 #: modules/cons.py:308
 msgid "Tile All Windows Triangle Up"
-msgstr "Triangular Arriba"
+msgstr "Vydláždit všechna okna trojúhelníkově nahoru"
 
 #: modules/cons.py:309
 msgid "Tile All Triangle _Right"
-msgstr "Triangular _Derecha"
+msgstr "Vydláždit vše trojúhelníkově v_pravo"
 
 #: modules/cons.py:309
 msgid "Tile All Windows Triangle Right"
-msgstr "Triangular Derecha"
+msgstr "Vydláždit všechna okna trojúhelníkově vpravo"
 
 #: modules/cons.py:310
 msgid "Tile All Triangle _Left"
-msgstr "Triangular _Izquierda"
+msgstr "Vydláždit vše trojúhelníkově v_levo"
 
 #: modules/cons.py:310
 msgid "Tile All Windows Triangle Left"
-msgstr "Triangular Izquierda"
+msgstr "Vydláždit všechna okna trojúhelníkově vlevo"
 
 #: modules/cons.py:311
 msgid "Tile All Custom _2"
-msgstr "Personalizado _2"
+msgstr "Vydláždit všechno podle rozvržení _2"
 
 #: modules/cons.py:311
 msgid "Tile All Windows Custom 2"
-msgstr "Personalizado 2"
+msgstr "Vydláždit všechna okna podle vlastního rozvržení 2"
 
 #: modules/cons.py:312
 msgid "Tile All Custom _1"
-msgstr "Personalizado _1"
+msgstr "Vydláždit všechno podle rozvržení _1"
 
 #: modules/cons.py:312
 msgid "Tile All Windows Custom 1"
-msgstr "Personalizado 1"
+msgstr "Vydláždit všechna okna podle vlastního rozvržení 1"
 
 #: modules/cons.py:313
 msgid "Tile All _Grid"
-msgstr "_Cuadricula"
+msgstr "Vydláždit vše v _mřížce"
 
 #: modules/cons.py:313
 msgid "Tile All Windows Grid"
-msgstr "Cuadricula"
+msgstr "Vydláždit všechna okna v mřížce"
 
 #: modules/cons.py:314
 msgid "Tile All _Horizontally"
-msgstr "_Horizontal"
+msgstr "Vydláždit vše _vodorovně"
 
 #: modules/cons.py:314
 msgid "Tile All Windows Horizontally"
-msgstr "Horizontal"
+msgstr "Vydláždit všechna okna vodorovně"
 
 #: modules/cons.py:315
 msgid "Tile All _Vertically"
-msgstr "_Vertical"
+msgstr "Vydláždit vše _svisle"
 
 #: modules/cons.py:315
 msgid "Tile All Windows Vertically"
-msgstr "Vertical"
+msgstr "Vydláždit všechna okna svisle"
 
 #: glade/x-tile.glade.h:1
 msgid ""
@@ -515,52 +508,56 @@ msgid ""
 "MA 02110-1301, USA."
 msgstr ""
 "\n"
-"Este programa es software libre, puede redistribuirlo y/o modificarlo \n"
-"bajo los términos de la GNU General Public License publicada por \n"
-"la Free Software Foundation, bien de la versión 2 de la Licencia, o \n"
-"(a su elección) cualquier versión posterior. \n"
+"Tento program je svobodným softwarem; můžete jej rozdávat a/nebo upravovat "
+"za \n"
+"podmínek GNU General Public License (GPL), jak jsou zveřejněny Free "
+"Software \n"
+"Foundation; buď ve verzi 2 licence, nebo (podle své volby) v kterékoli \n"
+"pozdější verzi.\n"
 "\n"
-"Este programa se distribuye con la esperanza de que sea útil, \n"
-"pero SIN NINGUNA GARANTÍA, incluso sin la garantía implícita de \n"
-"COMERCIALIZACIÓN o IDONEIDAD PARA UN PROPÓSITO PARTICULAR. Véase la \n"
-"Licencia Pública General GNU para más detalles. \n"
+"Tento program je šířen v naději, že bude užitečný, ale BEZ JAKÉKOLI "
+"ZÁRUKY; \n"
+"také bez předpokládané záruky PRODEJNOSTI nebo POUŽITELNOSTI PRO NĚJAKÝ \n"
+"URČITÝ ÚČEL: Více podrobností naleznete v GNU Library General Public \n"
+"License.\n"
 "\n"
-"Debería haber recibido una copia de la Licencia Pública General GNU \n"
-"junto con este programa, si no, escriba a la Free Software \n"
-"Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, \n"
-"MA 02110-1301, EE.UU."
+"Kopii GNU Library General Public License byste měl obdržet společně s "
+"tímto \n"
+"balíkem; a pokud ne, napište Free Software Foundation, Inc., 51 Franklin "
+"St, \n"
+"Fifth Floor, Boston, MA 02110-1301, USA."
 
 #: glade/x-tile.glade.h:16
 msgid " Language "
-msgstr "Lenguaje"
+msgstr " Jazyk "
 
 #: glade/x-tile.glade.h:17
 msgid "1) Tile Some Windows Manually"
-msgstr "1) Dimensionar las Ventanas Manualmente"
+msgstr "1) Vydlážděte určitá okna ručně"
 
 #: glade/x-tile.glade.h:18
 msgid "2) Select Them in the X Tile Windows List"
-msgstr "2) Selecciona Las Ventanas Dimensionadas en X Tile"
+msgstr "2) Vyberte je v seznamu oken X Tile"
 
 #: glade/x-tile.glade.h:19
 msgid "3) Click the Update Button"
-msgstr "3) Haz Clic en Actualizar"
+msgstr "3) Kliepněte na tlačítko Nahrát znovu"
 
 #: glade/x-tile.glade.h:20
 msgid "<b>Custom Tiling Layout</b>"
-msgstr "<b>Diseño Personalizado de Mosaico</b>"
+msgstr "<b>Vlastní rozvržení dláždění</b>"
 
 #: glade/x-tile.glade.h:22
 msgid "Add Row"
-msgstr "Agregar Fila"
+msgstr "Přidat řádek"
 
 #: glade/x-tile.glade.h:23
 msgid "Add an Application Filter"
-msgstr "Agregar un Filtro de Aplicación"
+msgstr "Přidat programový filtr"
 
 #: glade/x-tile.glade.h:24
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Zrušit"
 
 #: glade/x-tile.glade.h:25
 msgid ""
@@ -574,17 +571,17 @@ msgid ""
 "Russian (ru) Andriy Kovtun <kovtunos@yandex.ru>"
 msgstr ""
 "Chinese Simplified (zh_CN) Khiyuan Fan <Fan.Khiyuan@gmail.com>\n"
-"Cinese Tradizionale (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
-"Czech (cs) Pavel Fric <fripohled@blogspot.com\n"
-"Español (es_AR) MeloPixel <melopixel@gmail.com>\n"
-"Francese (fr) Ludovic Troisi <axalis@cegetel.net>\n"
-"Tedesco (de) Jöran Zeller <joeran@zeller.ws>\n"
-"Italiano (it) Giuseppe Penone <giuspen@gmail.com>\n"
-"Russo (ru) Andriy Kovtun <kovtunos@yandex.ru>"
+"Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
+"Čeština (cs) Pavel Fric <fripohled@blogspot.com>\n"
+"Spanish (es_AR) MeloPixel <melopixel@gmail.com>\n"
+"French (fr) Ludovic Troisi <axalis@cegetel.net>\n"
+"German (de) Jöran Zeller <joeran@zeller.ws>\n"
+"Italian (it) Giuseppe Penone <giuspen@gmail.com>\n"
+"Russian (ru) Andriy Kovtun <kovtunos@yandex.ru>"
 
 #: glade/x-tile.glade.h:33
 msgid "Close"
-msgstr "Cerrar"
+msgstr "Zavřít"
 
 #: glade/x-tile.glade.h:34
 msgid ""
@@ -598,19 +595,19 @@ msgstr ""
 
 #: glade/x-tile.glade.h:37
 msgid "Do Not List Minimized Windows"
-msgstr "No lista las ventanas Minimizadas"
+msgstr "Neukazovat žádná zmenšená okna"
 
 #: glade/x-tile.glade.h:38
 msgid "Enable System Tray Docking"
-msgstr "Habilitar el Sistema de acoplamiento de bandeja"
+msgstr "Povolit ikonu v oznamovací oblasti panelu"
 
 #: glade/x-tile.glade.h:39
 msgid "Exit After Tile"
-msgstr "Salir Después de Mosaico"
+msgstr "Ukončit po vydláždění"
 
 #: glade/x-tile.glade.h:40
 msgid "Height"
-msgstr "Altura"
+msgstr "Výška"
 
 #: glade/x-tile.glade.h:41
 msgid "OK"
@@ -618,51 +615,51 @@ msgstr "OK"
 
 #: glade/x-tile.glade.h:42
 msgid "Only Current Workspace"
-msgstr "Sólo en el actual Espacio de Trabajo"
+msgstr "Jen současná pracovní oblast"
 
 #: glade/x-tile.glade.h:43
 msgid "Override Monitor 1 Tiling Area"
-msgstr "Área de monitor 1 Mosaico Personalizado"
+msgstr "Přepsat oblast dláždění obrazovka 1"
 
 #: glade/x-tile.glade.h:44
 msgid "Override Monitor 2 Tiling Area"
-msgstr "Área de monitor 2 Mosaico Personalizado"
+msgstr "Přepsat oblast dláždění obrazovka 2"
 
 #: glade/x-tile.glade.h:45
 msgid "Position"
-msgstr "Posición"
+msgstr "Poloha"
 
 #: glade/x-tile.glade.h:46
 msgid "Preferences"
-msgstr "Preferencias"
+msgstr "Nastavení"
 
 #: glade/x-tile.glade.h:47
 msgid "Remove an Application Filter"
-msgstr "Quitar un Filtro aplicado"
+msgstr "Odstranit programový filtr"
 
 #: glade/x-tile.glade.h:48
 msgid "Rows to Filter"
-msgstr "Filtrar Filas"
+msgstr "Přidat filtr"
 
 #: glade/x-tile.glade.h:50
 msgid "Show Toolbar"
-msgstr "Barra de Herramientas"
+msgstr "Ukázat nástrojový pruh"
 
 #: glade/x-tile.glade.h:51
 msgid "Size"
-msgstr "Tamaño"
+msgstr "Velikost"
 
 #: glade/x-tile.glade.h:52
 msgid "Start Minimized in the System Tray"
-msgstr "Iniciar Minimizado en la Bandeja del Sistema"
+msgstr "Spustit zmenšené v oznamovací oblasti panelu"
 
 #: glade/x-tile.glade.h:54
 msgid "Update"
-msgstr "Actualizar"
+msgstr "Aktualizovat"
 
 #: glade/x-tile.glade.h:55
 msgid "Width"
-msgstr "Ancho"
+msgstr "Šířka"
 
 #: glade/x-tile.glade.h:56
 msgid "X"

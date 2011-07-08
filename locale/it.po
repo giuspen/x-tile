@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-02 22:37+0200\n"
+"POT-Creation-Date: 2011-07-08 16:31+0200\n"
 "PO-Revision-Date: 2010-02-17 21:30+0100\n"
 "Last-Translator: maul <giuspen@gmail.com>\n"
 "Language-Team: Italian\n"
@@ -25,7 +25,7 @@ msgstr "Usa il Drag and Drop per Ordinare le Righe"
 msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr "La Nuova Lingua Sara' Disponibile Solo Dopo Aver Riavviato X Tile"
 
-#: modules/core.py:341 glade/x-tile.glade.h:52
+#: modules/core.py:341 glade/x-tile.glade.h:53
 msgid "Tile the Windows Upon your X Desktop"
 msgstr "Piastrella le finestre sul tuo Desktop X"
 
@@ -137,7 +137,7 @@ msgstr "Filtra Righe"
 msgid "Selected by _Default"
 msgstr "Selezionate di _Default"
 
-#: modules/cons.py:270 glade/x-tile.glade.h:48
+#: modules/cons.py:270 glade/x-tile.glade.h:49
 msgid "Rows to be Selected by Default"
 msgstr "Righe da Selezionare di Default"
 
@@ -559,6 +559,7 @@ msgstr "Annulla"
 msgid ""
 "Chinese Simplified (zh_CN) Khiyuan Fan <Fan.Khiyuan@gmail.com>\n"
 "Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
+"Czech (cs) Pavel Fric <fripohled@blogspot.com\n"
 "Spanish (es_AR) MeloPixel <melopixel@gmail.com>\n"
 "French (fr) Ludovic Troisi <axalis@cegetel.net>\n"
 "German (de) Jöran Zeller <joeran@zeller.ws>\n"
@@ -567,17 +568,18 @@ msgid ""
 msgstr ""
 "Chinese Semplificato (zh_CN) Khiyuan Fan <Fan.Khiyuan@gmail.com>\n"
 "Cinese Tradizionale (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
+"Ceco (cs) Pavel Fric <fripohled@blogspot.com\n"
 "Spagnolo (es_AR) MeloPixel <melopixel@gmail.com>\n"
 "Francese (fr) Ludovic Troisi <axalis@cegetel.net>\n"
 "Tedesco (de) Jöran Zeller <joeran@zeller.ws>\n"
 "Italiano (it) Giuseppe Penone <giuspen@gmail.com>\n"
 "Russo (ru) Andriy Kovtun <kovtunos@yandex.ru>"
 
-#: glade/x-tile.glade.h:32
+#: glade/x-tile.glade.h:33
 msgid "Close"
 msgstr "Chiudi"
 
-#: glade/x-tile.glade.h:33
+#: glade/x-tile.glade.h:34
 msgid ""
 "Copyright © 2009-2011\n"
 "Giuseppe Penone <giuspen@gmail.com>\n"
@@ -587,86 +589,86 @@ msgstr ""
 "Giuseppe Penone <giuspen@gmail.com>\n"
 "Chris Camacho <chris_camacho@yahoo.com>"
 
-#: glade/x-tile.glade.h:36
+#: glade/x-tile.glade.h:37
 msgid "Do Not List Minimized Windows"
 msgstr "Non Elencare Finestre Minimizzate"
 
-#: glade/x-tile.glade.h:37
+#: glade/x-tile.glade.h:38
 msgid "Enable System Tray Docking"
 msgstr "Abilita l'Ancoraggio a System Tray"
 
-#: glade/x-tile.glade.h:38
+#: glade/x-tile.glade.h:39
 msgid "Exit After Tile"
 msgstr "Esci Dopo il Tiling"
 
-#: glade/x-tile.glade.h:39
+#: glade/x-tile.glade.h:40
 msgid "Height"
 msgstr "Altezza"
 
-#: glade/x-tile.glade.h:40
+#: glade/x-tile.glade.h:41
 msgid "OK"
 msgstr "OK"
 
-#: glade/x-tile.glade.h:41
+#: glade/x-tile.glade.h:42
 msgid "Only Current Workspace"
 msgstr "Solo il Workspace Corrente"
 
-#: glade/x-tile.glade.h:42
+#: glade/x-tile.glade.h:43
 msgid "Override Monitor 1 Tiling Area"
 msgstr "Area di Tiling del Monitor 1 Personalizzata"
 
-#: glade/x-tile.glade.h:43
+#: glade/x-tile.glade.h:44
 msgid "Override Monitor 2 Tiling Area"
 msgstr "Area di Tiling del Monitor 2 Personalizzata"
 
-#: glade/x-tile.glade.h:44
+#: glade/x-tile.glade.h:45
 msgid "Position"
 msgstr "Posizione"
 
-#: glade/x-tile.glade.h:45
+#: glade/x-tile.glade.h:46
 msgid "Preferences"
 msgstr "Preferenze"
 
-#: glade/x-tile.glade.h:46
+#: glade/x-tile.glade.h:47
 msgid "Remove an Application Filter"
 msgstr "Rimuovi un Filtro Applicazione"
 
-#: glade/x-tile.glade.h:47
+#: glade/x-tile.glade.h:48
 msgid "Rows to Filter"
 msgstr "Righe da Filtrare"
 
-#: glade/x-tile.glade.h:49
+#: glade/x-tile.glade.h:50
 msgid "Show Toolbar"
 msgstr "Mostra Toolbar"
 
-#: glade/x-tile.glade.h:50
+#: glade/x-tile.glade.h:51
 msgid "Size"
 msgstr "Dimensione"
 
-#: glade/x-tile.glade.h:51
+#: glade/x-tile.glade.h:52
 msgid "Start Minimized in the System Tray"
 msgstr "Avvia Minimizzato su System Tray"
 
-#: glade/x-tile.glade.h:53
+#: glade/x-tile.glade.h:54
 msgid "Update"
 msgstr "Aggiorna"
 
-#: glade/x-tile.glade.h:54
+#: glade/x-tile.glade.h:55
 msgid "Width"
 msgstr "Larghezza"
 
-#: glade/x-tile.glade.h:55
+#: glade/x-tile.glade.h:56
 msgid "X"
 msgstr "X"
 
-#: glade/x-tile.glade.h:56
+#: glade/x-tile.glade.h:57
 msgid "X Tile"
 msgstr "X Tile"
 
-#: glade/x-tile.glade.h:57
+#: glade/x-tile.glade.h:58
 msgid "Y"
 msgstr "Y"
 
-#: glade/x-tile.glade.h:58
+#: glade/x-tile.glade.h:59
 msgid "http://www.giuspen.com/x-tile/"
 msgstr "http://www.giuspen.com/x-tile/"

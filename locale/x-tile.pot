@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-02 22:37+0200\n"
+"POT-Creation-Date: 2011-07-08 16:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,7 +25,7 @@ msgstr ""
 msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr ""
 
-#: modules/core.py:341 glade/x-tile.glade.h:52
+#: modules/core.py:341 glade/x-tile.glade.h:53
 msgid "Tile the Windows Upon your X Desktop"
 msgstr ""
 
@@ -131,7 +131,7 @@ msgstr ""
 msgid "Selected by _Default"
 msgstr ""
 
-#: modules/cons.py:270 glade/x-tile.glade.h:48
+#: modules/cons.py:270 glade/x-tile.glade.h:49
 msgid "Rows to be Selected by Default"
 msgstr ""
 
@@ -538,6 +538,7 @@ msgstr ""
 msgid ""
 "Chinese Simplified (zh_CN) Khiyuan Fan <Fan.Khiyuan@gmail.com>\n"
 "Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
+"Czech (cs) Pavel Fric <fripohled@blogspot.com\n"
 "Spanish (es_AR) MeloPixel <melopixel@gmail.com>\n"
 "French (fr) Ludovic Troisi <axalis@cegetel.net>\n"
 "German (de) Jöran Zeller <joeran@zeller.ws>\n"
@@ -545,97 +546,97 @@ msgid ""
 "Russian (ru) Andriy Kovtun <kovtunos@yandex.ru>"
 msgstr ""
 
-#: glade/x-tile.glade.h:32
+#: glade/x-tile.glade.h:33
 msgid "Close"
 msgstr ""
 
-#: glade/x-tile.glade.h:33
+#: glade/x-tile.glade.h:34
 msgid ""
 "Copyright © 2009-2011\n"
 "Giuseppe Penone <giuspen@gmail.com>\n"
 "Chris Camacho <chris_camacho@yahoo.com>"
 msgstr ""
 
-#: glade/x-tile.glade.h:36
+#: glade/x-tile.glade.h:37
 msgid "Do Not List Minimized Windows"
 msgstr ""
 
-#: glade/x-tile.glade.h:37
+#: glade/x-tile.glade.h:38
 msgid "Enable System Tray Docking"
 msgstr ""
 
-#: glade/x-tile.glade.h:38
+#: glade/x-tile.glade.h:39
 msgid "Exit After Tile"
 msgstr ""
 
-#: glade/x-tile.glade.h:39
+#: glade/x-tile.glade.h:40
 msgid "Height"
 msgstr ""
 
-#: glade/x-tile.glade.h:40
+#: glade/x-tile.glade.h:41
 msgid "OK"
 msgstr ""
 
-#: glade/x-tile.glade.h:41
+#: glade/x-tile.glade.h:42
 msgid "Only Current Workspace"
 msgstr ""
 
-#: glade/x-tile.glade.h:42
+#: glade/x-tile.glade.h:43
 msgid "Override Monitor 1 Tiling Area"
 msgstr ""
 
-#: glade/x-tile.glade.h:43
+#: glade/x-tile.glade.h:44
 msgid "Override Monitor 2 Tiling Area"
 msgstr ""
 
-#: glade/x-tile.glade.h:44
+#: glade/x-tile.glade.h:45
 msgid "Position"
 msgstr ""
 
-#: glade/x-tile.glade.h:45
+#: glade/x-tile.glade.h:46
 msgid "Preferences"
 msgstr ""
 
-#: glade/x-tile.glade.h:46
+#: glade/x-tile.glade.h:47
 msgid "Remove an Application Filter"
 msgstr ""
 
-#: glade/x-tile.glade.h:47
+#: glade/x-tile.glade.h:48
 msgid "Rows to Filter"
 msgstr ""
 
-#: glade/x-tile.glade.h:49
+#: glade/x-tile.glade.h:50
 msgid "Show Toolbar"
 msgstr ""
 
-#: glade/x-tile.glade.h:50
+#: glade/x-tile.glade.h:51
 msgid "Size"
 msgstr ""
 
-#: glade/x-tile.glade.h:51
+#: glade/x-tile.glade.h:52
 msgid "Start Minimized in the System Tray"
 msgstr ""
 
-#: glade/x-tile.glade.h:53
+#: glade/x-tile.glade.h:54
 msgid "Update"
 msgstr ""
 
-#: glade/x-tile.glade.h:54
+#: glade/x-tile.glade.h:55
 msgid "Width"
 msgstr ""
 
-#: glade/x-tile.glade.h:55
+#: glade/x-tile.glade.h:56
 msgid "X"
 msgstr ""
 
-#: glade/x-tile.glade.h:56
+#: glade/x-tile.glade.h:57
 msgid "X Tile"
 msgstr ""
 
-#: glade/x-tile.glade.h:57
+#: glade/x-tile.glade.h:58
 msgid "Y"
 msgstr ""
 
-#: glade/x-tile.glade.h:58
+#: glade/x-tile.glade.h:59
 msgid "http://www.giuspen.com/x-tile/"
 msgstr ""
