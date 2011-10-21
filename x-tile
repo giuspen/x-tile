@@ -30,7 +30,7 @@ import sys, os, gettext, ctypes, ctypes.util, locale
 import gtk, gconf
 import __builtin__
 
-if os.path.isdir('modules'): MODULES_PATH = 'modules/'
+if os.path.isfile('modules/globs.py'): MODULES_PATH = 'modules/'
 else: MODULES_PATH = '/usr/share/x-tile/modules/'
 sys.path.append(MODULES_PATH)
 import cons, globs, core
@@ -40,16 +40,16 @@ gconf_client = gconf.client_get_default()
 gconf_client.add_dir(cons.GCONF_DIR, gconf.CLIENT_PRELOAD_NONE)
 lang_str = gconf_client.get_string(cons.GCONF_LANG)
 if lang_str == None:
-   gconf_client.set_string(cons.GCONF_LANG, "default")
-   lang_str = "default"
+    gconf_client.set_string(cons.GCONF_LANG, "default")
+    lang_str = "default"
 if lang_str != "default": os.environ["LANGUAGE"] = lang_str
 try:
-   locale.bindtextdomain(cons.APP_NAME, cons.LOCALE_PATH)
-   gettext.translation(cons.APP_NAME, cons.LOCALE_PATH).install()
+    locale.bindtextdomain(cons.APP_NAME, cons.LOCALE_PATH)
+    gettext.translation(cons.APP_NAME, cons.LOCALE_PATH).install()
 except:
-   def _(transl_str):
-      return transl_str
-   __builtin__._ = _
+    def _(transl_str):
+        return transl_str
+    __builtin__._ = _
 
 __builtin__.glob = globs.GlobalsObject()
 
@@ -61,46 +61,46 @@ except: print "libc.prctl not available, the process name will be python and not
 # icons generation
 factory = gtk.IconFactory()
 for filename, stock_name in cons.ICONS_FILENAMES:
-   pixbuf = gtk.gdk.pixbuf_new_from_file(filename)
-   iconset = gtk.IconSet(pixbuf)
-   factory.add(stock_name, iconset)
+    pixbuf = gtk.gdk.pixbuf_new_from_file(filename)
+    iconset = gtk.IconSet(pixbuf)
+    factory.add(stock_name, iconset)
 factory.add_default()
 
 if len(sys.argv) < 2: sys.argv.append("w")
 
 arg = sys.argv[1]
 if arg == "w":
-   x = core.XTile(core.InfoModel())
-   x.launch_application()
-   x.reload_windows_list()
-   gtk.main()
+    x = core.XTile(core.InfoModel())
+    x.launch_application()
+    x.reload_windows_list()
+    gtk.main()
 elif arg in cons.CMD_LINE_ACTIONS:
-   x = core.XTile(core.InfoModel())
-   x.launch_application()
-   if arg not in ["z", "i"]:
-      x.reload_windows_list()
-      x.flag_all_rows()
-   if arg == "z": x.undo_tiling()
-   elif arg == "i": x.invert_tiling()
-   elif arg == "v": x.tile_vertically()
-   elif arg == "h": x.tile_horizontally()
-   elif arg == "u": x.tile_triangle_up()
-   elif arg == "d": x.tile_triangle_down()
-   elif arg == "l": x.tile_triangle_left()
-   elif arg == "r": x.tile_triangle_right()
-   elif arg == "q": x.tile_quad()
-   elif arg == "g":
-      if len(sys.argv) >= 4:
-         try:
-            cons.GRID_ROWS = int(sys.argv[2])
-            cons.GRID_COLS = int(sys.argv[3])
-            x.tile_grid()
-         except: print "bad arguments"
-      else: x.dialog_grid()
-   elif arg == "1": x.tile_custom_1_run()
-   elif arg == "2": x.tile_custom_2_run()
-   elif arg == "m": x.maximize_checked_windows()
-   elif arg == "M": x.unmaximize_checked_windows()
-   elif arg == "c": x.close_checked_windows()
+    x = core.XTile(core.InfoModel())
+    x.launch_application()
+    if arg not in ["z", "i"]:
+        x.reload_windows_list()
+        x.flag_all_rows()
+    if arg == "z": x.undo_tiling()
+    elif arg == "i": x.invert_tiling()
+    elif arg == "v": x.tile_vertically()
+    elif arg == "h": x.tile_horizontally()
+    elif arg == "u": x.tile_triangle_up()
+    elif arg == "d": x.tile_triangle_down()
+    elif arg == "l": x.tile_triangle_left()
+    elif arg == "r": x.tile_triangle_right()
+    elif arg == "q": x.tile_quad()
+    elif arg == "g":
+        if len(sys.argv) >= 4:
+            try:
+                cons.GRID_ROWS = int(sys.argv[2])
+                cons.GRID_COLS = int(sys.argv[3])
+                x.tile_grid()
+            except: print "bad arguments"
+        else: x.dialog_grid()
+    elif arg == "1": x.tile_custom_1_run()
+    elif arg == "2": x.tile_custom_2_run()
+    elif arg == "m": x.maximize_checked_windows()
+    elif arg == "M": x.unmaximize_checked_windows()
+    elif arg == "c": x.close_checked_windows()
 else: # -h
-   print cons.HELP_TEXT
+    print cons.HELP_TEXT
