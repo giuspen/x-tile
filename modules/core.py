@@ -26,6 +26,10 @@
 
 import gtk, gobject, gconf
 import os, sys, ctypes, webbrowser, time, subprocess
+try:
+    import appindicator
+    HAS_APPINDICATOR = True
+except: HAS_APPINDICATOR = False
 import cons, support, tilings
 
 
@@ -256,7 +260,7 @@ class XTile:
             gtk_settings.set_property("gtk-button-images", True)
             gtk_settings.set_property("gtk-menu-images", True)
         except: pass # older gtk do not have the property "gtk-menu-images"
-        os.environ['UBUNTU_MENUPROXY'] = '0' # cherrytree has custom stock icons not visible in appmenu
+        os.environ['UBUNTU_MENUPROXY'] = '0' # for custom stock icons not visible in appmenu
         # instantiate the Glade Widgets Wrapper
         self.glade = GladeWidgetsWrapper(cons.GLADE_PATH + 'x-tile.glade', self)
         # ui manager
@@ -342,40 +346,52 @@ class XTile:
     
     def status_icon_enable(self):
         """Creates the Stats Icon"""
-        self.status_icon = gtk.StatusIcon()
-        self.status_icon.set_from_stock("Tile Quad")
-        self.status_icon.connect('button-press-event', self.on_mouse_button_clicked_systray)
-        self.status_icon.set_tooltip(_("Tile the Windows Upon your X Desktop"))
+        if HAS_APPINDICATOR:
+            self.ind = appindicator.Indicator("x-tile", "indicator-messages", appindicator.CATEGORY_APPLICATION_STATUS)
+            self.ind.set_status(appindicator.STATUS_ACTIVE)
+            self.ind.set_attention_icon("indicator-messages-new")
+            self.ind.set_icon("x-tile")
+            self.ind.set_menu(self.ui.get_widget("/SysTrayMenu"))
+        else:
+            self.status_icon = gtk.StatusIcon()
+            self.status_icon.set_from_stock("Tile Quad")
+            self.status_icon.connect('button-press-event', self.on_mouse_button_clicked_systray)
+            self.status_icon.set_tooltip(_("Tile the Windows Upon your X Desktop"))
     
     def on_mouse_button_clicked_systray(self, widget, event):
         """Catches mouse buttons clicks upon the system tray icon"""
-        if event.button == 1:
-            if self.win_on_screen: self.window_hide()
-            else:
-                self.window_position_restore()
-                self.glade.window.show()
-                self.reload_windows_list()
-                self.win_on_screen = True
+        if event.button == 1: self.toggle_show_hide_main_window()
         elif event.button == 3: self.ui.get_widget("/SysTrayMenu").popup(None, None, None, event.button, event.time)
+    
+    def toggle_show_hide_main_window(self, *args):
+        if self.win_on_screen: self.window_hide()
+        else:
+            self.window_position_restore()
+            self.glade.window.show()
+            self.reload_windows_list()
+            self.win_on_screen = True
     
     def on_checkbutton_systray_docking_toggled(self, checkbutton):
         """SysTray Toggled Handling"""
-        if checkbutton.get_active():
-            if not self.systray_on: self.status_icon_enable()
+        self.systray_on = checkbutton.get_active()
+        if self.systray_on:
+            if not HAS_APPINDICATOR:
+                if "status_icon" in dir(self): self.status_icon.set_property('visible', True)
+                else: self.status_icon_enable()
+            else:
+                if "ind" in dir(self): self.ind.set_status(appindicator.STATUS_ACTIVE)
+                else: self.status_icon_enable()
             self.ui.get_widget("/MenuBar/FileMenu/ExitApp").set_property('visible', True)
             self.glade.checkbutton_start_minimized.set_sensitive(True)
             if self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) != cons.STR_TRUE:
                 self.gconf_client.set_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index, cons.STR_TRUE)
-            self.systray_on = True
         else:
-            if self.systray_on:
-                self.status_icon.set_property('visible', False)
-                del self.status_icon
+            if not HAS_APPINDICATOR: self.status_icon.set_property('visible', False)
+            else: self.ind.set_status(appindicator.STATUS_PASSIVE)
             self.ui.get_widget("/MenuBar/FileMenu/ExitApp").set_property('visible', False)
             self.glade.checkbutton_start_minimized.set_sensitive(False)
             if self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) != cons.STR_FALSE:
                 self.gconf_client.set_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index, cons.STR_FALSE)
-            self.systray_on = False
 
     def on_checkbutton_start_minimized_toggled(self, checkbutton):
         """Start Minimized on SysTray Toggled Handling"""
@@ -865,9 +881,7 @@ class XTile:
 
     def quit_application_totally(self, *args):
         """The process is Shut Down"""
-        if self.systray_on:
-            self.status_icon.set_property('visible', False)
-            del self.status_icon
+        if not HAS_APPINDICATOR and "status_icon" in dir(self): self.status_icon.set_visible(False)
         self.save_win_pos_n_size()
         self.glade.window.destroy()
         gtk.main_quit()

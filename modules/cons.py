@@ -220,9 +220,9 @@ UI_INFO = """
     </toolbar>
     
     <popup name='SysTrayMenu'>
-        <menuitem action='ExitApp'/>
+        <menuitem action='ShowHideMainWin'/>
         <separator/>
-        <menuitem action='All_About'/>
+        <menuitem action='ExitApp'/>
         <separator/>
         <menuitem action='All_C'/>
         <menuitem action='All_U'/>
@@ -244,6 +244,8 @@ UI_INFO = """
         <separator/>
         <menuitem action='All_Invert'/>
         <menuitem action='All_Undo'/>
+        <separator/>
+        <menuitem action='All_About'/>
     </popup>
     
     <popup name='ListMenu'>
@@ -271,6 +273,7 @@ def get_entries(inst):
     ( "Reload", "Reload Windows List", _("_Reload"), "F5", _("Reload the Windows List"), inst.reload_windows_list),
     ( "QuitApp", "Quit App", _("_Quit"), "<control>Q", _("Quit the Application"), inst.quit_application),
     ( "ExitApp", "Quit App", _("_Exit X Tile"), "<control><shift>Q", _("Exit from X Tile"), inst.quit_application_totally),
+    ( "ShowHideMainWin", "Tile Quad", _("Show/Hide _X Tile"), None, _("Toggle Show/Hide X Tile"), inst.toggle_show_hide_main_window),
     ( "Preferences", "gtk-preferences", _("_Preferences"), "<control><alt>P", _("Open the Preferences Window"), inst.dialog_preferences),
     ( "SelectAll", "Select All", _("Select _All"), "<control>A", _("Select All the Windows in the List"), inst.flag_all_rows),
     ( "DeselectAll", "Deselect All", _("Deselect A_ll"), "<control><shift>A", _("Deselect All the Windows in the List"), inst.unflag_all_rows),
