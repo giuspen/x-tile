@@ -25,7 +25,7 @@
 #      MA 02110-1301, USA.
 
 import gtk, gobject, gconf
-import sys, ctypes, webbrowser, time, subprocess
+import os, sys, ctypes, webbrowser, time, subprocess
 import cons, support, tilings
 
 
@@ -248,6 +248,15 @@ class XTile:
     def __init__(self, store):
         """Instantiate the Glade Widgets Wrapper, create the view,
         retrieves and stores the information about the running desktop self.geometry"""
+        # create a variable pointing to the instance of the InfoModel class
+        self.store = store
+        # system settings
+        try:
+            gtk_settings = gtk.settings_get_default()
+            gtk_settings.set_property("gtk-button-images", True)
+            gtk_settings.set_property("gtk-menu-images", True)
+        except: pass # older gtk do not have the property "gtk-menu-images"
+        os.environ['UBUNTU_MENUPROXY'] = '0' # cherrytree has custom stock icons not visible in appmenu
         # instantiate the Glade Widgets Wrapper
         self.glade = GladeWidgetsWrapper(cons.GLADE_PATH + 'x-tile.glade', self)
         # ui manager
@@ -264,8 +273,6 @@ class XTile:
         self.glade.vbox_main.pack_start(self.ui.get_widget("/ToolBar"), False, False)
         self.glade.vbox_main.reorder_child(self.ui.get_widget("/ToolBar"), 1)
         self.ui.get_widget("/ToolBar").set_style(gtk.TOOLBAR_ICONS)
-        # create a variable pointing to the instance of the InfoModel class
-        self.store = store
         # create the view
         self.view = gtk.TreeView(store.get_model())
         self.view.set_headers_visible(False)
