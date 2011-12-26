@@ -171,34 +171,39 @@ def desktop_size():
     return 0,0,0,0
 
 def is_inside(p, pdim, a, adim):
-    """Returns True if p and p+dim is between a and a+dim"""
-    return ( (p >= a) and (p+pdim >= a) and (p <= a+adim) and (p+pdim <= a+adim) )
+    """Returns True if p <---> p+dim is between a <---> a+dim"""
+    return ( (p+pdim/2 > a) and (p+pdim/2 < a+adim) )
 
 def subtract_areas(white_area, black_area):
     """Returns the white_area without the black_area"""
+    #print "white_area", white_area
+    #print "black_area", black_area
     if not is_inside(black_area[0], black_area[2], white_area[0], white_area[2])\
     or not is_inside(black_area[1], black_area[3], white_area[1], white_area[3]):
+        #print "not is_inside"
         return white_area
     # ignore the desktop strut
     if black_area[2] > white_area[2]/2 and black_area[3] > white_area[3]/2:
+        #print "strut ignored"
         return white_area
     # we have to understand whether the panel is top, bottom, left or right
     if black_area[2] < black_area[3]:
         # width < height => this is a left or right panel
         if black_area[0] == white_area[0]:
-            # this is a left panel
+            #print "left panel"
             white_area[0] += black_area[2]
+            white_area[2] -= black_area[2]
         else:
-            # this is a right panel
+            #print "right panel"
             white_area[2] -= black_area[2]
     else:
         # width > height => this is a top or bottom panel
         if black_area[1] == white_area[1]:
-            # this is a top panel
+            #print "top panel"
             white_area[1] += black_area[3]
-            white_area[3] -= black_area[3] # this was not taken into account previously
+            white_area[3] -= black_area[3]
         else:
-            # this is a bottom panel
+            #print "bottom panel"
             white_area[3] -= black_area[3]
     return white_area
 

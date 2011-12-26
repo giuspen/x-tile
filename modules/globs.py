@@ -142,4 +142,5 @@ class GlobalsObject(object):
             if rect.y + rect.height > drawing_area_size[1]: drawing_area_size[1] = rect.y + rect.height
             for strut_win in strut_windows:
                 self.monitors_areas[-1] = support.subtract_areas(self.monitors_areas[-1], strut_win)
+        #print self.monitors_areas
         self.drawing_rect = gtk.gdk.Rectangle(0, 0, drawing_area_size[0]/cons.DRAW_SCALE, drawing_area_size[1]/cons.DRAW_SCALE)
