@@ -386,8 +386,12 @@ class XTile:
             if self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) != cons.STR_TRUE:
                 self.gconf_client.set_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index, cons.STR_TRUE)
         else:
-            if not HAS_APPINDICATOR: self.status_icon.set_property('visible', False)
-            else: self.ind.set_status(appindicator.STATUS_PASSIVE)
+            if not HAS_APPINDICATOR:
+                if not "status_icon" in dir(self): self.status_icon_enable()
+                self.status_icon.set_property('visible', False)
+            else:
+                if not "ind" in dir(self): self.status_icon_enable()
+                self.ind.set_status(appindicator.STATUS_PASSIVE)
             self.ui.get_widget("/MenuBar/FileMenu/ExitApp").set_property('visible', False)
             self.glade.checkbutton_start_minimized.set_sensitive(False)
             if self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) != cons.STR_FALSE:
