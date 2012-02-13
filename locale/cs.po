@@ -1,14 +1,15 @@
 # Czech translations for x-tile package.
 # Copyright (C) 2010 THE x-tile'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the x-tile package.
-# maul <giuspen@gmail.com>, 2010.
 #
+# maul <giuspen@gmail.com>, 2010.
+# Pavel Fric <pavelfric@seznam.cz>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: x-tile 1.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-07-08 16:31+0200\n"
-"PO-Revision-Date: 2010-06-04 09:01+0200\n"
+"PO-Revision-Date: 2012-02-13 19:48+0100\n"
 "Last-Translator: Pavel Fric <pavelfric@seznam.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -20,7 +21,7 @@ msgstr ""
 
 #: modules/core.py:293
 msgid "Use Drag and Drop to Sort the Rows"
-msgstr "Použít Táhni a pusť pro roztřídění řádků"
+msgstr "Pro roztřídění řádků položku přetáhněte a upusťte"
 
 #: modules/core.py:333
 msgid "The New Language will be Available Only After Restarting X Tile"
@@ -28,7 +29,7 @@ msgstr "Nové jazykové nastavení bude dostupné až po novém spuštění X Ti
 
 #: modules/core.py:341 glade/x-tile.glade.h:53
 msgid "Tile the Windows Upon your X Desktop"
-msgstr "Vydláždit okno na vašem X Desktop"
+msgstr "Vydlážděte okna na vaší ploše X"
 
 #: modules/core.py:529
 msgid "The Size of the Toolbar Icons is already at the Maximum Value"
@@ -135,7 +136,7 @@ msgstr "Filtrovat řádky"
 
 #: modules/cons.py:270
 msgid "Selected by _Default"
-msgstr "Vždy vybráno"
+msgstr "Vybráno vždy"
 
 #: modules/cons.py:270 glade/x-tile.glade.h:49
 msgid "Rows to be Selected by Default"
@@ -676,3 +677,5 @@ msgstr "Y"
 #: glade/x-tile.glade.h:59
 msgid "http://www.giuspen.com/x-tile/"
 msgstr "http://www.giuspen.com/x-tile/"
+
+
