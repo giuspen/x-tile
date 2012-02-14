@@ -173,14 +173,12 @@ msgid "Exit from X Tile"
 msgstr "Salir Después del Mosaico"
 
 #: modules/cons.py:276
-#, fuzzy
 msgid "Show/Hide _X Tile"
-msgstr "Barra de _Herramientas"
+msgstr "Muestra y Oculta _X Tile"
 
 #: modules/cons.py:276
-#, fuzzy
 msgid "Toggle Show/Hide X Tile"
-msgstr "Muestra y Oculta la Barra de Herramientas"
+msgstr "Muestra y Oculta X Tile"
 
 #: modules/cons.py:277
 msgid "_Preferences"

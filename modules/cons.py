@@ -28,7 +28,7 @@ import gtk, os
 
 
 APP_NAME = "x-tile"
-VERSION = "2.2"
+VERSION = "2.2.1"
 if os.path.isdir('glade'):
     GLADE_PATH = "glade/"
     ICON_PLACE = "linux/x-tile.svg"

@@ -167,14 +167,12 @@ msgid "Exit from X Tile"
 msgstr "Opustit X Tile"
 
 #: modules/cons.py:276
-#, fuzzy
 msgid "Show/Hide _X Tile"
-msgstr "Ukázat/Skrýt _nástrojový pruh"
+msgstr "Ukázat/Skrýt _X Tile"
 
 #: modules/cons.py:276
-#, fuzzy
 msgid "Toggle Show/Hide X Tile"
-msgstr "Ukázat/Skrýt nástrojový pruh"
+msgstr "Ukázat/Skrýt X Tile"
 
 #: modules/cons.py:277
 msgid "_Preferences"

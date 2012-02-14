@@ -166,14 +166,12 @@ msgid "Exit from X Tile"
 msgstr "Verlasse X Tile"
 
 #: modules/cons.py:276
-#, fuzzy
 msgid "Show/Hide _X Tile"
-msgstr "Zeige/Verstecke Werkzeugleiste"
+msgstr "Zeige/Verstecke X Tile"
 
 #: modules/cons.py:276
-#, fuzzy
 msgid "Toggle Show/Hide X Tile"
-msgstr "Schalte Zeige/Verstecke Werkzeugleiste um"
+msgstr "Schalte Zeige/Verstecke X Tile um"
 
 #: modules/cons.py:277
 msgid "_Preferences"
