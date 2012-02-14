@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-08 16:31+0200\n"
+"POT-Creation-Date: 2012-02-14 18:02+0100\n"
 "PO-Revision-Date: 2011-07-05 12:57-0300\n"
 "Last-Translator: MeloPixel <melopixel@gmail.com>\n"
 "Language-Team: Spanish <MeloPixel>\n"
@@ -20,79 +20,79 @@ msgstr ""
 "X-Poedit-Country: ARGENTINA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: modules/core.py:293
+#: modules/core.py:304
 msgid "Use Drag and Drop to Sort the Rows"
 msgstr "Utilice Arrastrar y Soltar para ordenar las Filas"
 
-#: modules/core.py:333
+#: modules/core.py:344
 msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr "El nuevo idioma no estará disponible hasta que Reinicie X Tile"
 
-#: modules/core.py:341 glade/x-tile.glade.h:53
+#: modules/core.py:359 glade/x-tile.glade.h:53
 msgid "Tile the Windows Upon your X Desktop"
 msgstr "Mosaico de Windows Sobre su escritorio X"
 
-#: modules/core.py:529
+#: modules/core.py:556
 msgid "The Size of the Toolbar Icons is already at the Maximum Value"
 msgstr ""
 "El tamaño de los Iconos de la Barra de Herramientas ya está en su Valor "
 "Máximo"
 
-#: modules/core.py:539
+#: modules/core.py:566
 msgid "The Size of the Toolbar Icons is already at the Minimum Value"
 msgstr ""
 "El tamaño de los Iconos de la Barra de Herramientas ya está en su Valor "
 "Mínimo"
 
-#: modules/core.py:547
+#: modules/core.py:574
 msgid "ON"
 msgstr "Activado"
 
-#: modules/core.py:547
+#: modules/core.py:574
 msgid "OFF"
 msgstr "Desactivado"
 
-#: modules/core.py:548
+#: modules/core.py:575
 #, python-format
 msgid "Version %s  -  Exit After Tile: %s"
 msgstr "Versión %s  -  Salida después de Mosaico: %s"
 
-#: modules/core.py:590 modules/core.py:596
+#: modules/core.py:617 modules/core.py:623
 msgid ""
 "The used shortcut is not available when the Preferences Window is opened"
 msgstr ""
 "El atajo utilizado no está disponible cuando la Ventana de Preferencias se "
 "abre"
 
-#: modules/core.py:668 modules/core.py:676 modules/core.py:684
+#: modules/core.py:695 modules/core.py:703 modules/core.py:711
 msgid "No Row is Selected"
 msgstr "No hay Filas Seleccionadas"
 
-#: modules/core.py:706 modules/core.py:740
+#: modules/core.py:733 modules/core.py:767
 msgid "No Application Selected!"
 msgstr "No hay ninguna Aplicación Seleccionada!"
 
-#: modules/core.py:820
+#: modules/core.py:847
 msgid "Grid Details"
 msgstr "Detallar Cuadricula"
 
-#: modules/core.py:828
+#: modules/core.py:855
 msgid "Rows"
 msgstr "Fila"
 
-#: modules/core.py:835
+#: modules/core.py:862
 msgid "Columns"
 msgstr "Columnas"
 
-#: modules/core.py:915 modules/core.py:923 modules/core.py:933
+#: modules/core.py:940 modules/core.py:948 modules/core.py:958
 msgid "No Windows Checked"
 msgstr "No hay Ventanas Seleccionadas"
 
-#: modules/core.py:969 modules/core.py:982
+#: modules/core.py:994 modules/core.py:1007
 msgid "Edit Custom Tile Settings"
 msgstr "Editar configuración Personalizada de Mosaico"
 
-#: modules/core.py:1098
+#: modules/core.py:1123
 msgid ""
 "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
 "Set'"
@@ -100,7 +100,7 @@ msgstr ""
 "El Mosaico Personalizado 1 No de ha establecido: Haz Clic en el Menú -> "
 "Mosaico Personalizado 1"
 
-#: modules/core.py:1116
+#: modules/core.py:1141
 msgid ""
 "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
 "Set'"
@@ -108,391 +108,401 @@ msgstr ""
 "El Mosaico Personalizado 2 No de ha establecido: Haz Clic en el Menú -> "
 "Mosaico Personalizado 2"
 
-#: modules/cons.py:262
+#: modules/cons.py:264
 msgid "_File"
 msgstr "_Archivo"
 
-#: modules/cons.py:263
+#: modules/cons.py:265
 msgid "_Edit"
 msgstr "_Editar"
 
-#: modules/cons.py:264
+#: modules/cons.py:266
 msgid "_Row"
 msgstr "_Fila"
 
-#: modules/cons.py:265
+#: modules/cons.py:267
 msgid "_Tile"
 msgstr "_Mosaico"
 
-#: modules/cons.py:266
+#: modules/cons.py:268
 msgid "_View"
 msgstr "_Ver"
 
-#: modules/cons.py:267 modules/cons.py:300
+#: modules/cons.py:269 modules/cons.py:303
 msgid "_Help"
 msgstr "_Ayuda"
 
-#: modules/cons.py:269
+#: modules/cons.py:271
 msgid "_Filter"
 msgstr "_Filtro"
 
-#: modules/cons.py:269
+#: modules/cons.py:271
 msgid "Filter Rows"
 msgstr "Filtrar Filas"
 
-#: modules/cons.py:270
+#: modules/cons.py:272
 msgid "Selected by _Default"
 msgstr "Seleccionar por _Defecto"
 
-#: modules/cons.py:270 glade/x-tile.glade.h:49
+#: modules/cons.py:272 glade/x-tile.glade.h:49
 msgid "Rows to be Selected by Default"
 msgstr "Filas para seleccionar por defecto"
 
-#: modules/cons.py:271
+#: modules/cons.py:273
 msgid "_Reload"
 msgstr "_Actualizar"
 
-#: modules/cons.py:271
+#: modules/cons.py:273
 msgid "Reload the Windows List"
 msgstr "Actualiza la Lista de Ventanas"
 
-#: modules/cons.py:272
+#: modules/cons.py:274
 msgid "_Quit"
 msgstr "_Salir"
 
-#: modules/cons.py:272
+#: modules/cons.py:274
 msgid "Quit the Application"
 msgstr "Salir de Aplicación"
 
-#: modules/cons.py:273
+#: modules/cons.py:275
 msgid "_Exit X Tile"
 msgstr "Salir D_espués de Mosaico"
 
-#: modules/cons.py:273
+#: modules/cons.py:275
 msgid "Exit from X Tile"
 msgstr "Salir Después del Mosaico"
 
-#: modules/cons.py:274
+#: modules/cons.py:276
+#, fuzzy
+msgid "Show/Hide _X Tile"
+msgstr "Barra de _Herramientas"
+
+#: modules/cons.py:276
+#, fuzzy
+msgid "Toggle Show/Hide X Tile"
+msgstr "Muestra y Oculta la Barra de Herramientas"
+
+#: modules/cons.py:277
 msgid "_Preferences"
 msgstr "_Preferencias"
 
-#: modules/cons.py:274
+#: modules/cons.py:277
 msgid "Open the Preferences Window"
 msgstr "Abre las Preferencias de Ventanas"
 
-#: modules/cons.py:275
+#: modules/cons.py:278
 msgid "Select _All"
 msgstr "M_arcar Todo"
 
-#: modules/cons.py:275
+#: modules/cons.py:278
 msgid "Select All the Windows in the List"
 msgstr "Tilda Todas las Ventanas de la Lista "
 
-#: modules/cons.py:276
+#: modules/cons.py:279
 msgid "Deselect A_ll"
 msgstr "Desmarcar _todo"
 
-#: modules/cons.py:276
+#: modules/cons.py:279
 msgid "Deselect All the Windows in the List"
 msgstr "Des-tilda Todas las Ventanas de la Lista "
 
-#: modules/cons.py:277
+#: modules/cons.py:280
 msgid "Tile _Vertically"
 msgstr "Mosaico _Vertical"
 
-#: modules/cons.py:277
+#: modules/cons.py:280
 msgid "Tile Vertically The Checked Windows"
 msgstr "Muestra las Ventanas en modo  Mosaico Vertical"
 
-#: modules/cons.py:278
+#: modules/cons.py:281
 msgid "Tile _Horizontally"
 msgstr "Mosaico _Horizontal"
 
-#: modules/cons.py:278
+#: modules/cons.py:281
 msgid "Tile Horizontally The Checked Windows"
 msgstr "Muestra las Ventanas en modo Mosaico Horizontal"
 
-#: modules/cons.py:279
+#: modules/cons.py:282
 msgid "_Triangle Up"
 msgstr "_Triangulo Arriba"
 
-#: modules/cons.py:279
+#: modules/cons.py:282
 msgid "Tile Triangle Up The Checked Windows"
 msgstr "Muestra las Ventanas en Modo Triangular hacia Arriba"
 
-#: modules/cons.py:280
+#: modules/cons.py:283
 msgid "Triangle _Down"
 msgstr "Triangulo _Abajo"
 
-#: modules/cons.py:280
+#: modules/cons.py:283
 msgid "Tile Triangle Down The Checked Windows"
 msgstr "Muestra las Ventanas en Modo Triangular hacia Abajo"
 
-#: modules/cons.py:281
+#: modules/cons.py:284
 msgid "Triangle _Left"
 msgstr "Triangulo _Izquierda"
 
-#: modules/cons.py:281
+#: modules/cons.py:284
 msgid "Tile Triangle Left The Checked Windows"
 msgstr "Muestra las Ventanas en Modo Triangular hacia la Izquierda"
 
-#: modules/cons.py:282
+#: modules/cons.py:285
 msgid "Triangle _Right"
 msgstr "Triangulo _Derecha"
 
-#: modules/cons.py:282
+#: modules/cons.py:285
 msgid "Tile Triangle Right The Checked Windows"
 msgstr "Muestra las Ventanas en Modo Triangular hacia la Derecha"
 
-#: modules/cons.py:283
+#: modules/cons.py:286
 msgid "Tile _Quad"
 msgstr "Mosaico Cuadricula"
 
-#: modules/cons.py:283
+#: modules/cons.py:286
 msgid "Tile into 4 quadrants The Checked Windows"
 msgstr "Muestra las Ventanas en Modo Cuadricula"
 
-#: modules/cons.py:284
+#: modules/cons.py:287
 msgid "Tile _Grid"
 msgstr "Mosaico Cuadricula"
 
-#: modules/cons.py:284
+#: modules/cons.py:287
 msgid "Tile into an Arbitrary Grid The Checked Windows"
 msgstr "Muestra las Ventanas en Modo Cuadricula"
 
-#: modules/cons.py:285
+#: modules/cons.py:288
 msgid "Custom Tile 1 _Set"
 msgstr "Ajuste Per_sonalizado 1"
 
-#: modules/cons.py:285
+#: modules/cons.py:288
 msgid "Edit Custom Tile 1 Settings"
 msgstr "Edita la configuración de Mosaico Personalizado 1"
 
-#: modules/cons.py:286
+#: modules/cons.py:289
 msgid "Custom Tile _1 Run"
 msgstr "Personalizado _1"
 
-#: modules/cons.py:286
+#: modules/cons.py:289
 msgid "Execute Custom Tile 1"
 msgstr "Ejecuta el ajuste del Mosaico Personalizado 1"
 
-#: modules/cons.py:287
+#: modules/cons.py:290
 msgid "Custom Tile 2 S_et"
 msgstr "Ajuste P_ersonalizado 2"
 
-#: modules/cons.py:287
+#: modules/cons.py:290
 msgid "Edit Custom Tile 2 Settings"
 msgstr "Edita la configuración de Mosaico Personalizado 2"
 
-#: modules/cons.py:288
+#: modules/cons.py:291
 msgid "Custom Tile _2 Run"
 msgstr "Personalizado _2"
 
-#: modules/cons.py:288
+#: modules/cons.py:291
 msgid "Execute Custom Tile 2"
 msgstr "Ejecuta el ajuste del Mosaico Personalizado 2"
 
-#: modules/cons.py:289 modules/cons.py:317
+#: modules/cons.py:292 modules/cons.py:320
 msgid "U_ndo Tiling"
 msgstr "_Deshacer"
 
-#: modules/cons.py:289 modules/cons.py:317
+#: modules/cons.py:292 modules/cons.py:320
 msgid "Undo the Latest Tiling Operation"
 msgstr "Deshacer el Ultimo Mosaico Aplicado"
 
-#: modules/cons.py:290 modules/cons.py:316
+#: modules/cons.py:293 modules/cons.py:319
 msgid "_Invert Tiling Order"
 msgstr "_Invertir Orden"
 
-#: modules/cons.py:290 modules/cons.py:316
+#: modules/cons.py:293 modules/cons.py:319
 msgid "Invert the Order of the Latest Tiling Operation"
 msgstr "Invertir el orden de la última operación"
 
-#: modules/cons.py:291
+#: modules/cons.py:294
 msgid "_Maximize Windows"
 msgstr "_Maximizar Ventanas"
 
-#: modules/cons.py:291
+#: modules/cons.py:294
 msgid "Maximize The Checked Windows"
 msgstr "Maximiza las ventanas Seleccionadas"
 
-#: modules/cons.py:292
+#: modules/cons.py:295
 msgid "_Unmaximize Windows"
 msgstr "Resta_urar Ventanas"
 
-#: modules/cons.py:292
+#: modules/cons.py:295
 msgid "Unmaximize The Checked Windows"
 msgstr "Restaura las Ventanas Seleccionadas"
 
-#: modules/cons.py:293
+#: modules/cons.py:296
 msgid "_Close Windows"
 msgstr "_Cerrar Ventanas"
 
-#: modules/cons.py:293
+#: modules/cons.py:296
 msgid "Close The Checked Windows"
 msgstr "Cierra las Ventanas Seleccionada"
 
-#: modules/cons.py:294
+#: modules/cons.py:297
 msgid "Move _Up"
 msgstr "S_ubir"
 
-#: modules/cons.py:294
+#: modules/cons.py:297
 msgid "Move the Selected Row Up"
 msgstr "Mueve la Fila Seleccionada Arriba"
 
-#: modules/cons.py:295
+#: modules/cons.py:298
 msgid "Move _Down"
 msgstr "B_ajar"
 
-#: modules/cons.py:295
+#: modules/cons.py:298
 msgid "Move the Selected Row Down"
 msgstr "Mueve la Fila Seleccionada Abajo"
 
-#: modules/cons.py:296
+#: modules/cons.py:299
 msgid "_Remove"
 msgstr "_Eliminar"
 
-#: modules/cons.py:296
+#: modules/cons.py:299
 msgid "Remove the Selected Row"
 msgstr "Elimina la Fila Seleccionada"
 
-#: modules/cons.py:297
+#: modules/cons.py:300
 msgid "Show/Hide _Toolbar"
 msgstr "Barra de _Herramientas"
 
-#: modules/cons.py:297
+#: modules/cons.py:300
 msgid "Toggle Show/Hide Toolbar"
 msgstr "Muestra y Oculta la Barra de Herramientas"
 
-#: modules/cons.py:298
+#: modules/cons.py:301
 msgid "_Increase Toolbar Icons Size"
 msgstr "_Agrandar Iconos"
 
-#: modules/cons.py:298
+#: modules/cons.py:301
 msgid "Increase the Size of the Toolbar Icons"
 msgstr "Aumenta tamaño de los Iconos de la Barra de Herramientas"
 
-#: modules/cons.py:299
+#: modules/cons.py:302
 msgid "_Decrease Toolbar Icons Size"
 msgstr "A_chicar Iconos"
 
-#: modules/cons.py:299
+#: modules/cons.py:302
 msgid "Decrease the Size of the Toolbar Icons"
 msgstr "Disminuye tamaño de los Iconos de la Barra de Herramientas"
 
-#: modules/cons.py:300
+#: modules/cons.py:303
 msgid "X Tile Project Home Page"
 msgstr "Pagina del Proyecto X Tile"
 
-#: modules/cons.py:301 modules/cons.py:302
+#: modules/cons.py:304 modules/cons.py:305
 msgid "_About"
 msgstr "_Acerca de"
 
-#: modules/cons.py:301 modules/cons.py:302 glade/x-tile.glade.h:21
+#: modules/cons.py:304 modules/cons.py:305 glade/x-tile.glade.h:21
 msgid "About X Tile"
 msgstr "Acerca de X Tile"
 
-#: modules/cons.py:303
+#: modules/cons.py:306
 msgid "_Close All"
 msgstr "_Cerrar Todo"
 
-#: modules/cons.py:303
+#: modules/cons.py:306
 msgid "Close All Windows"
 msgstr "Cerrar Ventanas"
 
-#: modules/cons.py:304
+#: modules/cons.py:307
 msgid "_Unmaximize All"
 msgstr "_Restaurar Todo"
 
-#: modules/cons.py:304
+#: modules/cons.py:307
 msgid "Unmaximize All Windows"
 msgstr "Restaurar Ventanas"
 
-#: modules/cons.py:305
+#: modules/cons.py:308
 msgid "_Maximize All"
 msgstr "_Maximizar Todo"
 
-#: modules/cons.py:305
+#: modules/cons.py:308
 msgid "Maximize All Windows"
 msgstr "Maximizar Ventanas"
 
-#: modules/cons.py:306
+#: modules/cons.py:309
 msgid "Tile All _Quad"
 msgstr "_Cuadricula"
 
-#: modules/cons.py:306
+#: modules/cons.py:309
 msgid "Tile All Windows Quad"
 msgstr "Cuadricula"
 
-#: modules/cons.py:307
+#: modules/cons.py:310
 msgid "Tile All Triangle _Down"
 msgstr "Triangular A_bajo"
 
-#: modules/cons.py:307
+#: modules/cons.py:310
 msgid "Tile All Windows Triangle Down"
 msgstr "Triangular Abajo"
 
-#: modules/cons.py:308
+#: modules/cons.py:311
 msgid "Tile All Triangle _Up"
 msgstr "Triangular _Arriba"
 
-#: modules/cons.py:308
+#: modules/cons.py:311
 msgid "Tile All Windows Triangle Up"
 msgstr "Triangular Arriba"
 
-#: modules/cons.py:309
+#: modules/cons.py:312
 msgid "Tile All Triangle _Right"
 msgstr "Triangular _Derecha"
 
-#: modules/cons.py:309
+#: modules/cons.py:312
 msgid "Tile All Windows Triangle Right"
 msgstr "Triangular Derecha"
 
-#: modules/cons.py:310
+#: modules/cons.py:313
 msgid "Tile All Triangle _Left"
 msgstr "Triangular _Izquierda"
 
-#: modules/cons.py:310
+#: modules/cons.py:313
 msgid "Tile All Windows Triangle Left"
 msgstr "Triangular Izquierda"
 
-#: modules/cons.py:311
+#: modules/cons.py:314
 msgid "Tile All Custom _2"
 msgstr "Personalizado _2"
 
-#: modules/cons.py:311
+#: modules/cons.py:314
 msgid "Tile All Windows Custom 2"
 msgstr "Personalizado 2"
 
-#: modules/cons.py:312
+#: modules/cons.py:315
 msgid "Tile All Custom _1"
 msgstr "Personalizado _1"
 
-#: modules/cons.py:312
+#: modules/cons.py:315
 msgid "Tile All Windows Custom 1"
 msgstr "Personalizado 1"
 
-#: modules/cons.py:313
+#: modules/cons.py:316
 msgid "Tile All _Grid"
 msgstr "_Cuadricula"
 
-#: modules/cons.py:313
+#: modules/cons.py:316
 msgid "Tile All Windows Grid"
 msgstr "Cuadricula"
 
-#: modules/cons.py:314
+#: modules/cons.py:317
 msgid "Tile All _Horizontally"
 msgstr "_Horizontal"
 
-#: modules/cons.py:314
+#: modules/cons.py:317
 msgid "Tile All Windows Horizontally"
 msgstr "Horizontal"
 
-#: modules/cons.py:315
+#: modules/cons.py:318
 msgid "Tile All _Vertically"
 msgstr "_Vertical"
 
-#: modules/cons.py:315
+#: modules/cons.py:318
 msgid "Tile All Windows Vertically"
 msgstr "Vertical"
 

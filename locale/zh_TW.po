@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-08 16:31+0200\n"
+"POT-Creation-Date: 2012-02-14 18:02+0100\n"
 "PO-Revision-Date: 2011-07-03 15:30+0800\n"
 "Last-Translator: Yan-ren Tsai <elleryq@gmail.com>\n"
 "Language-Team: zh_TW <elleryq@gmail.com>\n"
@@ -18,469 +18,479 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: modules/core.py:293
+#: modules/core.py:304
 msgid "Use Drag and Drop to Sort the Rows"
 msgstr "使用拖拉來排序列"
 
-#: modules/core.py:333
+#: modules/core.py:344
 msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr "新的語言在重新啟動 X Tile 後才會生效。"
 
-#: modules/core.py:341 glade/x-tile.glade.h:53
+#: modules/core.py:359 glade/x-tile.glade.h:53
 msgid "Tile the Windows Upon your X Desktop"
 msgstr "在你的X桌面上排列視窗"
 
-#: modules/core.py:529
+#: modules/core.py:556
 msgid "The Size of the Toolbar Icons is already at the Maximum Value"
 msgstr "工具列圖示的尺寸已經是最大的了。"
 
-#: modules/core.py:539
+#: modules/core.py:566
 msgid "The Size of the Toolbar Icons is already at the Minimum Value"
 msgstr "工具列圖示的尺寸已經是最小的了。"
 
-#: modules/core.py:547
+#: modules/core.py:574
 msgid "ON"
 msgstr "ON"
 
-#: modules/core.py:547
+#: modules/core.py:574
 msgid "OFF"
 msgstr "OFF"
 
-#: modules/core.py:548
+#: modules/core.py:575
 #, python-format
 msgid "Version %s  -  Exit After Tile: %s"
 msgstr "版本:%s  - 在鋪排後離開: %s"
 
-#: modules/core.py:590 modules/core.py:596
+#: modules/core.py:617 modules/core.py:623
 msgid ""
 "The used shortcut is not available when the Preferences Window is opened"
 msgstr "當偏好設定視窗開啟時，使用的捷徑無效。"
 
-#: modules/core.py:668 modules/core.py:676 modules/core.py:684
+#: modules/core.py:695 modules/core.py:703 modules/core.py:711
 msgid "No Row is Selected"
 msgstr "沒有選定任何列"
 
-#: modules/core.py:706 modules/core.py:740
+#: modules/core.py:733 modules/core.py:767
 msgid "No Application Selected!"
 msgstr "沒有選擇任何應用程式!"
 
-#: modules/core.py:820
+#: modules/core.py:847
 msgid "Grid Details"
 msgstr "格框詳情"
 
-#: modules/core.py:828
+#: modules/core.py:855
 msgid "Rows"
 msgstr "列"
 
-#: modules/core.py:835
+#: modules/core.py:862
 msgid "Columns"
 msgstr "欄"
 
-#: modules/core.py:915 modules/core.py:923 modules/core.py:933
+#: modules/core.py:940 modules/core.py:948 modules/core.py:958
 msgid "No Windows Checked"
 msgstr "沒選擇視窗"
 
-#: modules/core.py:969 modules/core.py:982
+#: modules/core.py:994 modules/core.py:1007
 msgid "Edit Custom Tile Settings"
 msgstr "編輯自訂排列設定"
 
-#: modules/core.py:1098
+#: modules/core.py:1123
 msgid ""
 "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
 "Set'"
 msgstr "自訂排列1尚未設定：點擊選單項目 '排列->自訂排列1' 進行設定。"
 
-#: modules/core.py:1116
+#: modules/core.py:1141
 msgid ""
 "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
 "Set'"
 msgstr "自訂排列2尚未設定：點擊選單項目 '排列->自訂排列2' 進行設定。"
 
-#: modules/cons.py:262
+#: modules/cons.py:264
 msgid "_File"
 msgstr "檔案 (_F)"
 
-#: modules/cons.py:263
+#: modules/cons.py:265
 msgid "_Edit"
 msgstr "編輯 (_E)"
 
-#: modules/cons.py:264
+#: modules/cons.py:266
 msgid "_Row"
 msgstr "列(_R)"
 
-#: modules/cons.py:265
+#: modules/cons.py:267
 msgid "_Tile"
 msgstr "排列 (_T)"
 
-#: modules/cons.py:266
+#: modules/cons.py:268
 msgid "_View"
 msgstr "檢視 (_V)"
 
-#: modules/cons.py:267 modules/cons.py:300
+#: modules/cons.py:269 modules/cons.py:303
 msgid "_Help"
 msgstr "求助 (_H)"
 
-#: modules/cons.py:269
+#: modules/cons.py:271
 msgid "_Filter"
 msgstr "篩選 (_F)"
 
-#: modules/cons.py:269
+#: modules/cons.py:271
 msgid "Filter Rows"
 msgstr "篩選列"
 
-#: modules/cons.py:270
+#: modules/cons.py:272
 msgid "Selected by _Default"
 msgstr "預設選定的"
 
-#: modules/cons.py:270 glade/x-tile.glade.h:49
+#: modules/cons.py:272 glade/x-tile.glade.h:49
 msgid "Rows to be Selected by Default"
 msgstr "預設選定的列"
 
-#: modules/cons.py:271
+#: modules/cons.py:273
 msgid "_Reload"
 msgstr "重新載入"
 
-#: modules/cons.py:271
+#: modules/cons.py:273
 msgid "Reload the Windows List"
 msgstr "重新載入視窗列表"
 
-#: modules/cons.py:272
+#: modules/cons.py:274
 msgid "_Quit"
 msgstr "離開 (_Q)"
 
-#: modules/cons.py:272
+#: modules/cons.py:274
 msgid "Quit the Application"
 msgstr "離開應用程式"
 
-#: modules/cons.py:273
+#: modules/cons.py:275
 msgid "_Exit X Tile"
 msgstr "離開X Tile(_E)"
 
-#: modules/cons.py:273
+#: modules/cons.py:275
 msgid "Exit from X Tile"
 msgstr "從X Tile離開"
 
-#: modules/cons.py:274
+#: modules/cons.py:276
+#, fuzzy
+msgid "Show/Hide _X Tile"
+msgstr "顯示/隱藏工具列 (_T)"
+
+#: modules/cons.py:276
+#, fuzzy
+msgid "Toggle Show/Hide X Tile"
+msgstr "切換顯示/隱藏工具列"
+
+#: modules/cons.py:277
 msgid "_Preferences"
 msgstr "偏好設定 (_P)"
 
-#: modules/cons.py:274
+#: modules/cons.py:277
 msgid "Open the Preferences Window"
 msgstr "開啟偏好設定視窗"
 
-#: modules/cons.py:275
+#: modules/cons.py:278
 msgid "Select _All"
 msgstr "選擇全部 (_A)"
 
-#: modules/cons.py:275
+#: modules/cons.py:278
 msgid "Select All the Windows in the List"
 msgstr "選擇列表內所有視窗"
 
-#: modules/cons.py:276
+#: modules/cons.py:279
 msgid "Deselect A_ll"
 msgstr "取消選擇全部 (_l)"
 
-#: modules/cons.py:276
+#: modules/cons.py:279
 msgid "Deselect All the Windows in the List"
 msgstr "取消選擇列表上所有視窗"
 
-#: modules/cons.py:277
+#: modules/cons.py:280
 msgid "Tile _Vertically"
 msgstr "垂直鋪排 (_V)"
 
-#: modules/cons.py:277
+#: modules/cons.py:280
 msgid "Tile Vertically The Checked Windows"
 msgstr "垂直鋪排選定的視窗"
 
-#: modules/cons.py:278
+#: modules/cons.py:281
 msgid "Tile _Horizontally"
 msgstr "水平鋪排 (_H)"
 
-#: modules/cons.py:278
+#: modules/cons.py:281
 msgid "Tile Horizontally The Checked Windows"
 msgstr "水平鋪排選定的視窗"
 
-#: modules/cons.py:279
+#: modules/cons.py:282
 msgid "_Triangle Up"
 msgstr "三等份，最大的在上 (_T)"
 
-#: modules/cons.py:279
+#: modules/cons.py:282
 msgid "Tile Triangle Up The Checked Windows"
 msgstr "平舖選定視窗為三等份，最大的在上"
 
-#: modules/cons.py:280
+#: modules/cons.py:283
 msgid "Triangle _Down"
 msgstr "三等份，最大的在下 (_D)"
 
-#: modules/cons.py:280
+#: modules/cons.py:283
 msgid "Tile Triangle Down The Checked Windows"
 msgstr "平舖選定視窗為三等份，最大的在下"
 
-#: modules/cons.py:281
+#: modules/cons.py:284
 msgid "Triangle _Left"
 msgstr "三等份，最大的在左 (_L)"
 
-#: modules/cons.py:281
+#: modules/cons.py:284
 msgid "Tile Triangle Left The Checked Windows"
 msgstr "平舖選定視窗為三等份，最大的在左"
 
-#: modules/cons.py:282
+#: modules/cons.py:285
 msgid "Triangle _Right"
 msgstr "三等份，最大的在右 (_R)"
 
-#: modules/cons.py:282
+#: modules/cons.py:285
 msgid "Tile Triangle Right The Checked Windows"
 msgstr "平舖選定視窗為三等份，最大的在右"
 
-#: modules/cons.py:283
+#: modules/cons.py:286
 msgid "Tile _Quad"
 msgstr "平鋪為4個 (_Q)"
 
-#: modules/cons.py:283
+#: modules/cons.py:286
 msgid "Tile into 4 quadrants The Checked Windows"
 msgstr "將選定的視窗平鋪到四個象限"
 
-#: modules/cons.py:284
+#: modules/cons.py:287
 msgid "Tile _Grid"
 msgstr "平鋪為格框 (_G)"
 
-#: modules/cons.py:284
+#: modules/cons.py:287
 msgid "Tile into an Arbitrary Grid The Checked Windows"
 msgstr "平鋪選定的視窗為一個任意格框"
 
-#: modules/cons.py:285
+#: modules/cons.py:288
 msgid "Custom Tile 1 _Set"
 msgstr "自訂鋪排1設定 (_S)"
 
-#: modules/cons.py:285
+#: modules/cons.py:288
 msgid "Edit Custom Tile 1 Settings"
 msgstr "編輯自訂鋪排1設定"
 
-#: modules/cons.py:286
+#: modules/cons.py:289
 msgid "Custom Tile _1 Run"
 msgstr "執行自訂鋪排1 (_1)"
 
-#: modules/cons.py:286
+#: modules/cons.py:289
 msgid "Execute Custom Tile 1"
 msgstr "執行自訂鋪排1"
 
-#: modules/cons.py:287
+#: modules/cons.py:290
 msgid "Custom Tile 2 S_et"
 msgstr "自訂鋪排2設定 (_e)"
 
-#: modules/cons.py:287
+#: modules/cons.py:290
 msgid "Edit Custom Tile 2 Settings"
 msgstr "編輯自訂鋪排2設定"
 
-#: modules/cons.py:288
+#: modules/cons.py:291
 msgid "Custom Tile _2 Run"
 msgstr "執行自訂鋪排2 (_2)"
 
-#: modules/cons.py:288
+#: modules/cons.py:291
 msgid "Execute Custom Tile 2"
 msgstr "執行自訂鋪排2"
 
-#: modules/cons.py:289 modules/cons.py:317
+#: modules/cons.py:292 modules/cons.py:320
 msgid "U_ndo Tiling"
 msgstr "復原鋪排"
 
-#: modules/cons.py:289 modules/cons.py:317
+#: modules/cons.py:292 modules/cons.py:320
 msgid "Undo the Latest Tiling Operation"
 msgstr "復原最後一次鋪排的動作"
 
-#: modules/cons.py:290 modules/cons.py:316
+#: modules/cons.py:293 modules/cons.py:319
 msgid "_Invert Tiling Order"
 msgstr "將鋪排順序顛倒 (_I)"
 
-#: modules/cons.py:290 modules/cons.py:316
+#: modules/cons.py:293 modules/cons.py:319
 msgid "Invert the Order of the Latest Tiling Operation"
 msgstr "將最後一次鋪排的動作顛倒"
 
-#: modules/cons.py:291
+#: modules/cons.py:294
 msgid "_Maximize Windows"
 msgstr "最大化視窗 (_M)"
 
-#: modules/cons.py:291
+#: modules/cons.py:294
 msgid "Maximize The Checked Windows"
 msgstr "最大化選定的視窗"
 
-#: modules/cons.py:292
+#: modules/cons.py:295
 msgid "_Unmaximize Windows"
 msgstr "不最大化視窗 (_U)"
 
-#: modules/cons.py:292
+#: modules/cons.py:295
 msgid "Unmaximize The Checked Windows"
 msgstr "不最大化選定的視窗"
 
-#: modules/cons.py:293
+#: modules/cons.py:296
 msgid "_Close Windows"
 msgstr "關閉視窗 (_C)"
 
-#: modules/cons.py:293
+#: modules/cons.py:296
 msgid "Close The Checked Windows"
 msgstr "關閉選定視窗"
 
-#: modules/cons.py:294
+#: modules/cons.py:297
 msgid "Move _Up"
 msgstr "往上移 (_U)"
 
-#: modules/cons.py:294
+#: modules/cons.py:297
 msgid "Move the Selected Row Up"
 msgstr "將選定列移上去"
 
-#: modules/cons.py:295
+#: modules/cons.py:298
 msgid "Move _Down"
 msgstr "往下移 (_D)"
 
-#: modules/cons.py:295
+#: modules/cons.py:298
 msgid "Move the Selected Row Down"
 msgstr "將選定列移下來"
 
-#: modules/cons.py:296
+#: modules/cons.py:299
 msgid "_Remove"
 msgstr "移除 (_R)"
 
-#: modules/cons.py:296
+#: modules/cons.py:299
 msgid "Remove the Selected Row"
 msgstr "移除選定的列"
 
-#: modules/cons.py:297
+#: modules/cons.py:300
 msgid "Show/Hide _Toolbar"
 msgstr "顯示/隱藏工具列 (_T)"
 
-#: modules/cons.py:297
+#: modules/cons.py:300
 msgid "Toggle Show/Hide Toolbar"
 msgstr "切換顯示/隱藏工具列"
 
-#: modules/cons.py:298
+#: modules/cons.py:301
 msgid "_Increase Toolbar Icons Size"
 msgstr "將工具列圖示變大 (_I)"
 
-#: modules/cons.py:298
+#: modules/cons.py:301
 msgid "Increase the Size of the Toolbar Icons"
 msgstr "放大工具列圖示"
 
-#: modules/cons.py:299
+#: modules/cons.py:302
 msgid "_Decrease Toolbar Icons Size"
 msgstr "將工具列圖示變小 (_D)"
 
-#: modules/cons.py:299
+#: modules/cons.py:302
 msgid "Decrease the Size of the Toolbar Icons"
 msgstr "縮小工具列圖示"
 
-#: modules/cons.py:300
+#: modules/cons.py:303
 msgid "X Tile Project Home Page"
 msgstr "X Tile 專案首頁"
 
-#: modules/cons.py:301 modules/cons.py:302
+#: modules/cons.py:304 modules/cons.py:305
 msgid "_About"
 msgstr "關於 (_A)"
 
-#: modules/cons.py:301 modules/cons.py:302 glade/x-tile.glade.h:21
+#: modules/cons.py:304 modules/cons.py:305 glade/x-tile.glade.h:21
 msgid "About X Tile"
 msgstr "關於 X Tile"
 
-#: modules/cons.py:303
+#: modules/cons.py:306
 msgid "_Close All"
 msgstr "關閉所有(_C)"
 
-#: modules/cons.py:303
+#: modules/cons.py:306
 msgid "Close All Windows"
 msgstr "關閉所有視窗"
 
-#: modules/cons.py:304
+#: modules/cons.py:307
 msgid "_Unmaximize All"
 msgstr "不最大化全部 (_U)"
 
-#: modules/cons.py:304
+#: modules/cons.py:307
 msgid "Unmaximize All Windows"
 msgstr "不最大化所有視窗"
 
-#: modules/cons.py:305
+#: modules/cons.py:308
 msgid "_Maximize All"
 msgstr "最大化全部 (_M)"
 
-#: modules/cons.py:305
+#: modules/cons.py:308
 msgid "Maximize All Windows"
 msgstr "最大化所有視窗"
 
-#: modules/cons.py:306
+#: modules/cons.py:309
 msgid "Tile All _Quad"
 msgstr "平鋪所有視窗為4個 (_Q)"
 
-#: modules/cons.py:306
+#: modules/cons.py:309
 msgid "Tile All Windows Quad"
 msgstr "平鋪所有視窗為4個"
 
-#: modules/cons.py:307
+#: modules/cons.py:310
 msgid "Tile All Triangle _Down"
 msgstr "平舖所有視窗為三等份，最大的在下 (_D)"
 
-#: modules/cons.py:307
+#: modules/cons.py:310
 msgid "Tile All Windows Triangle Down"
 msgstr "平舖所有視窗為三等份，最大的在下"
 
-#: modules/cons.py:308
+#: modules/cons.py:311
 msgid "Tile All Triangle _Up"
 msgstr "平舖所有視窗為三等份，最大的在上 (_U)"
 
-#: modules/cons.py:308
+#: modules/cons.py:311
 msgid "Tile All Windows Triangle Up"
 msgstr "平舖所有視窗為三等份，最大的在上"
 
-#: modules/cons.py:309
+#: modules/cons.py:312
 msgid "Tile All Triangle _Right"
 msgstr "平舖所有視窗為三等份，最大的在右 (_R)"
 
-#: modules/cons.py:309
+#: modules/cons.py:312
 msgid "Tile All Windows Triangle Right"
 msgstr "平舖所有視窗為三等份，最大的在右"
 
-#: modules/cons.py:310
+#: modules/cons.py:313
 msgid "Tile All Triangle _Left"
 msgstr "平舖所有視窗為三等份，最大的在左 (_L)"
 
-#: modules/cons.py:310
+#: modules/cons.py:313
 msgid "Tile All Windows Triangle Left"
 msgstr "平舖所有視窗為三等份，最大的在左"
 
-#: modules/cons.py:311
+#: modules/cons.py:314
 msgid "Tile All Custom _2"
 msgstr "平舖所有自訂2 (_2)"
 
-#: modules/cons.py:311
+#: modules/cons.py:314
 msgid "Tile All Windows Custom 2"
 msgstr "平舖所有自訂2"
 
-#: modules/cons.py:312
+#: modules/cons.py:315
 msgid "Tile All Custom _1"
 msgstr "平舖所有自訂1 (_1)"
 
-#: modules/cons.py:312
+#: modules/cons.py:315
 msgid "Tile All Windows Custom 1"
 msgstr "平舖所有自訂1"
 
-#: modules/cons.py:313
+#: modules/cons.py:316
 msgid "Tile All _Grid"
 msgstr "平鋪所有為格框 (_G)"
 
-#: modules/cons.py:313
+#: modules/cons.py:316
 msgid "Tile All Windows Grid"
 msgstr "平鋪所有為格框"
 
-#: modules/cons.py:314
+#: modules/cons.py:317
 msgid "Tile All _Horizontally"
 msgstr "水平鋪排所有視窗 (_H)"
 
-#: modules/cons.py:314
+#: modules/cons.py:317
 msgid "Tile All Windows Horizontally"
 msgstr "水平鋪排所有視窗"
 
-#: modules/cons.py:315
+#: modules/cons.py:318
 msgid "Tile All _Vertically"
 msgstr "垂直鋪排全部視窗 (_V)"
 
-#: modules/cons.py:315
+#: modules/cons.py:318
 msgid "Tile All Windows Vertically"
 msgstr "垂直鋪排所有視窗"
 
