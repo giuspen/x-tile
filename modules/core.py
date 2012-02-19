@@ -923,12 +923,12 @@ class XTile:
         show_toolbar = self.gconf_client.get_string(cons.GCONF_SHOW_TOOLBAR % glob.screen_index)
         if show_toolbar == None: self.gconf_client.set_string(cons.GCONF_SHOW_TOOLBAR % glob.screen_index, cons.STR_TRUE)
         elif show_toolbar == cons.STR_FALSE: self.ui.get_widget("/ToolBar").hide()
+        self.win_on_screen = True
         if self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) == cons.STR_FALSE:
             self.ui.get_widget("/MenuBar/FileMenu/ExitApp").set_property('visible', False)
         elif self.gconf_client.get_string(cons.GCONF_SYSTRAY_START % glob.screen_index) == cons.STR_TRUE:
             self.glade.window.hide()
             self.win_on_screen = False
-        else: self.win_on_screen = True
 
     def reload_windows_list(self, *args):
         """Reloads the Windows List"""
