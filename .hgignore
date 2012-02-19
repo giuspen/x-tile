@@ -1,6 +1,7 @@
 syntax: glob
 *.pyc
 *.glade.h
+*.log
 cs/*
 de/*
 es_AR/*
