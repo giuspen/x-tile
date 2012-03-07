@@ -162,11 +162,11 @@ msgstr "從X Tile離開"
 
 #: modules/cons.py:276
 msgid "Show/Hide _X Tile"
-msgstr "顯示/隱藏 _X Tile"
+msgstr "顯示/隱藏 X Tile (_X)"
 
 #: modules/cons.py:276
 msgid "Toggle Show/Hide X Tile"
-msgstr "切換顯示/隱藏X Tile"
+msgstr "切換顯示/隱藏 X Tile"
 
 #: modules/cons.py:277
 msgid "_Preferences"
