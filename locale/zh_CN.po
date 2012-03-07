@@ -157,14 +157,12 @@ msgid "Exit from X Tile"
 msgstr "自 X Tile 退出"
 
 #: modules/cons.py:276
-#, fuzzy
 msgid "Show/Hide _X Tile"
-msgstr "显示/隐藏工具栏 (_T)"
+msgstr "显示/隐藏X Tile (_X)"
 
 #: modules/cons.py:276
-#, fuzzy
 msgid "Toggle Show/Hide X Tile"
-msgstr "切换显示/隐藏工具栏"
+msgstr "切换显示/隐藏 X Tile"
 
 #: modules/cons.py:277
 msgid "_Preferences"
