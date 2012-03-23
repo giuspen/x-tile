@@ -125,30 +125,26 @@ def client_msg(win, msg, d0, d1, d2, d3, d4):
     if not glob.x11.XSendEvent(glob.disp,glob.root,False, 1<<20 | 1<<19,ctypes.byref(event)):
         print "can't send message ", msg # DEBUG
 
-WORKSPACE=0
-
-def moveresize(win, x, y, w, h):
+def moveresize(win, x, y, w, h, dest_workspace):
     """   moves window to the users current desktop removes states like
           maximised and fullscreen activates the window,
           raises it then finally! moves and resizes it """
     glob.x11.XSync(glob.disp, False)
-    l,r,t,b=0,0,0,0
-    get_property("_NET_FRAME_EXTENTS",win,glob.XA_CARDINAL)
-    if bool(glob.ret_pointer)==False:
-        l,r,t,b = (0,0,0,0)
+    get_property("_NET_FRAME_EXTENTS", win, glob.XA_CARDINAL)
+    if bool(glob.ret_pointer) == False:
+        l,r,t,b = (0, 0, 0, 0)
     else:
         l,r,t,b = glob.ret_pointer[0], glob.ret_pointer[1], glob.ret_pointer[2], glob.ret_pointer[3]
-    #get_property("_NET_CURRENT_DESKTOP",glob.root,glob.XA_CARDINAL)
-    #cdt = glob.ret_pointer[0]
-    #client_msg(win, "_NET_WM_DESKTOP", cdt, 0, 0, 0, 0)
-    client_msg(win, "_NET_WM_DESKTOP", WORKSPACE, 0, 0, 0, 0)
-    client_msg(win,"_NET_WM_STATE",0,glob.fscreen_atom,0,0,0)
-    client_msg(win,"_NET_WM_STATE",0,glob.maxv_atom,glob.maxh_atom,0,0)
-    client_msg(win,"_NET_ACTIVE_WINDOW",0,0,0,0,0)
-    glob.x11.XMapRaised(glob.disp,win)
+    if dest_workspace < 0:
+        get_property("_NET_CURRENT_DESKTOP", glob.root, glob.XA_CARDINAL)
+        dest_workspace = glob.ret_pointer[0]
+    client_msg(win, "_NET_WM_DESKTOP", dest_workspace, 0, 0, 0, 0)
+    client_msg(win,"_NET_WM_STATE", 0, glob.fscreen_atom, 0, 0, 0)
+    client_msg(win,"_NET_WM_STATE", 0, glob.maxv_atom,glob.maxh_atom, 0, 0)
+    client_msg(win,"_NET_ACTIVE_WINDOW", 0, 0, 0, 0, 0)
+    glob.x11.XMapRaised(glob.disp, win)
     glob.x11.XSync(glob.disp, False)
-    
-    glob.x11.XMoveResizeWindow(glob.disp,win,x,y,w-(l+r),h-(t+b)) # only interior size needs deco subtracting not position
+    glob.x11.XMoveResizeWindow(glob.disp, win, x, y, w-(l+r), h-(t+b)) # only interior size needs deco subtracting not position
     glob.x11.XSync(glob.disp, False)
 
 def maximize(win):
