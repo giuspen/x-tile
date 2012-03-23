@@ -136,7 +136,7 @@ def tile_vertically_on_area(windows_list, x, y, w, h):
     step = (h / len(windows_list))
     win_num = 0
     for checked_window in windows_list:
-        support.moveresize(checked_window, x, y+win_num*step, w , step)
+        support.moveresize(checked_window, x, y+win_num*step, w , step, -1)
         win_num += 1
 
 def tile_horizontally_on_area(windows_list, x, y, w, h):
@@ -144,7 +144,7 @@ def tile_horizontally_on_area(windows_list, x, y, w, h):
     step = (w / len(windows_list))
     win_num = 0
     for checked_window in windows_list:
-        support.moveresize(checked_window, x + win_num*step, y, step, h )
+        support.moveresize(checked_window, x + win_num*step, y, step, h, -1)
         win_num += 1
 
 def tile_quad_on_area(windows_list, x, y, w, h):
@@ -155,7 +155,7 @@ def tile_quad_on_area(windows_list, x, y, w, h):
         else: xo = 0
         if index > 1: yo = h/2
         else: yo = 0
-        support.moveresize(checked_window, (x + xo), (y + yo), w/2 , h/2)
+        support.moveresize(checked_window, (x + xo), (y + yo), w/2 , h/2, -1)
 
 def tile_grid_on_area(rows, cols, windows_list, x, y, w, h):
     """Tile the Given Windows Grid on the Given Area"""
@@ -165,7 +165,7 @@ def tile_grid_on_area(rows, cols, windows_list, x, y, w, h):
     for index,checked_window in enumerate(windows_list):
         xo = step_w*(index%cols)
         yo = step_h*(index/cols)
-        support.moveresize(checked_window, x+xo, y+yo, step_w , step_h)
+        support.moveresize(checked_window, x+xo, y+yo, step_w , step_h, -1)
 
 def tile_triangle_up_on_area(windows_list, x, y, w, h):
     """Tile 3 Windows in Triangle Up Scheme on the Given Area"""
@@ -177,7 +177,7 @@ def tile_triangle_up_on_area(windows_list, x, y, w, h):
         else: yo = 0
         if index == 0: width = w
         else: width = w/2
-        support.moveresize(checked_window, (x + xo), (y + yo), width, h/2 )
+        support.moveresize(checked_window, (x + xo), (y + yo), width, h/2, -1)
 
 def tile_triangle_down_on_area(windows_list, x, y, w, h):
     """Tile 3 Windows in Triangle Down Scheme on the Given Area"""
@@ -189,7 +189,7 @@ def tile_triangle_down_on_area(windows_list, x, y, w, h):
         else: yo = 0
         if index == 2: width = w
         else: width = w/2
-        support.moveresize(checked_window, (x + xo), (y + yo), width, h/2 )
+        support.moveresize(checked_window, (x + xo), (y + yo), width, h/2, -1)
 
 def tile_triangle_left_on_area(windows_list, x, y, w, h):
     """Tile 3 Windows in Triangle Left Scheme on the Given Area"""
@@ -201,7 +201,7 @@ def tile_triangle_left_on_area(windows_list, x, y, w, h):
         else: yo = 0
         if index == 0: height = h
         else: height = h/2
-        support.moveresize(checked_window, (x + xo), (y + yo), w/2 , height)
+        support.moveresize(checked_window, (x + xo), (y + yo), w/2 , height, -1)
 
 def tile_triangle_right_on_area(windows_list, x, y, w, h):
     """Tile 3 Windows in Triangle Right Scheme on the Given Area"""
@@ -213,4 +213,4 @@ def tile_triangle_right_on_area(windows_list, x, y, w, h):
         else: yo = 0
         if index == 1: height = h
         else: height = h/2
-        support.moveresize(checked_window, (x + xo), (y + yo), w/2 , height)
+        support.moveresize(checked_window, (x + xo), (y + yo), w/2 , height, -1)

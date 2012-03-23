@@ -1083,7 +1083,7 @@ class XTile:
                                int(element['win_geom'][0]),
                                int(element['win_geom'][1]),
                                int(element['win_geom'][2]),
-                               int(element['win_geom'][3]))
+                               int(element['win_geom'][3]), -1)
         self.check_exit_after_tile()
 
     def undo_tiling(self, *args):
@@ -1107,7 +1107,7 @@ class XTile:
                                           str(win_geom[3])  ])
             # proceed with the undo
             if int(is_maximized) == 1: support.maximize(int(win_id))
-            else: support.moveresize(win_id, int(x), int(y), int(width), int(height))
+            else: support.moveresize(win_id, int(x), int(y), int(width), int(height), -1)
         if doubleundo_snap_vec:
             doubleundo_snap_str = ""
             for element in doubleundo_snap_vec:
@@ -1129,7 +1129,7 @@ class XTile:
         win_num = 0
         for checked_window in windows_list:
             x, y, width, height = custom_geoms_vec[win_num].split(",")
-            support.moveresize(checked_window, int(x), int(y), int(width), int(height))
+            support.moveresize(checked_window, int(x), int(y), int(width), int(height), -1)
             if win_num + 1 < len(custom_geoms_vec): win_num += 1
             else: break
         self.check_exit_after_tile()
@@ -1147,7 +1147,7 @@ class XTile:
         win_num = 0
         for checked_window in windows_list:
             x, y, width, height = custom_geoms_vec[win_num].split(",")
-            support.moveresize(checked_window, int(x), int(y), int(width), int(height))
+            support.moveresize(checked_window, int(x), int(y), int(width), int(height), -1)
             if win_num + 1 < len(custom_geoms_vec): win_num += 1
             else: break
         self.check_exit_after_tile()
