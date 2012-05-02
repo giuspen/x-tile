@@ -14,7 +14,7 @@
     <property name="type_hint">dialog</property>
     <property name="transient_for">window</property>
     <property name="program_name">X Tile</property>
-    <property name="copyright" translatable="yes">Copyright © 2009-2011
+    <property name="copyright" translatable="yes">Copyright © 2009-2012
 Giuseppe Penone &lt;giuspen@gmail.com&gt;
 Chris Camacho &lt;chris_camacho@yahoo.com&gt;</property>
     <property name="comments" translatable="yes">Tile the Windows Upon your X Desktop</property>
@@ -70,6 +70,13 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
         </child>
       </object>
     </child>
+  </object>
+  <object class="GtkAdjustment" id="adjustment_dest_workspace">
+    <property name="lower">1</property>
+    <property name="upper">99</property>
+    <property name="value">2</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
   </object>
   <object class="GtkAdjustment" id="adjustment_h1">
     <property name="lower">10</property>
@@ -1716,10 +1723,52 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
           </packing>
         </child>
         <child>
-          <object class="GtkStatusbar" id="statusbar">
+          <object class="GtkHBox" id="hbox2">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="spacing">2</property>
+            <child>
+              <object class="GtkCheckButton" id="checkbutton_dest_workspace">
+                <property name="label" translatable="yes">Set Destination Workspace</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="use_action_appearance">False</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkSpinButton" id="spinbutton_dest_workspace">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="invisible_char">•</property>
+                <property name="primary_icon_activatable">False</property>
+                <property name="secondary_icon_activatable">False</property>
+                <property name="primary_icon_sensitive">True</property>
+                <property name="secondary_icon_sensitive">True</property>
+                <property name="adjustment">adjustment_dest_workspace</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label_statusbar">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
           </object>
           <packing>
             <property name="expand">False</property>
