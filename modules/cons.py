@@ -2,7 +2,7 @@
 #
 #      cons.py
 #
-#      Copyright 2009-2011
+#      Copyright 2009-2012
 #      Giuseppe Penone <giuspen@gmail.com>,
 #      Chris Camacho (chris_c) <chris_camacho@yahoo.com>.
 #
@@ -28,7 +28,7 @@ import gtk, os
 
 
 APP_NAME = "x-tile"
-VERSION = "2.2.1"
+VERSION = "2.3"
 if os.path.isdir('glade'):
     GLADE_PATH = "glade/"
     ICON_PLACE = "linux/x-tile.svg"

@@ -2,7 +2,7 @@
 #
 #      support.py
 #
-#      Copyright 2009-2011
+#      Copyright 2009-2012
 #      Giuseppe Penone <giuspen@gmail.com>,
 #      Chris Camacho (chris_c) <chris_camacho@yahoo.com>.
 #
@@ -30,12 +30,12 @@ import globs
 
 
 def get_desktop_width_n_height():
-    """Get the Curr Viewport Num Assuming Compiz is Running"""
+    """Get Desktop Width and Height"""
     get_property("_NET_WORKAREA", glob.root, glob.XA_CARDINAL)
     return glob.ret_pointer[2], glob.ret_pointer[3]
 
 def is_window_in_curr_viewport(desktop_width, desktop_height, win_id):
-    """Get the Curr Viewport Num Assuming Compiz is Running"""
+    """Check the Window to be in the Current Viewport assuming Compiz is Running"""
     x, y, width, height, root = get_geom(win_id)
     if x < 0 or x >= desktop_width or y < 0 or y >= desktop_height: return False
     else: return True
