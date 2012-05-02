@@ -923,6 +923,7 @@ class XTile:
     def reload_windows_list(self, *args):
         """Reloads the Windows List"""
         self.store.load_model(self)
+        support.is_compiz_running()
 
     def close_checked_windows(self, *args):
         """Closes the Checked Windows"""

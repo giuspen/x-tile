@@ -120,6 +120,7 @@ class GlobalsObject(object):
         # xlib global "defines" for some standard atoms
         self.XA_CARDINAL = 6
         self.XA_WINDOW = 33
+        self.XA_STRING = 31
         self.XA_ATOM = 4
         # GLOBAL size hints return
         self.size_hints_return = XSizeHints()

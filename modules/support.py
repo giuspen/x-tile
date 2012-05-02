@@ -40,6 +40,34 @@ def is_window_in_curr_viewport(desktop_width, desktop_height, win_id):
     if x < 0 or x >= desktop_width or y < 0 or y >= desktop_height: return False
     else: return True
 
+def is_compiz_running():
+    """Return True if Compiz is running"""
+    get_property("_NET_SUPPORTING_WM_CHECK", glob.root, glob.XA_WINDOW)
+    if bool(glob.ret_pointer) == False:
+        get_property("_NET_SUPPORTING_WM_CHECK", glob.root, glob.XA_CARDINAL)
+        if bool(glob.ret_pointer) == False:
+            print "no 1!"
+            return False
+        else:
+            sup_window = glob.ret_pointer[0]
+    else:
+        sup_window = glob.ret_pointer[0]
+    get_property("_NET_WM_NAME", sup_window, glob.str_atom)
+    if bool(glob.ret_pointer) == False:
+        get_property("_NET_WM_NAME", sup_window, glob.XA_STRING)
+        if bool(glob.ret_pointer) == False:
+            print "no 2!"
+            return False
+    buff = ""
+    fourchars = glob.ret_pointer[0]
+    buff += "%c" % (fourchars & 0xff)
+    buff += "%c" % ((fourchars >> 8) & 0xff)
+    buff += "%c" % ((fourchars >> 16) & 0xff)
+    buff += "%c" % ((fourchars >> 24) & 0xff)
+    print "WM =", buff
+    if buff == "Comp": return True
+    return False
+
 def get_geom(win):
     """
     Status XQueryTree(display, w, root_return, parent_return, children_return, nchildren_return)
