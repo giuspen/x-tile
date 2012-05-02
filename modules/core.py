@@ -308,9 +308,9 @@ class XTile:
         self.glade.scrolledwindow.add(self.view)
         self.glade.processadddialog.connect('key_press_event', self.on_key_press_processadddialog)
         self.glade.aboutdialog.set_version(cons.VERSION)
+        self.glade.window.set_title(self.glade.window.get_title() + " " + cons.VERSION)
         self.gconf_client = gconf.client_get_default()
         self.gconf_client.add_dir("/apps/x-tile/%s" % glob.screen_index, gconf.CLIENT_PRELOAD_NONE)
-        self.statusbar_context_id = self.glade.statusbar.get_context_id('')
         self.combobox_country_lang_init()
 
     def combobox_country_lang_init(self):
@@ -569,14 +569,6 @@ class XTile:
         self.gconf_client.set_int(cons.GCONF_TOOLBAR_ICON_SIZE % glob.screen_index, toolbar_icon_size)
         self.ui.get_widget("/ToolBar").set_property("icon-size", cons.ICONS_SIZE[toolbar_icon_size])
 
-    def update_statusbar(self):
-        """Update the Statusbar after checking checkbuttons"""
-        ON_OFF = {cons.STR_TRUE:_("ON"), cons.STR_FALSE:_("OFF")}
-        statusbar_str = _("Version %s  -  Exit After Tile: %s") %\
-                         (cons.VERSION,
-                          ON_OFF[self.gconf_client.get_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index)])
-        self.glade.statusbar.push(self.statusbar_context_id, statusbar_str)
-
     def toggle_active(self, cell, path, model):
         """Toggles the Active state"""
         model[path][0] = not model[path][0]
@@ -593,7 +585,6 @@ class XTile:
             if self.gconf_client.get_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index) == cons.STR_TRUE:
                 self.gconf_client.set_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index, cons.STR_FALSE)
             else: self.gconf_client.set_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index, cons.STR_TRUE)
-            self.update_statusbar()
 
     def toggle_do_not_list_minimized(self, *args):
         """Toggles the flag Do Not List Minimized Windows in List"""
@@ -917,7 +908,6 @@ class XTile:
     def launch_application(self):
         """Show the main window and all child widgets"""
         self.init_from_gconf()
-        self.update_statusbar()
         self.window_position_restore()
         self.glade.window.show_all()
         show_toolbar = self.gconf_client.get_string(cons.GCONF_SHOW_TOOLBAR % glob.screen_index)
@@ -964,28 +954,32 @@ class XTile:
         """Tile the Checked Windows Vertically"""
         self.gconf_client.set_string(cons.GCONF_LATEST_TILING % glob.screen_index, "v")
         checked_windows_list = self.store.get_checked_windows_list(True)
-        tilings.tile_vertically(checked_windows_list, glob.monitors_areas)
+        tilings.tile_vertically(checked_windows_list, glob.monitors_areas, self.get_dest_ws())
         self.check_exit_after_tile()
 
     def tile_horizontally(self, *args):
         """Tile the Checked Windows Horizontally"""
         self.gconf_client.set_string(cons.GCONF_LATEST_TILING % glob.screen_index, "h")
         checked_windows_list = self.store.get_checked_windows_list(True)
-        tilings.tile_horizontally(checked_windows_list, glob.monitors_areas)
+        tilings.tile_horizontally(checked_windows_list, glob.monitors_areas, self.get_dest_ws())
         self.check_exit_after_tile()
 
     def tile_quad(self, *args):
         """Tile the Checked Windows Quad"""
         self.gconf_client.set_string(cons.GCONF_LATEST_TILING % glob.screen_index, "q")
         checked_windows_list = self.store.get_checked_windows_list(True)
-        tilings.tile_quad(checked_windows_list, glob.monitors_areas)
+        tilings.tile_quad(checked_windows_list, glob.monitors_areas, self.get_dest_ws())
         self.check_exit_after_tile()
 
     def tile_grid(self):
         """Tile the Checked Windows in a rows by cols grid"""
         self.gconf_client.set_string(cons.GCONF_LATEST_TILING % glob.screen_index, "g")
         checked_windows_list = self.store.get_checked_windows_list(True)
-        tilings.tile_grid(cons.GRID_ROWS, cons.GRID_COLS, checked_windows_list, glob.monitors_areas)
+        tilings.tile_grid(cons.GRID_ROWS,
+                          cons.GRID_COLS,
+                          checked_windows_list,
+                          glob.monitors_areas,
+                          self.get_dest_ws())
         self.check_exit_after_tile()
 
     def tile_custom_1_set(self, *args):
@@ -1059,6 +1053,12 @@ class XTile:
             if rgb_idx + 1 < len(cons.DRAW_RGBS): rgb_idx += 1
             else: rgb_idx = 0
 
+    def get_dest_ws(self):
+        """Get Destination Desktop"""
+        if self.glade.checkbutton_dest_workspace.get_active():
+            return int(self.glade.spinbutton_dest_workspace.get_value())
+        return -1
+
     def invert_tiling(self, *args):
         """Invert the order of the latest tiling operation"""
         # get the win_id and win_geom of the latest tiled windows
@@ -1083,7 +1083,8 @@ class XTile:
                                int(element['win_geom'][0]),
                                int(element['win_geom'][1]),
                                int(element['win_geom'][2]),
-                               int(element['win_geom'][3]), -1)
+                               int(element['win_geom'][3]),
+                               self.get_dest_ws())
         self.check_exit_after_tile()
 
     def undo_tiling(self, *args):
@@ -1107,7 +1108,7 @@ class XTile:
                                           str(win_geom[3])  ])
             # proceed with the undo
             if int(is_maximized) == 1: support.maximize(int(win_id))
-            else: support.moveresize(win_id, int(x), int(y), int(width), int(height), -1)
+            else: support.moveresize(win_id, int(x), int(y), int(width), int(height), self.get_dest_ws())
         if doubleundo_snap_vec:
             doubleundo_snap_str = ""
             for element in doubleundo_snap_vec:
@@ -1129,7 +1130,7 @@ class XTile:
         win_num = 0
         for checked_window in windows_list:
             x, y, width, height = custom_geoms_vec[win_num].split(",")
-            support.moveresize(checked_window, int(x), int(y), int(width), int(height), -1)
+            support.moveresize(checked_window, int(x), int(y), int(width), int(height), self.get_dest_ws())
             if win_num + 1 < len(custom_geoms_vec): win_num += 1
             else: break
         self.check_exit_after_tile()
@@ -1147,7 +1148,7 @@ class XTile:
         win_num = 0
         for checked_window in windows_list:
             x, y, width, height = custom_geoms_vec[win_num].split(",")
-            support.moveresize(checked_window, int(x), int(y), int(width), int(height), -1)
+            support.moveresize(checked_window, int(x), int(y), int(width), int(height), self.get_dest_ws())
             if win_num + 1 < len(custom_geoms_vec): win_num += 1
             else: break
         self.check_exit_after_tile()
@@ -1156,28 +1157,28 @@ class XTile:
         """Tile 3 Windows in Triangle Up Scheme"""
         self.gconf_client.set_string(cons.GCONF_LATEST_TILING % glob.screen_index, "u")
         checked_windows_list = self.store.get_checked_windows_list(True)
-        tilings.tile_triangle_up(checked_windows_list, glob.monitors_areas)
+        tilings.tile_triangle_up(checked_windows_list, glob.monitors_areas, self.get_dest_ws())
         self.check_exit_after_tile()
 
     def tile_triangle_down(self, *args):
         """Tile 3 Windows in Triangle Down Scheme"""
         self.gconf_client.set_string(cons.GCONF_LATEST_TILING % glob.screen_index, "d")
         checked_windows_list = self.store.get_checked_windows_list(True)
-        tilings.tile_triangle_down(checked_windows_list, glob.monitors_areas)
+        tilings.tile_triangle_down(checked_windows_list, glob.monitors_areas, self.get_dest_ws())
         self.check_exit_after_tile()
 
     def tile_triangle_left(self, *args):
         """Tile 3 Windows in Triangle Left Scheme"""
         self.gconf_client.set_string(cons.GCONF_LATEST_TILING % glob.screen_index, "l")
         checked_windows_list = self.store.get_checked_windows_list(True)
-        tilings.tile_triangle_left(checked_windows_list, glob.monitors_areas)
+        tilings.tile_triangle_left(checked_windows_list, glob.monitors_areas, self.get_dest_ws())
         self.check_exit_after_tile()
 
     def tile_triangle_right(self, *args):
         """Tile 3 Windows in Triangle Right Scheme"""
         self.gconf_client.set_string(cons.GCONF_LATEST_TILING % glob.screen_index, "r")
         checked_windows_list = self.store.get_checked_windows_list(True)
-        tilings.tile_triangle_right(checked_windows_list, glob.monitors_areas)
+        tilings.tile_triangle_right(checked_windows_list, glob.monitors_areas, self.get_dest_ws())
         self.check_exit_after_tile()
 
     def show_hide_toolbar(self, menuitem, data=None):
