@@ -59,13 +59,19 @@ def is_compiz_running():
             print "no 2!"
             return False
     buff = ""
-    fourchars = glob.ret_pointer[0]
-    buff += "%c" % (fourchars & 0xff)
-    buff += "%c" % ((fourchars >> 8) & 0xff)
-    buff += "%c" % ((fourchars >> 16) & 0xff)
-    buff += "%c" % ((fourchars >> 24) & 0xff)
+    keep_going = True
+    i = 0
+    while keep_going:
+        eightchars = glob.ret_pointer[i]
+        for j in range(8):
+            curr_char = ((eightchars >> 8*j) & 0xff)
+            if curr_char == 0:
+                keep_going = False
+                break
+            buff += "%c" % curr_char
+        i += 1
     print "WM =", buff
-    if buff == "Comp": return True
+    if buff == "Compiz": return True
     return False
 
 def get_geom(win):
