@@ -172,7 +172,12 @@ def moveresize(win, x, y, w, h, dest_workspace):
     if dest_workspace < 0:
         get_property("_NET_CURRENT_DESKTOP", glob.root, glob.XA_CARDINAL)
         dest_workspace = glob.ret_pointer[0]
+    ###
+    # move myself to desktop
+    client_msg(glob.root, "_NET_CURRENT_DESKTOP", dest_workspace, 0, 0, 0, 0)
+    # move window to desktop
     client_msg(win, "_NET_WM_DESKTOP", dest_workspace, 0, 0, 0, 0)
+    ###
     client_msg(win,"_NET_WM_STATE", 0, glob.fscreen_atom, 0, 0, 0)
     client_msg(win,"_NET_WM_STATE", 0, glob.maxv_atom,glob.maxh_atom, 0, 0)
     client_msg(win,"_NET_ACTIVE_WINDOW", 0, 0, 0, 0, 0)
