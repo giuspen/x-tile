@@ -1057,7 +1057,7 @@ class XTile:
     def get_dest_ws(self):
         """Get Destination Desktop"""
         if self.glade.checkbutton_dest_workspace.get_active():
-            return int(self.glade.spinbutton_dest_workspace.get_value())
+            return int(self.glade.spinbutton_dest_workspace.get_value()-1)
         return -1
 
     def invert_tiling(self, *args):
