@@ -476,6 +476,8 @@ class XTile:
         else:
             self.systray_on = False
             self.ui.get_widget("/MenuBar/FileMenu/ExitApp").set_property('visible', False)
+        # exit after tile
+        self.glade.exit_after_tile_checkbutton.set_active(self.gconf_client.get_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index) == cons.STR_TRUE)
         # monitor 1 handling
         if self.gconf_client.get_int(cons.GCONF_OVERRIDE_1 % glob.screen_index) == 1:
             cons.OVERRIDE_1 = 1
@@ -601,18 +603,6 @@ class XTile:
             else: self.gconf_client.set_string(cons.GCONF_ONLY_CURR_DESK % glob.screen_index, cons.STR_TRUE)
             self.store.load_model(self)
 
-    def toggle_exit_after_tile_keyboard(self):
-        """Toggles the flag Exit After Tile Through Shortcut"""
-        if self.glade.configwindow.get_property("visible") == True:
-            support.dialog_warning(_("The used shortcut is not available when the Preferences Window is opened"), self.glade.window)
-        else: self.toggle_exit_after_tile()
-
-    def toggle_only_curr_workspace_keyboard(self):
-        """Toggles the flag Only Current Workspace Windows in List Through Shortcut"""
-        if self.glade.configwindow.get_property("visible") == True:
-            support.dialog_warning(_("The used shortcut is not available when the Preferences Window is opened"), self.glade.window)
-        else: self.toggle_only_curr_workspace()
-
     def is_window_visible(self):
         """Returns True if the window is visible, False otherwise"""
         return self.glade.window.get_property("visible")
@@ -644,7 +634,6 @@ class XTile:
         """Open the Config Window"""
         if self.glade.configwindow.get_property("visible") == True: return
         self.no_toggling_signals = True
-        self.glade.exit_after_tile_checkbutton.set_active(self.gconf_client.get_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index) == cons.STR_TRUE)
         self.glade.current_workspace_checkbutton.set_active(self.gconf_client.get_string(cons.GCONF_ONLY_CURR_DESK % glob.screen_index) == cons.STR_TRUE)
         self.glade.do_not_list_minimized_checkbutton.set_active(self.gconf_client.get_string(cons.GCONF_NOT_MINIMIZED % glob.screen_index) == cons.STR_TRUE)
         self.glade.checkbutton_systray_docking.set_active(self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) == cons.STR_TRUE)
@@ -909,6 +898,10 @@ class XTile:
         self.init_from_gconf()
         self.window_position_restore()
         self.glade.window.show_all()
+        if glob.is_compiz_running:
+            self.glade.checkbutton_dest_workspace.set_active(False)
+            self.glade.checkbutton_dest_workspace.hide()
+            self.glade.spinbutton_dest_workspace.hide()
         show_toolbar = self.gconf_client.get_string(cons.GCONF_SHOW_TOOLBAR % glob.screen_index)
         if show_toolbar == None: self.gconf_client.set_string(cons.GCONF_SHOW_TOOLBAR % glob.screen_index, cons.STR_TRUE)
         elif show_toolbar == cons.STR_FALSE: self.ui.get_widget("/ToolBar").hide()
