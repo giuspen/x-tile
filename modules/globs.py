@@ -127,6 +127,8 @@ class GlobalsObject(object):
         self.screen_index = support.get_root_screen_index()
         self.str2_atom = self.x11.XInternAtom(self.disp, "STRING", False)
         self.num_monitors = gtk.gdk.screen_get_default().get_n_monitors()
+        self.is_compiz_running = support.is_compiz_running()
+        self.desktop_width, self.desktop_height = support.get_desktop_width_n_height()
 
     def read_monitors_areas(self):
         """Read Monitor(s) Area(s)"""
