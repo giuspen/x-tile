@@ -63,7 +63,6 @@ class InfoModel:
             curr_workspace_num = -2
             print "DEBUG warning _NET_CURRENT_DESKTOP improperly set"
         else: curr_workspace_num = glob.ret_pointer[0] # the number of the current workspace
-        desktop_width, desktop_height = support.get_desktop_width_n_height()
         screen = gtk.gdk.screen_get_default()
         for client in clients:
             if support.is_window_sticky(client): continue
@@ -73,7 +72,7 @@ class InfoModel:
                 print "DEBUG warning _NET_WM_DESKTOP improperly set"
                 workspace_num = curr_workspace_num
             if self.gconf_client.get_string(cons.GCONF_ONLY_CURR_DESK % glob.screen_index) == cons.STR_TRUE\
-            and (workspace_num != curr_workspace_num or not support.is_window_in_curr_viewport(desktop_width, desktop_height, client)):
+            and (workspace_num != curr_workspace_num or not support.is_window_in_curr_viewport(glob.desktop_width, glob.desktop_height, client)):
                 continue
             if self.gconf_client.get_string(cons.GCONF_NOT_MINIMIZED % glob.screen_index) == cons.STR_TRUE\
             and support.is_window_hidden(client):
@@ -923,7 +922,6 @@ class XTile:
     def reload_windows_list(self, *args):
         """Reloads the Windows List"""
         self.store.load_model(self)
-        support.is_compiz_running()
 
     def close_checked_windows(self, *args):
         """Closes the Checked Windows"""
