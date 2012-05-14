@@ -7,7 +7,7 @@
 # Yan-ren Tsai <elleryq@gmail.com>, 2010, 2011, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: 2.0\n"
+"Project-Id-Version: 2.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-05-14 22:29+0200\n"
 "PO-Revision-Date: 2012-02-15 10:25+0800\n"
@@ -475,13 +475,12 @@ msgid "Tile All Windows Vertically"
 msgstr "垂直鋪排所有視窗"
 
 #: glade/x-tile.glade.h:2
-#, fuzzy
 msgid ""
 "Copyright © 2009-2012\n"
 "Giuseppe Penone <giuspen@gmail.com>\n"
 "Chris Camacho <chris_camacho@yahoo.com>"
 msgstr ""
-"Copyright © 2009-2011\n"
+"Copyright © 2009-2012\n"
 "Giuseppe Penone <giuspen@gmail.com>\n"
 "Chris Camacho <chris_camacho@yahoo.com>"
 
@@ -652,7 +651,7 @@ msgstr "X Tile"
 
 #: glade/x-tile.glade.h:59
 msgid "Set Destination Workspace"
-msgstr ""
+msgstr "設置目標工作區"
 
 #: glade/x-tile.glade.h:60
 msgid "Exit After Tile"
