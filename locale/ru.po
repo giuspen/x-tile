@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # maul <giuspen@gmail.com>, 2010.
 # Andriy Kovtun <kovtunos@yandex.ru>, 2010.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: X Tile\n"
@@ -18,6 +18,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Language: ru_RU\n"
+"X-Source-Language: C\n"
 
 #: modules/core.py:303
 msgid "Use Drag and Drop to Sort the Rows"
@@ -45,7 +47,7 @@ msgstr "Строки не выбраны"
 
 #: modules/core.py:712 modules/core.py:746
 msgid "No Application Selected!"
-msgstr "Приложения не выбраны"
+msgstr "Приложения не выбраны!"
 
 #: modules/core.py:826
 msgid "Grid Details"
@@ -480,13 +482,12 @@ msgid "Tile All Windows Vertically"
 msgstr "Разбить по вертикали"
 
 #: glade/x-tile.glade.h:2
-#, fuzzy
 msgid ""
 "Copyright © 2009-2012\n"
 "Giuseppe Penone <giuspen@gmail.com>\n"
 "Chris Camacho <chris_camacho@yahoo.com>"
 msgstr ""
-"Copyright © 2009-2011\n"
+"Copyright © 2009-2012\n"
 "Giuseppe Penone <giuspen@gmail.com>\n"
 "Chris Camacho <chris_camacho@yahoo.com>"
 
@@ -666,22 +667,8 @@ msgstr "X Tile"
 
 #: glade/x-tile.glade.h:59
 msgid "Set Destination Workspace"
-msgstr ""
+msgstr "Выбор рабочего стола"
 
 #: glade/x-tile.glade.h:60
 msgid "Exit After Tile"
 msgstr "Выйти после тайлинга"
-
-#~ msgid "ON"
-#~ msgstr "ВКЛ"
-
-#~ msgid "OFF"
-#~ msgstr "ВЫКЛ"
-
-#~ msgid "Version %s  -  Exit After Tile: %s"
-#~ msgstr "Версия %s  -  Выйти после тайлинга: %s"
-
-#~ msgid ""
-#~ "The used shortcut is not available when the Preferences Window is opened"
-#~ msgstr ""
-#~ "Используемая клавиатурная привязка недоступна, пока открыто окно настройки"
