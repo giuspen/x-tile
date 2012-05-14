@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: x-tile 1.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-14 18:02+0100\n"
+"POT-Creation-Date: 2012-05-14 22:29+0200\n"
 "PO-Revision-Date: 2010-06-04 09:01+0200\n"
 "Last-Translator: Jöran Zeller <joeran@zeller.ws>\n"
 "Language-Team: German\n"
@@ -17,75 +17,55 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: modules/core.py:304
+#: modules/core.py:303
 msgid "Use Drag and Drop to Sort the Rows"
 msgstr "Benutze Drag and Drop um Zeilen zu sortieren"
 
-#: modules/core.py:344
+#: modules/core.py:343
 msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr "Neue Spracheinstellung erst nach Neustart von X Tile verfügbar"
 
-#: modules/core.py:359 glade/x-tile.glade.h:53
+#: modules/core.py:358 glade/x-tile.glade.h:5
 msgid "Tile the Windows Upon your X Desktop"
 msgstr "Tile Fenster auf deinem X Desktop"
 
-#: modules/core.py:556
+#: modules/core.py:557
 msgid "The Size of the Toolbar Icons is already at the Maximum Value"
 msgstr "Werkzeugleisten Icons sind schon maximal"
 
-#: modules/core.py:566
+#: modules/core.py:567
 msgid "The Size of the Toolbar Icons is already at the Minimum Value"
 msgstr "Werkzeugleisten Icons sind schon minimal"
 
-#: modules/core.py:574
-msgid "ON"
-msgstr "AN"
-
-#: modules/core.py:574
-msgid "OFF"
-msgstr "AUS"
-
-#: modules/core.py:575
-#, python-format
-msgid "Version %s  -  Exit After Tile: %s"
-msgstr "Version %s  -  Schliessen nach Tiling: %s"
-
-#: modules/core.py:617 modules/core.py:623
-msgid ""
-"The used shortcut is not available when the Preferences Window is opened"
-msgstr ""
-"Das Tastaturkürzel ist nicht anwendbar solange das Einstellungsfenster offen "
-"ist"
-
-#: modules/core.py:695 modules/core.py:703 modules/core.py:711
+#: modules/core.py:674 modules/core.py:682 modules/core.py:690
 msgid "No Row is Selected"
 msgstr "Keine Zeile ausgewählt"
 
-#: modules/core.py:733 modules/core.py:767
+#: modules/core.py:712 modules/core.py:746
 msgid "No Application Selected!"
 msgstr "Keine Anwendung ausgewählt!"
 
-#: modules/core.py:847
+#: modules/core.py:826
 msgid "Grid Details"
 msgstr "Grid Details"
 
-#: modules/core.py:855
+#: modules/core.py:834
 msgid "Rows"
 msgstr "_Zeile"
 
-#: modules/core.py:862
+#: modules/core.py:841
 msgid "Columns"
 msgstr "Spalten"
 
-#: modules/core.py:940 modules/core.py:948 modules/core.py:958
+#: modules/core.py:922 modules/core.py:930 modules/core.py:940
 msgid "No Windows Checked"
 msgstr "Keine Fenster ausgewählt"
 
-#: modules/core.py:994 modules/core.py:1007
+#: modules/core.py:980 modules/core.py:993
 msgid "Edit Custom Tile Settings"
 msgstr "Persönliche Tiling Schema bearbeiten"
 
-#: modules/core.py:1123
+#: modules/core.py:1116
 msgid ""
 "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
 "Set'"
@@ -93,7 +73,7 @@ msgstr ""
 "Das persönliche tiling Schema (1) wurde noch nicht übernommen: Im Menü 'Tile-"
 ">Eigenes Schema (1) setzen anklicken'"
 
-#: modules/core.py:1141
+#: modules/core.py:1134
 msgid ""
 "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
 "Set'"
@@ -137,7 +117,7 @@ msgstr "Filtere Zeilen"
 msgid "Selected by _Default"
 msgstr "Immer selektiert"
 
-#: modules/cons.py:272 glade/x-tile.glade.h:49
+#: modules/cons.py:272 glade/x-tile.glade.h:57
 msgid "Rows to be Selected by Default"
 msgstr "Zeilen die immer selektiert sein sollen"
 
@@ -389,7 +369,7 @@ msgstr "X Tile Projekt Home Page"
 msgid "_About"
 msgstr "_Über"
 
-#: modules/cons.py:304 modules/cons.py:305 glade/x-tile.glade.h:21
+#: modules/cons.py:304 modules/cons.py:305 glade/x-tile.glade.h:1
 msgid "About X Tile"
 msgstr "Über X Tile"
 
@@ -497,7 +477,22 @@ msgstr "Tile _vertikal"
 msgid "Tile All Windows Vertically"
 msgstr "Tile alle Fenster vertikal"
 
-#: glade/x-tile.glade.h:1
+#: glade/x-tile.glade.h:2
+#, fuzzy
+msgid ""
+"Copyright © 2009-2012\n"
+"Giuseppe Penone <giuspen@gmail.com>\n"
+"Chris Camacho <chris_camacho@yahoo.com>"
+msgstr ""
+"Copyright © 2009-2011\n"
+"Giuseppe Penone <giuspen@gmail.com>\n"
+"Chris Camacho <chris_camacho@yahoo.com>"
+
+#: glade/x-tile.glade.h:6
+msgid "http://www.giuspen.com/x-tile/"
+msgstr "http://www.giuspen.com/x-tile/"
+
+#: glade/x-tile.glade.h:7
 msgid ""
 "\n"
 "This program is free software; you can redistribute it and/or modify\n"
@@ -531,152 +526,157 @@ msgstr ""
 "diesem Programm erhalten haben. Falls nicht, siehe\n"
 "<http://www.gnu.org/licenses/>."
 
-#: glade/x-tile.glade.h:16
+#: glade/x-tile.glade.h:22
+msgid ""
+"Chinese Simplified (zh_CN) Khiyuan Fan <Fan.Khiyuan@gmail.com>\n"
+"Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
+"Czech (cs) Pavel Fric <fripohled@blogspot.com\n"
+"Spanish (es_AR) MeloPixel <melopixel@gmail.com>\n"
+"French (fr) Ludovic Troisi <axalis@cegetel.net>\n"
+"German (de) Jöran Zeller <joeran@zeller.ws>\n"
+"Italian (it) Giuseppe Penone <giuspen@gmail.com>\n"
+"Russian (ru) Andriy Kovtun <kovtunos@yandex.ru>"
+msgstr ""
+"Chinese Simplified (zh_CN) Khiyuan Fan <Fan.Khiyuan@gmail.com>\n"
+"Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
+"Czech (cs) Pavel Fric <fripohled@blogspot.com\n"
+"Spanish (es_AR) MeloPixel <melopixel@gmail.com>\n"
+"French (fr) Ludovic Troisi <axalis@cegetel.net>\n"
+"German (de) Jöran Zeller <joeran@zeller.ws>\n"
+"Italian (it) Giuseppe Penone <giuspen@gmail.com>\n"
+"Russian (ru) Andriy Kovtun <kovtunos@yandex.ru>"
+
+#: glade/x-tile.glade.h:30
+msgid "Preferences"
+msgstr "Einstellungen"
+
+#: glade/x-tile.glade.h:31
 msgid " Language "
 msgstr " Sprache "
 
-#: glade/x-tile.glade.h:17
-msgid "1) Tile Some Windows Manually"
-msgstr "1) Tile bestimmte Fenster manuell"
-
-#: glade/x-tile.glade.h:18
-msgid "2) Select Them in the X Tile Windows List"
-msgstr "2) Wähle sie in der X Tile Fenster Liste aus"
-
-#: glade/x-tile.glade.h:19
-msgid "3) Click the Update Button"
-msgstr "3) Klicke auf den neuladen Knopf"
-
-#: glade/x-tile.glade.h:20
-msgid "<b>Custom Tiling Layout</b>"
-msgstr "<b>Persönliches Tiling Schema</b>"
-
-#: glade/x-tile.glade.h:22
-msgid "Add Row"
-msgstr "Zeile hinzufügen"
-
-#: glade/x-tile.glade.h:23
-msgid "Add an Application Filter"
-msgstr "Einen Anwendungsfilter hinzufügen"
-
-#: glade/x-tile.glade.h:24
-msgid "Cancel"
-msgstr "Abbrechen"
-
-#: glade/x-tile.glade.h:25
-msgid ""
-"Chinese Simplified (zh_CN) Khiyuan Fan <Fan.Khiyuan@gmail.com>\n"
-"Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
-"Czech (cs) Pavel Fric <fripohled@blogspot.com\n"
-"Spanish (es_AR) MeloPixel <melopixel@gmail.com>\n"
-"French (fr) Ludovic Troisi <axalis@cegetel.net>\n"
-"German (de) Jöran Zeller <joeran@zeller.ws>\n"
-"Italian (it) Giuseppe Penone <giuspen@gmail.com>\n"
-"Russian (ru) Andriy Kovtun <kovtunos@yandex.ru>"
-msgstr ""
-"Chinese Simplified (zh_CN) Khiyuan Fan <Fan.Khiyuan@gmail.com>\n"
-"Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
-"Czech (cs) Pavel Fric <fripohled@blogspot.com\n"
-"Spanish (es_AR) MeloPixel <melopixel@gmail.com>\n"
-"French (fr) Ludovic Troisi <axalis@cegetel.net>\n"
-"German (de) Jöran Zeller <joeran@zeller.ws>\n"
-"Italian (it) Giuseppe Penone <giuspen@gmail.com>\n"
-"Russian (ru) Andriy Kovtun <kovtunos@yandex.ru>"
-
-#: glade/x-tile.glade.h:33
-msgid "Close"
-msgstr "Schliessen"
-
-#: glade/x-tile.glade.h:34
-msgid ""
-"Copyright © 2009-2011\n"
-"Giuseppe Penone <giuspen@gmail.com>\n"
-"Chris Camacho <chris_camacho@yahoo.com>"
-msgstr ""
-"Copyright © 2009-2011\n"
-"Giuseppe Penone <giuspen@gmail.com>\n"
-"Chris Camacho <chris_camacho@yahoo.com>"
-
-#: glade/x-tile.glade.h:37
+#: glade/x-tile.glade.h:32
 msgid "Do Not List Minimized Windows"
 msgstr "Zeige keine minimierten Fenster an"
 
-#: glade/x-tile.glade.h:38
-msgid "Enable System Tray Docking"
-msgstr "Docken zu System Tray"
-
-#: glade/x-tile.glade.h:39
-msgid "Exit After Tile"
-msgstr "Schliessen nach tiling"
-
-#: glade/x-tile.glade.h:40
-msgid "Height"
-msgstr "Höhe"
-
-#: glade/x-tile.glade.h:41
-msgid "OK"
-msgstr "OK"
-
-#: glade/x-tile.glade.h:42
+#: glade/x-tile.glade.h:33
 msgid "Only Current Workspace"
 msgstr "Nur momentanen Arbeitsbereich"
 
-#: glade/x-tile.glade.h:43
+#: glade/x-tile.glade.h:34
+msgid "Enable System Tray Docking"
+msgstr "Docken zu System Tray"
+
+#: glade/x-tile.glade.h:35
+msgid "Start Minimized in the System Tray"
+msgstr "Starte minimiert im System Tray"
+
+#: glade/x-tile.glade.h:36
+msgid "Show Toolbar"
+msgstr "Zeige Werkzeugleiste"
+
+#: glade/x-tile.glade.h:37
 msgid "Override Monitor 1 Tiling Area"
 msgstr "Tiling Areal Monitor 1 überschreiben"
+
+#: glade/x-tile.glade.h:38
+msgid "X"
+msgstr "X"
+
+#: glade/x-tile.glade.h:39
+msgid "Y"
+msgstr "Y"
+
+#: glade/x-tile.glade.h:40
+msgid "Position"
+msgstr "Position"
+
+#: glade/x-tile.glade.h:41
+msgid "Width"
+msgstr "Breite"
+
+#: glade/x-tile.glade.h:42
+msgid "Height"
+msgstr "Höhe"
+
+#: glade/x-tile.glade.h:43
+msgid "Size"
+msgstr "Grösse"
 
 #: glade/x-tile.glade.h:44
 msgid "Override Monitor 2 Tiling Area"
 msgstr "Tiling Areal Monitor 2 überschreiben"
 
 #: glade/x-tile.glade.h:45
-msgid "Position"
-msgstr "Position"
+msgid "Close"
+msgstr "Schliessen"
 
 #: glade/x-tile.glade.h:46
-msgid "Preferences"
-msgstr "Einstellungen"
+msgid "Cancel"
+msgstr "Abbrechen"
 
 #: glade/x-tile.glade.h:47
-msgid "Remove an Application Filter"
-msgstr "Einen Anwendungsfilter entfernen"
+msgid "OK"
+msgstr "OK"
 
 #: glade/x-tile.glade.h:48
-msgid "Rows to Filter"
-msgstr "Filter hinzufügen"
+msgid "<b>Custom Tiling Layout</b>"
+msgstr "<b>Persönliches Tiling Schema</b>"
+
+#: glade/x-tile.glade.h:49
+msgid "1) Tile Some Windows Manually"
+msgstr "1) Tile bestimmte Fenster manuell"
 
 #: glade/x-tile.glade.h:50
-msgid "Show Toolbar"
-msgstr "Zeige Werkzeugleiste"
+msgid "2) Select Them in the X Tile Windows List"
+msgstr "2) Wähle sie in der X Tile Fenster Liste aus"
 
 #: glade/x-tile.glade.h:51
-msgid "Size"
-msgstr "Grösse"
+msgid "3) Click the Update Button"
+msgstr "3) Klicke auf den neuladen Knopf"
 
 #: glade/x-tile.glade.h:52
-msgid "Start Minimized in the System Tray"
-msgstr "Starte minimiert im System Tray"
-
-#: glade/x-tile.glade.h:54
 msgid "Update"
 msgstr "Update"
 
+#: glade/x-tile.glade.h:53
+msgid "Rows to Filter"
+msgstr "Filter hinzufügen"
+
+#: glade/x-tile.glade.h:54
+msgid "Add an Application Filter"
+msgstr "Einen Anwendungsfilter hinzufügen"
+
 #: glade/x-tile.glade.h:55
-msgid "Width"
-msgstr "Breite"
+msgid "Remove an Application Filter"
+msgstr "Einen Anwendungsfilter entfernen"
 
 #: glade/x-tile.glade.h:56
-msgid "X"
-msgstr "X"
+msgid "Add Row"
+msgstr "Zeile hinzufügen"
 
-#: glade/x-tile.glade.h:57
+#: glade/x-tile.glade.h:58
 msgid "X Tile"
 msgstr "X Tile"
 
-#: glade/x-tile.glade.h:58
-msgid "Y"
-msgstr "Y"
-
 #: glade/x-tile.glade.h:59
-msgid "http://www.giuspen.com/x-tile/"
-msgstr "http://www.giuspen.com/x-tile/"
+msgid "Set Destination Workspace"
+msgstr ""
+
+#: glade/x-tile.glade.h:60
+msgid "Exit After Tile"
+msgstr "Schliessen nach tiling"
+
+#~ msgid "ON"
+#~ msgstr "AN"
+
+#~ msgid "OFF"
+#~ msgstr "AUS"
+
+#~ msgid "Version %s  -  Exit After Tile: %s"
+#~ msgstr "Version %s  -  Schliessen nach Tiling: %s"
+
+#~ msgid ""
+#~ "The used shortcut is not available when the Preferences Window is opened"
+#~ msgstr ""
+#~ "Das Tastaturkürzel ist nicht anwendbar solange das Einstellungsfenster "
+#~ "offen ist"

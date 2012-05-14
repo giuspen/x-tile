@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-14 18:02+0100\n"
+"POT-Creation-Date: 2012-05-14 22:29+0200\n"
 "PO-Revision-Date: 2012-02-15 10:25+0800\n"
 "Last-Translator: Yan-ren Tsai <elleryq@gmail.com>\n"
 "Language-Team: zh_TW <elleryq@gmail.com>\n"
@@ -18,79 +18,61 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: modules/core.py:304
+#: modules/core.py:303
 msgid "Use Drag and Drop to Sort the Rows"
 msgstr "使用拖拉來排序列"
 
-#: modules/core.py:344
+#: modules/core.py:343
 msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr "新的語言在重新啟動 X Tile 後才會生效。"
 
-#: modules/core.py:359 glade/x-tile.glade.h:53
+#: modules/core.py:358 glade/x-tile.glade.h:5
 msgid "Tile the Windows Upon your X Desktop"
 msgstr "在你的X桌面上排列視窗"
 
-#: modules/core.py:556
+#: modules/core.py:557
 msgid "The Size of the Toolbar Icons is already at the Maximum Value"
 msgstr "工具列圖示的尺寸已經是最大的了。"
 
-#: modules/core.py:566
+#: modules/core.py:567
 msgid "The Size of the Toolbar Icons is already at the Minimum Value"
 msgstr "工具列圖示的尺寸已經是最小的了。"
 
-#: modules/core.py:574
-msgid "ON"
-msgstr "ON"
-
-#: modules/core.py:574
-msgid "OFF"
-msgstr "OFF"
-
-#: modules/core.py:575
-#, python-format
-msgid "Version %s  -  Exit After Tile: %s"
-msgstr "版本:%s  - 在鋪排後離開: %s"
-
-#: modules/core.py:617 modules/core.py:623
-msgid ""
-"The used shortcut is not available when the Preferences Window is opened"
-msgstr "當偏好設定視窗開啟時，使用的捷徑無效。"
-
-#: modules/core.py:695 modules/core.py:703 modules/core.py:711
+#: modules/core.py:674 modules/core.py:682 modules/core.py:690
 msgid "No Row is Selected"
 msgstr "沒有選定任何列"
 
-#: modules/core.py:733 modules/core.py:767
+#: modules/core.py:712 modules/core.py:746
 msgid "No Application Selected!"
 msgstr "沒有選擇任何應用程式!"
 
-#: modules/core.py:847
+#: modules/core.py:826
 msgid "Grid Details"
 msgstr "格框詳情"
 
-#: modules/core.py:855
+#: modules/core.py:834
 msgid "Rows"
 msgstr "列"
 
-#: modules/core.py:862
+#: modules/core.py:841
 msgid "Columns"
 msgstr "欄"
 
-#: modules/core.py:940 modules/core.py:948 modules/core.py:958
+#: modules/core.py:922 modules/core.py:930 modules/core.py:940
 msgid "No Windows Checked"
 msgstr "沒選擇視窗"
 
-#: modules/core.py:994 modules/core.py:1007
+#: modules/core.py:980 modules/core.py:993
 msgid "Edit Custom Tile Settings"
 msgstr "編輯自訂排列設定"
 
-#: modules/core.py:1123
+#: modules/core.py:1116
 msgid ""
 "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
 "Set'"
 msgstr "自訂排列1尚未設定：點擊選單項目 '排列->自訂排列1' 進行設定。"
 
-#: modules/core.py:1141
+#: modules/core.py:1134
 msgid ""
 "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
 "Set'"
@@ -132,7 +114,7 @@ msgstr "篩選列"
 msgid "Selected by _Default"
 msgstr "預設選定的"
 
-#: modules/cons.py:272 glade/x-tile.glade.h:49
+#: modules/cons.py:272 glade/x-tile.glade.h:57
 msgid "Rows to be Selected by Default"
 msgstr "預設選定的列"
 
@@ -384,7 +366,7 @@ msgstr "X Tile 專案首頁"
 msgid "_About"
 msgstr "關於 (_A)"
 
-#: modules/cons.py:304 modules/cons.py:305 glade/x-tile.glade.h:21
+#: modules/cons.py:304 modules/cons.py:305 glade/x-tile.glade.h:1
 msgid "About X Tile"
 msgstr "關於 X Tile"
 
@@ -492,7 +474,22 @@ msgstr "垂直鋪排全部視窗 (_V)"
 msgid "Tile All Windows Vertically"
 msgstr "垂直鋪排所有視窗"
 
-#: glade/x-tile.glade.h:1
+#: glade/x-tile.glade.h:2
+#, fuzzy
+msgid ""
+"Copyright © 2009-2012\n"
+"Giuseppe Penone <giuspen@gmail.com>\n"
+"Chris Camacho <chris_camacho@yahoo.com>"
+msgstr ""
+"Copyright © 2009-2011\n"
+"Giuseppe Penone <giuspen@gmail.com>\n"
+"Chris Camacho <chris_camacho@yahoo.com>"
+
+#: glade/x-tile.glade.h:6
+msgid "http://www.giuspen.com/x-tile/"
+msgstr "http://www.giuspen.com/x-tile/"
+
+#: glade/x-tile.glade.h:7
 msgid ""
 "\n"
 "This program is free software; you can redistribute it and/or modify\n"
@@ -521,39 +518,7 @@ msgstr ""
 "您應已收到附隨於本程式的 GNU 通用公共授權的副本；如無，請寫信至自由軟體基金"
 "會：51 Franklin Street, Fifth Floor, Boston, Ma 02110-1301, USA。"
 
-#: glade/x-tile.glade.h:16
-msgid " Language "
-msgstr "語言"
-
-#: glade/x-tile.glade.h:17
-msgid "1) Tile Some Windows Manually"
-msgstr "1) 手動鋪排某些視窗"
-
-#: glade/x-tile.glade.h:18
-msgid "2) Select Them in the X Tile Windows List"
-msgstr "2) 在 X Tile 視窗列表裡選擇視窗"
-
-#: glade/x-tile.glade.h:19
-msgid "3) Click the Update Button"
-msgstr "3) 點擊更新按鈕"
-
-#: glade/x-tile.glade.h:20
-msgid "<b>Custom Tiling Layout</b>"
-msgstr "<b>自訂鋪排版面</b>"
-
 #: glade/x-tile.glade.h:22
-msgid "Add Row"
-msgstr "增加列"
-
-#: glade/x-tile.glade.h:23
-msgid "Add an Application Filter"
-msgstr "增加應用程式篩選器"
-
-#: glade/x-tile.glade.h:24
-msgid "Cancel"
-msgstr "取消"
-
-#: glade/x-tile.glade.h:25
 msgid ""
 "Chinese Simplified (zh_CN) Khiyuan Fan <Fan.Khiyuan@gmail.com>\n"
 "Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
@@ -573,100 +538,135 @@ msgstr ""
 "義大利語 (it) Giuseppe Penone <giuspen@gmail.com>\n"
 "俄語 (ru) Andriy Kovtun <kovtunos@yandex.ru>"
 
-#: glade/x-tile.glade.h:33
-msgid "Close"
-msgstr "關閉"
+#: glade/x-tile.glade.h:30
+msgid "Preferences"
+msgstr "偏好設定"
 
-#: glade/x-tile.glade.h:34
-msgid ""
-"Copyright © 2009-2011\n"
-"Giuseppe Penone <giuspen@gmail.com>\n"
-"Chris Camacho <chris_camacho@yahoo.com>"
-msgstr ""
-"Copyright © 2009-2011\n"
-"Giuseppe Penone <giuspen@gmail.com>\n"
-"Chris Camacho <chris_camacho@yahoo.com>"
+#: glade/x-tile.glade.h:31
+msgid " Language "
+msgstr "語言"
 
-#: glade/x-tile.glade.h:37
+#: glade/x-tile.glade.h:32
 msgid "Do Not List Minimized Windows"
 msgstr "不要列出已經最小化的視窗"
 
-#: glade/x-tile.glade.h:38
-msgid "Enable System Tray Docking"
-msgstr "啟用系統匣停駐"
-
-#: glade/x-tile.glade.h:39
-msgid "Exit After Tile"
-msgstr "鋪排後離開"
-
-#: glade/x-tile.glade.h:40
-msgid "Height"
-msgstr "高"
-
-#: glade/x-tile.glade.h:41
-msgid "OK"
-msgstr "OK"
-
-#: glade/x-tile.glade.h:42
+#: glade/x-tile.glade.h:33
 msgid "Only Current Workspace"
 msgstr "只有目前工作區"
 
-#: glade/x-tile.glade.h:43
+#: glade/x-tile.glade.h:34
+msgid "Enable System Tray Docking"
+msgstr "啟用系統匣停駐"
+
+#: glade/x-tile.glade.h:35
+msgid "Start Minimized in the System Tray"
+msgstr "啟動時最小化到系統匣"
+
+#: glade/x-tile.glade.h:36
+msgid "Show Toolbar"
+msgstr "顯示工具列"
+
+#: glade/x-tile.glade.h:37
 msgid "Override Monitor 1 Tiling Area"
 msgstr "以下面設定取代第一個螢幕的鋪排區域"
+
+#: glade/x-tile.glade.h:38
+msgid "X"
+msgstr "X"
+
+#: glade/x-tile.glade.h:39
+msgid "Y"
+msgstr "Y"
+
+#: glade/x-tile.glade.h:40
+msgid "Position"
+msgstr "位置"
+
+#: glade/x-tile.glade.h:41
+msgid "Width"
+msgstr "寬"
+
+#: glade/x-tile.glade.h:42
+msgid "Height"
+msgstr "高"
+
+#: glade/x-tile.glade.h:43
+msgid "Size"
+msgstr "尺寸"
 
 #: glade/x-tile.glade.h:44
 msgid "Override Monitor 2 Tiling Area"
 msgstr "以下面設定取代第二個螢幕的鋪排區域"
 
 #: glade/x-tile.glade.h:45
-msgid "Position"
-msgstr "位置"
+msgid "Close"
+msgstr "關閉"
 
 #: glade/x-tile.glade.h:46
-msgid "Preferences"
-msgstr "偏好設定"
+msgid "Cancel"
+msgstr "取消"
 
 #: glade/x-tile.glade.h:47
-msgid "Remove an Application Filter"
-msgstr "移除應用程式篩選器"
+msgid "OK"
+msgstr "OK"
 
 #: glade/x-tile.glade.h:48
-msgid "Rows to Filter"
-msgstr "列轉篩選器"
+msgid "<b>Custom Tiling Layout</b>"
+msgstr "<b>自訂鋪排版面</b>"
+
+#: glade/x-tile.glade.h:49
+msgid "1) Tile Some Windows Manually"
+msgstr "1) 手動鋪排某些視窗"
 
 #: glade/x-tile.glade.h:50
-msgid "Show Toolbar"
-msgstr "顯示工具列"
+msgid "2) Select Them in the X Tile Windows List"
+msgstr "2) 在 X Tile 視窗列表裡選擇視窗"
 
 #: glade/x-tile.glade.h:51
-msgid "Size"
-msgstr "尺寸"
+msgid "3) Click the Update Button"
+msgstr "3) 點擊更新按鈕"
 
 #: glade/x-tile.glade.h:52
-msgid "Start Minimized in the System Tray"
-msgstr "啟動時最小化到系統匣"
-
-#: glade/x-tile.glade.h:54
 msgid "Update"
 msgstr "更新"
 
+#: glade/x-tile.glade.h:53
+msgid "Rows to Filter"
+msgstr "列轉篩選器"
+
+#: glade/x-tile.glade.h:54
+msgid "Add an Application Filter"
+msgstr "增加應用程式篩選器"
+
 #: glade/x-tile.glade.h:55
-msgid "Width"
-msgstr "寬"
+msgid "Remove an Application Filter"
+msgstr "移除應用程式篩選器"
 
 #: glade/x-tile.glade.h:56
-msgid "X"
-msgstr "X"
+msgid "Add Row"
+msgstr "增加列"
 
-#: glade/x-tile.glade.h:57
+#: glade/x-tile.glade.h:58
 msgid "X Tile"
 msgstr "X Tile"
 
-#: glade/x-tile.glade.h:58
-msgid "Y"
-msgstr "Y"
-
 #: glade/x-tile.glade.h:59
-msgid "http://www.giuspen.com/x-tile/"
-msgstr "http://www.giuspen.com/x-tile/"
+msgid "Set Destination Workspace"
+msgstr ""
+
+#: glade/x-tile.glade.h:60
+msgid "Exit After Tile"
+msgstr "鋪排後離開"
+
+#~ msgid "ON"
+#~ msgstr "ON"
+
+#~ msgid "OFF"
+#~ msgstr "OFF"
+
+#~ msgid "Version %s  -  Exit After Tile: %s"
+#~ msgstr "版本:%s  - 在鋪排後離開: %s"
+
+#~ msgid ""
+#~ "The used shortcut is not available when the Preferences Window is opened"
+#~ msgstr "當偏好設定視窗開啟時，使用的捷徑無效。"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: X Tile\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-14 18:02+0100\n"
+"POT-Creation-Date: 2012-05-14 22:29+0200\n"
 "PO-Revision-Date: 2011-07-03 10:59+0300\n"
 "Last-Translator: Andriy Kovtun <kovtunos@yandex.ru>\n"
 "Language-Team: Russian\n"
@@ -19,74 +19,55 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: modules/core.py:304
+#: modules/core.py:303
 msgid "Use Drag and Drop to Sort the Rows"
 msgstr "Используйте перетаскивания для сортировки"
 
-#: modules/core.py:344
+#: modules/core.py:343
 msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr "Новый язык будет доступен только после перезапуска X-Tile"
 
-#: modules/core.py:359 glade/x-tile.glade.h:53
+#: modules/core.py:358 glade/x-tile.glade.h:5
 msgid "Tile the Windows Upon your X Desktop"
 msgstr "Разбить окна на рабочем столе"
 
-#: modules/core.py:556
+#: modules/core.py:557
 msgid "The Size of the Toolbar Icons is already at the Maximum Value"
 msgstr "Размер иконок панели инструментов максимальный"
 
-#: modules/core.py:566
+#: modules/core.py:567
 msgid "The Size of the Toolbar Icons is already at the Minimum Value"
 msgstr "Размер иконок панели инструментов минимальный"
 
-#: modules/core.py:574
-msgid "ON"
-msgstr "ВКЛ"
-
-#: modules/core.py:574
-msgid "OFF"
-msgstr "ВЫКЛ"
-
-#: modules/core.py:575
-#, python-format
-msgid "Version %s  -  Exit After Tile: %s"
-msgstr "Версия %s  -  Выйти после тайлинга: %s"
-
-#: modules/core.py:617 modules/core.py:623
-msgid ""
-"The used shortcut is not available when the Preferences Window is opened"
-msgstr ""
-"Используемая клавиатурная привязка недоступна, пока открыто окно настройки"
-
-#: modules/core.py:695 modules/core.py:703 modules/core.py:711
+#: modules/core.py:674 modules/core.py:682 modules/core.py:690
 msgid "No Row is Selected"
 msgstr "Строки не выбраны"
 
-#: modules/core.py:733 modules/core.py:767
+#: modules/core.py:712 modules/core.py:746
 msgid "No Application Selected!"
 msgstr "Приложения не выбраны"
 
-#: modules/core.py:847
+#: modules/core.py:826
 msgid "Grid Details"
 msgstr "Настройки сетки"
 
-#: modules/core.py:855
+#: modules/core.py:834
 msgid "Rows"
 msgstr "Строки"
 
-#: modules/core.py:862
+#: modules/core.py:841
 msgid "Columns"
 msgstr "Столбцы"
 
-#: modules/core.py:940 modules/core.py:948 modules/core.py:958
+#: modules/core.py:922 modules/core.py:930 modules/core.py:940
 msgid "No Windows Checked"
 msgstr "Окна не выбраны"
 
-#: modules/core.py:994 modules/core.py:1007
+#: modules/core.py:980 modules/core.py:993
 msgid "Edit Custom Tile Settings"
 msgstr "Настроить пользовательскую схему"
 
-#: modules/core.py:1123
+#: modules/core.py:1116
 msgid ""
 "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
 "Set'"
@@ -94,7 +75,7 @@ msgstr ""
 "Пользовательская схема 1 не выставлена: Выберите ее в меню 'Разбиение-"
 ">Пользовательская схема 1'"
 
-#: modules/core.py:1141
+#: modules/core.py:1134
 msgid ""
 "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
 "Set'"
@@ -138,7 +119,7 @@ msgstr "Фильтровать строки"
 msgid "Selected by _Default"
 msgstr "Выбраны по умолчанию"
 
-#: modules/cons.py:272 glade/x-tile.glade.h:49
+#: modules/cons.py:272 glade/x-tile.glade.h:57
 msgid "Rows to be Selected by Default"
 msgstr "Строки выбраны по умолчанию"
 
@@ -390,7 +371,7 @@ msgstr "Домашняя страница проекта X Tile"
 msgid "_About"
 msgstr "О программе"
 
-#: modules/cons.py:304 modules/cons.py:305 glade/x-tile.glade.h:21
+#: modules/cons.py:304 modules/cons.py:305 glade/x-tile.glade.h:1
 msgid "About X Tile"
 msgstr "О программе X Tile"
 
@@ -498,7 +479,22 @@ msgstr "Разбить все по вертикали"
 msgid "Tile All Windows Vertically"
 msgstr "Разбить по вертикали"
 
-#: glade/x-tile.glade.h:1
+#: glade/x-tile.glade.h:2
+#, fuzzy
+msgid ""
+"Copyright © 2009-2012\n"
+"Giuseppe Penone <giuspen@gmail.com>\n"
+"Chris Camacho <chris_camacho@yahoo.com>"
+msgstr ""
+"Copyright © 2009-2011\n"
+"Giuseppe Penone <giuspen@gmail.com>\n"
+"Chris Camacho <chris_camacho@yahoo.com>"
+
+#: glade/x-tile.glade.h:6
+msgid "http://www.giuspen.com/x-tile/"
+msgstr "http://www.giuspen.com/x-tile/"
+
+#: glade/x-tile.glade.h:7
 msgid ""
 "\n"
 "This program is free software; you can redistribute it and/or modify\n"
@@ -536,39 +532,7 @@ msgstr ""
 "напишите в Фонд Свободного ПО (Free Software Foundation, Inc., \n"
 "675 Mass Ave, Cambridge, MA 02139, USA."
 
-#: glade/x-tile.glade.h:16
-msgid " Language "
-msgstr "Язык"
-
-#: glade/x-tile.glade.h:17
-msgid "1) Tile Some Windows Manually"
-msgstr "1) Разбить окна вручную"
-
-#: glade/x-tile.glade.h:18
-msgid "2) Select Them in the X Tile Windows List"
-msgstr "2) Выберите их из списка окон"
-
-#: glade/x-tile.glade.h:19
-msgid "3) Click the Update Button"
-msgstr "3) Нажмите кнопку 'Обновить'"
-
-#: glade/x-tile.glade.h:20
-msgid "<b>Custom Tiling Layout</b>"
-msgstr "<b>Пользовательская схема тайлинга</b>"
-
 #: glade/x-tile.glade.h:22
-msgid "Add Row"
-msgstr "Добавить строку"
-
-#: glade/x-tile.glade.h:23
-msgid "Add an Application Filter"
-msgstr "Добавить фильтр приложений"
-
-#: glade/x-tile.glade.h:24
-msgid "Cancel"
-msgstr "Отмена"
-
-#: glade/x-tile.glade.h:25
 msgid ""
 "Chinese Simplified (zh_CN) Khiyuan Fan <Fan.Khiyuan@gmail.com>\n"
 "Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
@@ -588,100 +552,136 @@ msgstr ""
 "Итальянский (it) Giuseppe Penone <giuspen@gmail.com>\n"
 "Русский (ru) Andriy Kovtun <kovtunos@yandex.ru>"
 
-#: glade/x-tile.glade.h:33
-msgid "Close"
-msgstr "Закрыть"
+#: glade/x-tile.glade.h:30
+msgid "Preferences"
+msgstr "Параметры"
 
-#: glade/x-tile.glade.h:34
-msgid ""
-"Copyright © 2009-2011\n"
-"Giuseppe Penone <giuspen@gmail.com>\n"
-"Chris Camacho <chris_camacho@yahoo.com>"
-msgstr ""
-"Copyright © 2009-2011\n"
-"Giuseppe Penone <giuspen@gmail.com>\n"
-"Chris Camacho <chris_camacho@yahoo.com>"
+#: glade/x-tile.glade.h:31
+msgid " Language "
+msgstr "Язык"
 
-#: glade/x-tile.glade.h:37
+#: glade/x-tile.glade.h:32
 msgid "Do Not List Minimized Windows"
 msgstr "Не включать минимизированные окна в список"
 
-#: glade/x-tile.glade.h:38
-msgid "Enable System Tray Docking"
-msgstr "Сворачивать в системный лоток"
-
-#: glade/x-tile.glade.h:39
-msgid "Exit After Tile"
-msgstr "Выйти после тайлинга"
-
-#: glade/x-tile.glade.h:40
-msgid "Height"
-msgstr "Высота"
-
-#: glade/x-tile.glade.h:41
-msgid "OK"
-msgstr "OK"
-
-#: glade/x-tile.glade.h:42
+#: glade/x-tile.glade.h:33
 msgid "Only Current Workspace"
 msgstr "Только текущий рабочий стол"
 
-#: glade/x-tile.glade.h:43
+#: glade/x-tile.glade.h:34
+msgid "Enable System Tray Docking"
+msgstr "Сворачивать в системный лоток"
+
+#: glade/x-tile.glade.h:35
+msgid "Start Minimized in the System Tray"
+msgstr "Свернуть в системный лоток при запуске"
+
+#: glade/x-tile.glade.h:36
+msgid "Show Toolbar"
+msgstr "Показывать панель инструментов"
+
+#: glade/x-tile.glade.h:37
 msgid "Override Monitor 1 Tiling Area"
 msgstr "Область тайлинга Монитора 1"
+
+#: glade/x-tile.glade.h:38
+msgid "X"
+msgstr "X"
+
+#: glade/x-tile.glade.h:39
+msgid "Y"
+msgstr "Y"
+
+#: glade/x-tile.glade.h:40
+msgid "Position"
+msgstr "Позиция"
+
+#: glade/x-tile.glade.h:41
+msgid "Width"
+msgstr "Ширина"
+
+#: glade/x-tile.glade.h:42
+msgid "Height"
+msgstr "Высота"
+
+#: glade/x-tile.glade.h:43
+msgid "Size"
+msgstr "Размер"
 
 #: glade/x-tile.glade.h:44
 msgid "Override Monitor 2 Tiling Area"
 msgstr "Область тайлинга Монитора 2"
 
 #: glade/x-tile.glade.h:45
-msgid "Position"
-msgstr "Позиция"
+msgid "Close"
+msgstr "Закрыть"
 
 #: glade/x-tile.glade.h:46
-msgid "Preferences"
-msgstr "Параметры"
+msgid "Cancel"
+msgstr "Отмена"
 
 #: glade/x-tile.glade.h:47
-msgid "Remove an Application Filter"
-msgstr "Убрать фильтр приложений"
+msgid "OK"
+msgstr "OK"
 
 #: glade/x-tile.glade.h:48
-msgid "Rows to Filter"
-msgstr "Применение фильтра ко всем строкам"
+msgid "<b>Custom Tiling Layout</b>"
+msgstr "<b>Пользовательская схема тайлинга</b>"
+
+#: glade/x-tile.glade.h:49
+msgid "1) Tile Some Windows Manually"
+msgstr "1) Разбить окна вручную"
 
 #: glade/x-tile.glade.h:50
-msgid "Show Toolbar"
-msgstr "Показывать панель инструментов"
+msgid "2) Select Them in the X Tile Windows List"
+msgstr "2) Выберите их из списка окон"
 
 #: glade/x-tile.glade.h:51
-msgid "Size"
-msgstr "Размер"
+msgid "3) Click the Update Button"
+msgstr "3) Нажмите кнопку 'Обновить'"
 
 #: glade/x-tile.glade.h:52
-msgid "Start Minimized in the System Tray"
-msgstr "Свернуть в системный лоток при запуске"
-
-#: glade/x-tile.glade.h:54
 msgid "Update"
 msgstr "Обновить"
 
+#: glade/x-tile.glade.h:53
+msgid "Rows to Filter"
+msgstr "Применение фильтра ко всем строкам"
+
+#: glade/x-tile.glade.h:54
+msgid "Add an Application Filter"
+msgstr "Добавить фильтр приложений"
+
 #: glade/x-tile.glade.h:55
-msgid "Width"
-msgstr "Ширина"
+msgid "Remove an Application Filter"
+msgstr "Убрать фильтр приложений"
 
 #: glade/x-tile.glade.h:56
-msgid "X"
-msgstr "X"
+msgid "Add Row"
+msgstr "Добавить строку"
 
-#: glade/x-tile.glade.h:57
+#: glade/x-tile.glade.h:58
 msgid "X Tile"
 msgstr "X Tile"
 
-#: glade/x-tile.glade.h:58
-msgid "Y"
-msgstr "Y"
-
 #: glade/x-tile.glade.h:59
-msgid "http://www.giuspen.com/x-tile/"
-msgstr "http://www.giuspen.com/x-tile/"
+msgid "Set Destination Workspace"
+msgstr ""
+
+#: glade/x-tile.glade.h:60
+msgid "Exit After Tile"
+msgstr "Выйти после тайлинга"
+
+#~ msgid "ON"
+#~ msgstr "ВКЛ"
+
+#~ msgid "OFF"
+#~ msgstr "ВЫКЛ"
+
+#~ msgid "Version %s  -  Exit After Tile: %s"
+#~ msgstr "Версия %s  -  Выйти после тайлинга: %s"
+
+#~ msgid ""
+#~ "The used shortcut is not available when the Preferences Window is opened"
+#~ msgstr ""
+#~ "Используемая клавиатурная привязка недоступна, пока открыто окно настройки"
