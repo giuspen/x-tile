@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-14 18:02+0100\n"
+"POT-Creation-Date: 2012-05-14 22:29+0200\n"
 "PO-Revision-Date: 2011-07-05 12:57-0300\n"
 "Last-Translator: MeloPixel <melopixel@gmail.com>\n"
 "Language-Team: Spanish <MeloPixel>\n"
@@ -20,79 +20,59 @@ msgstr ""
 "X-Poedit-Country: ARGENTINA\n"
 "X-Poedit-SourceCharset: utf-8\n"
 
-#: modules/core.py:304
+#: modules/core.py:303
 msgid "Use Drag and Drop to Sort the Rows"
 msgstr "Utilice Arrastrar y Soltar para ordenar las Filas"
 
-#: modules/core.py:344
+#: modules/core.py:343
 msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr "El nuevo idioma no estará disponible hasta que Reinicie X Tile"
 
-#: modules/core.py:359 glade/x-tile.glade.h:53
+#: modules/core.py:358 glade/x-tile.glade.h:5
 msgid "Tile the Windows Upon your X Desktop"
 msgstr "Mosaico de Windows Sobre su escritorio X"
 
-#: modules/core.py:556
+#: modules/core.py:557
 msgid "The Size of the Toolbar Icons is already at the Maximum Value"
 msgstr ""
 "El tamaño de los Iconos de la Barra de Herramientas ya está en su Valor "
 "Máximo"
 
-#: modules/core.py:566
+#: modules/core.py:567
 msgid "The Size of the Toolbar Icons is already at the Minimum Value"
 msgstr ""
 "El tamaño de los Iconos de la Barra de Herramientas ya está en su Valor "
 "Mínimo"
 
-#: modules/core.py:574
-msgid "ON"
-msgstr "Activado"
-
-#: modules/core.py:574
-msgid "OFF"
-msgstr "Desactivado"
-
-#: modules/core.py:575
-#, python-format
-msgid "Version %s  -  Exit After Tile: %s"
-msgstr "Versión %s  -  Salida después de Mosaico: %s"
-
-#: modules/core.py:617 modules/core.py:623
-msgid ""
-"The used shortcut is not available when the Preferences Window is opened"
-msgstr ""
-"El atajo utilizado no está disponible cuando la Ventana de Preferencias se "
-"abre"
-
-#: modules/core.py:695 modules/core.py:703 modules/core.py:711
+#: modules/core.py:674 modules/core.py:682 modules/core.py:690
 msgid "No Row is Selected"
 msgstr "No hay Filas Seleccionadas"
 
-#: modules/core.py:733 modules/core.py:767
+#: modules/core.py:712 modules/core.py:746
 msgid "No Application Selected!"
 msgstr "No hay ninguna Aplicación Seleccionada!"
 
-#: modules/core.py:847
+#: modules/core.py:826
 msgid "Grid Details"
 msgstr "Detallar Cuadricula"
 
-#: modules/core.py:855
+#: modules/core.py:834
 msgid "Rows"
 msgstr "Fila"
 
-#: modules/core.py:862
+#: modules/core.py:841
 msgid "Columns"
 msgstr "Columnas"
 
-#: modules/core.py:940 modules/core.py:948 modules/core.py:958
+#: modules/core.py:922 modules/core.py:930 modules/core.py:940
 msgid "No Windows Checked"
 msgstr "No hay Ventanas Seleccionadas"
 
-#: modules/core.py:994 modules/core.py:1007
+#: modules/core.py:980 modules/core.py:993
 msgid "Edit Custom Tile Settings"
 msgstr "Editar configuración Personalizada de Mosaico"
 
-#: modules/core.py:1123
+#: modules/core.py:1116
 msgid ""
 "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
 "Set'"
@@ -100,7 +80,7 @@ msgstr ""
 "El Mosaico Personalizado 1 No de ha establecido: Haz Clic en el Menú -> "
 "Mosaico Personalizado 1"
 
-#: modules/core.py:1141
+#: modules/core.py:1134
 msgid ""
 "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
 "Set'"
@@ -144,7 +124,7 @@ msgstr "Filtrar Filas"
 msgid "Selected by _Default"
 msgstr "Seleccionar por _Defecto"
 
-#: modules/cons.py:272 glade/x-tile.glade.h:49
+#: modules/cons.py:272 glade/x-tile.glade.h:57
 msgid "Rows to be Selected by Default"
 msgstr "Filas para seleccionar por defecto"
 
@@ -396,7 +376,7 @@ msgstr "Pagina del Proyecto X Tile"
 msgid "_About"
 msgstr "_Acerca de"
 
-#: modules/cons.py:304 modules/cons.py:305 glade/x-tile.glade.h:21
+#: modules/cons.py:304 modules/cons.py:305 glade/x-tile.glade.h:1
 msgid "About X Tile"
 msgstr "Acerca de X Tile"
 
@@ -504,7 +484,22 @@ msgstr "_Vertical"
 msgid "Tile All Windows Vertically"
 msgstr "Vertical"
 
-#: glade/x-tile.glade.h:1
+#: glade/x-tile.glade.h:2
+#, fuzzy
+msgid ""
+"Copyright © 2009-2012\n"
+"Giuseppe Penone <giuspen@gmail.com>\n"
+"Chris Camacho <chris_camacho@yahoo.com>"
+msgstr ""
+"Copyright © 2009-2011\n"
+"Giuseppe Penone <giuspen@gmail.com>\n"
+"Chris Camacho <chris_camacho@yahoo.com>"
+
+#: glade/x-tile.glade.h:6
+msgid "http://www.giuspen.com/x-tile/"
+msgstr "http://www.giuspen.com/x-tile/"
+
+#: glade/x-tile.glade.h:7
 msgid ""
 "\n"
 "This program is free software; you can redistribute it and/or modify\n"
@@ -538,39 +533,7 @@ msgstr ""
 "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, \n"
 "MA 02110-1301, EE.UU."
 
-#: glade/x-tile.glade.h:16
-msgid " Language "
-msgstr "Lenguaje"
-
-#: glade/x-tile.glade.h:17
-msgid "1) Tile Some Windows Manually"
-msgstr "1) Dimensionar las Ventanas Manualmente"
-
-#: glade/x-tile.glade.h:18
-msgid "2) Select Them in the X Tile Windows List"
-msgstr "2) Selecciona Las Ventanas Dimensionadas en X Tile"
-
-#: glade/x-tile.glade.h:19
-msgid "3) Click the Update Button"
-msgstr "3) Haz Clic en Actualizar"
-
-#: glade/x-tile.glade.h:20
-msgid "<b>Custom Tiling Layout</b>"
-msgstr "<b>Diseño Personalizado de Mosaico</b>"
-
 #: glade/x-tile.glade.h:22
-msgid "Add Row"
-msgstr "Agregar Fila"
-
-#: glade/x-tile.glade.h:23
-msgid "Add an Application Filter"
-msgstr "Agregar un Filtro de Aplicación"
-
-#: glade/x-tile.glade.h:24
-msgid "Cancel"
-msgstr "Cancelar"
-
-#: glade/x-tile.glade.h:25
 msgid ""
 "Chinese Simplified (zh_CN) Khiyuan Fan <Fan.Khiyuan@gmail.com>\n"
 "Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
@@ -590,100 +553,137 @@ msgstr ""
 "Italiano (it) Giuseppe Penone <giuspen@gmail.com>\n"
 "Russo (ru) Andriy Kovtun <kovtunos@yandex.ru>"
 
-#: glade/x-tile.glade.h:33
-msgid "Close"
-msgstr "Cerrar"
+#: glade/x-tile.glade.h:30
+msgid "Preferences"
+msgstr "Preferencias"
 
-#: glade/x-tile.glade.h:34
-msgid ""
-"Copyright © 2009-2011\n"
-"Giuseppe Penone <giuspen@gmail.com>\n"
-"Chris Camacho <chris_camacho@yahoo.com>"
-msgstr ""
-"Copyright © 2009-2011\n"
-"Giuseppe Penone <giuspen@gmail.com>\n"
-"Chris Camacho <chris_camacho@yahoo.com>"
+#: glade/x-tile.glade.h:31
+msgid " Language "
+msgstr "Lenguaje"
 
-#: glade/x-tile.glade.h:37
+#: glade/x-tile.glade.h:32
 msgid "Do Not List Minimized Windows"
 msgstr "No lista las ventanas Minimizadas"
 
-#: glade/x-tile.glade.h:38
-msgid "Enable System Tray Docking"
-msgstr "Habilitar el Sistema de acoplamiento de bandeja"
-
-#: glade/x-tile.glade.h:39
-msgid "Exit After Tile"
-msgstr "Salir Después de Mosaico"
-
-#: glade/x-tile.glade.h:40
-msgid "Height"
-msgstr "Altura"
-
-#: glade/x-tile.glade.h:41
-msgid "OK"
-msgstr "OK"
-
-#: glade/x-tile.glade.h:42
+#: glade/x-tile.glade.h:33
 msgid "Only Current Workspace"
 msgstr "Sólo en el actual Espacio de Trabajo"
 
-#: glade/x-tile.glade.h:43
+#: glade/x-tile.glade.h:34
+msgid "Enable System Tray Docking"
+msgstr "Habilitar el Sistema de acoplamiento de bandeja"
+
+#: glade/x-tile.glade.h:35
+msgid "Start Minimized in the System Tray"
+msgstr "Iniciar Minimizado en la Bandeja del Sistema"
+
+#: glade/x-tile.glade.h:36
+msgid "Show Toolbar"
+msgstr "Barra de Herramientas"
+
+#: glade/x-tile.glade.h:37
 msgid "Override Monitor 1 Tiling Area"
 msgstr "Área de monitor 1 Mosaico Personalizado"
+
+#: glade/x-tile.glade.h:38
+msgid "X"
+msgstr "X"
+
+#: glade/x-tile.glade.h:39
+msgid "Y"
+msgstr "Y"
+
+#: glade/x-tile.glade.h:40
+msgid "Position"
+msgstr "Posición"
+
+#: glade/x-tile.glade.h:41
+msgid "Width"
+msgstr "Ancho"
+
+#: glade/x-tile.glade.h:42
+msgid "Height"
+msgstr "Altura"
+
+#: glade/x-tile.glade.h:43
+msgid "Size"
+msgstr "Tamaño"
 
 #: glade/x-tile.glade.h:44
 msgid "Override Monitor 2 Tiling Area"
 msgstr "Área de monitor 2 Mosaico Personalizado"
 
 #: glade/x-tile.glade.h:45
-msgid "Position"
-msgstr "Posición"
+msgid "Close"
+msgstr "Cerrar"
 
 #: glade/x-tile.glade.h:46
-msgid "Preferences"
-msgstr "Preferencias"
+msgid "Cancel"
+msgstr "Cancelar"
 
 #: glade/x-tile.glade.h:47
-msgid "Remove an Application Filter"
-msgstr "Quitar un Filtro aplicado"
+msgid "OK"
+msgstr "OK"
 
 #: glade/x-tile.glade.h:48
-msgid "Rows to Filter"
-msgstr "Filtrar Filas"
+msgid "<b>Custom Tiling Layout</b>"
+msgstr "<b>Diseño Personalizado de Mosaico</b>"
+
+#: glade/x-tile.glade.h:49
+msgid "1) Tile Some Windows Manually"
+msgstr "1) Dimensionar las Ventanas Manualmente"
 
 #: glade/x-tile.glade.h:50
-msgid "Show Toolbar"
-msgstr "Barra de Herramientas"
+msgid "2) Select Them in the X Tile Windows List"
+msgstr "2) Selecciona Las Ventanas Dimensionadas en X Tile"
 
 #: glade/x-tile.glade.h:51
-msgid "Size"
-msgstr "Tamaño"
+msgid "3) Click the Update Button"
+msgstr "3) Haz Clic en Actualizar"
 
 #: glade/x-tile.glade.h:52
-msgid "Start Minimized in the System Tray"
-msgstr "Iniciar Minimizado en la Bandeja del Sistema"
-
-#: glade/x-tile.glade.h:54
 msgid "Update"
 msgstr "Actualizar"
 
+#: glade/x-tile.glade.h:53
+msgid "Rows to Filter"
+msgstr "Filtrar Filas"
+
+#: glade/x-tile.glade.h:54
+msgid "Add an Application Filter"
+msgstr "Agregar un Filtro de Aplicación"
+
 #: glade/x-tile.glade.h:55
-msgid "Width"
-msgstr "Ancho"
+msgid "Remove an Application Filter"
+msgstr "Quitar un Filtro aplicado"
 
 #: glade/x-tile.glade.h:56
-msgid "X"
-msgstr "X"
+msgid "Add Row"
+msgstr "Agregar Fila"
 
-#: glade/x-tile.glade.h:57
+#: glade/x-tile.glade.h:58
 msgid "X Tile"
 msgstr "X Tile"
 
-#: glade/x-tile.glade.h:58
-msgid "Y"
-msgstr "Y"
-
 #: glade/x-tile.glade.h:59
-msgid "http://www.giuspen.com/x-tile/"
-msgstr "http://www.giuspen.com/x-tile/"
+msgid "Set Destination Workspace"
+msgstr ""
+
+#: glade/x-tile.glade.h:60
+msgid "Exit After Tile"
+msgstr "Salir Después de Mosaico"
+
+#~ msgid "ON"
+#~ msgstr "Activado"
+
+#~ msgid "OFF"
+#~ msgstr "Desactivado"
+
+#~ msgid "Version %s  -  Exit After Tile: %s"
+#~ msgstr "Versión %s  -  Salida después de Mosaico: %s"
+
+#~ msgid ""
+#~ "The used shortcut is not available when the Preferences Window is opened"
+#~ msgstr ""
+#~ "El atajo utilizado no está disponible cuando la Ventana de Preferencias "
+#~ "se abre"

@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-14 18:02+0100\n"
-"PO-Revision-Date: 2010-02-17 21:30+0100\n"
-"Last-Translator: maul <giuspen@gmail.com>\n"
+"POT-Creation-Date: 2012-05-14 22:29+0200\n"
+"PO-Revision-Date: 2012-05-14 22:31+0100\n"
+"Last-Translator: Giuseppe Penone <giuspen@gmail.com>\n"
 "Language-Team: Italian\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -17,89 +17,68 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: modules/core.py:304
+#: modules/core.py:303
 msgid "Use Drag and Drop to Sort the Rows"
 msgstr "Usa il Drag and Drop per Ordinare le Righe"
 
-#: modules/core.py:344
+#: modules/core.py:343
 msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr "La Nuova Lingua Sara' Disponibile Solo Dopo Aver Riavviato X Tile"
 
-#: modules/core.py:359 glade/x-tile.glade.h:53
+#: modules/core.py:358
+#: glade/x-tile.glade.h:5
 msgid "Tile the Windows Upon your X Desktop"
 msgstr "Piastrella le finestre sul tuo Desktop X"
 
-#: modules/core.py:556
+#: modules/core.py:557
 msgid "The Size of the Toolbar Icons is already at the Maximum Value"
 msgstr "La Dimensione del Toolbar e' gia' al Massimo Valore"
 
-#: modules/core.py:566
+#: modules/core.py:567
 msgid "The Size of the Toolbar Icons is already at the Minimum Value"
 msgstr "La Dimensione del Toolbar e' gia' al Minimo Valore"
 
-#: modules/core.py:574
-msgid "ON"
-msgstr "ON"
-
-#: modules/core.py:574
-msgid "OFF"
-msgstr "OFF"
-
-#: modules/core.py:575
-#, python-format
-msgid "Version %s  -  Exit After Tile: %s"
-msgstr "Versione %s  -  Esci dopo Tiling: %s"
-
-#: modules/core.py:617 modules/core.py:623
-msgid ""
-"The used shortcut is not available when the Preferences Window is opened"
-msgstr ""
-"Lo shortcut utilizzato non e' disponibile quando la finestra delle "
-"Preferenze e' aperta"
-
-#: modules/core.py:695 modules/core.py:703 modules/core.py:711
+#: modules/core.py:674
+#: modules/core.py:682
+#: modules/core.py:690
 msgid "No Row is Selected"
 msgstr "Nessuna Riga e' Selezionata"
 
-#: modules/core.py:733 modules/core.py:767
+#: modules/core.py:712
+#: modules/core.py:746
 msgid "No Application Selected!"
 msgstr "Nessuna Applicazione e' Selezionata!"
 
-#: modules/core.py:847
+#: modules/core.py:826
 msgid "Grid Details"
 msgstr "Dettagli Griglia"
 
-#: modules/core.py:855
+#: modules/core.py:834
 msgid "Rows"
 msgstr "Righe"
 
-#: modules/core.py:862
+#: modules/core.py:841
 msgid "Columns"
 msgstr "Colonne"
 
-#: modules/core.py:940 modules/core.py:948 modules/core.py:958
+#: modules/core.py:922
+#: modules/core.py:930
+#: modules/core.py:940
 msgid "No Windows Checked"
 msgstr "Nessuna finestra e' Selezionata"
 
-#: modules/core.py:994 modules/core.py:1007
+#: modules/core.py:980
+#: modules/core.py:993
 msgid "Edit Custom Tile Settings"
 msgstr "Modifica Impostazioni Piastrellamento Personalizzato"
 
-#: modules/core.py:1123
-msgid ""
-"The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
-"Set'"
-msgstr ""
-"Il Piastrellamento Personalizzato 1 Non e' Ancora Stato Impostato: Clicca la "
-"Voce di Menu 'Piastrella->Imposta Piastrellamento Personalizzato 1'"
+#: modules/core.py:1116
+msgid "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 Set'"
+msgstr "Il Piastrellamento Personalizzato 1 Non e' Ancora Stato Impostato: Clicca la Voce di Menu 'Piastrella->Imposta Piastrellamento Personalizzato 1'"
 
-#: modules/core.py:1141
-msgid ""
-"The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
-"Set'"
-msgstr ""
-"Il Piastrellamento Personalizzato 2 Non e' Ancora Stato Impostato: Clicca la "
-"Voce di Menu 'Piastrella->Imposta Piastrellamento Personalizzato 2'"
+#: modules/core.py:1134
+msgid "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 Set'"
+msgstr "Il Piastrellamento Personalizzato 2 Non e' Ancora Stato Impostato: Clicca la Voce di Menu 'Piastrella->Imposta Piastrellamento Personalizzato 2'"
 
 #: modules/cons.py:264
 msgid "_File"
@@ -121,7 +100,8 @@ msgstr "_Piastrella"
 msgid "_View"
 msgstr "_Visualizza"
 
-#: modules/cons.py:269 modules/cons.py:303
+#: modules/cons.py:269
+#: modules/cons.py:303
 msgid "_Help"
 msgstr "_Aiuto"
 
@@ -137,7 +117,8 @@ msgstr "Filtra Righe"
 msgid "Selected by _Default"
 msgstr "Selezionate di _Default"
 
-#: modules/cons.py:272 glade/x-tile.glade.h:49
+#: modules/cons.py:272
+#: glade/x-tile.glade.h:57
 msgid "Rows to be Selected by Default"
 msgstr "Righe da Selezionare di Default"
 
@@ -293,19 +274,23 @@ msgstr "Esegui Piastrellamento Personalizzato _2"
 msgid "Execute Custom Tile 2"
 msgstr "Esegui Piastrellamento Personalizzato 2"
 
-#: modules/cons.py:292 modules/cons.py:320
+#: modules/cons.py:292
+#: modules/cons.py:320
 msgid "U_ndo Tiling"
 msgstr "_Annulla Piastrellamento"
 
-#: modules/cons.py:292 modules/cons.py:320
+#: modules/cons.py:292
+#: modules/cons.py:320
 msgid "Undo the Latest Tiling Operation"
 msgstr "Annulla l'Ultima Operazione di Piastrellamento"
 
-#: modules/cons.py:293 modules/cons.py:319
+#: modules/cons.py:293
+#: modules/cons.py:319
 msgid "_Invert Tiling Order"
 msgstr "_Inverti Ordine Piastrellamento"
 
-#: modules/cons.py:293 modules/cons.py:319
+#: modules/cons.py:293
+#: modules/cons.py:319
 msgid "Invert the Order of the Latest Tiling Operation"
 msgstr "Inverti l'Ordine dell' Ultima Operazione di Piastrellamento"
 
@@ -385,11 +370,14 @@ msgstr "Diminuisci la Dimensione delle Icone della Toolbar"
 msgid "X Tile Project Home Page"
 msgstr "Home Page del Progetto X Tile"
 
-#: modules/cons.py:304 modules/cons.py:305
+#: modules/cons.py:304
+#: modules/cons.py:305
 msgid "_About"
 msgstr "_Informazioni"
 
-#: modules/cons.py:304 modules/cons.py:305 glade/x-tile.glade.h:21
+#: modules/cons.py:304
+#: modules/cons.py:305
+#: glade/x-tile.glade.h:1
 msgid "About X Tile"
 msgstr "Informazioni su X Tile"
 
@@ -497,7 +485,21 @@ msgstr "Piastrella Tutte _Verticalmente"
 msgid "Tile All Windows Vertically"
 msgstr "Piastrella Tutte le Finestre Verticalmente"
 
-#: glade/x-tile.glade.h:1
+#: glade/x-tile.glade.h:2
+msgid ""
+"Copyright © 2009-2012\n"
+"Giuseppe Penone <giuspen@gmail.com>\n"
+"Chris Camacho <chris_camacho@yahoo.com>"
+msgstr ""
+"Copyright © 2009-2012\n"
+"Giuseppe Penone <giuspen@gmail.com>\n"
+"Chris Camacho <chris_camacho@yahoo.com>"
+
+#: glade/x-tile.glade.h:6
+msgid "http://www.giuspen.com/x-tile/"
+msgstr "http://www.giuspen.com/x-tile/"
+
+#: glade/x-tile.glade.h:7
 msgid ""
 "\n"
 "This program is free software; you can redistribute it and/or modify\n"
@@ -531,39 +533,7 @@ msgstr ""
 "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,\n"
 "MA 02110-1301, USA."
 
-#: glade/x-tile.glade.h:16
-msgid " Language "
-msgstr "Lingua"
-
-#: glade/x-tile.glade.h:17
-msgid "1) Tile Some Windows Manually"
-msgstr "1) Piastrella Alcune Finestre Manualmente"
-
-#: glade/x-tile.glade.h:18
-msgid "2) Select Them in the X Tile Windows List"
-msgstr "2) Selezionale nella Lista di Finestre di X Tile"
-
-#: glade/x-tile.glade.h:19
-msgid "3) Click the Update Button"
-msgstr "3) Clicca il il Bottone Aggiorna"
-
-#: glade/x-tile.glade.h:20
-msgid "<b>Custom Tiling Layout</b>"
-msgstr "<b>Disposizione Piastrellamento Personalizzato</b>"
-
 #: glade/x-tile.glade.h:22
-msgid "Add Row"
-msgstr "Aggiungi Riga"
-
-#: glade/x-tile.glade.h:23
-msgid "Add an Application Filter"
-msgstr "Aggiungi un Filtro ad Applicazione"
-
-#: glade/x-tile.glade.h:24
-msgid "Cancel"
-msgstr "Annulla"
-
-#: glade/x-tile.glade.h:25
 msgid ""
 "Chinese Simplified (zh_CN) Khiyuan Fan <Fan.Khiyuan@gmail.com>\n"
 "Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
@@ -583,100 +553,123 @@ msgstr ""
 "Italiano (it) Giuseppe Penone <giuspen@gmail.com>\n"
 "Russo (ru) Andriy Kovtun <kovtunos@yandex.ru>"
 
-#: glade/x-tile.glade.h:33
-msgid "Close"
-msgstr "Chiudi"
+#: glade/x-tile.glade.h:30
+msgid "Preferences"
+msgstr "Preferenze"
 
-#: glade/x-tile.glade.h:34
-msgid ""
-"Copyright © 2009-2011\n"
-"Giuseppe Penone <giuspen@gmail.com>\n"
-"Chris Camacho <chris_camacho@yahoo.com>"
-msgstr ""
-"Copyright © 2009-2011\n"
-"Giuseppe Penone <giuspen@gmail.com>\n"
-"Chris Camacho <chris_camacho@yahoo.com>"
+#: glade/x-tile.glade.h:31
+msgid " Language "
+msgstr "Lingua"
 
-#: glade/x-tile.glade.h:37
+#: glade/x-tile.glade.h:32
 msgid "Do Not List Minimized Windows"
 msgstr "Non Elencare Finestre Minimizzate"
 
-#: glade/x-tile.glade.h:38
-msgid "Enable System Tray Docking"
-msgstr "Abilita l'Ancoraggio a System Tray"
-
-#: glade/x-tile.glade.h:39
-msgid "Exit After Tile"
-msgstr "Esci Dopo il Tiling"
-
-#: glade/x-tile.glade.h:40
-msgid "Height"
-msgstr "Altezza"
-
-#: glade/x-tile.glade.h:41
-msgid "OK"
-msgstr "OK"
-
-#: glade/x-tile.glade.h:42
+#: glade/x-tile.glade.h:33
 msgid "Only Current Workspace"
 msgstr "Solo il Workspace Corrente"
 
-#: glade/x-tile.glade.h:43
+#: glade/x-tile.glade.h:34
+msgid "Enable System Tray Docking"
+msgstr "Abilita l'Ancoraggio a System Tray"
+
+#: glade/x-tile.glade.h:35
+msgid "Start Minimized in the System Tray"
+msgstr "Avvia Minimizzato su System Tray"
+
+#: glade/x-tile.glade.h:36
+msgid "Show Toolbar"
+msgstr "Mostra Toolbar"
+
+#: glade/x-tile.glade.h:37
 msgid "Override Monitor 1 Tiling Area"
 msgstr "Area di Tiling del Monitor 1 Personalizzata"
+
+#: glade/x-tile.glade.h:38
+msgid "X"
+msgstr "X"
+
+#: glade/x-tile.glade.h:39
+msgid "Y"
+msgstr "Y"
+
+#: glade/x-tile.glade.h:40
+msgid "Position"
+msgstr "Posizione"
+
+#: glade/x-tile.glade.h:41
+msgid "Width"
+msgstr "Larghezza"
+
+#: glade/x-tile.glade.h:42
+msgid "Height"
+msgstr "Altezza"
+
+#: glade/x-tile.glade.h:43
+msgid "Size"
+msgstr "Dimensione"
 
 #: glade/x-tile.glade.h:44
 msgid "Override Monitor 2 Tiling Area"
 msgstr "Area di Tiling del Monitor 2 Personalizzata"
 
 #: glade/x-tile.glade.h:45
-msgid "Position"
-msgstr "Posizione"
+msgid "Close"
+msgstr "Chiudi"
 
 #: glade/x-tile.glade.h:46
-msgid "Preferences"
-msgstr "Preferenze"
+msgid "Cancel"
+msgstr "Annulla"
 
 #: glade/x-tile.glade.h:47
-msgid "Remove an Application Filter"
-msgstr "Rimuovi un Filtro Applicazione"
+msgid "OK"
+msgstr "OK"
 
 #: glade/x-tile.glade.h:48
-msgid "Rows to Filter"
-msgstr "Righe da Filtrare"
+msgid "<b>Custom Tiling Layout</b>"
+msgstr "<b>Disposizione Piastrellamento Personalizzato</b>"
+
+#: glade/x-tile.glade.h:49
+msgid "1) Tile Some Windows Manually"
+msgstr "1) Piastrella Alcune Finestre Manualmente"
 
 #: glade/x-tile.glade.h:50
-msgid "Show Toolbar"
-msgstr "Mostra Toolbar"
+msgid "2) Select Them in the X Tile Windows List"
+msgstr "2) Selezionale nella Lista di Finestre di X Tile"
 
 #: glade/x-tile.glade.h:51
-msgid "Size"
-msgstr "Dimensione"
+msgid "3) Click the Update Button"
+msgstr "3) Clicca il il Bottone Aggiorna"
 
 #: glade/x-tile.glade.h:52
-msgid "Start Minimized in the System Tray"
-msgstr "Avvia Minimizzato su System Tray"
-
-#: glade/x-tile.glade.h:54
 msgid "Update"
 msgstr "Aggiorna"
 
+#: glade/x-tile.glade.h:53
+msgid "Rows to Filter"
+msgstr "Righe da Filtrare"
+
+#: glade/x-tile.glade.h:54
+msgid "Add an Application Filter"
+msgstr "Aggiungi un Filtro ad Applicazione"
+
 #: glade/x-tile.glade.h:55
-msgid "Width"
-msgstr "Larghezza"
+msgid "Remove an Application Filter"
+msgstr "Rimuovi un Filtro Applicazione"
 
 #: glade/x-tile.glade.h:56
-msgid "X"
-msgstr "X"
+msgid "Add Row"
+msgstr "Aggiungi Riga"
 
-#: glade/x-tile.glade.h:57
+#: glade/x-tile.glade.h:58
 msgid "X Tile"
 msgstr "X Tile"
 
-#: glade/x-tile.glade.h:58
-msgid "Y"
-msgstr "Y"
-
 #: glade/x-tile.glade.h:59
-msgid "http://www.giuspen.com/x-tile/"
-msgstr "http://www.giuspen.com/x-tile/"
+msgid "Set Destination Workspace"
+msgstr "Spazio di Lavoro Destinatario"
+
+#: glade/x-tile.glade.h:60
+msgid "Exit After Tile"
+msgstr "Esci Dopo il Tiling"
+

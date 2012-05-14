@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: x-tile 1.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-14 18:02+0100\n"
+"POT-Creation-Date: 2012-05-14 22:29+0200\n"
 "PO-Revision-Date: 2012-02-13 19:48+0100\n"
 "Last-Translator: Pavel Fric <pavelfric@seznam.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -19,74 +19,55 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 1.2\n"
 
-#: modules/core.py:304
+#: modules/core.py:303
 msgid "Use Drag and Drop to Sort the Rows"
 msgstr "Pro roztřídění řádků položku přetáhněte a upusťte"
 
-#: modules/core.py:344
+#: modules/core.py:343
 msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr "Nové jazykové nastavení bude dostupné až po novém spuštění X Tile"
 
-#: modules/core.py:359 glade/x-tile.glade.h:53
+#: modules/core.py:358 glade/x-tile.glade.h:5
 msgid "Tile the Windows Upon your X Desktop"
 msgstr "Vydlážděte okna na vaší ploše X"
 
-#: modules/core.py:556
+#: modules/core.py:557
 msgid "The Size of the Toolbar Icons is already at the Maximum Value"
 msgstr "Ikony v nástrojovém pruhu jsou již tak velké, jak jen je to možné"
 
-#: modules/core.py:566
+#: modules/core.py:567
 msgid "The Size of the Toolbar Icons is already at the Minimum Value"
 msgstr "Ikony v nástrojovém pruhu jsou již tak malé, jak jen je to možné"
 
-#: modules/core.py:574
-msgid "ON"
-msgstr "Zapnuto"
-
-#: modules/core.py:574
-msgid "OFF"
-msgstr "Vypnuto"
-
-#: modules/core.py:575
-#, python-format
-msgid "Version %s  -  Exit After Tile: %s"
-msgstr "Verze %s  -  Zavřít po vydláždění: %s"
-
-#: modules/core.py:617 modules/core.py:623
-msgid ""
-"The used shortcut is not available when the Preferences Window is opened"
-msgstr ""
-"Použitá klávesová zkratka není dostupná, dokud je otevřeno okno s nastavením"
-
-#: modules/core.py:695 modules/core.py:703 modules/core.py:711
+#: modules/core.py:674 modules/core.py:682 modules/core.py:690
 msgid "No Row is Selected"
 msgstr "Není vybrán žádný řádek"
 
-#: modules/core.py:733 modules/core.py:767
+#: modules/core.py:712 modules/core.py:746
 msgid "No Application Selected!"
 msgstr "Není vybrán žádný program!"
 
-#: modules/core.py:847
+#: modules/core.py:826
 msgid "Grid Details"
 msgstr "Podrobnosti k mřížce"
 
-#: modules/core.py:855
+#: modules/core.py:834
 msgid "Rows"
 msgstr "Řádky"
 
-#: modules/core.py:862
+#: modules/core.py:841
 msgid "Columns"
 msgstr "Sloupce"
 
-#: modules/core.py:940 modules/core.py:948 modules/core.py:958
+#: modules/core.py:922 modules/core.py:930 modules/core.py:940
 msgid "No Windows Checked"
 msgstr "Není vybráno žádné okno"
 
-#: modules/core.py:994 modules/core.py:1007
+#: modules/core.py:980 modules/core.py:993
 msgid "Edit Custom Tile Settings"
 msgstr "Upravit vlastní nastavení dláždění"
 
-#: modules/core.py:1123
+#: modules/core.py:1116
 msgid ""
 "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
 "Set'"
@@ -94,7 +75,7 @@ msgstr ""
 "Vlastní nastavení dláždění (1) ještě nebylo převzato: Klepněte v nabídce na "
 "'Dlaždice->Vlastní nastavení dláždění (1)'"
 
-#: modules/core.py:1141
+#: modules/core.py:1134
 msgid ""
 "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
 "Set'"
@@ -138,7 +119,7 @@ msgstr "Filtrovat řádky"
 msgid "Selected by _Default"
 msgstr "Vybráno vždy"
 
-#: modules/cons.py:272 glade/x-tile.glade.h:49
+#: modules/cons.py:272 glade/x-tile.glade.h:57
 msgid "Rows to be Selected by Default"
 msgstr "Řádky, které mají být vybrány vždy"
 
@@ -390,7 +371,7 @@ msgstr "Stránky projektu X Tile"
 msgid "_About"
 msgstr "_O programu"
 
-#: modules/cons.py:304 modules/cons.py:305 glade/x-tile.glade.h:21
+#: modules/cons.py:304 modules/cons.py:305 glade/x-tile.glade.h:1
 msgid "About X Tile"
 msgstr "O X Tile"
 
@@ -498,7 +479,22 @@ msgstr "Vydláždit vše _svisle"
 msgid "Tile All Windows Vertically"
 msgstr "Vydláždit všechna okna svisle"
 
-#: glade/x-tile.glade.h:1
+#: glade/x-tile.glade.h:2
+#, fuzzy
+msgid ""
+"Copyright © 2009-2012\n"
+"Giuseppe Penone <giuspen@gmail.com>\n"
+"Chris Camacho <chris_camacho@yahoo.com>"
+msgstr ""
+"Copyright © 2009-2011\n"
+"Giuseppe Penone <giuspen@gmail.com>\n"
+"Chris Camacho <chris_camacho@yahoo.com>"
+
+#: glade/x-tile.glade.h:6
+msgid "http://www.giuspen.com/x-tile/"
+msgstr "http://www.giuspen.com/x-tile/"
+
+#: glade/x-tile.glade.h:7
 msgid ""
 "\n"
 "This program is free software; you can redistribute it and/or modify\n"
@@ -536,39 +532,7 @@ msgstr ""
 "St, \n"
 "Fifth Floor, Boston, MA 02110-1301, USA."
 
-#: glade/x-tile.glade.h:16
-msgid " Language "
-msgstr " Jazyk "
-
-#: glade/x-tile.glade.h:17
-msgid "1) Tile Some Windows Manually"
-msgstr "1) Vydlážděte určitá okna ručně"
-
-#: glade/x-tile.glade.h:18
-msgid "2) Select Them in the X Tile Windows List"
-msgstr "2) Vyberte je v seznamu oken X Tile"
-
-#: glade/x-tile.glade.h:19
-msgid "3) Click the Update Button"
-msgstr "3) Kliepněte na tlačítko Nahrát znovu"
-
-#: glade/x-tile.glade.h:20
-msgid "<b>Custom Tiling Layout</b>"
-msgstr "<b>Vlastní rozvržení dláždění</b>"
-
 #: glade/x-tile.glade.h:22
-msgid "Add Row"
-msgstr "Přidat řádek"
-
-#: glade/x-tile.glade.h:23
-msgid "Add an Application Filter"
-msgstr "Přidat programový filtr"
-
-#: glade/x-tile.glade.h:24
-msgid "Cancel"
-msgstr "Zrušit"
-
-#: glade/x-tile.glade.h:25
 msgid ""
 "Chinese Simplified (zh_CN) Khiyuan Fan <Fan.Khiyuan@gmail.com>\n"
 "Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
@@ -588,100 +552,137 @@ msgstr ""
 "Italian (it) Giuseppe Penone <giuspen@gmail.com>\n"
 "Russian (ru) Andriy Kovtun <kovtunos@yandex.ru>"
 
-#: glade/x-tile.glade.h:33
-msgid "Close"
-msgstr "Zavřít"
+#: glade/x-tile.glade.h:30
+msgid "Preferences"
+msgstr "Nastavení"
 
-#: glade/x-tile.glade.h:34
-msgid ""
-"Copyright © 2009-2011\n"
-"Giuseppe Penone <giuspen@gmail.com>\n"
-"Chris Camacho <chris_camacho@yahoo.com>"
-msgstr ""
-"Copyright © 2009-2011\n"
-"Giuseppe Penone <giuspen@gmail.com>\n"
-"Chris Camacho <chris_camacho@yahoo.com>"
+#: glade/x-tile.glade.h:31
+msgid " Language "
+msgstr " Jazyk "
 
-#: glade/x-tile.glade.h:37
+#: glade/x-tile.glade.h:32
 msgid "Do Not List Minimized Windows"
 msgstr "Neukazovat žádná zmenšená okna"
 
-#: glade/x-tile.glade.h:38
-msgid "Enable System Tray Docking"
-msgstr "Povolit ikonu v oznamovací oblasti panelu"
-
-#: glade/x-tile.glade.h:39
-msgid "Exit After Tile"
-msgstr "Ukončit po vydláždění"
-
-#: glade/x-tile.glade.h:40
-msgid "Height"
-msgstr "Výška"
-
-#: glade/x-tile.glade.h:41
-msgid "OK"
-msgstr "OK"
-
-#: glade/x-tile.glade.h:42
+#: glade/x-tile.glade.h:33
 msgid "Only Current Workspace"
 msgstr "Jen současná pracovní oblast"
 
-#: glade/x-tile.glade.h:43
+#: glade/x-tile.glade.h:34
+msgid "Enable System Tray Docking"
+msgstr "Povolit ikonu v oznamovací oblasti panelu"
+
+#: glade/x-tile.glade.h:35
+msgid "Start Minimized in the System Tray"
+msgstr "Spustit zmenšené v oznamovací oblasti panelu"
+
+#: glade/x-tile.glade.h:36
+msgid "Show Toolbar"
+msgstr "Ukázat nástrojový pruh"
+
+#: glade/x-tile.glade.h:37
 msgid "Override Monitor 1 Tiling Area"
 msgstr "Přepsat oblast dláždění obrazovka 1"
+
+#: glade/x-tile.glade.h:38
+msgid "X"
+msgstr "X"
+
+#: glade/x-tile.glade.h:39
+msgid "Y"
+msgstr "Y"
+
+#: glade/x-tile.glade.h:40
+msgid "Position"
+msgstr "Poloha"
+
+#: glade/x-tile.glade.h:41
+msgid "Width"
+msgstr "Šířka"
+
+#: glade/x-tile.glade.h:42
+msgid "Height"
+msgstr "Výška"
+
+#: glade/x-tile.glade.h:43
+msgid "Size"
+msgstr "Velikost"
 
 #: glade/x-tile.glade.h:44
 msgid "Override Monitor 2 Tiling Area"
 msgstr "Přepsat oblast dláždění obrazovka 2"
 
 #: glade/x-tile.glade.h:45
-msgid "Position"
-msgstr "Poloha"
+msgid "Close"
+msgstr "Zavřít"
 
 #: glade/x-tile.glade.h:46
-msgid "Preferences"
-msgstr "Nastavení"
+msgid "Cancel"
+msgstr "Zrušit"
 
 #: glade/x-tile.glade.h:47
-msgid "Remove an Application Filter"
-msgstr "Odstranit programový filtr"
+msgid "OK"
+msgstr "OK"
 
 #: glade/x-tile.glade.h:48
-msgid "Rows to Filter"
-msgstr "Přidat filtr"
+msgid "<b>Custom Tiling Layout</b>"
+msgstr "<b>Vlastní rozvržení dláždění</b>"
+
+#: glade/x-tile.glade.h:49
+msgid "1) Tile Some Windows Manually"
+msgstr "1) Vydlážděte určitá okna ručně"
 
 #: glade/x-tile.glade.h:50
-msgid "Show Toolbar"
-msgstr "Ukázat nástrojový pruh"
+msgid "2) Select Them in the X Tile Windows List"
+msgstr "2) Vyberte je v seznamu oken X Tile"
 
 #: glade/x-tile.glade.h:51
-msgid "Size"
-msgstr "Velikost"
+msgid "3) Click the Update Button"
+msgstr "3) Kliepněte na tlačítko Nahrát znovu"
 
 #: glade/x-tile.glade.h:52
-msgid "Start Minimized in the System Tray"
-msgstr "Spustit zmenšené v oznamovací oblasti panelu"
-
-#: glade/x-tile.glade.h:54
 msgid "Update"
 msgstr "Aktualizovat"
 
+#: glade/x-tile.glade.h:53
+msgid "Rows to Filter"
+msgstr "Přidat filtr"
+
+#: glade/x-tile.glade.h:54
+msgid "Add an Application Filter"
+msgstr "Přidat programový filtr"
+
 #: glade/x-tile.glade.h:55
-msgid "Width"
-msgstr "Šířka"
+msgid "Remove an Application Filter"
+msgstr "Odstranit programový filtr"
 
 #: glade/x-tile.glade.h:56
-msgid "X"
-msgstr "X"
+msgid "Add Row"
+msgstr "Přidat řádek"
 
-#: glade/x-tile.glade.h:57
+#: glade/x-tile.glade.h:58
 msgid "X Tile"
 msgstr "X Tile"
 
-#: glade/x-tile.glade.h:58
-msgid "Y"
-msgstr "Y"
-
 #: glade/x-tile.glade.h:59
-msgid "http://www.giuspen.com/x-tile/"
-msgstr "http://www.giuspen.com/x-tile/"
+msgid "Set Destination Workspace"
+msgstr ""
+
+#: glade/x-tile.glade.h:60
+msgid "Exit After Tile"
+msgstr "Ukončit po vydláždění"
+
+#~ msgid "ON"
+#~ msgstr "Zapnuto"
+
+#~ msgid "OFF"
+#~ msgstr "Vypnuto"
+
+#~ msgid "Version %s  -  Exit After Tile: %s"
+#~ msgstr "Verze %s  -  Zavřít po vydláždění: %s"
+
+#~ msgid ""
+#~ "The used shortcut is not available when the Preferences Window is opened"
+#~ msgstr ""
+#~ "Použitá klávesová zkratka není dostupná, dokud je otevřeno okno s "
+#~ "nastavením"
