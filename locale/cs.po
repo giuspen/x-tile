@@ -671,17 +671,3 @@ msgstr "Nastavit cílovou pracovní oblast"
 msgid "Exit After Tile"
 msgstr "Ukončit po vydláždění"
 
-#~ msgid "ON"
-#~ msgstr "Zapnuto"
-
-#~ msgid "OFF"
-#~ msgstr "Vypnuto"
-
-#~ msgid "Version %s  -  Exit After Tile: %s"
-#~ msgstr "Verze %s  -  Zavřít po vydláždění: %s"
-
-#~ msgid ""
-#~ "The used shortcut is not available when the Preferences Window is opened"
-#~ msgstr ""
-#~ "Použitá klávesová zkratka není dostupná, dokud je otevřeno okno s "
-#~ "nastavením"

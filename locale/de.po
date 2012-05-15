@@ -2,13 +2,13 @@
 # Copyright (C) 2010 THE x-tile'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the x-tile package.
 # maul <giuspen@gmail.com>, 2010.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: x-tile 1.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-05-14 22:29+0200\n"
-"PO-Revision-Date: 2010-06-04 09:01+0200\n"
+"PO-Revision-Date: 2012-05-15 20:55+0100\n"
 "Last-Translator: Jöran Zeller <joeran@zeller.ws>\n"
 "Language-Team: German\n"
 "Language: German (Deutsch)\n"
@@ -478,13 +478,12 @@ msgid "Tile All Windows Vertically"
 msgstr "Tile alle Fenster vertikal"
 
 #: glade/x-tile.glade.h:2
-#, fuzzy
 msgid ""
 "Copyright © 2009-2012\n"
 "Giuseppe Penone <giuspen@gmail.com>\n"
 "Chris Camacho <chris_camacho@yahoo.com>"
 msgstr ""
-"Copyright © 2009-2011\n"
+"Copyright © 2009-2012\n"
 "Giuseppe Penone <giuspen@gmail.com>\n"
 "Chris Camacho <chris_camacho@yahoo.com>"
 
@@ -660,23 +659,8 @@ msgstr "X Tile"
 
 #: glade/x-tile.glade.h:59
 msgid "Set Destination Workspace"
-msgstr ""
+msgstr "Setze Ziel Arbeitsfläche"
 
 #: glade/x-tile.glade.h:60
 msgid "Exit After Tile"
 msgstr "Schliessen nach tiling"
-
-#~ msgid "ON"
-#~ msgstr "AN"
-
-#~ msgid "OFF"
-#~ msgstr "AUS"
-
-#~ msgid "Version %s  -  Exit After Tile: %s"
-#~ msgstr "Version %s  -  Schliessen nach Tiling: %s"
-
-#~ msgid ""
-#~ "The used shortcut is not available when the Preferences Window is opened"
-#~ msgstr ""
-#~ "Das Tastaturkürzel ist nicht anwendbar solange das Einstellungsfenster "
-#~ "offen ist"

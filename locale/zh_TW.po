@@ -656,16 +656,3 @@ msgstr "設置目標工作區"
 #: glade/x-tile.glade.h:60
 msgid "Exit After Tile"
 msgstr "鋪排後離開"
-
-#~ msgid "ON"
-#~ msgstr "ON"
-
-#~ msgid "OFF"
-#~ msgstr "OFF"
-
-#~ msgid "Version %s  -  Exit After Tile: %s"
-#~ msgstr "版本:%s  - 在鋪排後離開: %s"
-
-#~ msgid ""
-#~ "The used shortcut is not available when the Preferences Window is opened"
-#~ msgstr "當偏好設定視窗開啟時，使用的捷徑無效。"
