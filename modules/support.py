@@ -74,8 +74,9 @@ def is_compiz_running():
     if buff == "Compiz": return True
     return False
 
-def is_candidate_desktop(win):
-    """Is this a candidate File Manager Desktop window"""
+def is_candidate_compiz_desktop(win):
+    """Is this a candidate Compiz Desktop window"""
+    if not glob.is_compiz_running: return False
     x, y, w, h, r = get_geom(win)
     if w > glob.monitors_areas[0][2] and not is_window_Hmax(win):
         return True
