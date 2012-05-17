@@ -102,7 +102,12 @@ class InfoModel:
             # filter based on process name - NB beppie I'd like something better for this but dont know what!
             if len(process_name) > 6 and process_name[-6:] == "x-tile": continue
             if process_name in cons.PROCESSES_BLACKLIST: continue
-            #print process_name
+            #print "win", pid, process_name
+            if pid > 0:
+                ppid = os.popen("ps -p %d -oppid=" % pid).read().strip()
+                pp_name = support.get_process_name(ppid)
+                print "pwin", ppid, pp_name
+                if pp_name in cons.PROCESSES_PARENT_BLACKLIST: continue
             self.process_picklist.add(process_name)
             if process_name not in self.process_blacklist: # user filter
                 win_curr_monitor = screen.get_monitor_at_window(gtk.gdk.window_foreign_new(client))
