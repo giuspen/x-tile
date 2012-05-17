@@ -78,7 +78,10 @@ def is_candidate_compiz_desktop(win):
     """Is this a candidate Compiz Desktop window"""
     if not glob.is_compiz_running: return False
     x, y, w, h, r = get_geom(win)
-    if w > glob.monitors_areas[0][2] and not is_window_Hmax(win):
+    if w > glob.monitors_areas[0][2] \
+    and h > glob.monitors_areas[0][3] \
+    and not is_window_Hmax(win) \
+    and not is_window_Vmax(win):
         return True
     return False
 
