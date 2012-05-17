@@ -77,7 +77,8 @@ def is_compiz_running():
 def is_candidate_desktop(win):
     """Is this a candidate File Manager Desktop window"""
     x, y, w, h, r = get_geom(win)
-    if w > glob.monitors_areas[0][2]: return True
+    if w > glob.monitors_areas[0][2] and not is_window_Hmax(win):
+        return True
     return False
 
 def get_geom(win):
