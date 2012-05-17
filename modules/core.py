@@ -108,7 +108,7 @@ class InfoModel:
                 #pp_name = support.get_process_name(ppid)
                 #print "pwin", ppid, pp_name
                 #if pp_name in cons.PROCESSES_PARENT_BLACKLIST: continue
-            if support.is_candidate_desktop(client): continue
+            if support.is_candidate_compiz_desktop(client): continue
             self.process_picklist.add(process_name)
             if process_name not in self.process_blacklist: # user filter
                 win_curr_monitor = screen.get_monitor_at_window(gtk.gdk.window_foreign_new(client))
