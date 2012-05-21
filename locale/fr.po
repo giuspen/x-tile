@@ -669,18 +669,3 @@ msgstr ""
 #: glade/x-tile.glade.h:60
 msgid "Exit After Tile"
 msgstr "Fermer après répartition"
-
-#~ msgid "ON"
-#~ msgstr "ACTIVÉ"
-
-#~ msgid "OFF"
-#~ msgstr "DÉSACTIVÉ"
-
-#~ msgid "Version %s  -  Exit After Tile: %s"
-#~ msgstr "Version %s  -  Fermer après répartition : %s"
-
-#~ msgid ""
-#~ "The used shortcut is not available when the Preferences Window is opened"
-#~ msgstr ""
-#~ "Le raccourci clavier utilisé n'est pas disponible lorsque la fenêtre de "
-#~ "préférences est ouverte"

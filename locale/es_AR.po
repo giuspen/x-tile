@@ -672,18 +672,3 @@ msgstr ""
 #: glade/x-tile.glade.h:60
 msgid "Exit After Tile"
 msgstr "Salir Después de Mosaico"
-
-#~ msgid "ON"
-#~ msgstr "Activado"
-
-#~ msgid "OFF"
-#~ msgstr "Desactivado"
-
-#~ msgid "Version %s  -  Exit After Tile: %s"
-#~ msgstr "Versión %s  -  Salida después de Mosaico: %s"
-
-#~ msgid ""
-#~ "The used shortcut is not available when the Preferences Window is opened"
-#~ msgstr ""
-#~ "El atajo utilizado no está disponible cuando la Ventana de Preferencias "
-#~ "se abre"
