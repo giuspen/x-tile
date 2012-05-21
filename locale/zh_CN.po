@@ -658,16 +658,3 @@ msgstr ""
 #: glade/x-tile.glade.h:60
 msgid "Exit After Tile"
 msgstr "排列后退出"
-
-#~ msgid "ON"
-#~ msgstr "ON"
-
-#~ msgid "OFF"
-#~ msgstr "OFF"
-
-#~ msgid "Version %s  -  Exit After Tile: %s"
-#~ msgstr "版本:%s  - 在排列后退出: %s"
-
-#~ msgid ""
-#~ "The used shortcut is not available when the Preferences Window is opened"
-#~ msgstr "当首选项窗口开启时，使用的快捷方式无效。"
