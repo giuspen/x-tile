@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-05-14 22:29+0200\n"
-"PO-Revision-Date: 2011-07-05 12:57-0300\n"
-"Last-Translator: MeloPixel <melopixel@gmail.com>\n"
+"PO-Revision-Date: 2012-05-25 14:46-0300\n"
+"Last-Translator: melopixel <melopixel@gmail.com>\n"
 "Language-Team: Spanish <MeloPixel>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -28,27 +28,27 @@ msgstr "Utilice Arrastrar y Soltar para ordenar las Filas"
 msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr "El nuevo idioma no estará disponible hasta que Reinicie X Tile"
 
-#: modules/core.py:358 glade/x-tile.glade.h:5
+#: modules/core.py:358
+#: glade/x-tile.glade.h:5
 msgid "Tile the Windows Upon your X Desktop"
 msgstr "Mosaico de Windows Sobre su escritorio X"
 
 #: modules/core.py:557
 msgid "The Size of the Toolbar Icons is already at the Maximum Value"
-msgstr ""
-"El tamaño de los Iconos de la Barra de Herramientas ya está en su Valor "
-"Máximo"
+msgstr "El tamaño de los Iconos de la Barra de Herramientas ya está en su Valor Máximo"
 
 #: modules/core.py:567
 msgid "The Size of the Toolbar Icons is already at the Minimum Value"
-msgstr ""
-"El tamaño de los Iconos de la Barra de Herramientas ya está en su Valor "
-"Mínimo"
+msgstr "El tamaño de los Iconos de la Barra de Herramientas ya está en su Valor Mínimo"
 
-#: modules/core.py:674 modules/core.py:682 modules/core.py:690
+#: modules/core.py:674
+#: modules/core.py:682
+#: modules/core.py:690
 msgid "No Row is Selected"
 msgstr "No hay Filas Seleccionadas"
 
-#: modules/core.py:712 modules/core.py:746
+#: modules/core.py:712
+#: modules/core.py:746
 msgid "No Application Selected!"
 msgstr "No hay ninguna Aplicación Seleccionada!"
 
@@ -64,29 +64,24 @@ msgstr "Fila"
 msgid "Columns"
 msgstr "Columnas"
 
-#: modules/core.py:922 modules/core.py:930 modules/core.py:940
+#: modules/core.py:922
+#: modules/core.py:930
+#: modules/core.py:940
 msgid "No Windows Checked"
 msgstr "No hay Ventanas Seleccionadas"
 
-#: modules/core.py:980 modules/core.py:993
+#: modules/core.py:980
+#: modules/core.py:993
 msgid "Edit Custom Tile Settings"
 msgstr "Editar configuración Personalizada de Mosaico"
 
 #: modules/core.py:1116
-msgid ""
-"The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
-"Set'"
-msgstr ""
-"El Mosaico Personalizado 1 No de ha establecido: Haz Clic en el Menú -> "
-"Mosaico Personalizado 1"
+msgid "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 Set'"
+msgstr "El Mosaico Personalizado 1 No de ha establecido: Haz Clic en el Menú -> Mosaico Personalizado 1"
 
 #: modules/core.py:1134
-msgid ""
-"The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
-"Set'"
-msgstr ""
-"El Mosaico Personalizado 2 No de ha establecido: Haz Clic en el Menú -> "
-"Mosaico Personalizado 2"
+msgid "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 Set'"
+msgstr "El Mosaico Personalizado 2 No de ha establecido: Haz Clic en el Menú -> Mosaico Personalizado 2"
 
 #: modules/cons.py:264
 msgid "_File"
@@ -108,7 +103,8 @@ msgstr "_Mosaico"
 msgid "_View"
 msgstr "_Ver"
 
-#: modules/cons.py:269 modules/cons.py:303
+#: modules/cons.py:269
+#: modules/cons.py:303
 msgid "_Help"
 msgstr "_Ayuda"
 
@@ -124,7 +120,8 @@ msgstr "Filtrar Filas"
 msgid "Selected by _Default"
 msgstr "Seleccionar por _Defecto"
 
-#: modules/cons.py:272 glade/x-tile.glade.h:57
+#: modules/cons.py:272
+#: glade/x-tile.glade.h:57
 msgid "Rows to be Selected by Default"
 msgstr "Filas para seleccionar por defecto"
 
@@ -280,19 +277,23 @@ msgstr "Personalizado _2"
 msgid "Execute Custom Tile 2"
 msgstr "Ejecuta el ajuste del Mosaico Personalizado 2"
 
-#: modules/cons.py:292 modules/cons.py:320
+#: modules/cons.py:292
+#: modules/cons.py:320
 msgid "U_ndo Tiling"
 msgstr "_Deshacer"
 
-#: modules/cons.py:292 modules/cons.py:320
+#: modules/cons.py:292
+#: modules/cons.py:320
 msgid "Undo the Latest Tiling Operation"
 msgstr "Deshacer el Ultimo Mosaico Aplicado"
 
-#: modules/cons.py:293 modules/cons.py:319
+#: modules/cons.py:293
+#: modules/cons.py:319
 msgid "_Invert Tiling Order"
 msgstr "_Invertir Orden"
 
-#: modules/cons.py:293 modules/cons.py:319
+#: modules/cons.py:293
+#: modules/cons.py:319
 msgid "Invert the Order of the Latest Tiling Operation"
 msgstr "Invertir el orden de la última operación"
 
@@ -372,11 +373,14 @@ msgstr "Disminuye tamaño de los Iconos de la Barra de Herramientas"
 msgid "X Tile Project Home Page"
 msgstr "Pagina del Proyecto X Tile"
 
-#: modules/cons.py:304 modules/cons.py:305
+#: modules/cons.py:304
+#: modules/cons.py:305
 msgid "_About"
 msgstr "_Acerca de"
 
-#: modules/cons.py:304 modules/cons.py:305 glade/x-tile.glade.h:1
+#: modules/cons.py:304
+#: modules/cons.py:305
+#: glade/x-tile.glade.h:1
 msgid "About X Tile"
 msgstr "Acerca de X Tile"
 
@@ -667,7 +671,7 @@ msgstr "X Tile"
 
 #: glade/x-tile.glade.h:59
 msgid "Set Destination Workspace"
-msgstr ""
+msgstr "Establecer el destino del Área de Trabajo"
 
 #: glade/x-tile.glade.h:60
 msgid "Exit After Tile"
