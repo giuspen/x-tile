@@ -28,7 +28,7 @@ import gtk, os
 
 
 APP_NAME = "x-tile"
-VERSION = "2.3.1"
+VERSION = "2.4"
 if os.path.isdir('glade'):
     GLADE_PATH = "glade/"
     ICON_PLACE = "linux/x-tile.svg"
@@ -38,9 +38,9 @@ else:
     ICON_PLACE = "/usr/share/pixmaps/x-tile.svg"
     LOCALE_PATH = "/usr/share/locale/"
 
-AVAILABLE_LANGS = ['default', 'cs', 'de', 'en', 'es_AR', 'fr', 'it', 'ru', 'zh_CN', 'zh_TW']
+AVAILABLE_LANGS = ['default', 'cs', 'de', 'en', 'es_AR', 'fr', 'it', 'pl', 'ru', 'zh_CN', 'zh_TW']
 
-CMD_LINE_ACTIONS = ["z", "i", "v", "h", "u", "d", "l", "r", "1", "2", "q", "g", "m", "M", "c"]
+CMD_LINE_ACTIONS = ["z", "i", "y", "v", "h", "u", "d", "l", "r", "1", "2", "q", "g", "m", "M", "c"]
 
 OVERRIDE_1 = 0
 OVERRIDE_2 = 0
@@ -98,6 +98,7 @@ ICONS_FILENAMES = [(GLADE_PATH + 'tile-vertically.svg', 'Tile Vertically'),
                    (GLADE_PATH + 'unmaximize-checked-windows.svg', 'Unmaximize Windows'),
                    (GLADE_PATH + 'close-checked-windows.svg', 'Close Windows'),
                    (GLADE_PATH + 'invert-tiling.svg', 'Invert Tiling'),
+                   (GLADE_PATH + 'cycle-tiling.svg', 'Cycle Tiling'),
                    (GLADE_PATH + 'toolbar.png', 'Toolbar'),
                    (GLADE_PATH + 'quit-app.svg', 'Quit App'),
                    (GLADE_PATH + 'help-contents.svg', 'Help Contents'),
@@ -166,6 +167,7 @@ UI_INFO = """
         <menu action='TileMenu'>
             <menuitem action='UnTile'/>
             <menuitem action='InverTile'/>
+            <menuitem action='CycleTile'/>
             <separator/>
             <menuitem action='Vertically'/>
             <menuitem action='Horizontally'/>
@@ -208,6 +210,7 @@ UI_INFO = """
         <separator/>
         <toolitem action='UnTile'/>
         <toolitem action='InverTile'/>
+        <toolitem action='CycleTile'/>
         <separator/>
         <toolitem action='Vertically'/>
         <toolitem action='Horizontally'/>
@@ -243,6 +246,7 @@ UI_INFO = """
         <menuitem action='All_H'/>
         <menuitem action='All_V'/>
         <separator/>
+        <menuitem action='All_Cycle'/>
         <menuitem action='All_Invert'/>
         <menuitem action='All_Undo'/>
         <separator/>
@@ -292,6 +296,7 @@ def get_entries(inst):
     ( "Custom2Exe", "Custom Exe 2", _("Custom Tile _2 Run"), "<control>2", _("Execute Custom Tile 2"), inst.tile_custom_2_run),
     ( "UnTile", "gtk-undo", _("U_ndo Tiling"), "<control>Z", _("Undo the Latest Tiling Operation"), inst.undo_tiling),
     ( "InverTile", "Invert Tiling", _("_Invert Tiling Order"), "<control>I", _("Invert the Order of the Latest Tiling Operation"), inst.invert_tiling),
+    ( "CycleTile", "Cycle Tiling", _("C_ycle Tiling Order"), "<control>Y", _("Cycle the Order of the Latest Tiling Operation"), inst.cycle_tiling),
     ( "Maximize", "Maximize Windows", _("_Maximize Windows"), "<control>M", _("Maximize The Checked Windows"), inst.maximize_checked_windows),
     ( "Unmaximize", "Unmaximize Windows", _("_Unmaximize Windows"), "<control>U", _("Unmaximize The Checked Windows"), inst.unmaximize_checked_windows),
     ( "Close", "Close Windows", _("_Close Windows"), "<control>C", _("Close The Checked Windows"), inst.close_checked_windows),
@@ -319,6 +324,7 @@ def get_entries(inst):
     ( "All_V", "Tile Vertically", _("Tile All _Vertically"), None, _("Tile All Windows Vertically"), inst.tile_all_vertically),
     ( "All_Invert", "Invert Tiling", _("_Invert Tiling Order"), None, _("Invert the Order of the Latest Tiling Operation"), inst.invert_tiling_all),
     ( "All_Undo", "gtk-undo", _("U_ndo Tiling"), None, _("Undo the Latest Tiling Operation"), inst.undo_tiling_all),
+    ( "All_Cycle", "Cycle Tiling", _("C_ycle Tiling Order"), None, _("Cycle the Order of the Latest Tiling Operation"), inst.cycle_tiling_all),
     ]
 
 HELP_TEXT = """
@@ -359,6 +365,8 @@ OPTIONS
    2 => custom tile 2 all opened windows
 
    i => invert the order of the latest tiling operation
+
+   y => cycle the order of the latest tiling operation
 
    m => maximize all opened windows
 

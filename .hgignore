@@ -2,11 +2,4 @@ syntax: glob
 *.pyc
 *.glade.h
 *.log
-cs/*
-de/*
-es_AR/*
-fr/*
-it/*
-ru/*
-zh_CN/*
-zh_TW/*
+*.mo
