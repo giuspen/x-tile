@@ -77,11 +77,12 @@ if arg == "w":
 elif arg in cons.CMD_LINE_ACTIONS:
     x = core.XTile(core.InfoModel())
     x.launch_application()
-    if arg not in ["z", "i"]:
+    if arg not in ["z", "i", "y"]:
         x.reload_windows_list()
         x.flag_all_rows()
     if arg == "z": x.undo_tiling()
     elif arg == "i": x.invert_tiling()
+    elif arg == "y": x.cycle_tiling()
     elif arg == "v": x.tile_vertically()
     elif arg == "h": x.tile_horizontally()
     elif arg == "u": x.tile_triangle_up()

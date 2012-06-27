@@ -1085,6 +1085,34 @@ class XTile:
                                self.get_dest_ws())
         self.check_exit_after_tile()
 
+    def cycle_tiling(self, *args):
+        """Cycle the order of the latest tiling operation"""
+        # get the win_id and win_geom of the latest tiled windows
+        latest_tiling_geoms = []
+        undo_snap_str = self.gconf_client.get_string(cons.GCONF_UNDO % glob.screen_index)
+        if not undo_snap_str: return
+        undo_snap_vec = undo_snap_str.split(" ")
+        for element in undo_snap_vec:
+            win_id, is_maximized, x, y, width, height = element.split(",")
+            win_geom = support.get_geom(int(win_id))
+            latest_tiling_geoms.append({'win_id': win_id, 'win_geom': win_geom})
+        #print "latest_tiling_geoms", latest_tiling_geoms
+        # generate the win_id and win_geom of the next tiled windows
+        next_tiling_geoms = []
+        for i, element in enumerate(latest_tiling_geoms):
+            next_tiling_geoms.append({'win_id': element['win_id'],
+                                      'win_geom': latest_tiling_geoms[(i+1)%len(latest_tiling_geoms)]['win_geom']})
+        #print "next_tiling_geoms", next_tiling_geoms
+        # tile the windows
+        for element in next_tiling_geoms:
+            support.moveresize(int(element['win_id']),
+                               int(element['win_geom'][0]),
+                               int(element['win_geom'][1]),
+                               int(element['win_geom'][2]),
+                               int(element['win_geom'][3]),
+                               self.get_dest_ws())
+        self.check_exit_after_tile()
+
     def undo_tiling(self, *args):
         """Undo the Latest Tiling Operation"""
         undo_snap_str = self.gconf_client.get_string(cons.GCONF_UNDO % glob.screen_index)
@@ -1215,6 +1243,10 @@ class XTile:
     def invert_tiling_all(self, *args):
         """Invert the Order of the Latest Tiling Operation"""
         self.hide_and_process("x-tile i &")
+    
+    def cycle_tiling_all(self, *args):
+        """Cycle the Order of the Latest Tiling Operation"""
+        self.hide_and_process("x-tile y &")
     
     def tile_all_vertically(self, *args):
         """Just tile Vertically all opened windows"""
