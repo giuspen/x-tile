@@ -290,14 +290,12 @@ msgid "Invert the Order of the Latest Tiling Operation"
 msgstr "Inverti l'Ordine dell' Ultima Operazione di Piastrellamento"
 
 #: modules/cons.py:299 modules/cons.py:327
-#, fuzzy
 msgid "C_ycle Tiling Order"
-msgstr "_Inverti Ordine Piastrellamento"
+msgstr "Cic_la Ordine Piastrellamento"
 
 #: modules/cons.py:299 modules/cons.py:327
-#, fuzzy
 msgid "Cycle the Order of the Latest Tiling Operation"
-msgstr "Inverti l'Ordine dell' Ultima Operazione di Piastrellamento"
+msgstr "Cicla l'Ordine dell' Ultima Operazione di Piastrellamento"
 
 #: modules/cons.py:300
 msgid "_Maximize Windows"
@@ -536,7 +534,6 @@ msgstr ""
 "MA 02110-1301, USA."
 
 #: glade/x-tile.glade.h:22
-#, fuzzy
 msgid ""
 "Chinese Simplified (zh_CN) Khiyuan Fan <Fan.Khiyuan@gmail.com>\n"
 "Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
@@ -555,6 +552,7 @@ msgstr ""
 "Francese (fr) Ludovic Troisi <axalis@cegetel.net>\n"
 "Tedesco (de) Jöran Zeller <joeran@zeller.ws>\n"
 "Italiano (it) Giuseppe Penone <giuspen@gmail.com>\n"
+"Polacco (pl) Dominik Wójt <domin144@o2.pl>\n"
 "Russo (ru) Andriy Kovtun <kovtunos@yandex.ru>"
 
 #: glade/x-tile.glade.h:31
