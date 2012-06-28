@@ -537,7 +537,6 @@ msgstr ""
 "Place, Fifth Floor, Boston, MA 02110-1301 USA"
 
 #: glade/x-tile.glade.h:22
-#, fuzzy
 msgid ""
 "Chinese Simplified (zh_CN) Khiyuan Fan <Fan.Khiyuan@gmail.com>\n"
 "Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
@@ -556,8 +555,9 @@ msgstr ""
 "Francuski (fr) Ludovic Troisi <axalis@cegetel.net>\n"
 "Niemiecki (de) Jöran Zeller <joeran@zeller.ws>\n"
 "Włoski (it) Giuseppe Penone <giuspen@gmail.com>\n"
-"Rosyjski (ru) Andriy Kovtun <kovtunos@yandex.ru>\n"
-"Polski (pl) Dominik Wójt <domin144@o2.pl>"
+"Polski (pl) Dominik Wójt <domin144@o2.pl>\n"
+"Rosyjski (ru) Andriy Kovtun <kovtunos@yandex.ru>"
+
 
 #: glade/x-tile.glade.h:31
 msgid "Preferences"
