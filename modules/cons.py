@@ -358,7 +358,9 @@ OPTIONS
 
    q => quad tile all opened windows
 
-   g => tile all opened windows in a grid having number of rows and columns the given arguments
+   g => tile all opened windows in an automatic grid, depending on the number of windows to be tiled
+
+   g rows cols => tile all opened windows in a grid having a user-defined number of rows and columns
 
    1 => custom tile 1 all opened windows
 
