@@ -91,19 +91,25 @@ elif arg in cons.CMD_LINE_ACTIONS:
     elif arg == "r": x.tile_triangle_right()
     elif arg == "q": x.tile_quad()
     elif arg == "g":
-        if len(sys.argv) == 2:
-            checked_windows_count = len(x.store.get_checked_windows_list(True)[0])
-            for cons.GRID_ROWS, cons.GRID_COLS in ((r, c) for r in xrange(1, 100) for c in [r, r + 1]):
-                if cons.GRID_ROWS * cons.GRID_COLS >= checked_windows_count:
-                    break
-        else:
+        wins = len(x.store.get_checked_windows_list(True)[0])
+        if wins == 1:
+            x.maximize_checked_windows()
+        elif wins:
             try:
-                cons.GRID_ROWS = int(sys.argv[2]); assert cons.GRID_ROWS > 0
-                cons.GRID_COLS = int(sys.argv[3]); assert cons.GRID_COLS > 0
+                rows, cols = ([max(0, min(wins, int(a))) for a in sys.argv[2:4]] + [0, 0])[:2]
             except:
                 print "bad arguments"
                 exit(1)
-        x.tile_grid()
+            if not rows and not cols:
+                for rows, cols in ((r, c) for r in xrange(1, 100) for c in [r, r + 1]):
+                    if rows * cols >= wins:
+                        break
+            elif not rows:
+                rows = (wins + cols - 1) // cols
+            elif not cols:
+                cols = (wins + rows - 1) // rows
+            cons.GRID_ROWS, cons.GRID_COLS = rows, cols
+            x.tile_grid()
     elif arg == "1": x.tile_custom_1_run()
     elif arg == "2": x.tile_custom_2_run()
     elif arg == "m": x.maximize_checked_windows()
