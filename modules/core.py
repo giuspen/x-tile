@@ -266,6 +266,7 @@ class XTile:
             gtk_settings.set_property("gtk-menu-images", True)
         except: pass # older gtk do not have the property "gtk-menu-images"
         os.environ['UBUNTU_MENUPROXY'] = '0' # for custom stock icons not visible in appmenu
+        self.cmd_line_only = False
         # instantiate the Glade Widgets Wrapper
         self.glade = GladeWidgetsWrapper(cons.GLADE_PATH + 'x-tile.glade', self)
         # ui manager
@@ -1219,6 +1220,7 @@ class XTile:
     
     def check_exit_after_tile(self):
         """Check if the Exit After Tile is Active and Eventually Quit"""
+        if self.cmd_line_only: return
         if self.gconf_client.get_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index) == cons.STR_TRUE:
             self.quit_application()
     
