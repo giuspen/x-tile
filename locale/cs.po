@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: x-tile 1.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-27 23:59+0200\n"
+"POT-Creation-Date: 2012-07-12 12:08+0200\n"
 "PO-Revision-Date: 2012-05-15 00:33+0200\n"
 "Last-Translator: Pavel <pavelfric@seznam.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -19,55 +19,55 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 1.4\n"
 
-#: modules/core.py:309
+#: modules/core.py:310
 msgid "Use Drag and Drop to Sort the Rows"
 msgstr "Pro roztřídění řádků položku přetáhněte a upusťte"
 
-#: modules/core.py:349
+#: modules/core.py:350
 msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr "Nové jazykové nastavení bude dostupné až po novém spuštění X Tile"
 
-#: modules/core.py:364 glade/x-tile.glade.h:5
+#: modules/core.py:365 glade/x-tile.glade.h:5
 msgid "Tile the Windows Upon your X Desktop"
 msgstr "Vydlážděte okna na vaší ploše X"
 
-#: modules/core.py:563
+#: modules/core.py:564
 msgid "The Size of the Toolbar Icons is already at the Maximum Value"
 msgstr "Ikony v nástrojovém pruhu jsou již tak velké, jak jen je to možné"
 
-#: modules/core.py:573
+#: modules/core.py:574
 msgid "The Size of the Toolbar Icons is already at the Minimum Value"
 msgstr "Ikony v nástrojovém pruhu jsou již tak malé, jak jen je to možné"
 
-#: modules/core.py:680 modules/core.py:688 modules/core.py:696
+#: modules/core.py:681 modules/core.py:689 modules/core.py:697
 msgid "No Row is Selected"
 msgstr "Není vybrán žádný řádek"
 
-#: modules/core.py:718 modules/core.py:752
+#: modules/core.py:719 modules/core.py:753
 msgid "No Application Selected!"
 msgstr "Není vybrán žádný program!"
 
-#: modules/core.py:832
+#: modules/core.py:833
 msgid "Grid Details"
 msgstr "Podrobnosti k mřížce"
 
-#: modules/core.py:840
+#: modules/core.py:841
 msgid "Rows"
 msgstr "Řádky"
 
-#: modules/core.py:847
+#: modules/core.py:848
 msgid "Columns"
 msgstr "Sloupce"
 
-#: modules/core.py:928 modules/core.py:936 modules/core.py:946
+#: modules/core.py:929 modules/core.py:937 modules/core.py:947
 msgid "No Windows Checked"
 msgstr "Není vybráno žádné okno"
 
-#: modules/core.py:986 modules/core.py:999
+#: modules/core.py:987 modules/core.py:1000
 msgid "Edit Custom Tile Settings"
 msgstr "Upravit vlastní nastavení dláždění"
 
-#: modules/core.py:1150
+#: modules/core.py:1151
 msgid ""
 "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
 "Set'"
@@ -75,7 +75,7 @@ msgstr ""
 "Vlastní nastavení dláždění (1) ještě nebylo převzato: Klepněte v nabídce na "
 "'Dlaždice->Vlastní nastavení dláždění (1)'"
 
-#: modules/core.py:1168
+#: modules/core.py:1169
 msgid ""
 "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
 "Set'"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: X Tile\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-27 23:59+0200\n"
+"POT-Creation-Date: 2012-07-12 12:08+0200\n"
 "PO-Revision-Date: 2012-06-26 02:01+0100\n"
 "Last-Translator: Dominik Wójt <domin144@o2.pl>\n"
 "Language-Team: Polish\n"
@@ -18,55 +18,55 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2)\n"
 
-#: modules/core.py:309
+#: modules/core.py:310
 msgid "Use Drag and Drop to Sort the Rows"
 msgstr "Użyj przeciągania, aby sortować rzędy"
 
-#: modules/core.py:349
+#: modules/core.py:350
 msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr "Nowy język będzie dostępny dopiero po ponownym uruchomieniu X Tile"
 
-#: modules/core.py:364 glade/x-tile.glade.h:5
+#: modules/core.py:365 glade/x-tile.glade.h:5
 msgid "Tile the Windows Upon your X Desktop"
 msgstr "Ułóż okna na twoim pulpicie X"
 
-#: modules/core.py:563
+#: modules/core.py:564
 msgid "The Size of the Toolbar Icons is already at the Maximum Value"
 msgstr "Rozmiar paska narzędzi ma już maksymalną wartość"
 
-#: modules/core.py:573
+#: modules/core.py:574
 msgid "The Size of the Toolbar Icons is already at the Minimum Value"
 msgstr "Rozmiar ikon paska narzędzi ma już maksymalną wartość"
 
-#: modules/core.py:680 modules/core.py:688 modules/core.py:696
+#: modules/core.py:681 modules/core.py:689 modules/core.py:697
 msgid "No Row is Selected"
 msgstr "Żaden rząd nie jest zaznaczony"
 
-#: modules/core.py:718 modules/core.py:752
+#: modules/core.py:719 modules/core.py:753
 msgid "No Application Selected!"
 msgstr "Żadna aplikacja nie jest zaznaczona"
 
-#: modules/core.py:832
+#: modules/core.py:833
 msgid "Grid Details"
 msgstr "Szczegóły siatki"
 
-#: modules/core.py:840
+#: modules/core.py:841
 msgid "Rows"
 msgstr "Rzędy"
 
-#: modules/core.py:847
+#: modules/core.py:848
 msgid "Columns"
 msgstr "Kolumny"
 
-#: modules/core.py:928 modules/core.py:936 modules/core.py:946
+#: modules/core.py:929 modules/core.py:937 modules/core.py:947
 msgid "No Windows Checked"
 msgstr "Żadne okno nie jest zaznaczone"
 
-#: modules/core.py:986 modules/core.py:999
+#: modules/core.py:987 modules/core.py:1000
 msgid "Edit Custom Tile Settings"
 msgstr "Ustaw niestandardowe ustawienia układu"
 
-#: modules/core.py:1150
+#: modules/core.py:1151
 msgid ""
 "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
 "Set'"
@@ -74,7 +74,7 @@ msgstr ""
 "Niestandardowy układ 1 nie został jeszcze ustawiony: Kliknij element menu "
 "'Układ->Ustaw niestandardowy układ 1'"
 
-#: modules/core.py:1168
+#: modules/core.py:1169
 msgid ""
 "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
 "Set'"
@@ -557,7 +557,6 @@ msgstr ""
 "Włoski (it) Giuseppe Penone <giuspen@gmail.com>\n"
 "Polski (pl) Dominik Wójt <domin144@o2.pl>\n"
 "Rosyjski (ru) Andriy Kovtun <kovtunos@yandex.ru>"
-
 
 #: glade/x-tile.glade.h:31
 msgid "Preferences"
