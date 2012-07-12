@@ -3,20 +3,21 @@
 # Copyright (C) 2010 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Automatically generated, 2010.
-#
 # Yan-ren Tsai <elleryq@gmail.com>, 2010, 2011, 2012.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: 2.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-07-12 12:08+0200\n"
-"PO-Revision-Date: 2012-02-15 10:25+0800\n"
+"PO-Revision-Date: 2012-07-13 06:13+0800\n"
 "Last-Translator: Yan-ren Tsai <elleryq@gmail.com>\n"
-"Language-Team: zh_TW <elleryq@gmail.com>\n"
+"Language-Team: 漢語 <chinese-l10n@googlegroups.com>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: 8bits\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #: modules/core.py:310
 msgid "Use Drag and Drop to Sort the Rows"
@@ -287,14 +288,12 @@ msgid "Invert the Order of the Latest Tiling Operation"
 msgstr "將最後一次鋪排的動作顛倒"
 
 #: modules/cons.py:299 modules/cons.py:327
-#, fuzzy
 msgid "C_ycle Tiling Order"
-msgstr "將鋪排順序顛倒 (_I)"
+msgstr "循環切換鋪排順序 (_C)"
 
 #: modules/cons.py:299 modules/cons.py:327
-#, fuzzy
 msgid "Cycle the Order of the Latest Tiling Operation"
-msgstr "將最後一次鋪排的動作顛倒"
+msgstr "循環順序到最後一次鋪排的動作"
 
 #: modules/cons.py:300
 msgid "_Maximize Windows"
@@ -528,7 +527,6 @@ msgstr ""
 "會：51 Franklin Street, Fifth Floor, Boston, Ma 02110-1301, USA。"
 
 #: glade/x-tile.glade.h:22
-#, fuzzy
 msgid ""
 "Chinese Simplified (zh_CN) Khiyuan Fan <Fan.Khiyuan@gmail.com>\n"
 "Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
@@ -547,6 +545,7 @@ msgstr ""
 "法語 (fr) Ludovic Troisi <axalis@cegetel.net>\n"
 "德語 (de) Jöran Zeller <joeran@zeller.ws>\n"
 "義大利語 (it) Giuseppe Penone <giuspen@gmail.com>\n"
+"波蘭語 (pl) Dominik Wójt <domin144@o2.pl>\n"
 "俄語 (ru) Andriy Kovtun <kovtunos@yandex.ru>"
 
 #: glade/x-tile.glade.h:31
