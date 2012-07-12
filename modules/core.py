@@ -179,11 +179,7 @@ class InfoModel:
                                         str(win_geom[3])  ])
             tree_iter = self.liststore.iter_next(tree_iter)
         if undo_ready and undo_snap_vec:
-            undo_snap_str = ""
-            for element in undo_snap_vec:
-                undo_snap_str += ",".join(element) + " "
-            undo_snap_str = undo_snap_str[:-1]
-            self.gconf_client.set_string(cons.GCONF_UNDO % glob.screen_index, undo_snap_str)
+            support.undo_snap_write(self.gconf_client, undo_snap_vec)
         return checked_windows_list
 
     def close_checked_windows(self):
@@ -1137,11 +1133,7 @@ class XTile:
             if int(is_maximized) == 1: support.maximize(int(win_id))
             else: support.moveresize(win_id, int(x), int(y), int(width), int(height), self.get_dest_ws())
         if doubleundo_snap_vec:
-            doubleundo_snap_str = ""
-            for element in doubleundo_snap_vec:
-                doubleundo_snap_str += ",".join(element) + " "
-            doubleundo_snap_str = doubleundo_snap_str[:-1]
-            self.gconf_client.set_string(cons.GCONF_UNDO % glob.screen_index, doubleundo_snap_str)
+            support.undo_snap_write(self.gconf_client, doubleundo_snap_vec)
         self.check_exit_after_tile()
 
     def tile_custom_1_run(self, *args):
