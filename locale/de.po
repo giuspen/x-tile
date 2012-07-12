@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: x-tile 1.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-27 23:59+0200\n"
+"POT-Creation-Date: 2012-07-12 12:08+0200\n"
 "PO-Revision-Date: 2012-05-15 20:55+0100\n"
 "Last-Translator: Jöran Zeller <joeran@zeller.ws>\n"
 "Language-Team: German\n"
@@ -17,55 +17,55 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: modules/core.py:309
+#: modules/core.py:310
 msgid "Use Drag and Drop to Sort the Rows"
 msgstr "Benutze Drag and Drop um Zeilen zu sortieren"
 
-#: modules/core.py:349
+#: modules/core.py:350
 msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr "Neue Spracheinstellung erst nach Neustart von X Tile verfügbar"
 
-#: modules/core.py:364 glade/x-tile.glade.h:5
+#: modules/core.py:365 glade/x-tile.glade.h:5
 msgid "Tile the Windows Upon your X Desktop"
 msgstr "Tile Fenster auf deinem X Desktop"
 
-#: modules/core.py:563
+#: modules/core.py:564
 msgid "The Size of the Toolbar Icons is already at the Maximum Value"
 msgstr "Werkzeugleisten Icons sind schon maximal"
 
-#: modules/core.py:573
+#: modules/core.py:574
 msgid "The Size of the Toolbar Icons is already at the Minimum Value"
 msgstr "Werkzeugleisten Icons sind schon minimal"
 
-#: modules/core.py:680 modules/core.py:688 modules/core.py:696
+#: modules/core.py:681 modules/core.py:689 modules/core.py:697
 msgid "No Row is Selected"
 msgstr "Keine Zeile ausgewählt"
 
-#: modules/core.py:718 modules/core.py:752
+#: modules/core.py:719 modules/core.py:753
 msgid "No Application Selected!"
 msgstr "Keine Anwendung ausgewählt!"
 
-#: modules/core.py:832
+#: modules/core.py:833
 msgid "Grid Details"
 msgstr "Grid Details"
 
-#: modules/core.py:840
+#: modules/core.py:841
 msgid "Rows"
 msgstr "_Zeile"
 
-#: modules/core.py:847
+#: modules/core.py:848
 msgid "Columns"
 msgstr "Spalten"
 
-#: modules/core.py:928 modules/core.py:936 modules/core.py:946
+#: modules/core.py:929 modules/core.py:937 modules/core.py:947
 msgid "No Windows Checked"
 msgstr "Keine Fenster ausgewählt"
 
-#: modules/core.py:986 modules/core.py:999
+#: modules/core.py:987 modules/core.py:1000
 msgid "Edit Custom Tile Settings"
 msgstr "Persönliche Tiling Schema bearbeiten"
 
-#: modules/core.py:1150
+#: modules/core.py:1151
 msgid ""
 "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
 "Set'"
@@ -73,7 +73,7 @@ msgstr ""
 "Das persönliche tiling Schema (1) wurde noch nicht übernommen: Im Menü 'Tile-"
 ">Eigenes Schema (1) setzen anklicken'"
 
-#: modules/core.py:1168
+#: modules/core.py:1169
 msgid ""
 "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
 "Set'"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-27 23:59+0200\n"
+"POT-Creation-Date: 2012-07-12 12:08+0200\n"
 "PO-Revision-Date: 2011-03-03 11:05+0100\n"
 "Last-Translator: Ludovic Troisi <axalis@cegetel.net>\n"
 "Language-Team: X Tile\n"
@@ -17,55 +17,55 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: modules/core.py:309
+#: modules/core.py:310
 msgid "Use Drag and Drop to Sort the Rows"
 msgstr "Utilisez le glisser-déposer pour trier les lignes"
 
-#: modules/core.py:349
+#: modules/core.py:350
 msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr "La nouvelle langue sera chargée une fois X Tile relancé"
 
-#: modules/core.py:364 glade/x-tile.glade.h:5
+#: modules/core.py:365 glade/x-tile.glade.h:5
 msgid "Tile the Windows Upon your X Desktop"
 msgstr "Répartit vos fenêtres sur votre Bureau X"
 
-#: modules/core.py:563
+#: modules/core.py:564
 msgid "The Size of the Toolbar Icons is already at the Maximum Value"
 msgstr "La taille de la barre d'outils est déjà à sa valeur maximale"
 
-#: modules/core.py:573
+#: modules/core.py:574
 msgid "The Size of the Toolbar Icons is already at the Minimum Value"
 msgstr "La taille de la barre d'outils est déjà à sa valeur minimale"
 
-#: modules/core.py:680 modules/core.py:688 modules/core.py:696
+#: modules/core.py:681 modules/core.py:689 modules/core.py:697
 msgid "No Row is Selected"
 msgstr "Aucune ligne n'a été sélectionnée"
 
-#: modules/core.py:718 modules/core.py:752
+#: modules/core.py:719 modules/core.py:753
 msgid "No Application Selected!"
 msgstr "Aucune application sélectionnée !"
 
-#: modules/core.py:832
+#: modules/core.py:833
 msgid "Grid Details"
 msgstr "Détails de la grille"
 
-#: modules/core.py:840
+#: modules/core.py:841
 msgid "Rows"
 msgstr "Lignes"
 
-#: modules/core.py:847
+#: modules/core.py:848
 msgid "Columns"
 msgstr "Colonnes"
 
-#: modules/core.py:928 modules/core.py:936 modules/core.py:946
+#: modules/core.py:929 modules/core.py:937 modules/core.py:947
 msgid "No Windows Checked"
 msgstr "Aucune fenêtre n'a été sélectionnée"
 
-#: modules/core.py:986 modules/core.py:999
+#: modules/core.py:987 modules/core.py:1000
 msgid "Edit Custom Tile Settings"
 msgstr "Éditer la répartition personnalisée"
 
-#: modules/core.py:1150
+#: modules/core.py:1151
 msgid ""
 "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
 "Set'"
@@ -73,7 +73,7 @@ msgstr ""
 "La répartition personnalisée 1 n'est pas définie: Cliquez sur le menu 'Tile-"
 ">Configurer la répartition personnalisée 1'"
 
-#: modules/core.py:1168
+#: modules/core.py:1169
 msgid ""
 "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
 "Set'"

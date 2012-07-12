@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-27 23:59+0200\n"
+"POT-Creation-Date: 2012-07-12 12:08+0200\n"
 "PO-Revision-Date: 2011-07-03 22:58+0800\n"
 "Last-Translator: Fan.Khiyuan <Fan.Khiyuan@gmail.com>\n"
 "Language-Team: Fan.khiyuan@gmail.com\n"
@@ -12,63 +12,63 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: Chinese\n"
 
-#: modules/core.py:309
+#: modules/core.py:310
 msgid "Use Drag and Drop to Sort the Rows"
 msgstr "使用拖拉来排序行"
 
-#: modules/core.py:349
+#: modules/core.py:350
 msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr "新语言将在重启 X Tile 后生效。"
 
-#: modules/core.py:364 glade/x-tile.glade.h:5
+#: modules/core.py:365 glade/x-tile.glade.h:5
 msgid "Tile the Windows Upon your X Desktop"
 msgstr ""
 "X Tile\n"
 "在你的X桌面排列窗口"
 
-#: modules/core.py:563
+#: modules/core.py:564
 msgid "The Size of the Toolbar Icons is already at the Maximum Value"
 msgstr "工具栏图标的尺寸已经是最大的了。"
 
-#: modules/core.py:573
+#: modules/core.py:574
 msgid "The Size of the Toolbar Icons is already at the Minimum Value"
 msgstr "工具栏图标的尺寸已经是最小的了。"
 
-#: modules/core.py:680 modules/core.py:688 modules/core.py:696
+#: modules/core.py:681 modules/core.py:689 modules/core.py:697
 msgid "No Row is Selected"
 msgstr "没有选定任何行"
 
-#: modules/core.py:718 modules/core.py:752
+#: modules/core.py:719 modules/core.py:753
 msgid "No Application Selected!"
 msgstr "没有选择应用程序!"
 
-#: modules/core.py:832
+#: modules/core.py:833
 msgid "Grid Details"
 msgstr "网格明细"
 
-#: modules/core.py:840
+#: modules/core.py:841
 msgid "Rows"
 msgstr "行"
 
-#: modules/core.py:847
+#: modules/core.py:848
 msgid "Columns"
 msgstr "列"
 
-#: modules/core.py:928 modules/core.py:936 modules/core.py:946
+#: modules/core.py:929 modules/core.py:937 modules/core.py:947
 msgid "No Windows Checked"
 msgstr "没有选择窗口"
 
-#: modules/core.py:986 modules/core.py:999
+#: modules/core.py:987 modules/core.py:1000
 msgid "Edit Custom Tile Settings"
 msgstr "编辑自定排列设定"
 
-#: modules/core.py:1150
+#: modules/core.py:1151
 msgid ""
 "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
 "Set'"
 msgstr "自定排列1尚未设置：点击菜单 '排列->自定排列1' 进行设置。"
 
-#: modules/core.py:1168
+#: modules/core.py:1169
 msgid ""
 "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
 "Set'"
