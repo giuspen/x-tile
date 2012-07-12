@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: x-tile 1.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-07-12 12:08+0200\n"
-"PO-Revision-Date: 2012-05-15 00:33+0200\n"
-"Last-Translator: Pavel <pavelfric@seznam.cz>\n"
+"PO-Revision-Date: 2012-07-12 14:53+0200\n"
+"Last-Translator: Pavel Fric <pavelfric@seznam.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -281,7 +281,7 @@ msgstr "Dláždění _zpět"
 
 #: modules/cons.py:297 modules/cons.py:326
 msgid "Undo the Latest Tiling Operation"
-msgstr "Vrátit poslední dláždící operaci zpět"
+msgstr "Vrátit poslední dláždicí operaci zpět"
 
 #: modules/cons.py:298 modules/cons.py:325
 msgid "_Invert Tiling Order"
@@ -289,17 +289,15 @@ msgstr "_Obrátit pořadí dláždění"
 
 #: modules/cons.py:298 modules/cons.py:325
 msgid "Invert the Order of the Latest Tiling Operation"
-msgstr "Obrátit pořadí poslední dláždící operace"
+msgstr "Obrátit pořadí poslední dláždicí operace"
 
 #: modules/cons.py:299 modules/cons.py:327
-#, fuzzy
 msgid "C_ycle Tiling Order"
-msgstr "_Obrátit pořadí dláždění"
+msgstr "_Točit pořadí dláždění"
 
 #: modules/cons.py:299 modules/cons.py:327
-#, fuzzy
 msgid "Cycle the Order of the Latest Tiling Operation"
-msgstr "Obrátit pořadí poslední dláždící operace"
+msgstr "Točit pořadí poslední dláždicí operace"
 
 #: modules/cons.py:300
 msgid "_Maximize Windows"
@@ -542,7 +540,6 @@ msgstr ""
 "Fifth Floor, Boston, MA 02110-1301, USA."
 
 #: glade/x-tile.glade.h:22
-#, fuzzy
 msgid ""
 "Chinese Simplified (zh_CN) Khiyuan Fan <Fan.Khiyuan@gmail.com>\n"
 "Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
@@ -561,6 +558,7 @@ msgstr ""
 "Francouzština (fr) Ludovic Troisi <axalis@cegetel.net>\n"
 "Němčina (de) Jöran Zeller <joeran@zeller.ws>\n"
 "Italština (it) Giuseppe Penone <giuspen@gmail.com>\n"
+"Polština (pl) Dominik Wójt <domin144@o2.pl>\n"
 "Ruština (ru) Andriy Kovtun <kovtunos@yandex.ru>"
 
 #: glade/x-tile.glade.h:31
