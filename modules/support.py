@@ -370,6 +370,18 @@ def is_window_Hmax(win):
         if glob.ret_pointer[i] == glob.maxh_atom: return True
     return False
 
+def get_undo_element_from_win_id(win_id):
+    """From win_id to Undo Snap Element"""
+    if is_window_Vmax(win_id) or is_window_Hmax(win_id): is_maximized = 1
+    else: is_maximized = 0
+    win_geom = get_geom(win_id)
+    return [str(win_id),
+            str(is_maximized),
+            str(win_geom[0]),
+            str(win_geom[1]),
+            str(win_geom[2]),
+            str(win_geom[3])]
+
 def undo_snap_write(gconf_client, undo_snap_vec):
     """Write Undo Snap to Disk"""
     undo_snap_str = ""

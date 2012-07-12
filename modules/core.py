@@ -1061,6 +1061,7 @@ class XTile:
         undo_snap_str = self.gconf_client.get_string(cons.GCONF_UNDO % glob.screen_index)
         if not undo_snap_str: return
         undo_snap_vec = undo_snap_str.split(" ")
+        doubleundo_snap_vec = []
         for element in undo_snap_vec:
             win_id, is_maximized, x, y, width, height = element.split(",")
             win_geom = support.get_geom(int(win_id))
@@ -1074,12 +1075,15 @@ class XTile:
         #print "next_tiling_geoms", next_tiling_geoms
         # tile the windows
         for element in next_tiling_geoms:
+            doubleundo_snap_vec.append(support.get_undo_element_from_win_id(int(element['win_id'])))
             support.moveresize(int(element['win_id']),
                                int(element['win_geom'][0]),
                                int(element['win_geom'][1]),
                                int(element['win_geom'][2]),
                                int(element['win_geom'][3]),
                                self.get_dest_ws())
+        if doubleundo_snap_vec:
+            support.undo_snap_write(self.gconf_client, doubleundo_snap_vec)
         self.check_exit_after_tile()
 
     def cycle_tiling(self, *args):
@@ -1089,6 +1093,7 @@ class XTile:
         undo_snap_str = self.gconf_client.get_string(cons.GCONF_UNDO % glob.screen_index)
         if not undo_snap_str: return
         undo_snap_vec = undo_snap_str.split(" ")
+        doubleundo_snap_vec = []
         for element in undo_snap_vec:
             win_id, is_maximized, x, y, width, height = element.split(",")
             win_geom = support.get_geom(int(win_id))
@@ -1102,12 +1107,15 @@ class XTile:
         #print "next_tiling_geoms", next_tiling_geoms
         # tile the windows
         for element in next_tiling_geoms:
+            doubleundo_snap_vec.append(support.get_undo_element_from_win_id(int(element['win_id'])))
             support.moveresize(int(element['win_id']),
                                int(element['win_geom'][0]),
                                int(element['win_geom'][1]),
                                int(element['win_geom'][2]),
                                int(element['win_geom'][3]),
                                self.get_dest_ws())
+        if doubleundo_snap_vec:
+            support.undo_snap_write(self.gconf_client, doubleundo_snap_vec)
         self.check_exit_after_tile()
 
     def undo_tiling(self, *args):
@@ -1119,19 +1127,11 @@ class XTile:
         for element in undo_snap_vec:
             win_id, is_maximized, x, y, width, height = element.split(",")
             # save current state for eventual undo of the undo
-            win_id = int(win_id)
-            if support.is_window_Vmax(win_id) or support.is_window_Hmax(win_id): is_maximized = 1
-            else: is_maximized = 0
-            win_geom = support.get_geom(win_id)
-            doubleundo_snap_vec.append([  str(win_id),
-                                          str(is_maximized),
-                                          str(win_geom[0]),
-                                          str(win_geom[1]),
-                                          str(win_geom[2]),
-                                          str(win_geom[3])  ])
+            win_id_int = int(win_id)
+            doubleundo_snap_vec.append(support.get_undo_element_from_win_id(win_id_int))
             # proceed with the undo
-            if int(is_maximized) == 1: support.maximize(int(win_id))
-            else: support.moveresize(win_id, int(x), int(y), int(width), int(height), self.get_dest_ws())
+            if int(is_maximized) == 1: support.maximize(win_id_int)
+            else: support.moveresize(win_id_int, int(x), int(y), int(width), int(height), self.get_dest_ws())
         if doubleundo_snap_vec:
             support.undo_snap_write(self.gconf_client, doubleundo_snap_vec)
         self.check_exit_after_tile()
