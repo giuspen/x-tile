@@ -26,7 +26,7 @@
 
 import gtk, gobject
 import os, subprocess, ctypes, re
-import globs
+import globs, cons
 
 
 def get_desktop_width_n_height():
@@ -369,6 +369,14 @@ def is_window_Hmax(win):
     for i in range(0, glob.num_items.value):
         if glob.ret_pointer[i] == glob.maxh_atom: return True
     return False
+
+def undo_snap_write(gconf_client, undo_snap_vec):
+    """Write Undo Snap to Disk"""
+    undo_snap_str = ""
+    for element in undo_snap_vec:
+        undo_snap_str += ",".join(element) + " "
+    undo_snap_str = undo_snap_str[:-1]
+    gconf_client.set_string(cons.GCONF_UNDO % glob.screen_index, undo_snap_str)
 
 def dialog_info(message, parent=None):
     """The Info dialog"""
