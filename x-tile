@@ -26,18 +26,23 @@
 #      Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 #      MA 02110-1301, USA.
 
+from gi.repository import Gtk, GdkPixbuf, GConf
 import sys, os, gettext, ctypes, ctypes.util, locale
-import gtk, gconf
 import __builtin__
 
 if os.path.isfile('modules/globs.py'): MODULES_PATH = 'modules/'
 else: MODULES_PATH = '/usr/share/x-tile/modules/'
 sys.path.append(MODULES_PATH)
-import cons, globs, core
+import cons
+print "3"
+import core
+print "4"
+import globs
+
 
 # language installation
-gconf_client = gconf.client_get_default()
-gconf_client.add_dir(cons.GCONF_DIR, gconf.CLIENT_PRELOAD_NONE)
+gconf_client = GConf.Client.get_default()
+gconf_client.add_dir(cons.GCONF_DIR, GConf.ClientPreloadType.PRELOAD_NONE)
 lang_str = gconf_client.get_string(cons.GCONF_LANG)
 if lang_str == None:
     gconf_client.set_string(cons.GCONF_LANG, "default")
@@ -52,17 +57,16 @@ except:
     __builtin__._ = _
 
 __builtin__.glob = globs.GlobalsObject()
-
 try:
    libc = ctypes.cdll.LoadLibrary(ctypes.util.find_library("libc"))
    libc.prctl(15, cons.APP_NAME, 0, 0, 0)
 except: print "libc.prctl not available, the process name will be python and not x-tile"
 
 # icons generation
-factory = gtk.IconFactory()
+factory = Gtk.IconFactory()
 for filename, stock_name in cons.ICONS_FILENAMES:
-    pixbuf = gtk.gdk.pixbuf_new_from_file(filename)
-    iconset = gtk.IconSet(pixbuf)
+    pixbuf = GdkPixbuf.Pixbuf.new_from_file(filename)
+    iconset = Gtk.IconSet(pixbuf)
     factory.add(stock_name, iconset)
 factory.add_default()
 
@@ -73,7 +77,7 @@ if arg == "w":
     x = core.XTile(core.InfoModel())
     x.launch_application()
     x.reload_windows_list()
-    gtk.main()
+    Gtk.main()
 elif arg in cons.CMD_LINE_ACTIONS:
     x = core.XTile(core.InfoModel())
     x.launch_application()

@@ -24,10 +24,10 @@
 #      Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 #      MA 02110-1301, USA.
 
-import gtk, gobject, gconf
+from gi.repository import Gtk, GObject, GConf
 import os, sys, ctypes, webbrowser, time, subprocess
 try:
-    import appindicator
+    from gi.repository import AppIndicator3 as appindicator
     HAS_APPINDICATOR = True
 except: HAS_APPINDICATOR = False
 import cons, support, tilings
@@ -37,21 +37,21 @@ class InfoModel:
     """Holds the information"""
 
     def __init__(self):
-        """Sets up and populates the gtk.ListStore"""
+        """Sets up and populates the Gtk.ListStore"""
         # 0:selected, 1:window ref, 2:title, 3:pixbuf of icon, 4:selected2, 5:cell_background
-        self.gconf_client = gconf.client_get_default()
-        self.liststore = gtk.ListStore(gobject.TYPE_BOOLEAN,
-                                       gobject.TYPE_ULONG,
-                                       gobject.TYPE_STRING,
-                                       gobject.TYPE_PYOBJECT,
-                                       gobject.TYPE_BOOLEAN,
-                                       gobject.TYPE_STRING)
+        self.gconf_client = GConf.Client.get_default()
+        self.liststore = Gtk.ListStore(GObject.TYPE_BOOLEAN,
+                                       GObject.TYPE_ULONG,
+                                       GObject.TYPE_STRING,
+                                       GObject.TYPE_PYOBJECT,
+                                       GObject.TYPE_BOOLEAN,
+                                       GObject.TYPE_STRING)
         self.process_picklist = set()
         self.process_blacklist = set()
         self.process_whitelist = set()
 
     def load_model(self, appletobj):
-        """Populates the gtk.ListStore"""
+        """Populates the Gtk.ListStore"""
         self.liststore.clear()
         clients = []
         support.get_property("_NET_CLIENT_LIST", glob.root, glob.XA_WINDOW)
@@ -63,7 +63,7 @@ class InfoModel:
             curr_workspace_num = -2
             print "DEBUG warning _NET_CURRENT_DESKTOP improperly set"
         else: curr_workspace_num = glob.ret_pointer[0] # the number of the current workspace
-        screen = gtk.gdk.screen_get_default()
+        screen = Gdk.Screen.get_default()
         for client in clients:
             if support.is_window_sticky(client): continue
             support.get_property("_NET_WM_DESKTOP", client, glob.XA_CARDINAL)
@@ -90,7 +90,7 @@ class InfoModel:
             else: title = ctypes.string_at(glob.ret_pointer)
             if title in cons.WINNAMES_BLACKLIST: continue
             pxb = support.get_icon(client)
-            if pxb: pxb = pxb.scale_simple(24, 24, gtk.gdk.INTERP_BILINEAR)
+            if pxb: pxb = pxb.scale_simple(24, 24, GdkPixbuf.InterpType.BILINEAR)
             support.get_property("_NET_WM_PID", client, glob.XA_CARDINAL)
             pid=0
             process_name="UNKNOWN"
@@ -111,7 +111,7 @@ class InfoModel:
             if support.is_candidate_compiz_desktop(client): continue
             self.process_picklist.add(process_name)
             if process_name not in self.process_blacklist: # user filter
-                win_curr_monitor = screen.get_monitor_at_window(gtk.gdk.window_foreign_new(client))
+                win_curr_monitor = screen.get_monitor_at_window(Gdk.window_foreign_new(client))
                 if win_curr_monitor == 0: cell_background = None
                 else: cell_background = 'gray'
                 if process_name not in self.process_whitelist: flagged = False
@@ -229,7 +229,7 @@ class GladeWidgetsWrapper:
 
     def __init__(self, glade_file_path, gui_instance):
         try:
-            self.glade_widgets = gtk.Builder()
+            self.glade_widgets = Gtk.Builder()
             self.glade_widgets.set_translation_domain(cons.APP_NAME)
             self.glade_widgets.add_from_file(glade_file_path)
             self.glade_widgets.connect_signals(gui_instance)
@@ -257,7 +257,7 @@ class XTile:
         self.store = store
         # system settings
         try:
-            gtk_settings = gtk.settings_get_default()
+            gtk_settings = Gtk.Settings.get_default()
             gtk_settings.set_property("gtk-button-images", True)
             gtk_settings.set_property("gtk-menu-images", True)
         except: pass # older gtk do not have the property "gtk-menu-images"
@@ -266,39 +266,39 @@ class XTile:
         # instantiate the Glade Widgets Wrapper
         self.glade = GladeWidgetsWrapper(cons.GLADE_PATH + 'x-tile.glade', self)
         # ui manager
-        actions = gtk.ActionGroup("Actions")
+        actions = Gtk.ActionGroup("Actions")
         actions.add_actions(cons.get_entries(self))
-        self.ui = gtk.UIManager()
+        self.ui = Gtk.UIManager()
         self.ui.insert_action_group(actions, 0)
         self.glade.window.add_accel_group(self.ui.get_accel_group())
         self.ui.add_ui_from_string(cons.UI_INFO)
         # menubar add
-        self.glade.vbox_main.pack_start(self.ui.get_widget("/MenuBar"), False, False)
+        self.glade.vbox_main.pack_start(self.ui.get_widget("/MenuBar", True, True, 0), False, False)
         self.glade.vbox_main.reorder_child(self.ui.get_widget("/MenuBar"), 0)
         # toolbar add
-        self.glade.vbox_main.pack_start(self.ui.get_widget("/ToolBar"), False, False)
+        self.glade.vbox_main.pack_start(self.ui.get_widget("/ToolBar", True, True, 0), False, False)
         self.glade.vbox_main.reorder_child(self.ui.get_widget("/ToolBar"), 1)
-        self.ui.get_widget("/ToolBar").set_style(gtk.TOOLBAR_ICONS)
+        self.ui.get_widget("/ToolBar").set_style(Gtk.TOOLBAR_ICONS)
         # create the view
-        self.view = gtk.TreeView(store.get_model())
+        self.view = Gtk.TreeView(store.get_model())
         self.view.set_headers_visible(False)
-        self.renderer_checkbox = gtk.CellRendererToggle()
+        self.renderer_checkbox = Gtk.CellRendererToggle()
         self.renderer_checkbox.set_property('activatable', True)
         self.renderer_checkbox.connect('toggled', self.toggle_active, self.store.liststore)
-        self.renderer_checkbox2 = gtk.CellRendererToggle()
+        self.renderer_checkbox2 = Gtk.CellRendererToggle()
         self.renderer_checkbox2.set_property('activatable', True)
         self.renderer_checkbox2.connect('toggled', self.toggle_active2, self.store.liststore)
-        self.renderer_pixbuf = gtk.CellRendererPixbuf()
-        self.renderer_text = gtk.CellRendererText()
+        self.renderer_pixbuf = Gtk.CellRendererPixbuf()
+        self.renderer_text = Gtk.CellRendererText()
         self.columns = [None]*4
-        self.columns[0] = gtk.TreeViewColumn("Tile", self.renderer_checkbox, active=0) # active=0 <> read from column 0 of model
+        self.columns[0] = Gtk.TreeViewColumn("Tile", self.renderer_checkbox, active=0) # active=0 <> read from column 0 of model
         self.columns[0].add_attribute(self.renderer_checkbox, "cell-background", 5)
-        self.columns[1] = gtk.TreeViewColumn("Tile", self.renderer_checkbox2, active=4) # active=4 <> read from column 4 of model
+        self.columns[1] = Gtk.TreeViewColumn("Tile", self.renderer_checkbox2, active=4) # active=4 <> read from column 4 of model
         self.columns[1].add_attribute(self.renderer_checkbox2, "cell-background", 5)
-        self.columns[2] = gtk.TreeViewColumn("Logo", self.renderer_pixbuf)
+        self.columns[2] = Gtk.TreeViewColumn("Logo", self.renderer_pixbuf)
         self.columns[2].set_cell_data_func(self.renderer_pixbuf, self.make_pixbuf)
         self.columns[2].add_attribute(self.renderer_pixbuf, "cell-background", 5)
-        self.columns[3] = gtk.TreeViewColumn("Window Description", self.renderer_text, text=2) # text=2 <> read from column 2 of model
+        self.columns[3] = Gtk.TreeViewColumn("Window Description", self.renderer_text, text=2) # text=2 <> read from column 2 of model
         self.columns[3].add_attribute(self.renderer_text, "cell-background", 5)
         for n in range(4): self.view.append_column(self.columns[n])
         if glob.num_monitors < 2: self.columns[1].set_visible(False)
@@ -311,16 +311,16 @@ class XTile:
         self.glade.processadddialog.connect('key_press_event', self.on_key_press_processadddialog)
         self.glade.aboutdialog.set_version(cons.VERSION)
         self.glade.window.set_title(self.glade.window.get_title() + " " + cons.VERSION)
-        self.gconf_client = gconf.client_get_default()
-        self.gconf_client.add_dir("/apps/x-tile/%s" % glob.screen_index, gconf.CLIENT_PRELOAD_NONE)
+        self.gconf_client = GConf.Client.get_default()
+        self.gconf_client.add_dir("/apps/x-tile/%s" % glob.screen_index, GConf.ClientPreloadType.PRELOAD_NONE)
         self.combobox_country_lang_init()
 
     def combobox_country_lang_init(self):
         """Init The Programming Languages Syntax Highlighting"""
         combobox = self.glade.combobox_country_language
-        self.country_lang_liststore = gtk.ListStore(str)
+        self.country_lang_liststore = Gtk.ListStore(str)
         combobox.set_model(self.country_lang_liststore)
-        cell = gtk.CellRendererText()
+        cell = Gtk.CellRendererText()
         combobox.pack_start(cell, True)
         combobox.add_attribute(cell, 'text', 0)
         for country_lang in cons.AVAILABLE_LANGS:
@@ -355,7 +355,7 @@ class XTile:
             self.ind.set_icon("x-tile")
             self.ind.set_menu(self.ui.get_widget("/SysTrayMenu"))
         else:
-            self.status_icon = gtk.StatusIcon()
+            self.status_icon = Gtk.StatusIcon()
             self.status_icon.set_from_stock("Tile Quad")
             self.status_icon.connect('button-press-event', self.on_mouse_button_clicked_systray)
             self.status_icon.set_tooltip(_("Tile the Windows Upon your X Desktop"))
@@ -777,11 +777,11 @@ class XTile:
     def filter_list_exist_or_create(self):
         """If The List Was Never Used, this will Create It"""
         if not "filter_liststore" in dir(self):
-            self.filter_liststore = gtk.ListStore(str)
-            self.filter_treeview = gtk.TreeView(self.filter_liststore)
+            self.filter_liststore = Gtk.ListStore(str)
+            self.filter_treeview = Gtk.TreeView(self.filter_liststore)
             self.filter_treeview.set_headers_visible(False)
-            self.filter_renderer_text = gtk.CellRendererText()
-            self.filter_column = gtk.TreeViewColumn("Application", self.filter_renderer_text, text=0)
+            self.filter_renderer_text = Gtk.CellRendererText()
+            self.filter_column = Gtk.TreeViewColumn("Application", self.filter_renderer_text, text=0)
             self.filter_treeview.append_column(self.filter_column)
             self.filter_treeviewselection = self.filter_treeview.get_selection()
             self.glade.scrolledwindow_filter.add(self.filter_treeview)
@@ -790,11 +790,11 @@ class XTile:
     def white_list_exist_or_create(self):
         """If The List Was Never Used, this will Create It"""
         if not "white_liststore" in dir(self):
-            self.white_liststore = gtk.ListStore(str)
-            self.white_treeview = gtk.TreeView(self.white_liststore)
+            self.white_liststore = Gtk.ListStore(str)
+            self.white_treeview = Gtk.TreeView(self.white_liststore)
             self.white_treeview.set_headers_visible(False)
-            self.white_renderer_text = gtk.CellRendererText()
-            self.white_column = gtk.TreeViewColumn("Application", self.white_renderer_text, text=0)
+            self.white_renderer_text = Gtk.CellRendererText()
+            self.white_column = Gtk.TreeViewColumn("Application", self.white_renderer_text, text=0)
             self.white_treeview.append_column(self.white_column)
             self.white_treeviewselection = self.white_treeview.get_selection()
             self.glade.scrolledwindow_white.add(self.white_treeview)
@@ -803,11 +803,11 @@ class XTile:
     def process_add_list_exist_or_create(self):
         """If The List Was Never Used, this will Create It"""
         if not "process_add_liststore" in dir(self):
-            self.process_add_liststore = gtk.ListStore(str)
-            self.process_add_treeview = gtk.TreeView(self.process_add_liststore)
+            self.process_add_liststore = Gtk.ListStore(str)
+            self.process_add_treeview = Gtk.TreeView(self.process_add_liststore)
             self.process_add_treeview.set_headers_visible(False)
-            self.process_add_renderer_text = gtk.CellRendererText()
-            self.process_add_column = gtk.TreeViewColumn("Application", self.process_add_renderer_text, text=0)
+            self.process_add_renderer_text = Gtk.CellRendererText()
+            self.process_add_column = Gtk.TreeViewColumn("Application", self.process_add_renderer_text, text=0)
             self.process_add_treeview.append_column(self.process_add_column)
             self.process_add_treeviewselection = self.process_add_treeview.get_selection()
             self.process_add_treeview.connect('button-press-event', self.on_mouse_button_clicked_process_add)
@@ -817,40 +817,40 @@ class XTile:
     def on_mouse_button_clicked_process_add(self, widget, event):
         """Catches mouse buttons clicks"""
         if event.button != 1: return
-        if event.type == gtk.gdk._2BUTTON_PRESS: self.glade.processadddialog_button_ok.clicked()
+        if event.type == Gdk._2BUTTON_PRESS: self.glade.processadddialog_button_ok.clicked()
 
     def on_key_press_processadddialog(self, widget, event):
         """Catches AnchorHandle Dialog key presses"""
-        keyname = gtk.gdk.keyval_name(event.keyval)
+        keyname = Gdk.keyval_name(event.keyval)
         if keyname == "Return": self.glade.processadddialog_button_ok.clicked()
 
     def dialog_grid(self, *args):
         """Open the Grid Dialog"""
-        dialog = gtk.Dialog(title=_("Grid Details"),
+        dialog = Gtk.Dialog(title=_("Grid Details"),
                                     parent=self.glade.window,
-                                    flags=gtk.DIALOG_MODAL|gtk.DIALOG_DESTROY_WITH_PARENT,
-                                    buttons=(gtk.STOCK_CANCEL, gtk.RESPONSE_REJECT,
-                                    gtk.STOCK_OK, gtk.RESPONSE_ACCEPT) )
-        dialog.set_position(gtk.WIN_POS_CENTER_ON_PARENT)
+                                    flags=Gtk.DialogFlags.MODAL|Gtk.DialogFlags.DESTROY_WITH_PARENT,
+                                    buttons=(Gtk.STOCK_CANCEL, Gtk.ResponseType.REJECT,
+                                    Gtk.STOCK_OK, Gtk.ResponseType.ACCEPT) )
+        dialog.set_position(Gtk.WindowPosition.CENTER_ON_PARENT)
         content_area = dialog.get_content_area()
-        hbox_rows = gtk.HBox()
-        label_rows = gtk.Label(_("Rows"))
-        spinbutton_rows = gtk.SpinButton()
+        hbox_rows = Gtk.HBox()
+        label_rows = Gtk.Label(label=_("Rows"))
+        spinbutton_rows = Gtk.SpinButton()
         adj_rows = spinbutton_rows.get_adjustment()
         adj_rows.set_all(cons.GRID_ROWS, 1, 100, 1, 0, 0)
-        hbox_rows.pack_start(label_rows)
-        hbox_rows.pack_start(spinbutton_rows)
-        hbox_cols = gtk.HBox()
-        label_cols = gtk.Label(_("Columns"))
-        spinbutton_cols = gtk.SpinButton()
+        hbox_rows.pack_start(label_rows, True, True, 0)
+        hbox_rows.pack_start(spinbutton_rows, True, True, 0)
+        hbox_cols = Gtk.HBox()
+        label_cols = Gtk.Label(label=_("Columns"))
+        spinbutton_cols = Gtk.SpinButton()
         adj_cols = spinbutton_cols.get_adjustment()
         adj_cols.set_all(cons.GRID_COLS, 1, 100, 1, 0, 0)
-        hbox_cols.pack_start(label_cols)
-        hbox_cols.pack_start(spinbutton_cols)
-        content_area.pack_start(hbox_rows)
-        content_area.pack_start(hbox_cols)
+        hbox_cols.pack_start(label_cols, True, True, 0)
+        hbox_cols.pack_start(spinbutton_cols, True, True, 0)
+        content_area.pack_start(hbox_rows, True, True, 0)
+        content_area.pack_start(hbox_cols, True, True, 0)
         def on_key_press_enter_password_dialog(widget, event):
-            if gtk.gdk.keyval_name(event.keyval) == "Return":
+            if Gdk.keyval_name(event.keyval) == "Return":
                 button_box = dialog.get_action_area()
                 buttons = button_box.get_children()
                 buttons[0].clicked() # first is the ok button
@@ -860,7 +860,7 @@ class XTile:
         cons.GRID_ROWS = int(spinbutton_rows.get_value())
         cons.GRID_COLS = int(spinbutton_cols.get_value())
         dialog.destroy()
-        if response != gtk.RESPONSE_ACCEPT: return
+        if response != Gtk.ResponseType.ACCEPT: return
         self.gconf_client.set_int(cons.GCONF_GRID_ROWS % glob.screen_index, cons.GRID_ROWS)
         self.gconf_client.set_int(cons.GCONF_GRID_COLS % glob.screen_index, cons.GRID_COLS)
         self.tile_grid()
@@ -870,7 +870,7 @@ class XTile:
         if not HAS_APPINDICATOR and "status_icon" in dir(self): self.status_icon.set_visible(False)
         self.save_win_pos_n_size()
         self.glade.window.destroy()
-        gtk.main_quit()
+        Gtk.main_quit()
     
     def save_win_pos_n_size(self):
         """Destroy the window"""

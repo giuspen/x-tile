@@ -24,11 +24,12 @@
 #      Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 #      MA 02110-1301, USA.
 
-import gtk, os
+from gi.repository import Gtk
+import os
 
 
 APP_NAME = "x-tile"
-VERSION = "2.4"
+VERSION = "3.0"
 if os.path.isdir('glade'):
     GLADE_PATH = "glade/"
     ICON_PLACE = "linux/x-tile.svg"
@@ -78,8 +79,8 @@ DRAW_RGBS = (
                (1, 0, 0.25), # red wine
              )
 
-ICONS_SIZE = {1: gtk.ICON_SIZE_MENU, 2: gtk.ICON_SIZE_SMALL_TOOLBAR, 3: gtk.ICON_SIZE_LARGE_TOOLBAR,
-              4: gtk.ICON_SIZE_DND, 5: gtk.ICON_SIZE_DIALOG}
+ICONS_SIZE = {1: Gtk.IconSize.MENU, 2: Gtk.IconSize.SMALL_TOOLBAR, 3: Gtk.IconSize.LARGE_TOOLBAR,
+              4: Gtk.IconSize.DND, 5: Gtk.IconSize.DIALOG}
 
 ICONS_FILENAMES = [(GLADE_PATH + 'tile-vertically.svg', 'Tile Vertically'),
                    (GLADE_PATH + 'tile-horizontally.svg', 'Tile Horizontally'),
