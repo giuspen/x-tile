@@ -198,31 +198,19 @@ class InfoModel:
                 self.liststore.remove(iter)
             iter = next_iter
 
-    def row_up(self, iter):
+    def row_up(self, node_iter):
         """Row up one position"""
-        prev_iter = self.get_tree_iter_prev_sibling(iter)
-        if prev_iter != None: self.liststore.swap(iter, prev_iter)
+        prev_iter = self.liststore.iter_previous(node_iter)
+        if prev_iter != None: self.liststore.swap(node_iter, prev_iter)
 
-    def row_down(self, iter):
+    def row_down(self, node_iter):
         """Row down one position"""
-        subseq_iter = self.liststore.iter_next(iter)
-        if subseq_iter != None: self.liststore.swap(iter, subseq_iter)
+        subseq_iter = self.liststore.iter_next(node_iter)
+        if subseq_iter != None: self.liststore.swap(node_iter, subseq_iter)
 
-    def row_delete(self, iter):
+    def row_delete(self, node_iter):
         """Row remove"""
-        self.liststore.remove(iter)
-
-    def get_tree_iter_prev_sibling(self, node_iter):
-        """Returns the previous sibling iter or None if the given iter is the first"""
-        node_path = self.liststore.get_path(node_iter)
-        sibling_index = len(node_path)-1
-        prev_iter = None
-        while prev_iter == None and node_path[sibling_index] > 0:
-            node_path_list = list(node_path)
-            node_path_list[sibling_index] -= 1
-            prev_path = tuple(node_path_list)
-            prev_iter = self.liststore.get_iter(prev_path)
-        return prev_iter
+        self.liststore.remove(node_iter)
 
     def get_model(self):
         """Returns the model"""
@@ -1022,7 +1010,7 @@ class XTile:
     def on_mouse_button_clicked_list(self, widget, event):
         """Catches mouse buttons clicks"""
         if event.button == 3:
-            self.ui.get_widget("/ListMenu").popup(None, None, None, event.button, event.time)
+            self.ui.get_widget("/ListMenu").popup(None, None, None, None, event.button, event.time)
 
     def on_button_update_custom_tiling_clicked(self, button):
         """Let's Get Positions and Size of the Flagged Windows"""
