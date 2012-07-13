@@ -353,10 +353,10 @@ class XTile:
     def status_icon_enable(self):
         """Creates the Stats Icon"""
         if HAS_APPINDICATOR:
-            self.ind = appindicator.Indicator("x-tile", "indicator-messages", appindicator.IndicatorCategory.APPLICATION_STATUS)
+            self.ind = appindicator.Indicator.new("x-tile", "indicator-messages", appindicator.IndicatorCategory.APPLICATION_STATUS)
             self.ind.set_status(appindicator.IndicatorStatus.ACTIVE)
             self.ind.set_attention_icon("indicator-messages-new")
-            self.ind.set_icon("x-tile")
+            self.ind.set_icon("/usr/share/pixmaps/x-tile.svg")
             self.ind.set_menu(self.ui.get_widget("/SysTrayMenu"))
         else:
             self.status_icon = Gtk.StatusIcon()
@@ -622,9 +622,9 @@ class XTile:
         """Unflags All Rows"""
         self.store.unflag_all_rows()
 
-    def make_pixbuf(self, treeviewcolumn, cell, model, tree_iter, data):
+    def make_pixbuf(self, treeviewcolumn, cell, tree_model, tree_iter, data):
         """Function to associate the pixbuf to the cell renderer"""
-        pixbuf = model[tree_iter][3]
+        pixbuf = tree_model[tree_iter][3]
         cell.set_property('pixbuf', pixbuf)
 
     def on_window_delete_event(self, widget, event, data=None):
@@ -1007,12 +1007,12 @@ class XTile:
         if custom_geoms_str != "": custom_geoms_str = custom_geoms_str[1:]
         self.gconf_client.set_string(cons.GCONF_CUSTOM_2 % glob.screen_index, custom_geoms_str)
 
-    def on_drawingarea_expose_event(self, widget, event):
+    def on_drawing_area_draw(self, drawing_area, cairo_context):
         """Drawing Area was Exposed"""
         if self.last_custom == 1:
-            if self.custom_geoms_1: self.custom_geoms_draw(self.custom_geoms_1)
+            if self.custom_geoms_1: self.custom_geoms_draw(self.custom_geoms_1, cairo_context)
         elif self.last_custom == 2:
-            if self.custom_geoms_2: self.custom_geoms_draw(self.custom_geoms_2)
+            if self.custom_geoms_2: self.custom_geoms_draw(self.custom_geoms_2, cairo_context)
 
     def on_mouse_button_clicked_list(self, widget, event):
         """Catches mouse buttons clicks"""
@@ -1035,20 +1035,19 @@ class XTile:
                 self.custom_geoms_2.append([win_geom[0], win_geom[1], win_geom[2], win_geom[3]])
             self.custom_geoms_draw(self.custom_geoms_2)
 
-    def custom_geoms_draw(self, custom_geoms):
+    def custom_geoms_draw(self, custom_geoms, cairo_context):
         """Draw Custom Geometries"""
-        cr = self.glade.drawingarea.window.cairo_create()
         rgb_idx = 0
         for i, win_geom in enumerate(custom_geoms):
-            cr.set_source_rgb(*cons.DRAW_RGBS[rgb_idx])
-            cr.rectangle(win_geom[0]/cons.DRAW_SCALE, win_geom[1]/cons.DRAW_SCALE,
+            cairo_context.set_source_rgb(*cons.DRAW_RGBS[rgb_idx])
+            cairo_context.rectangle(win_geom[0]/cons.DRAW_SCALE, win_geom[1]/cons.DRAW_SCALE,
                          win_geom[2]/cons.DRAW_SCALE, win_geom[3]/cons.DRAW_SCALE)
-            cr.fill()
-            cr.set_source_rgb(0, 0, 0)
-            cr.set_font_size(13)
-            cr.move_to(win_geom[0]/cons.DRAW_SCALE + win_geom[2]/(2*cons.DRAW_SCALE),
+            cairo_context.fill()
+            cairo_context.set_source_rgb(0, 0, 0)
+            cairo_context.set_font_size(13)
+            cairo_context.move_to(win_geom[0]/cons.DRAW_SCALE + win_geom[2]/(2*cons.DRAW_SCALE),
                        win_geom[1]/cons.DRAW_SCALE + win_geom[3]/(2*cons.DRAW_SCALE))
-            cr.show_text(str(i+1))
+            cairo_context.show_text(str(i+1))
             if rgb_idx + 1 < len(cons.DRAW_RGBS): rgb_idx += 1
             else: rgb_idx = 0
 
