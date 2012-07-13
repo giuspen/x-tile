@@ -813,7 +813,7 @@ class XTile:
     def on_mouse_button_clicked_process_add(self, widget, event):
         """Catches mouse buttons clicks"""
         if event.button != 1: return
-        if event.type == Gdk._2BUTTON_PRESS: self.glade.processadddialog_button_ok.clicked()
+        if event.type == Gdk.EventType._2BUTTON_PRESS: self.glade.processadddialog_button_ok.clicked()
 
     def on_key_press_processadddialog(self, widget, event):
         """Catches AnchorHandle Dialog key presses"""
