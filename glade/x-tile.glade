@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <requires lib="gtk+" version="2.16"/>
-  <!-- interface-naming-policy project-wide -->
+  <!-- interface-requires gtk+ 3.0 -->
   <object class="GtkAboutDialog" id="aboutdialog">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
@@ -49,12 +48,13 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
     <property name="artists"></property>
     <property name="logo">x-tile.svg</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox1">
+      <object class="GtkBox" id="dialog-vbox1">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area1">
+          <object class="GtkButtonBox" id="dialog-action_area1">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
@@ -214,10 +214,12 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                 <child>
                   <object class="GtkCheckButton" id="do_not_list_minimized_checkbutton">
                     <property name="label" translatable="yes">Do Not List Minimized Windows</property>
+                    <property name="use_action_appearance">False</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
                     <property name="use_action_appearance">False</property>
+                    <property name="xalign">0.5</property>
                     <property name="active">True</property>
                     <property name="draw_indicator">True</property>
                     <signal name="toggled" handler="toggle_do_not_list_minimized" swapped="no"/>
@@ -232,10 +234,12 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                 <child>
                   <object class="GtkCheckButton" id="current_workspace_checkbutton">
                     <property name="label" translatable="yes">Only Current Workspace</property>
+                    <property name="use_action_appearance">False</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
                     <property name="use_action_appearance">False</property>
+                    <property name="xalign">0.5</property>
                     <property name="active">True</property>
                     <property name="draw_indicator">True</property>
                     <signal name="toggled" handler="toggle_only_curr_workspace" swapped="no"/>
@@ -261,10 +265,12 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                 <child>
                   <object class="GtkCheckButton" id="checkbutton_systray_docking">
                     <property name="label" translatable="yes">Enable System Tray Docking</property>
+                    <property name="use_action_appearance">False</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
                     <property name="use_action_appearance">False</property>
+                    <property name="xalign">0.5</property>
                     <property name="active">True</property>
                     <property name="draw_indicator">True</property>
                     <signal name="toggled" handler="on_checkbutton_systray_docking_toggled" swapped="no"/>
@@ -278,10 +284,12 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                 <child>
                   <object class="GtkCheckButton" id="checkbutton_start_minimized">
                     <property name="label" translatable="yes">Start Minimized in the System Tray</property>
+                    <property name="use_action_appearance">False</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
                     <property name="use_action_appearance">False</property>
+                    <property name="xalign">0.5</property>
                     <property name="draw_indicator">True</property>
                     <signal name="toggled" handler="on_checkbutton_start_minimized_toggled" swapped="no"/>
                   </object>
@@ -305,10 +313,12 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                 <child>
                   <object class="GtkCheckButton" id="show_toolbar_checkbutton">
                     <property name="label" translatable="yes">Show Toolbar</property>
+                    <property name="use_action_appearance">False</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
                     <property name="use_action_appearance">False</property>
+                    <property name="xalign">0.5</property>
                     <property name="active">True</property>
                     <property name="draw_indicator">True</property>
                     <signal name="toggled" handler="show_hide_toolbar" swapped="no"/>
@@ -346,10 +356,12 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                 <child>
                   <object class="GtkCheckButton" id="checkbutton_override_monitor_1_area">
                     <property name="label" translatable="yes">Override Monitor 1 Tiling Area</property>
+                    <property name="use_action_appearance">False</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">False</property>
                     <property name="use_action_appearance">False</property>
+                    <property name="xalign">0.5</property>
                     <property name="draw_indicator">True</property>
                     <signal name="toggled" handler="on_checkbutton_override_monitor_1_area_toggled" swapped="no"/>
                   </object>
@@ -384,8 +396,6 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                                     <property name="invisible_char">●</property>
                                     <property name="primary_icon_activatable">False</property>
                                     <property name="secondary_icon_activatable">False</property>
-                                    <property name="primary_icon_sensitive">True</property>
-                                    <property name="secondary_icon_sensitive">True</property>
                                     <property name="adjustment">adjustment_x1</property>
                                   </object>
                                   <packing>
@@ -425,8 +435,6 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                                     <property name="invisible_char">●</property>
                                     <property name="primary_icon_activatable">False</property>
                                     <property name="secondary_icon_activatable">False</property>
-                                    <property name="primary_icon_sensitive">True</property>
-                                    <property name="secondary_icon_sensitive">True</property>
                                     <property name="adjustment">adjustment_y1</property>
                                   </object>
                                   <packing>
@@ -487,8 +495,6 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                                     <property name="invisible_char">●</property>
                                     <property name="primary_icon_activatable">False</property>
                                     <property name="secondary_icon_activatable">False</property>
-                                    <property name="primary_icon_sensitive">True</property>
-                                    <property name="secondary_icon_sensitive">True</property>
                                     <property name="adjustment">adjustment_w1</property>
                                   </object>
                                   <packing>
@@ -528,8 +534,6 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                                     <property name="invisible_char">●</property>
                                     <property name="primary_icon_activatable">False</property>
                                     <property name="secondary_icon_activatable">False</property>
-                                    <property name="primary_icon_sensitive">True</property>
-                                    <property name="secondary_icon_sensitive">True</property>
                                     <property name="adjustment">adjustment_h1</property>
                                   </object>
                                   <packing>
@@ -595,10 +599,12 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                     <child>
                       <object class="GtkCheckButton" id="checkbutton_override_monitor_2_area">
                         <property name="label" translatable="yes">Override Monitor 2 Tiling Area</property>
+                        <property name="use_action_appearance">False</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">False</property>
                         <property name="use_action_appearance">False</property>
+                        <property name="xalign">0.5</property>
                         <property name="draw_indicator">True</property>
                         <signal name="toggled" handler="on_checkbutton_override_monitor_2_area_toggled" swapped="no"/>
                       </object>
@@ -633,8 +639,6 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                                         <property name="invisible_char">●</property>
                                         <property name="primary_icon_activatable">False</property>
                                         <property name="secondary_icon_activatable">False</property>
-                                        <property name="primary_icon_sensitive">True</property>
-                                        <property name="secondary_icon_sensitive">True</property>
                                         <property name="adjustment">adjustment_x2</property>
                                       </object>
                                       <packing>
@@ -674,8 +678,6 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                                         <property name="invisible_char">●</property>
                                         <property name="primary_icon_activatable">False</property>
                                         <property name="secondary_icon_activatable">False</property>
-                                        <property name="primary_icon_sensitive">True</property>
-                                        <property name="secondary_icon_sensitive">True</property>
                                         <property name="adjustment">adjustment_y2</property>
                                       </object>
                                       <packing>
@@ -736,8 +738,6 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                                         <property name="invisible_char">●</property>
                                         <property name="primary_icon_activatable">False</property>
                                         <property name="secondary_icon_activatable">False</property>
-                                        <property name="primary_icon_sensitive">True</property>
-                                        <property name="secondary_icon_sensitive">True</property>
                                         <property name="adjustment">adjustment_w2</property>
                                       </object>
                                       <packing>
@@ -777,8 +777,6 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                                         <property name="invisible_char">●</property>
                                         <property name="primary_icon_activatable">False</property>
                                         <property name="secondary_icon_activatable">False</property>
-                                        <property name="primary_icon_sensitive">True</property>
-                                        <property name="secondary_icon_sensitive">True</property>
                                         <property name="adjustment">adjustment_h2</property>
                                       </object>
                                       <packing>
@@ -864,6 +862,7 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
             <property name="layout_style">spread</property>
             <child>
               <object class="GtkButton" id="configwin_close_button">
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -922,17 +921,19 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
     <property name="type_hint">normal</property>
     <property name="transient_for">window</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox6">
+      <object class="GtkBox" id="dialog-vbox6">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area6">
+          <object class="GtkButtonBox" id="dialog-action_area6">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="layout_style">center</property>
             <child>
               <object class="GtkButton" id="button7">
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -976,6 +977,7 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
             </child>
             <child>
               <object class="GtkButton" id="button8">
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -1038,7 +1040,7 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                   <object class="GtkDrawingArea" id="drawingarea">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <signal name="expose-event" handler="on_drawingarea_expose_event" swapped="no"/>
+                    <signal name="draw" handler="on_drawing_area_draw" swapped="no"/>
                   </object>
                 </child>
                 <child type="label">
@@ -1123,6 +1125,7 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                 </child>
                 <child>
                   <object class="GtkButton" id="button_update_custom_tiling">
+                    <property name="use_action_appearance">False</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -1196,17 +1199,18 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
     <property name="type_hint">normal</property>
     <property name="transient_for">window</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox2">
+      <object class="GtkBox" id="dialog-vbox2">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area2">
+          <object class="GtkButtonBox" id="dialog-action_area2">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="layout_style">center</property>
             <child>
               <object class="GtkButton" id="button5">
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -1264,8 +1268,6 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
               <object class="GtkScrolledWindow" id="scrolledwindow_filter">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="hscrollbar_policy">automatic</property>
-                <property name="vscrollbar_policy">automatic</property>
                 <child>
                   <placeholder/>
                 </child>
@@ -1283,6 +1285,7 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                 <property name="layout_style">start</property>
                 <child>
                   <object class="GtkButton" id="button_add_filter">
+                    <property name="use_action_appearance">False</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -1305,6 +1308,7 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                 </child>
                 <child>
                   <object class="GtkButton" id="button_remove_filter">
+                    <property name="use_action_appearance">False</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -1345,21 +1349,6 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
       <action-widget response="0">button5</action-widget>
     </action-widgets>
   </object>
-  <object class="GtkImage" id="image20">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="stock">gtk-about</property>
-  </object>
-  <object class="GtkImage" id="image21">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="stock">Reload Windows List</property>
-  </object>
-  <object class="GtkImage" id="image22">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
-    <property name="stock">gtk-about</property>
-  </object>
   <object class="GtkDialog" id="processadddialog">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
@@ -1369,17 +1358,19 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
     <property name="type_hint">normal</property>
     <property name="transient_for">window</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox3">
+      <object class="GtkBox" id="dialog-vbox3">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area3">
+          <object class="GtkButtonBox" id="dialog-action_area3">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="layout_style">center</property>
             <child>
               <object class="GtkButton" id="processadddialog_button_cancel">
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -1423,6 +1414,7 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
             </child>
             <child>
               <object class="GtkButton" id="processadddialog_button_ok">
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -1476,8 +1468,6 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
           <object class="GtkScrolledWindow" id="scrolledwindow_process_add">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
-            <property name="hscrollbar_policy">automatic</property>
-            <property name="vscrollbar_policy">automatic</property>
             <child>
               <placeholder/>
             </child>
@@ -1495,6 +1485,115 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
       <action-widget response="1">processadddialog_button_ok</action-widget>
     </action-widgets>
   </object>
+  <object class="GtkWindow" id="window">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">X Tile</property>
+    <property name="default_width">400</property>
+    <property name="default_height">200</property>
+    <property name="icon">x-tile.svg</property>
+    <signal name="delete-event" handler="on_window_delete_event" swapped="no"/>
+    <child>
+      <object class="GtkVBox" id="vbox_main">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <object class="GtkFrame" id="frame1">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label_xalign">0</property>
+            <child>
+              <object class="GtkScrolledWindow" id="scrolledwindow">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <child>
+                  <placeholder/>
+                </child>
+              </object>
+            </child>
+            <child type="label_item">
+              <placeholder/>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkHBox" id="hbox2">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GtkCheckButton" id="checkbutton_dest_workspace">
+                <property name="label" translatable="yes">Set Destination Workspace</property>
+                <property name="use_action_appearance">False</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="use_action_appearance">False</property>
+                <property name="xalign">0.5</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="padding">3</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkSpinButton" id="spinbutton_dest_workspace">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="invisible_char">•</property>
+                <property name="primary_icon_activatable">False</property>
+                <property name="secondary_icon_activatable">False</property>
+                <property name="adjustment">adjustment_dest_workspace</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="exit_after_tile_checkbutton">
+                <property name="label" translatable="yes">Exit After Tile</property>
+                <property name="use_action_appearance">False</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="use_action_appearance">False</property>
+                <property name="use_underline">True</property>
+                <property name="xalign">0.5</property>
+                <property name="active">True</property>
+                <property name="draw_indicator">True</property>
+                <signal name="toggled" handler="toggle_exit_after_tile" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="padding">3</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
   <object class="GtkDialog" id="whitedialog">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
@@ -1504,17 +1603,19 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
     <property name="type_hint">normal</property>
     <property name="transient_for">window</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox5">
+      <object class="GtkBox" id="dialog-vbox5">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area5">
+          <object class="GtkButtonBox" id="dialog-action_area5">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="layout_style">center</property>
             <child>
               <object class="GtkButton" id="button6">
+                <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -1572,8 +1673,6 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
               <object class="GtkScrolledWindow" id="scrolledwindow_white">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="hscrollbar_policy">automatic</property>
-                <property name="vscrollbar_policy">automatic</property>
                 <child>
                   <placeholder/>
                 </child>
@@ -1591,6 +1690,7 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                 <property name="layout_style">start</property>
                 <child>
                   <object class="GtkButton" id="button_add_white">
+                    <property name="use_action_appearance">False</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -1612,6 +1712,7 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                 </child>
                 <child>
                   <object class="GtkButton" id="button_remove_white">
+                    <property name="use_action_appearance">False</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -1650,114 +1751,5 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
     <action-widgets>
       <action-widget response="0">button6</action-widget>
     </action-widgets>
-  </object>
-  <object class="GtkWindow" id="window">
-    <property name="can_focus">False</property>
-    <property name="title" translatable="yes">X Tile</property>
-    <property name="default_width">400</property>
-    <property name="default_height">200</property>
-    <property name="icon">x-tile.svg</property>
-    <signal name="delete-event" handler="on_window_delete_event" swapped="no"/>
-    <child>
-      <object class="GtkVBox" id="vbox_main">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <child>
-          <placeholder/>
-        </child>
-        <child>
-          <placeholder/>
-        </child>
-        <child>
-          <object class="GtkFrame" id="frame1">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="label_xalign">0</property>
-            <child>
-              <object class="GtkScrolledWindow" id="scrolledwindow">
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="hscrollbar_policy">automatic</property>
-                <property name="vscrollbar_policy">automatic</property>
-                <child>
-                  <placeholder/>
-                </child>
-              </object>
-            </child>
-            <child type="label_item">
-              <placeholder/>
-            </child>
-          </object>
-          <packing>
-            <property name="expand">True</property>
-            <property name="fill">True</property>
-            <property name="position">2</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkHBox" id="hbox2">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <child>
-              <object class="GtkCheckButton" id="checkbutton_dest_workspace">
-                <property name="label" translatable="yes">Set Destination Workspace</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">False</property>
-                <property name="use_action_appearance">False</property>
-                <property name="draw_indicator">True</property>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="padding">3</property>
-                <property name="position">0</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkSpinButton" id="spinbutton_dest_workspace">
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="invisible_char">•</property>
-                <property name="primary_icon_activatable">False</property>
-                <property name="secondary_icon_activatable">False</property>
-                <property name="primary_icon_sensitive">True</property>
-                <property name="secondary_icon_sensitive">True</property>
-                <property name="adjustment">adjustment_dest_workspace</property>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">1</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkCheckButton" id="exit_after_tile_checkbutton">
-                <property name="label" translatable="yes">Exit After Tile</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">False</property>
-                <property name="use_action_appearance">False</property>
-                <property name="use_underline">True</property>
-                <property name="active">True</property>
-                <property name="draw_indicator">True</property>
-                <signal name="toggled" handler="toggle_exit_after_tile" swapped="no"/>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="padding">3</property>
-                <property name="position">2</property>
-              </packing>
-            </child>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">3</property>
-          </packing>
-        </child>
-      </object>
-    </child>
   </object>
 </interface>
