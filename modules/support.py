@@ -24,7 +24,7 @@
 #      Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 #      MA 02110-1301, USA.
 
-import gtk, gobject
+from gi.repository import Gtk
 import os, subprocess, ctypes, re
 import globs, cons
 
@@ -127,7 +127,7 @@ def get_property(prop_name, window, data_type):  #128*256 longs (128kb) should b
                            ctypes.byref(glob.bytes_after), ctypes.byref(glob.ret_pointer))
 
 def get_icon(win):
-    """   this returns a gtk.gdk.pixbuf of the windows icon
+    """   this returns a Gdk.pixbuf of the windows icon
           converts argb into rgba in the process   """
     get_property("_NET_WM_ICON", win, glob.XA_CARDINAL)
     if not glob.ret_pointer : return None
@@ -143,7 +143,7 @@ def get_icon(win):
         buff = buff + ("%c" % ((argb >> 8) & 0xff))
         buff = buff + ("%c" % (argb & 0xff))
         buff = buff + ("%c" % ((argb >> 24) & 0xff))
-    pxbuf = gtk.gdk.pixbuf_new_from_data(buff, gtk.gdk.COLORSPACE_RGB, True, 8, w, h, w*4)
+    pxbuf = GdkPixbuf.Pixbuf.new_from_data(buff, GdkPixbuf.Colorspace.RGB, True, 8, w, h, w*4)
     return pxbuf
 
 def get_min_size(win):
@@ -392,9 +392,9 @@ def undo_snap_write(gconf_client, undo_snap_vec):
 
 def dialog_info(message, parent=None):
     """The Info dialog"""
-    dialog = gtk.MessageDialog(flags=gtk.DIALOG_MODAL|gtk.DIALOG_DESTROY_WITH_PARENT,
-                               type=gtk.MESSAGE_INFO,
-                               buttons=gtk.BUTTONS_OK,
+    dialog = Gtk.MessageDialog(flags=Gtk.DialogFlags.MODAL|Gtk.DialogFlags.DESTROY_WITH_PARENT,
+                               type=Gtk.MessageType.INFO,
+                               buttons=Gtk.ButtonsType.OK,
                                message_format=message)
     if parent != None: dialog.set_transient_for(parent)
     dialog.set_title(_("Info"))
@@ -403,9 +403,9 @@ def dialog_info(message, parent=None):
 
 def dialog_warning(message, parent=None):
     """The Warning dialog"""
-    dialog = gtk.MessageDialog(flags=gtk.DIALOG_MODAL|gtk.DIALOG_DESTROY_WITH_PARENT,
-                               type=gtk.MESSAGE_WARNING,
-                               buttons=gtk.BUTTONS_OK,
+    dialog = Gtk.MessageDialog(flags=Gtk.DialogFlags.MODAL|Gtk.DialogFlags.DESTROY_WITH_PARENT,
+                               type=Gtk.MessageType.WARNING,
+                               buttons=Gtk.ButtonsType.OK,
                                message_format=message)
     if parent != None: dialog.set_transient_for(parent)
     dialog.set_title(_("Warning"))
