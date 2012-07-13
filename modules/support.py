@@ -24,7 +24,7 @@
 #      Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 #      MA 02110-1301, USA.
 
-from gi.repository import Gtk
+from gi.repository import Gtk, GdkPixbuf
 import os, subprocess, ctypes, re
 import globs, cons
 
@@ -126,6 +126,10 @@ def get_property(prop_name, window, data_type):  #128*256 longs (128kb) should b
                            ctypes.byref(glob.ret_type), ctypes.byref(glob.ret_format), ctypes.byref(glob.num_items),
                            ctypes.byref(glob.bytes_after), ctypes.byref(glob.ret_pointer))
 
+def pixbuf_destroy_fn(pixbuf, data):
+    """Function called when there are no more references of pixbuf"""
+    del pixbuf
+
 def get_icon(win):
     """   this returns a Gdk.pixbuf of the windows icon
           converts argb into rgba in the process   """
@@ -143,7 +147,14 @@ def get_icon(win):
         buff = buff + ("%c" % ((argb >> 8) & 0xff))
         buff = buff + ("%c" % (argb & 0xff))
         buff = buff + ("%c" % ((argb >> 24) & 0xff))
-    pxbuf = GdkPixbuf.Pixbuf.new_from_data(buff, GdkPixbuf.Colorspace.RGB, True, 8, w, h, w*4)
+    pxbuf = GdkPixbuf.Pixbuf.new_from_data(buff,
+                                           GdkPixbuf.Colorspace.RGB,
+                                           True,
+                                           8,
+                                           w,
+                                           h,
+                                           w*4,
+                                           pixbuf_destroy_fn, None)
     return pxbuf
 
 def get_min_size(win):

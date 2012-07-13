@@ -24,7 +24,7 @@
 #      Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 #      MA 02110-1301, USA.
 
-from gi.repository import Gtk, GObject, GConf
+from gi.repository import Gtk, Gdk, GdkPixbuf, GObject, GConf
 import os, sys, ctypes, webbrowser, time, subprocess
 try:
     from gi.repository import AppIndicator3 as appindicator
@@ -111,7 +111,11 @@ class InfoModel:
             if support.is_candidate_compiz_desktop(client): continue
             self.process_picklist.add(process_name)
             if process_name not in self.process_blacklist: # user filter
-                win_curr_monitor = screen.get_monitor_at_window(Gdk.window_foreign_new(client))
+                if glob.num_monitors > 1:
+                    win_geom = support.get_geom(win_id)
+                    win_curr_monitor = screen.get_monitor_at_point(win_geom[0]+win_geom[2]/2,
+                                                                   win_geom[1]+win_geom[3]/2)
+                else: win_curr_monitor = 0
                 if win_curr_monitor == 0: cell_background = None
                 else: cell_background = 'gray'
                 if process_name not in self.process_whitelist: flagged = False
@@ -273,12 +277,12 @@ class XTile:
         self.glade.window.add_accel_group(self.ui.get_accel_group())
         self.ui.add_ui_from_string(cons.UI_INFO)
         # menubar add
-        self.glade.vbox_main.pack_start(self.ui.get_widget("/MenuBar", True, True, 0), False, False)
+        self.glade.vbox_main.pack_start(self.ui.get_widget("/MenuBar"), False, False, 0)
         self.glade.vbox_main.reorder_child(self.ui.get_widget("/MenuBar"), 0)
         # toolbar add
-        self.glade.vbox_main.pack_start(self.ui.get_widget("/ToolBar", True, True, 0), False, False)
+        self.glade.vbox_main.pack_start(self.ui.get_widget("/ToolBar"), False, False, 0)
         self.glade.vbox_main.reorder_child(self.ui.get_widget("/ToolBar"), 1)
-        self.ui.get_widget("/ToolBar").set_style(Gtk.TOOLBAR_ICONS)
+        self.ui.get_widget("/ToolBar").set_style(Gtk.ToolbarStyle.ICONS)
         # create the view
         self.view = Gtk.TreeView(store.get_model())
         self.view.set_headers_visible(False)
@@ -349,8 +353,8 @@ class XTile:
     def status_icon_enable(self):
         """Creates the Stats Icon"""
         if HAS_APPINDICATOR:
-            self.ind = appindicator.Indicator("x-tile", "indicator-messages", appindicator.CATEGORY_APPLICATION_STATUS)
-            self.ind.set_status(appindicator.STATUS_ACTIVE)
+            self.ind = appindicator.Indicator("x-tile", "indicator-messages", appindicator.IndicatorCategory.APPLICATION_STATUS)
+            self.ind.set_status(appindicator.IndicatorStatus.ACTIVE)
             self.ind.set_attention_icon("indicator-messages-new")
             self.ind.set_icon("x-tile")
             self.ind.set_menu(self.ui.get_widget("/SysTrayMenu"))
@@ -381,7 +385,7 @@ class XTile:
                 if "status_icon" in dir(self): self.status_icon.set_property('visible', True)
                 else: self.status_icon_enable()
             else:
-                if "ind" in dir(self): self.ind.set_status(appindicator.STATUS_ACTIVE)
+                if "ind" in dir(self): self.ind.set_status(appindicator.IndicatorStatus.ACTIVE)
                 else: self.status_icon_enable()
             self.ui.get_widget("/MenuBar/FileMenu/ExitApp").set_property('visible', True)
             self.glade.checkbutton_start_minimized.set_sensitive(True)
@@ -393,7 +397,7 @@ class XTile:
                 self.status_icon.set_property('visible', False)
             else:
                 if not "ind" in dir(self): self.status_icon_enable()
-                self.ind.set_status(appindicator.STATUS_PASSIVE)
+                self.ind.set_status(appindicator.IndicatorStatus.PASSIVE)
             self.ui.get_widget("/MenuBar/FileMenu/ExitApp").set_property('visible', False)
             self.glade.checkbutton_start_minimized.set_sensitive(False)
             if self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) != cons.STR_FALSE:
@@ -445,8 +449,8 @@ class XTile:
     def init_from_gconf(self):
         """Init the geometry and the spinbuttons"""
         glob.read_monitors_areas()
-        self.glade.drawingarea.set_property("width-request", glob.drawing_rect.width)
-        self.glade.drawingarea.set_property("height-request", glob.drawing_rect.height)
+        self.glade.drawingarea.set_property("width-request", glob.drawing_rect[2])
+        self.glade.drawingarea.set_property("height-request", glob.drawing_rect[3])
         self.custom_geoms_1 = []
         custom_geoms_str = self.gconf_client.get_string(cons.GCONF_CUSTOM_1 % glob.screen_index)
         if custom_geoms_str:
@@ -618,9 +622,9 @@ class XTile:
         """Unflags All Rows"""
         self.store.unflag_all_rows()
 
-    def make_pixbuf(self, treeviewcolumn, cell, model, iter):
+    def make_pixbuf(self, treeviewcolumn, cell, model, tree_iter, data):
         """Function to associate the pixbuf to the cell renderer"""
-        pixbuf = model[iter][3]
+        pixbuf = model[tree_iter][3]
         cell.set_property('pixbuf', pixbuf)
 
     def on_window_delete_event(self, widget, event, data=None):
