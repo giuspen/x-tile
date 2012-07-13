@@ -34,9 +34,7 @@ if os.path.isfile('modules/globs.py'): MODULES_PATH = 'modules/'
 else: MODULES_PATH = '/usr/share/x-tile/modules/'
 sys.path.append(MODULES_PATH)
 import cons
-print "3"
 import core
-print "4"
 import globs
 
 
