@@ -1040,7 +1040,6 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                   <object class="GtkDrawingArea" id="drawingarea">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <signal name="draw" handler="on_drawing_area_draw" swapped="no"/>
                   </object>
                 </child>
                 <child type="label">
