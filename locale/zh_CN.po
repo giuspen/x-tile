@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: 1.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-07-12 12:08+0200\n"
-"PO-Revision-Date: 2011-07-03 22:58+0800\n"
-"Last-Translator: Fan.Khiyuan <Fan.Khiyuan@gmail.com>\n"
+"PO-Revision-Date: 2012-07-13 13:20+0800\n"
+"Last-Translator: Khiyuan.Fan <Fan.Khiyuan@gmail.com>\n"
 "Language-Team: Fan.khiyuan@gmail.com\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,8 @@ msgstr "使用拖拉来排序行"
 msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr "新语言将在重启 X Tile 后生效。"
 
-#: modules/core.py:365 glade/x-tile.glade.h:5
+#: modules/core.py:365
+#: glade/x-tile.glade.h:5
 msgid "Tile the Windows Upon your X Desktop"
 msgstr ""
 "X Tile\n"
@@ -34,11 +35,14 @@ msgstr "工具栏图标的尺寸已经是最大的了。"
 msgid "The Size of the Toolbar Icons is already at the Minimum Value"
 msgstr "工具栏图标的尺寸已经是最小的了。"
 
-#: modules/core.py:681 modules/core.py:689 modules/core.py:697
+#: modules/core.py:681
+#: modules/core.py:689
+#: modules/core.py:697
 msgid "No Row is Selected"
 msgstr "没有选定任何行"
 
-#: modules/core.py:719 modules/core.py:753
+#: modules/core.py:719
+#: modules/core.py:753
 msgid "No Application Selected!"
 msgstr "没有选择应用程序!"
 
@@ -54,24 +58,23 @@ msgstr "行"
 msgid "Columns"
 msgstr "列"
 
-#: modules/core.py:929 modules/core.py:937 modules/core.py:947
+#: modules/core.py:929
+#: modules/core.py:937
+#: modules/core.py:947
 msgid "No Windows Checked"
 msgstr "没有选择窗口"
 
-#: modules/core.py:987 modules/core.py:1000
+#: modules/core.py:987
+#: modules/core.py:1000
 msgid "Edit Custom Tile Settings"
 msgstr "编辑自定排列设定"
 
 #: modules/core.py:1151
-msgid ""
-"The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
-"Set'"
+msgid "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 Set'"
 msgstr "自定排列1尚未设置：点击菜单 '排列->自定排列1' 进行设置。"
 
 #: modules/core.py:1169
-msgid ""
-"The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
-"Set'"
+msgid "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 Set'"
 msgstr "自定排列2尚未设置：点击菜单 '排列->自定排列2' 进行设置。"
 
 #: modules/cons.py:269
@@ -94,7 +97,8 @@ msgstr "排列 (_T)"
 msgid "_View"
 msgstr "查看 (_V)"
 
-#: modules/cons.py:274 modules/cons.py:309
+#: modules/cons.py:274
+#: modules/cons.py:309
 msgid "_Help"
 msgstr "帮助 (_H)"
 
@@ -110,7 +114,8 @@ msgstr "过滤行"
 msgid "Selected by _Default"
 msgstr "预设选定 (_D)"
 
-#: modules/cons.py:277 glade/x-tile.glade.h:58
+#: modules/cons.py:277
+#: glade/x-tile.glade.h:58
 msgid "Rows to be Selected by Default"
 msgstr "预设选定的行"
 
@@ -266,31 +271,35 @@ msgstr "运行自定排列2 (_2)"
 msgid "Execute Custom Tile 2"
 msgstr "运行自定排列2"
 
-#: modules/cons.py:297 modules/cons.py:326
+#: modules/cons.py:297
+#: modules/cons.py:326
 msgid "U_ndo Tiling"
 msgstr "撤销排列 (_N)"
 
-#: modules/cons.py:297 modules/cons.py:326
+#: modules/cons.py:297
+#: modules/cons.py:326
 msgid "Undo the Latest Tiling Operation"
 msgstr "撤消最后一次排列操作"
 
-#: modules/cons.py:298 modules/cons.py:325
+#: modules/cons.py:298
+#: modules/cons.py:325
 msgid "_Invert Tiling Order"
 msgstr "倒置排列次序(_I)"
 
-#: modules/cons.py:298 modules/cons.py:325
+#: modules/cons.py:298
+#: modules/cons.py:325
 msgid "Invert the Order of the Latest Tiling Operation"
 msgstr "倒置最后一次排列操作"
 
-#: modules/cons.py:299 modules/cons.py:327
-#, fuzzy
+#: modules/cons.py:299
+#: modules/cons.py:327
 msgid "C_ycle Tiling Order"
-msgstr "倒置排列次序(_I)"
+msgstr "循环排列次序(_I)"
 
-#: modules/cons.py:299 modules/cons.py:327
-#, fuzzy
+#: modules/cons.py:299
+#: modules/cons.py:327
 msgid "Cycle the Order of the Latest Tiling Operation"
-msgstr "倒置最后一次排列操作"
+msgstr "循环最后一次排列操作"
 
 #: modules/cons.py:300
 msgid "_Maximize Windows"
@@ -368,11 +377,14 @@ msgstr "缩小工具栏图标"
 msgid "X Tile Project Home Page"
 msgstr "X Tile 项目首页"
 
-#: modules/cons.py:310 modules/cons.py:311
+#: modules/cons.py:310
+#: modules/cons.py:311
 msgid "_About"
 msgstr "关于 (_A)"
 
-#: modules/cons.py:310 modules/cons.py:311 glade/x-tile.glade.h:1
+#: modules/cons.py:310
+#: modules/cons.py:311
+#: glade/x-tile.glade.h:1
 msgid "About X Tile"
 msgstr "关于 X Tile"
 
@@ -481,13 +493,12 @@ msgid "Tile All Windows Vertically"
 msgstr "垂直排列全部窗口"
 
 #: glade/x-tile.glade.h:2
-#, fuzzy
 msgid ""
 "Copyright © 2009-2012\n"
 "Giuseppe Penone <giuspen@gmail.com>\n"
 "Chris Camacho <chris_camacho@yahoo.com>"
 msgstr ""
-"Copyright © 2009-2011\n"
+"Copyright © 2009-2012\n"
 "Giuseppe Penone <giuspen@gmail.com>\n"
 "Chris Camacho <chris_camacho@yahoo.com>"
 
@@ -530,7 +541,6 @@ msgstr ""
 "MA 02110-1301, USA."
 
 #: glade/x-tile.glade.h:22
-#, fuzzy
 msgid ""
 "Chinese Simplified (zh_CN) Khiyuan Fan <Fan.Khiyuan@gmail.com>\n"
 "Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
@@ -544,7 +554,7 @@ msgid ""
 msgstr ""
 "汉语(简体中文) (zh_CN) Khi-yuan Fan <Fan.khiyuan@gmail.com>\n"
 "汉语(繁体中文) (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
-"Czech (cs) Pavel Fric <fripohled@blogspot.com\n"
+"捷克语 (cs) Pavel Fric <fripohled@blogspot.com\n"
 "西班牙语 (es_AR) MeloPixel <melopixel@gmail.com>\n"
 "法语 (fr) Ludovic Troisi <axalis@cegetel.net>\n"
 "德语 (de) Jöran Zeller <joeran@zeller.ws>\n"
@@ -665,8 +675,9 @@ msgstr "X Tile"
 
 #: glade/x-tile.glade.h:60
 msgid "Set Destination Workspace"
-msgstr ""
+msgstr "设置目标工作区"
 
 #: glade/x-tile.glade.h:61
 msgid "Exit After Tile"
 msgstr "排列后退出"
+
