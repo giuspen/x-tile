@@ -1001,11 +1001,10 @@ class XTile:
 
     def on_drawing_area_draw(self, drawing_area, cairo_context):
         """Drawing Area was Exposed"""
-        self.cairo_context = cairo_context
         if self.last_custom == 1:
-            if self.custom_geoms_1: self.custom_geoms_draw(self.custom_geoms_1)
+            if self.custom_geoms_1: self.custom_geoms_draw(self.custom_geoms_1, cairo_context)
         elif self.last_custom == 2:
-            if self.custom_geoms_2: self.custom_geoms_draw(self.custom_geoms_2)
+            if self.custom_geoms_2: self.custom_geoms_draw(self.custom_geoms_2, cairo_context)
 
     def on_mouse_button_clicked_list(self, widget, event):
         """Catches mouse buttons clicks"""
@@ -1020,27 +1019,26 @@ class XTile:
             for win_id in checked_windows_list[0] + checked_windows_list[1]:
                 win_geom = support.get_geom(win_id)
                 self.custom_geoms_1.append([win_geom[0], win_geom[1], win_geom[2], win_geom[3]])
-            self.custom_geoms_draw(self.custom_geoms_1)
         elif self.last_custom == 2:
             self.custom_geoms_2 = []
             for win_id in checked_windows_list[0] + checked_windows_list[1]:
                 win_geom = support.get_geom(win_id)
                 self.custom_geoms_2.append([win_geom[0], win_geom[1], win_geom[2], win_geom[3]])
-            self.custom_geoms_draw(self.custom_geoms_2)
+        self.glade.drawingarea.queue_draw()
 
-    def custom_geoms_draw(self, custom_geoms):
+    def custom_geoms_draw(self, custom_geoms, cairo_context):
         """Draw Custom Geometries"""
         rgb_idx = 0
         for i, win_geom in enumerate(custom_geoms):
-            self.cairo_context.set_source_rgb(*cons.DRAW_RGBS[rgb_idx])
-            self.cairo_context.rectangle(win_geom[0]/cons.DRAW_SCALE, win_geom[1]/cons.DRAW_SCALE,
+            cairo_context.set_source_rgb(*cons.DRAW_RGBS[rgb_idx])
+            cairo_context.rectangle(win_geom[0]/cons.DRAW_SCALE, win_geom[1]/cons.DRAW_SCALE,
                          win_geom[2]/cons.DRAW_SCALE, win_geom[3]/cons.DRAW_SCALE)
-            self.cairo_context.fill()
-            self.cairo_context.set_source_rgb(0, 0, 0)
-            self.cairo_context.set_font_size(13)
-            self.cairo_context.move_to(win_geom[0]/cons.DRAW_SCALE + win_geom[2]/(2*cons.DRAW_SCALE),
+            cairo_context.fill()
+            cairo_context.set_source_rgb(0, 0, 0)
+            cairo_context.set_font_size(13)
+            cairo_context.move_to(win_geom[0]/cons.DRAW_SCALE + win_geom[2]/(2*cons.DRAW_SCALE),
                        win_geom[1]/cons.DRAW_SCALE + win_geom[3]/(2*cons.DRAW_SCALE))
-            self.cairo_context.show_text(str(i+1))
+            cairo_context.show_text(str(i+1))
             if rgb_idx + 1 < len(cons.DRAW_RGBS): rgb_idx += 1
             else: rgb_idx = 0
 
