@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # maul <giuspen@gmail.com>, 2010.
 # Andriy Kovtun <kovtunos@yandex.ru>, 2010.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: X Tile\n"
@@ -16,8 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Language: ru_RU\n"
 "X-Source-Language: C\n"
 
@@ -74,16 +73,16 @@ msgid ""
 "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
 "Set'"
 msgstr ""
-"Пользовательская схема 1 не выставлена: Выберите ее в меню 'Разбиение-"
-">Пользовательская схема 1'"
+"Пользовательская схема 1 не выставлена: Выберите ее в меню "
+"'Разбиение->Пользовательская схема 1'"
 
 #: modules/core.py:1169
 msgid ""
 "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
 "Set'"
 msgstr ""
-"Пользовательская схема2  не выставлена: Выберите ее в меню 'Разбиение-"
-">Пользовательская схема 2'"
+"Пользовательская схема2  не выставлена: Выберите ее в меню "
+"'Разбиение->Пользовательская схема 2'"
 
 #: modules/cons.py:269
 msgid "_File"
@@ -294,14 +293,12 @@ msgid "Invert the Order of the Latest Tiling Operation"
 msgstr "Инвертировать порядок последней операции тайлинга"
 
 #: modules/cons.py:299 modules/cons.py:327
-#, fuzzy
 msgid "C_ycle Tiling Order"
-msgstr "Инвертировать порядок тайлинга"
+msgstr "Циклический порядок тайлинга"
 
 #: modules/cons.py:299 modules/cons.py:327
-#, fuzzy
 msgid "Cycle the Order of the Latest Tiling Operation"
-msgstr "Инвертировать порядок последней операции тайлинга"
+msgstr "Циклический порядок последней операции тайлинга"
 
 #: modules/cons.py:300
 msgid "_Maximize Windows"
@@ -544,7 +541,6 @@ msgstr ""
 "675 Mass Ave, Cambridge, MA 02139, USA."
 
 #: glade/x-tile.glade.h:22
-#, fuzzy
 msgid ""
 "Chinese Simplified (zh_CN) Khiyuan Fan <Fan.Khiyuan@gmail.com>\n"
 "Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
@@ -556,14 +552,15 @@ msgid ""
 "Polish (pl) Dominik Wójt <domin144@o2.pl>\n"
 "Russian (ru) Andriy Kovtun <kovtunos@yandex.ru>"
 msgstr ""
-"Китайский (zh_CN) Khiyuan Fan <Fan.Khiyuan@gmail.com>\n"
-"Китайский (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
-"Czech (cs) Pavel Fric <fripohled@blogspot.com\n"
+"Китайский Упрощённый (zh_CN) Khiyuan Fan <Fan.Khiyuan@gmail.com>\n"
+"Китайский Традиционный (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
+"Чешский (cs) Pavel Fric <fripohled@blogspot.com>\n"
 "Испанский (es_AR) MeloPixel <melopixel@gmail.com>\n"
 "Французский (fr) Ludovic Troisi <axalis@cegetel.net>\n"
 "Немецкий (de) Jöran Zeller <joeran@zeller.ws>\n"
 "Итальянский (it) Giuseppe Penone <giuspen@gmail.com>\n"
-"Русский (ru) Andriy Kovtun <kovtunos@yandex.ru>"
+"Польский (pl) Dominik Wójt <domin144@o2.pl>\n"
+"Русский (ru) Андрей Ковтун <kovtunos@yandex.ru>"
 
 #: glade/x-tile.glade.h:31
 msgid "Preferences"
