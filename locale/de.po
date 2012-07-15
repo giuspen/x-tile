@@ -2,13 +2,13 @@
 # Copyright (C) 2010 THE x-tile'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the x-tile package.
 # maul <giuspen@gmail.com>, 2010.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: x-tile 1.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-07-12 12:08+0200\n"
-"PO-Revision-Date: 2012-05-15 20:55+0100\n"
+"PO-Revision-Date: 2012-07-15 21:35+0100\n"
 "Last-Translator: Jöran Zeller <joeran@zeller.ws>\n"
 "Language-Team: German\n"
 "Language: German (Deutsch)\n"
@@ -25,7 +25,8 @@ msgstr "Benutze Drag and Drop um Zeilen zu sortieren"
 msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr "Neue Spracheinstellung erst nach Neustart von X Tile verfügbar"
 
-#: modules/core.py:365 glade/x-tile.glade.h:5
+#: modules/core.py:365
+#: glade/x-tile.glade.h:5
 msgid "Tile the Windows Upon your X Desktop"
 msgstr "Tile Fenster auf deinem X Desktop"
 
@@ -37,11 +38,14 @@ msgstr "Werkzeugleisten Icons sind schon maximal"
 msgid "The Size of the Toolbar Icons is already at the Minimum Value"
 msgstr "Werkzeugleisten Icons sind schon minimal"
 
-#: modules/core.py:681 modules/core.py:689 modules/core.py:697
+#: modules/core.py:681
+#: modules/core.py:689
+#: modules/core.py:697
 msgid "No Row is Selected"
 msgstr "Keine Zeile ausgewählt"
 
-#: modules/core.py:719 modules/core.py:753
+#: modules/core.py:719
+#: modules/core.py:753
 msgid "No Application Selected!"
 msgstr "Keine Anwendung ausgewählt!"
 
@@ -57,29 +61,24 @@ msgstr "_Zeile"
 msgid "Columns"
 msgstr "Spalten"
 
-#: modules/core.py:929 modules/core.py:937 modules/core.py:947
+#: modules/core.py:929
+#: modules/core.py:937
+#: modules/core.py:947
 msgid "No Windows Checked"
 msgstr "Keine Fenster ausgewählt"
 
-#: modules/core.py:987 modules/core.py:1000
+#: modules/core.py:987
+#: modules/core.py:1000
 msgid "Edit Custom Tile Settings"
 msgstr "Persönliche Tiling Schema bearbeiten"
 
 #: modules/core.py:1151
-msgid ""
-"The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
-"Set'"
-msgstr ""
-"Das persönliche tiling Schema (1) wurde noch nicht übernommen: Im Menü 'Tile-"
-">Eigenes Schema (1) setzen anklicken'"
+msgid "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 Set'"
+msgstr "Das persönliche tiling Schema (1) wurde noch nicht übernommen: Im Menü 'Tile->Eigenes Schema (1) setzen anklicken'"
 
 #: modules/core.py:1169
-msgid ""
-"The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
-"Set'"
-msgstr ""
-"Das persönliche tiling Schema wurde noch nicht übernommen: Im Menü 'Tile-"
-">Eigenes Schema (2) setzen anklicken'"
+msgid "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 Set'"
+msgstr "Das persönliche tiling Schema wurde noch nicht übernommen: Im Menü 'Tile->Eigenes Schema (2) setzen anklicken'"
 
 #: modules/cons.py:269
 msgid "_File"
@@ -101,7 +100,8 @@ msgstr "_Tile"
 msgid "_View"
 msgstr "_Ansicht"
 
-#: modules/cons.py:274 modules/cons.py:309
+#: modules/cons.py:274
+#: modules/cons.py:309
 msgid "_Help"
 msgstr "_Hilfe"
 
@@ -117,7 +117,8 @@ msgstr "Filtere Zeilen"
 msgid "Selected by _Default"
 msgstr "Immer selektiert"
 
-#: modules/cons.py:277 glade/x-tile.glade.h:58
+#: modules/cons.py:277
+#: glade/x-tile.glade.h:58
 msgid "Rows to be Selected by Default"
 msgstr "Zeilen die immer selektiert sein sollen"
 
@@ -273,31 +274,35 @@ msgstr "Eigenes Tiling Schema (_2) ausführen"
 msgid "Execute Custom Tile 2"
 msgstr "Eigenes Tiling Schema (2) ausführen"
 
-#: modules/cons.py:297 modules/cons.py:326
+#: modules/cons.py:297
+#: modules/cons.py:326
 msgid "U_ndo Tiling"
 msgstr "Tiling rückgä_ngig machen"
 
-#: modules/cons.py:297 modules/cons.py:326
+#: modules/cons.py:297
+#: modules/cons.py:326
 msgid "Undo the Latest Tiling Operation"
 msgstr "Mache die letzte tiling Operation rückgängig"
 
-#: modules/cons.py:298 modules/cons.py:325
+#: modules/cons.py:298
+#: modules/cons.py:325
 msgid "_Invert Tiling Order"
 msgstr "_Invertiere die tiling Reihenfolge"
 
-#: modules/cons.py:298 modules/cons.py:325
+#: modules/cons.py:298
+#: modules/cons.py:325
 msgid "Invert the Order of the Latest Tiling Operation"
 msgstr "Invertiere die Reihenfolge der letzten tiling Operation"
 
-#: modules/cons.py:299 modules/cons.py:327
-#, fuzzy
+#: modules/cons.py:299
+#: modules/cons.py:327
 msgid "C_ycle Tiling Order"
-msgstr "_Invertiere die tiling Reihenfolge"
+msgstr "_Durchlaufe Tiling Reihenfolge"
 
-#: modules/cons.py:299 modules/cons.py:327
-#, fuzzy
+#: modules/cons.py:299
+#: modules/cons.py:327
 msgid "Cycle the Order of the Latest Tiling Operation"
-msgstr "Invertiere die Reihenfolge der letzten tiling Operation"
+msgstr "Durchlaufe die Reihenfolge der letzten tiling Aktion"
 
 #: modules/cons.py:300
 msgid "_Maximize Windows"
@@ -375,11 +380,14 @@ msgstr "Verkleinere Icons der Werkzeugleiste"
 msgid "X Tile Project Home Page"
 msgstr "X Tile Projekt Home Page"
 
-#: modules/cons.py:310 modules/cons.py:311
+#: modules/cons.py:310
+#: modules/cons.py:311
 msgid "_About"
 msgstr "_Über"
 
-#: modules/cons.py:310 modules/cons.py:311 glade/x-tile.glade.h:1
+#: modules/cons.py:310
+#: modules/cons.py:311
+#: glade/x-tile.glade.h:1
 msgid "About X Tile"
 msgstr "Über X Tile"
 
@@ -536,7 +544,6 @@ msgstr ""
 "<http://www.gnu.org/licenses/>."
 
 #: glade/x-tile.glade.h:22
-#, fuzzy
 msgid ""
 "Chinese Simplified (zh_CN) Khiyuan Fan <Fan.Khiyuan@gmail.com>\n"
 "Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
@@ -548,8 +555,8 @@ msgid ""
 "Polish (pl) Dominik Wójt <domin144@o2.pl>\n"
 "Russian (ru) Andriy Kovtun <kovtunos@yandex.ru>"
 msgstr ""
-"Chinese Simplified (zh_CN) Khiyuan Fan <Fan.Khiyuan@gmail.com>\n"
-"Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
+"Chinesisch vereinfacht (zh_CN) Khiyuan Fan <Fan.Khiyuan@gmail.com>\n"
+"Chinesisch traditionell (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
 "Czech (cs) Pavel Fric <fripohled@blogspot.com\n"
 "Spanish (es_AR) MeloPixel <melopixel@gmail.com>\n"
 "French (fr) Ludovic Troisi <axalis@cegetel.net>\n"
@@ -676,3 +683,4 @@ msgstr "Setze Ziel Arbeitsfläche"
 #: glade/x-tile.glade.h:61
 msgid "Exit After Tile"
 msgstr "Schliessen nach tiling"
+
