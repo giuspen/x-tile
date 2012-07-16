@@ -4,7 +4,7 @@
 #
 #      Copyright 2009-2012
 #      Giuseppe Penone <giuspen@gmail.com>,
-#      Chris Camacho (chris_c) <chris_camacho@yahoo.com>.
+#      Chris Camacho (chris_c) <codifies@gmail.com>.
 #
 #      plus many thanks to  http://tronche.com/gui/x/xlib/
 #                      and  http://tripie.sweb.cz/utils/wmctrl/
@@ -350,7 +350,7 @@ class XTile:
                 if os.path.isfile(icp):
                     icon_path = icp
                     break
-            else: icon_path = "x-tile"
+            else: icon_path = cons.APP_NAME
             self.ind.set_icon(icon_path)
             self.ind.set_menu(self.ui.get_widget("/SysTrayMenu"))
         else:

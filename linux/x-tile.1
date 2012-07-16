@@ -1,0 +1,52 @@
+.TH X-TILE "1" "July 2012" "x-tile 3.0"
+.SH NAME
+X-Tile \- an application that allows you to select a number of windows and tile them in different ways
+.SH SYNOPSIS
+\fBx-tile [option]\fP
+.SH DESCRIPTION
+\fBX-Tile\fP works on any X desktop (gnome, kde, xfce, lxde…).
+The main features are: many tiling geometries, undo tiling, invert tiling order, cycle tiling order, optional system tray docking and menu, filter to avoid listing some windows, filter to check some windows by default, command line interface.
+.SH OPTIONS
+w => open the x-tile main window without using the panel
+
+z => undo the latest tiling operation
+
+v => tile all opened windows vertically
+
+h => tile all opened windows horizontally
+
+u => tile all opened windows triangle-up
+
+d => tile all opened windows triangle-down
+
+l => tile all opened windows triangle-left
+
+r => tile all opened windows triangle-right
+
+q => quad tile all opened windows
+
+g = g 0 = g 0 0   => tile all opened windows in a grid with automatic rows and columns
+g rows = g rows 0 => tile all opened windows in a grid with given rows and automatic columns
+g 0 cols          => tile all opened windows in a grid with automatic rows and given columns
+g rows cols       => tile all opened windows in a grid with given rows and columns
+
+1 => custom tile 1 all opened windows
+
+2 => custom tile 2 all opened windows
+
+i => invert the order of the latest tiling operation
+
+y => cycle the order of the latest tiling operation
+
+m => maximize all opened windows
+
+M => unmaximize all opened windows
+
+c => close all opened windows
+.SH AUTHOR
+\fBX-Tile\fP was written by Giuseppe Penone <giuspen@gmail.com> and and Chris Camacho <codifies@gmail.com>.
+.SH SEE ALSO
+http://www.giuspen.com/x-tile
+.PP
+This manual page was written by Giuseppe Penone <giuspen@gmail.com>,
+for the Debian project (and may be used by others).
