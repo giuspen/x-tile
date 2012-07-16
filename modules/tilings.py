@@ -4,7 +4,7 @@
 #
 #      Copyright 2009-2012
 #      Giuseppe Penone <giuspen@gmail.com>,
-#      Chris Camacho (chris_c) <chris_camacho@yahoo.com>.
+#      Chris Camacho (chris_c) <codifies@gmail.com>.
 #
 #      plus many thanks to  http://tronche.com/gui/x/xlib/
 #                      and  http://tripie.sweb.cz/utils/wmctrl/
