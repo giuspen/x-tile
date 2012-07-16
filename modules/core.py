@@ -4,7 +4,7 @@
 #
 #      Copyright 2009-2012
 #      Giuseppe Penone <giuspen@gmail.com>,
-#      Chris Camacho (chris_c) <chris_camacho@yahoo.com>.
+#      Chris Camacho (chris_c) <codifies@gmail.com>.
 #
 #      plus many thanks to  http://tronche.com/gui/x/xlib/
 #                      and  http://tripie.sweb.cz/utils/wmctrl/
@@ -352,7 +352,14 @@ class XTile:
             self.ind = appindicator.Indicator("x-tile", "indicator-messages", appindicator.CATEGORY_APPLICATION_STATUS)
             self.ind.set_status(appindicator.STATUS_ACTIVE)
             self.ind.set_attention_icon("indicator-messages-new")
-            self.ind.set_icon("x-tile")
+            for icp in ["/usr/share/icons/hicolor/scalable/apps/x-tile.svg",
+                        "/usr/local/share/icons/hicolor/scalable/apps/x-tile.svg",
+                        "glade/x-tile.svg"]:
+                if os.path.isfile(icp):
+                    icon_path = icp
+                    break
+            else: icon_path = cons.APP_NAME
+            self.ind.set_icon(icon_path)
             self.ind.set_menu(self.ui.get_widget("/SysTrayMenu"))
         else:
             self.status_icon = gtk.StatusIcon()

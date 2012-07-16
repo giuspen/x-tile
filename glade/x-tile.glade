@@ -16,7 +16,7 @@
     <property name="program_name">X Tile</property>
     <property name="copyright" translatable="yes">Copyright © 2009-2012
 Giuseppe Penone &lt;giuspen@gmail.com&gt;
-Chris Camacho &lt;chris_camacho@yahoo.com&gt;</property>
+Chris Camacho &lt;codifies@gmail.com&gt;</property>
     <property name="comments" translatable="yes">Tile the Windows Upon your X Desktop</property>
     <property name="website">http://www.giuspen.com/x-tile/</property>
     <property name="website_label" translatable="yes">http://www.giuspen.com/x-tile/</property>
@@ -36,7 +36,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 MA 02110-1301, USA.</property>
     <property name="authors">Giuseppe Penone &lt;giuspen@gmail.com&gt;
-Chris Camacho &lt;chris_camacho@yahoo.com&gt;</property>
+Chris Camacho &lt;codifies@gmail.com&gt;</property>
     <property name="translator_credits" translatable="yes">Chinese Simplified (zh_CN) Khiyuan Fan &lt;Fan.Khiyuan@gmail.com&gt;
 Chinese Traditional (zh_TW) Yan-ren Tsai &lt;elleryq@gmail.com&gt;
 Czech (cs) Pavel Fric &lt;fripohled@blogspot.com

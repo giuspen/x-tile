@@ -36,6 +36,16 @@ class XTileDist(Distribution):
 class BuildData(build):
     def run(self):
         build.run(self)
+        xtile_man_file = "linux/x-tile.1"
+        xtile_man_file_gz = xtile_man_file + ".gz"
+        if newer(xtile_man_file, xtile_man_file_gz):
+            if os.path.isfile(xtile_man_file_gz): os.remove(xtile_man_file_gz)
+            import gzip
+            f_in = open(xtile_man_file, 'rb')
+            f_out = gzip.open(xtile_man_file_gz, 'wb')
+            f_out.writelines(f_in)
+            f_out.close()
+            f_in.close()
         if self.distribution.without_gettext: return
         for po in glob.glob(os.path.join (PO_DIR, '*.po')):
             lang = os.path.basename(po[:-3])
@@ -137,13 +147,14 @@ setup(
     long_description = "Allows you to select a number of windows and tile them in different ways",
     version = cons.VERSION,
     author = "Giuseppe Penone & Chris Camacho",
-    author_email = "giuspen@gmail.com & chris_camacho@yahoo.com",
+    author_email = "giuspen@gmail.com & codifies@gmail.com",
     url = "http://www.giuspen.com/x-tile/",
     license = "GPL",
     data_files = [
-                  ("share/pixmaps", ["linux/x-tile.svg"] ),
+                  ("share/icons/hicolor/scalable/apps", ["glade/x-tile.svg"] ),
                   ("share/x-tile/glade", glob.glob("glade/*.*") ),
-                  ("share/x-tile/modules", glob.glob("modules/*.py") ) ],
+                  ("share/x-tile/modules", glob.glob("modules/*.py") ),
+                  ("share/man/man1", ["linux/x-tile.1.gz"]) ],
     cmdclass={
         'build': BuildData,
         'install_data': InstallData,

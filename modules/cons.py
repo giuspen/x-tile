@@ -4,7 +4,7 @@
 #
 #      Copyright 2009-2012
 #      Giuseppe Penone <giuspen@gmail.com>,
-#      Chris Camacho (chris_c) <chris_camacho@yahoo.com>.
+#      Chris Camacho (chris_c) <codifies@gmail.com>.
 #
 #      plus many thanks to  http://tronche.com/gui/x/xlib/
 #                      and  http://tripie.sweb.cz/utils/wmctrl/
@@ -31,11 +31,9 @@ APP_NAME = "x-tile"
 VERSION = "2.4"
 if os.path.isdir('glade'):
     GLADE_PATH = "glade/"
-    ICON_PLACE = "linux/x-tile.svg"
     LOCALE_PATH = "locale/"
 else:
     GLADE_PATH = "/usr/share/x-tile/glade/"
-    ICON_PLACE = "/usr/share/pixmaps/x-tile.svg"
     LOCALE_PATH = "/usr/share/locale/"
 
 AVAILABLE_LANGS = ['default', 'cs', 'de', 'en', 'es_AR', 'fr', 'it', 'pl', 'ru', 'zh_CN', 'zh_TW']
@@ -333,7 +331,7 @@ NAME
    X Tile - Tile the Windows upon your Desktop
 
 SYNOPSIS
-   x-tile OPTION [grid rows] [grid columns]
+   x-tile OPTION
 
 DESCRIPTION
    This manual page briefly documents the command line arguments
