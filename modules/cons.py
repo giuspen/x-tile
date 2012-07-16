@@ -32,11 +32,9 @@ APP_NAME = "x-tile"
 VERSION = "3.0"
 if os.path.isdir('glade'):
     GLADE_PATH = "glade/"
-    ICON_PLACE = "linux/x-tile.svg"
     LOCALE_PATH = "locale/"
 else:
     GLADE_PATH = "/usr/share/x-tile/glade/"
-    ICON_PLACE = "/usr/share/pixmaps/x-tile.svg"
     LOCALE_PATH = "/usr/share/locale/"
 
 AVAILABLE_LANGS = ['default', 'cs', 'de', 'en', 'es_AR', 'fr', 'it', 'pl', 'ru', 'zh_CN', 'zh_TW']
