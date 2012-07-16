@@ -3,7 +3,7 @@
 Name=X Tile
 Comment=Tile the Windows Upon your X Desktop
 Exec=x-tile
-Icon=/usr/share/pixmaps/x-tile.svg
+Icon=x-tile
 Terminal=false
 Type=Application
 StartupNotify=true

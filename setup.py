@@ -141,7 +141,7 @@ setup(
     url = "http://www.giuspen.com/x-tile/",
     license = "GPL",
     data_files = [
-                  ("share/pixmaps", ["linux/x-tile.svg"] ),
+                  ("share/icons/hicolor/scalable/apps", ["linux/x-tile.svg"] ),
                   ("share/x-tile/glade", glob.glob("glade/*.*") ),
                   ("share/x-tile/modules", glob.glob("modules/*.py") ) ],
     cmdclass={

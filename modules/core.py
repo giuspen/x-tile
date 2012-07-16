@@ -346,7 +346,12 @@ class XTile:
             self.ind = appindicator.Indicator.new("x-tile", "indicator-messages", appindicator.IndicatorCategory.APPLICATION_STATUS)
             self.ind.set_status(appindicator.IndicatorStatus.ACTIVE)
             self.ind.set_attention_icon("indicator-messages-new")
-            self.ind.set_icon("/usr/share/pixmaps/x-tile.svg")
+            for icp in ["/usr/share/icons/hicolor/scalable/apps/x-tile.svg", "/usr/local/share/icons/hicolor/scalable/apps/x-tile.svg", "glade/x-tile.svg"]:
+                if os.path.isfile(icp):
+                    icon_path = icp
+                    break
+            else: icon_path = "x-tile"
+            self.ind.set_icon(icon_path)
             self.ind.set_menu(self.ui.get_widget("/SysTrayMenu"))
         else:
             self.status_icon = Gtk.StatusIcon()
