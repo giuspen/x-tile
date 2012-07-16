@@ -292,14 +292,12 @@ msgid "Invert the Order of the Latest Tiling Operation"
 msgstr "Inverse l'ordre de la dernière opération de répartition"
 
 #: modules/cons.py:299 modules/cons.py:327
-#, fuzzy
 msgid "C_ycle Tiling Order"
-msgstr "_Inverser l'ordre de répartition"
+msgstr "_Alterner l'ordre de répartition"
 
 #: modules/cons.py:299 modules/cons.py:327
-#, fuzzy
 msgid "Cycle the Order of the Latest Tiling Operation"
-msgstr "Inverse l'ordre de la dernière opération de répartition"
+msgstr "Alterne l'ordre de la dernière opération de répartition"
 
 #: modules/cons.py:300
 msgid "_Maximize Windows"
@@ -490,13 +488,12 @@ msgid "Tile All Windows Vertically"
 msgstr "Répartir toutes les fenêtres verticalement"
 
 #: glade/x-tile.glade.h:2
-#, fuzzy
 msgid ""
 "Copyright © 2009-2012\n"
 "Giuseppe Penone <giuspen@gmail.com>\n"
 "Chris Camacho <chris_camacho@yahoo.com>"
 msgstr ""
-"Copyright © 2009-2011\n"
+"Copyright © 2009-2012\n"
 "Giuseppe Penone <giuspen@gmail.com>\n"
 "Chris Camacho <chris_camacho@yahoo.com>"
 
@@ -541,7 +538,6 @@ msgstr ""
 "Boston, MA 02110-1301, USA."
 
 #: glade/x-tile.glade.h:22
-#, fuzzy
 msgid ""
 "Chinese Simplified (zh_CN) Khiyuan Fan <Fan.Khiyuan@gmail.com>\n"
 "Chinese Traditional (zh_TW) Yan-ren Tsai <elleryq@gmail.com>\n"
@@ -560,6 +556,7 @@ msgstr ""
 "Français (fr) Ludovic Troisi <axalis@cegetel.net>\n"
 "Allemand (de) Jöran Zeller <joeran@zeller.ws>\n"
 "Italien (it) Giuseppe Penone <giuspen@gmail.com>\n"
+"Polish (pl) Dominik Wójt <domin144@o2.pl>\n"
 "Russe (ru) Andriy Kovtun <kovtunos@yandex.ru>"
 
 #: glade/x-tile.glade.h:31
@@ -676,7 +673,7 @@ msgstr "X Tile"
 
 #: glade/x-tile.glade.h:60
 msgid "Set Destination Workspace"
-msgstr ""
+msgstr "Définir l'Espace de travail de destination"
 
 #: glade/x-tile.glade.h:61
 msgid "Exit After Tile"
