@@ -292,6 +292,21 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                   </packing>
                 </child>
                 <child>
+                  <object class="GtkCheckButton" id="checkbutton_use_appind">
+                    <property name="label" translatable="yes">Use AppIndicator for Docking</property>
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">False</property>
+                    <property name="use_action_appearance">False</property>
+                    <property name="draw_indicator">True</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">7</property>
+                  </packing>
+                </child>
+                <child>
                   <object class="GtkHSeparator" id="hseparator3">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
@@ -299,7 +314,7 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">True</property>
-                    <property name="position">7</property>
+                    <property name="position">8</property>
                   </packing>
                 </child>
                 <child>
@@ -317,7 +332,7 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
                     <property name="expand">False</property>
                     <property name="fill">True</property>
                     <property name="padding">2</property>
-                    <property name="position">8</property>
+                    <property name="position">9</property>
                   </packing>
                 </child>
               </object>

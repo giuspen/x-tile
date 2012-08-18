@@ -648,6 +648,7 @@ class XTile:
         self.glade.do_not_list_minimized_checkbutton.set_active(self.gconf_client.get_string(cons.GCONF_NOT_MINIMIZED % glob.screen_index) == cons.STR_TRUE)
         self.glade.checkbutton_systray_docking.set_active(self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) == cons.STR_TRUE)
         self.glade.checkbutton_start_minimized.set_active(self.gconf_client.get_string(cons.GCONF_SYSTRAY_START % glob.screen_index) == cons.STR_TRUE)
+        self.glade.checkbutton_use_appind.set_active(self.gconf_client.get_string(cons.GCONF_USE_APPIND % glob.screen_index) == cons.STR_TRUE)
         self.glade.show_toolbar_checkbutton.set_active(self.gconf_client.get_string(cons.GCONF_SHOW_TOOLBAR % glob.screen_index) == cons.STR_TRUE)
         self.no_toggling_signals = False
         self.glade.configwindow.show_all()
