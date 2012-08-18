@@ -28,7 +28,7 @@ import gtk, os
 
 
 APP_NAME = "x-tile"
-VERSION = "2.4"
+VERSION = "2.5"
 if os.path.isdir('glade'):
     GLADE_PATH = "glade/"
     LOCALE_PATH = "locale/"
@@ -133,6 +133,7 @@ GCONF_OVERRIDE_2 = "/apps/x-tile/%s/override_2"
 GCONF_GRID_ROWS = "/apps/x-tile/%s/grid_rows"
 GCONF_GRID_COLS = "/apps/x-tile/%s/grid_cols"
 GCONF_SYSTRAY_ENABLE = "/apps/x-tile/%s/systray_enable"
+GCONF_USE_APPIND = "/apps/x-tile/%s/use_appind"
 GCONF_SYSTRAY_START = "/apps/x-tile/%s/systray_start"
 
 UI_INFO = """
