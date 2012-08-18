@@ -380,6 +380,13 @@ class XTile:
             self.reload_windows_list()
             self.win_on_screen = True
     
+    def on_checkbutton_use_appind_toggled(self, checkbutton):
+        """Use AppIndicator Toggled Handling"""
+        if checkbutton.get_active():
+            self.gconf_client.set_string(cons.GCONF_USE_APPIND % glob.screen_index, cons.STR_TRUE)
+        else:
+            self.gconf_client.set_string(cons.GCONF_USE_APPIND % glob.screen_index, cons.STR_FALSE)
+    
     def on_checkbutton_systray_docking_toggled(self, checkbutton):
         """SysTray Toggled Handling"""
         self.systray_on = checkbutton.get_active()
