@@ -382,12 +382,15 @@ class XTile:
     
     def on_checkbutton_use_appind_toggled(self, checkbutton):
         """Use AppIndicator Toggled Handling"""
+        if self.glade.checkbutton_systray_docking.get_active():
+            former_active = True
+            self.glade.checkbutton_systray_docking.set_active(False)
+        else: former_active = False
         if checkbutton.get_active():
             self.gconf_client.set_string(cons.GCONF_USE_APPIND % glob.screen_index, cons.STR_TRUE)
         else:
             self.gconf_client.set_string(cons.GCONF_USE_APPIND % glob.screen_index, cons.STR_FALSE)
-        if self.glade.checkbutton_systray_docking.get_active():
-            self.glade.checkbutton_systray_docking.set_active(False)
+        if former_active:
             self.glade.checkbutton_systray_docking.set_active(True)
     
     def on_checkbutton_systray_docking_toggled(self, checkbutton):
