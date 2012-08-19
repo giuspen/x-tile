@@ -348,7 +348,7 @@ class XTile:
     
     def status_icon_enable(self):
         """Creates the Stats Icon"""
-        if HAS_APPINDICATOR:
+        if self.use_appindicator():
             self.ind = appindicator.Indicator("x-tile", "indicator-messages", appindicator.CATEGORY_APPLICATION_STATUS)
             self.ind.set_status(appindicator.STATUS_ACTIVE)
             self.ind.set_attention_icon("indicator-messages-new")
@@ -386,12 +386,15 @@ class XTile:
             self.gconf_client.set_string(cons.GCONF_USE_APPIND % glob.screen_index, cons.STR_TRUE)
         else:
             self.gconf_client.set_string(cons.GCONF_USE_APPIND % glob.screen_index, cons.STR_FALSE)
+        if self.glade.checkbutton_systray_docking.get_active():
+            self.glade.checkbutton_systray_docking.set_active(False)
+            self.glade.checkbutton_systray_docking.set_active(True)
     
     def on_checkbutton_systray_docking_toggled(self, checkbutton):
         """SysTray Toggled Handling"""
         self.systray_on = checkbutton.get_active()
         if self.systray_on:
-            if not HAS_APPINDICATOR:
+            if not self.use_appindicator():
                 if "status_icon" in dir(self): self.status_icon.set_property('visible', True)
                 else: self.status_icon_enable()
             else:
@@ -402,7 +405,7 @@ class XTile:
             if self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) != cons.STR_TRUE:
                 self.gconf_client.set_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index, cons.STR_TRUE)
         else:
-            if not HAS_APPINDICATOR:
+            if not self.use_appindicator():
                 if not "status_icon" in dir(self): self.status_icon_enable()
                 self.status_icon.set_property('visible', False)
             else:
@@ -880,9 +883,14 @@ class XTile:
         self.gconf_client.set_int(cons.GCONF_GRID_COLS % glob.screen_index, cons.GRID_COLS)
         self.tile_grid()
 
+    def use_appindicator(self):
+        """Will we use AppIndicator?"""
+        return HAS_APPINDICATOR and (self.gconf_client.get_string(cons.GCONF_USE_APPIND % glob.screen_index) == cons.STR_TRUE)
+
     def quit_application_totally(self, *args):
         """The process is Shut Down"""
-        if not HAS_APPINDICATOR and "status_icon" in dir(self): self.status_icon.set_visible(False)
+        if not self.use_appindicator() and "status_icon" in dir(self):
+            self.status_icon.set_visible(False)
         self.save_win_pos_n_size()
         self.glade.window.destroy()
         gtk.main_quit()
