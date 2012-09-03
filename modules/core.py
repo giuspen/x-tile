@@ -30,6 +30,7 @@ try:
     import appindicator
     HAS_APPINDICATOR = True
 except: HAS_APPINDICATOR = False
+HAS_SYSTRAY = not (os.environ['XDG_CURRENT_DESKTOP'] and os.environ['XDG_CURRENT_DESKTOP'] == "Unity")
 import cons, support, tilings
 
 
@@ -662,7 +663,8 @@ class XTile:
         self.glade.checkbutton_systray_docking.set_active(self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) == cons.STR_TRUE)
         self.glade.checkbutton_start_minimized.set_active(self.gconf_client.get_string(cons.GCONF_SYSTRAY_START % glob.screen_index) == cons.STR_TRUE)
         self.glade.checkbutton_use_appind.set_active(self.gconf_client.get_string(cons.GCONF_USE_APPIND % glob.screen_index) == cons.STR_TRUE)
-        if not HAS_APPINDICATOR: self.glade.checkbutton_use_appind.set_sensitive(False)
+        if not HAS_APPINDICATOR or not HAS_SYSTRAY:
+            self.glade.checkbutton_use_appind.set_sensitive(False)
         self.glade.show_toolbar_checkbutton.set_active(self.gconf_client.get_string(cons.GCONF_SHOW_TOOLBAR % glob.screen_index) == cons.STR_TRUE)
         self.no_toggling_signals = False
         self.glade.configwindow.show_all()
