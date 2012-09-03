@@ -489,6 +489,8 @@ class XTile:
         if self.gconf_client.get_string(cons.GCONF_ONLY_CURR_DESK % glob.screen_index) == None:
             self.gconf_client.set_string(cons.GCONF_ONLY_CURR_DESK % glob.screen_index, cons.STR_FALSE)
         # systray handling
+        if not HAS_SYSTRAY: self.gconf_client.set_string(cons.GCONF_USE_APPIND % glob.screen_index, cons.STR_TRUE)
+        elif not HAS_APPINDICATOR: self.gconf_client.set_string(cons.GCONF_USE_APPIND % glob.screen_index, cons.STR_FALSE)
         if self.gconf_client.get_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index) == None:
             self.gconf_client.set_string(cons.GCONF_SYSTRAY_ENABLE % glob.screen_index, cons.STR_TRUE)
         if self.gconf_client.get_string(cons.GCONF_SYSTRAY_START % glob.screen_index) == None:
@@ -891,7 +893,7 @@ class XTile:
 
     def use_appindicator(self):
         """Will we use AppIndicator?"""
-        return HAS_APPINDICATOR and (self.gconf_client.get_string(cons.GCONF_USE_APPIND % glob.screen_index) == cons.STR_TRUE)
+        return self.gconf_client.get_string(cons.GCONF_USE_APPIND % glob.screen_index) == cons.STR_TRUE
 
     def quit_application_totally(self, *args):
         """The process is Shut Down"""
