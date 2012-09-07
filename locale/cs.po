@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: x-tile 1.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-16 21:38+0200\n"
+"POT-Creation-Date: 2012-09-07 23:14+0200\n"
 "PO-Revision-Date: 2012-07-12 14:53+0200\n"
 "Last-Translator: Pavel Fric <pavelfric@seznam.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -19,55 +19,55 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 1.4\n"
 
-#: modules/core.py:306
+#: modules/core.py:307
 msgid "Use Drag and Drop to Sort the Rows"
 msgstr "Pro roztřídění řádků položku přetáhněte a upusťte"
 
-#: modules/core.py:346
+#: modules/core.py:347
 msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr "Nové jazykové nastavení bude dostupné až po novém spuštění X Tile"
 
-#: modules/core.py:368 glade/x-tile.glade.h:5
+#: modules/core.py:369 glade/x-tile.glade.h:5
 msgid "Tile the Windows Upon your X Desktop"
 msgstr "Vydlážděte okna na vaší ploše X"
 
-#: modules/core.py:567
+#: modules/core.py:583
 msgid "The Size of the Toolbar Icons is already at the Maximum Value"
 msgstr "Ikony v nástrojovém pruhu jsou již tak velké, jak jen je to možné"
 
-#: modules/core.py:577
+#: modules/core.py:593
 msgid "The Size of the Toolbar Icons is already at the Minimum Value"
 msgstr "Ikony v nástrojovém pruhu jsou již tak malé, jak jen je to možné"
 
-#: modules/core.py:684 modules/core.py:692 modules/core.py:700
+#: modules/core.py:703 modules/core.py:711 modules/core.py:719
 msgid "No Row is Selected"
 msgstr "Není vybrán žádný řádek"
 
-#: modules/core.py:722 modules/core.py:756
+#: modules/core.py:741 modules/core.py:775
 msgid "No Application Selected!"
 msgstr "Není vybrán žádný program!"
 
-#: modules/core.py:836
+#: modules/core.py:855
 msgid "Grid Details"
 msgstr "Podrobnosti k mřížce"
 
-#: modules/core.py:844
+#: modules/core.py:863
 msgid "Rows"
 msgstr "Řádky"
 
-#: modules/core.py:851
+#: modules/core.py:870
 msgid "Columns"
 msgstr "Sloupce"
 
-#: modules/core.py:932 modules/core.py:940 modules/core.py:950
+#: modules/core.py:956 modules/core.py:964 modules/core.py:974
 msgid "No Windows Checked"
 msgstr "Není vybráno žádné okno"
 
-#: modules/core.py:990 modules/core.py:1003
+#: modules/core.py:1014 modules/core.py:1027
 msgid "Edit Custom Tile Settings"
 msgstr "Upravit vlastní nastavení dláždění"
 
-#: modules/core.py:1150
+#: modules/core.py:1174
 msgid ""
 "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
 "Set'"
@@ -75,7 +75,7 @@ msgstr ""
 "Vlastní nastavení dláždění (1) ještě nebylo převzato: Klepněte v nabídce na "
 "'Dlaždice->Vlastní nastavení dláždění (1)'"
 
-#: modules/core.py:1168
+#: modules/core.py:1192
 msgid ""
 "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
 "Set'"
@@ -83,407 +83,407 @@ msgstr ""
 "Vlastní nastavení dláždění (2) ještě nebylo převzato: Klepněte v nabídce na "
 "'Dlaždice->Vlastní nastavení dláždění (2)'"
 
-#: modules/cons.py:267
+#: modules/cons.py:268
 msgid "_File"
 msgstr "_Soubor"
 
-#: modules/cons.py:268
+#: modules/cons.py:269
 msgid "_Edit"
 msgstr "Ú_pravy"
 
-#: modules/cons.py:269
+#: modules/cons.py:270
 msgid "_Row"
 msgstr "Řá_dek"
 
-#: modules/cons.py:270
+#: modules/cons.py:271
 msgid "_Tile"
 msgstr "_Dlaždice"
 
-#: modules/cons.py:271
+#: modules/cons.py:272
 msgid "_View"
 msgstr "_Pohled"
 
-#: modules/cons.py:272 modules/cons.py:307
+#: modules/cons.py:273 modules/cons.py:308
 msgid "_Help"
 msgstr "_Nápověda"
 
-#: modules/cons.py:274
+#: modules/cons.py:275
 msgid "_Filter"
 msgstr "_Filtr"
 
-#: modules/cons.py:274
+#: modules/cons.py:275
 msgid "Filter Rows"
 msgstr "Filtrovat řádky"
 
-#: modules/cons.py:275
+#: modules/cons.py:276
 msgid "Selected by _Default"
 msgstr "Vybráno vždy"
 
-#: modules/cons.py:275 glade/x-tile.glade.h:58
+#: modules/cons.py:276 glade/x-tile.glade.h:59
 msgid "Rows to be Selected by Default"
 msgstr "Řádky, které mají být vybrány vždy"
 
-#: modules/cons.py:276
+#: modules/cons.py:277
 msgid "_Reload"
 msgstr "_Nahrát znovu"
 
-#: modules/cons.py:276
+#: modules/cons.py:277
 msgid "Reload the Windows List"
 msgstr "Nahrát seznam oken znovu"
 
-#: modules/cons.py:277
+#: modules/cons.py:278
 msgid "_Quit"
 msgstr "_Ukončit"
 
-#: modules/cons.py:277
+#: modules/cons.py:278
 msgid "Quit the Application"
 msgstr "Ukončit program"
 
-#: modules/cons.py:278
+#: modules/cons.py:279
 msgid "_Exit X Tile"
 msgstr "_Opustit X Tile"
 
-#: modules/cons.py:278
+#: modules/cons.py:279
 msgid "Exit from X Tile"
 msgstr "Opustit X Tile"
 
-#: modules/cons.py:279
+#: modules/cons.py:280
 msgid "Show/Hide _X Tile"
 msgstr "Ukázat/Skrýt _X Tile"
 
-#: modules/cons.py:279
+#: modules/cons.py:280
 msgid "Toggle Show/Hide X Tile"
 msgstr "Ukázat/Skrýt X Tile"
 
-#: modules/cons.py:280
+#: modules/cons.py:281
 msgid "_Preferences"
 msgstr "_Nastavení"
 
-#: modules/cons.py:280
+#: modules/cons.py:281
 msgid "Open the Preferences Window"
 msgstr "Otevřít okno s nastavením"
 
-#: modules/cons.py:281
+#: modules/cons.py:282
 msgid "Select _All"
 msgstr "Vybrat vš_e"
 
-#: modules/cons.py:281
+#: modules/cons.py:282
 msgid "Select All the Windows in the List"
 msgstr "Vybrat všechna okna v seznamu"
 
-#: modules/cons.py:282
+#: modules/cons.py:283
 msgid "Deselect A_ll"
 msgstr "Zrušit výběr u _všeho"
 
-#: modules/cons.py:282
+#: modules/cons.py:283
 msgid "Deselect All the Windows in the List"
 msgstr "Zrušit výběr u všech oken v seznamu"
 
-#: modules/cons.py:283
+#: modules/cons.py:284
 msgid "Tile _Vertically"
 msgstr "Vydláždit _svisle"
 
-#: modules/cons.py:283
+#: modules/cons.py:284
 msgid "Tile Vertically The Checked Windows"
 msgstr "Vydláždit vybraná okna svisle"
 
-#: modules/cons.py:284
+#: modules/cons.py:285
 msgid "Tile _Horizontally"
 msgstr "Vydláždit _vodorovně"
 
-#: modules/cons.py:284
+#: modules/cons.py:285
 msgid "Tile Horizontally The Checked Windows"
 msgstr "Vydláždit vybraná okna vodorovně"
 
-#: modules/cons.py:285
+#: modules/cons.py:286
 msgid "_Triangle Up"
 msgstr "_Trojúhelník nahoru"
 
-#: modules/cons.py:285
+#: modules/cons.py:286
 msgid "Tile Triangle Up The Checked Windows"
 msgstr "Vydláždit vybraná okna trojúhelníkově nahoru"
 
-#: modules/cons.py:286
+#: modules/cons.py:287
 msgid "Triangle _Down"
 msgstr "Trojúhelník _dolů"
 
-#: modules/cons.py:286
+#: modules/cons.py:287
 msgid "Tile Triangle Down The Checked Windows"
 msgstr "Vydláždit vybraná okna trojúhelníkově dolů"
 
-#: modules/cons.py:287
+#: modules/cons.py:288
 msgid "Triangle _Left"
 msgstr "Trojúhelník _vlevo"
 
-#: modules/cons.py:287
+#: modules/cons.py:288
 msgid "Tile Triangle Left The Checked Windows"
 msgstr "Vydláždit vybraná okna trojúhelníkově vlevo"
 
-#: modules/cons.py:288
+#: modules/cons.py:289
 msgid "Triangle _Right"
 msgstr "Trojúhelník v_pravo"
 
-#: modules/cons.py:288
+#: modules/cons.py:289
 msgid "Tile Triangle Right The Checked Windows"
 msgstr "Vydláždit vybraná okna trojúhelníkově vpravo"
 
-#: modules/cons.py:289
+#: modules/cons.py:290
 msgid "Tile _Quad"
 msgstr "Vydláždit _čtvercově"
 
-#: modules/cons.py:289
+#: modules/cons.py:290
 msgid "Tile into 4 quadrants The Checked Windows"
 msgstr "Vydláždit vybraná okna do čtyř čtverců"
 
-#: modules/cons.py:290
+#: modules/cons.py:291
 msgid "Tile _Grid"
 msgstr "Vydláždit v _mřížce"
 
-#: modules/cons.py:290
+#: modules/cons.py:291
 msgid "Tile into an Arbitrary Grid The Checked Windows"
 msgstr "Vydláždit vybraná okna do libovolné mřížky"
 
-#: modules/cons.py:291
+#: modules/cons.py:292
 msgid "Custom Tile 1 _Set"
 msgstr "Vlastní _nastavení dláždění (1)"
 
-#: modules/cons.py:291
+#: modules/cons.py:292
 msgid "Edit Custom Tile 1 Settings"
 msgstr "Upravit vlastní nastavení dláždění (1)"
 
-#: modules/cons.py:292
+#: modules/cons.py:293
 msgid "Custom Tile _1 Run"
 msgstr "Provedení vlastního nastavení dláždění (_1)"
 
-#: modules/cons.py:292
+#: modules/cons.py:293
 msgid "Execute Custom Tile 1"
 msgstr "Provést vlastní nastavení dláždění (1)"
 
-#: modules/cons.py:293
+#: modules/cons.py:294
 msgid "Custom Tile 2 S_et"
 msgstr "Vlastní na_stavení dláždění (2)"
 
-#: modules/cons.py:293
+#: modules/cons.py:294
 msgid "Edit Custom Tile 2 Settings"
 msgstr "Upravit vlastní nastavení dláždění (2)"
 
-#: modules/cons.py:294
+#: modules/cons.py:295
 msgid "Custom Tile _2 Run"
 msgstr "Provedení vlastního nastavení dláždění (_2)"
 
-#: modules/cons.py:294
+#: modules/cons.py:295
 msgid "Execute Custom Tile 2"
 msgstr "Provést vlastní nastavení dláždění (2)"
 
-#: modules/cons.py:295 modules/cons.py:324
+#: modules/cons.py:296 modules/cons.py:325
 msgid "U_ndo Tiling"
 msgstr "Dláždění _zpět"
 
-#: modules/cons.py:295 modules/cons.py:324
+#: modules/cons.py:296 modules/cons.py:325
 msgid "Undo the Latest Tiling Operation"
 msgstr "Vrátit poslední dláždicí operaci zpět"
 
-#: modules/cons.py:296 modules/cons.py:323
+#: modules/cons.py:297 modules/cons.py:324
 msgid "_Invert Tiling Order"
 msgstr "_Obrátit pořadí dláždění"
 
-#: modules/cons.py:296 modules/cons.py:323
+#: modules/cons.py:297 modules/cons.py:324
 msgid "Invert the Order of the Latest Tiling Operation"
 msgstr "Obrátit pořadí poslední dláždicí operace"
 
-#: modules/cons.py:297 modules/cons.py:325
+#: modules/cons.py:298 modules/cons.py:326
 msgid "C_ycle Tiling Order"
 msgstr "_Točit pořadí dláždění"
 
-#: modules/cons.py:297 modules/cons.py:325
+#: modules/cons.py:298 modules/cons.py:326
 msgid "Cycle the Order of the Latest Tiling Operation"
 msgstr "Točit pořadí poslední dláždicí operace"
 
-#: modules/cons.py:298
+#: modules/cons.py:299
 msgid "_Maximize Windows"
 msgstr "_Zvětšit okna"
 
-#: modules/cons.py:298
+#: modules/cons.py:299
 msgid "Maximize The Checked Windows"
 msgstr "Zvětšit označená okna"
 
-#: modules/cons.py:299
+#: modules/cons.py:300
 msgid "_Unmaximize Windows"
 msgstr "Z_rušit zvětšení oken"
 
-#: modules/cons.py:299
+#: modules/cons.py:300
 msgid "Unmaximize The Checked Windows"
 msgstr "Zrušit zvětšení označených oken"
 
-#: modules/cons.py:300
+#: modules/cons.py:301
 msgid "_Close Windows"
 msgstr "_Zavřít okna"
 
-#: modules/cons.py:300
+#: modules/cons.py:301
 msgid "Close The Checked Windows"
 msgstr "Zavřít všechna označená okna"
 
-#: modules/cons.py:301
+#: modules/cons.py:302
 msgid "Move _Up"
 msgstr "Posunout _nahoru"
 
-#: modules/cons.py:301
+#: modules/cons.py:302
 msgid "Move the Selected Row Up"
 msgstr "Posunout označený řádek nahoru"
 
-#: modules/cons.py:302
+#: modules/cons.py:303
 msgid "Move _Down"
 msgstr "Posunout _dolů"
 
-#: modules/cons.py:302
+#: modules/cons.py:303
 msgid "Move the Selected Row Down"
 msgstr "Posunout označený řádek dolů"
 
-#: modules/cons.py:303
+#: modules/cons.py:304
 msgid "_Remove"
 msgstr "_Odstranit"
 
-#: modules/cons.py:303
+#: modules/cons.py:304
 msgid "Remove the Selected Row"
 msgstr "Odstranit označený řádek"
 
-#: modules/cons.py:304
+#: modules/cons.py:305
 msgid "Show/Hide _Toolbar"
 msgstr "Ukázat/Skrýt _nástrojový pruh"
 
-#: modules/cons.py:304
+#: modules/cons.py:305
 msgid "Toggle Show/Hide Toolbar"
 msgstr "Ukázat/Skrýt nástrojový pruh"
 
-#: modules/cons.py:305
+#: modules/cons.py:306
 msgid "_Increase Toolbar Icons Size"
 msgstr "Z_většit velikost ikon v nástrojovém pruhu"
 
-#: modules/cons.py:305
+#: modules/cons.py:306
 msgid "Increase the Size of the Toolbar Icons"
 msgstr "Zvětšit velikost ikon v nástrojovém pruhu"
 
-#: modules/cons.py:306
+#: modules/cons.py:307
 msgid "_Decrease Toolbar Icons Size"
 msgstr "Z_menšit velikost ikon v nástrojovém pruhu"
 
-#: modules/cons.py:306
+#: modules/cons.py:307
 msgid "Decrease the Size of the Toolbar Icons"
 msgstr "Zmenšit velikost ikon v nástrojovém pruhu"
 
-#: modules/cons.py:307
+#: modules/cons.py:308
 msgid "X Tile Project Home Page"
 msgstr "Stránky projektu X Tile"
 
-#: modules/cons.py:308 modules/cons.py:309
+#: modules/cons.py:309 modules/cons.py:310
 msgid "_About"
 msgstr "_O programu"
 
-#: modules/cons.py:308 modules/cons.py:309 glade/x-tile.glade.h:1
+#: modules/cons.py:309 modules/cons.py:310 glade/x-tile.glade.h:1
 msgid "About X Tile"
 msgstr "O X Tile"
 
-#: modules/cons.py:310
+#: modules/cons.py:311
 msgid "_Close All"
 msgstr "_Zavřít vše"
 
-#: modules/cons.py:310
+#: modules/cons.py:311
 msgid "Close All Windows"
 msgstr "Zavřít všechna okna"
 
-#: modules/cons.py:311
+#: modules/cons.py:312
 msgid "_Unmaximize All"
 msgstr "Z_rušit zvětšení u všeho"
 
-#: modules/cons.py:311
+#: modules/cons.py:312
 msgid "Unmaximize All Windows"
 msgstr "Zrušit zvětšení u všech oken"
 
-#: modules/cons.py:312
+#: modules/cons.py:313
 msgid "_Maximize All"
 msgstr "_Zvětšit vše"
 
-#: modules/cons.py:312
+#: modules/cons.py:313
 msgid "Maximize All Windows"
 msgstr "Zvětšit všechna okna"
 
-#: modules/cons.py:313
+#: modules/cons.py:314
 msgid "Tile All _Quad"
 msgstr "Vydláždit vše _čtvercově"
 
-#: modules/cons.py:313
+#: modules/cons.py:314
 msgid "Tile All Windows Quad"
 msgstr "Vydláždit všechna okna čtvercově"
 
-#: modules/cons.py:314
+#: modules/cons.py:315
 msgid "Tile All Triangle _Down"
 msgstr "Vydláždit vše trojúhelníkově _dolů"
 
-#: modules/cons.py:314
+#: modules/cons.py:315
 msgid "Tile All Windows Triangle Down"
 msgstr "Vydláždit všechna okna trojúhelníkově dolů"
 
-#: modules/cons.py:315
+#: modules/cons.py:316
 msgid "Tile All Triangle _Up"
 msgstr "Vydláždit vše trojúhelníkově _nahoru"
 
-#: modules/cons.py:315
+#: modules/cons.py:316
 msgid "Tile All Windows Triangle Up"
 msgstr "Vydláždit všechna okna trojúhelníkově nahoru"
 
-#: modules/cons.py:316
+#: modules/cons.py:317
 msgid "Tile All Triangle _Right"
 msgstr "Vydláždit vše trojúhelníkově v_pravo"
 
-#: modules/cons.py:316
+#: modules/cons.py:317
 msgid "Tile All Windows Triangle Right"
 msgstr "Vydláždit všechna okna trojúhelníkově vpravo"
 
-#: modules/cons.py:317
+#: modules/cons.py:318
 msgid "Tile All Triangle _Left"
 msgstr "Vydláždit vše trojúhelníkově v_levo"
 
-#: modules/cons.py:317
+#: modules/cons.py:318
 msgid "Tile All Windows Triangle Left"
 msgstr "Vydláždit všechna okna trojúhelníkově vlevo"
 
-#: modules/cons.py:318
+#: modules/cons.py:319
 msgid "Tile All Custom _2"
 msgstr "Vydláždit všechno podle rozvržení _2"
 
-#: modules/cons.py:318
+#: modules/cons.py:319
 msgid "Tile All Windows Custom 2"
 msgstr "Vydláždit všechna okna podle vlastního rozvržení 2"
 
-#: modules/cons.py:319
+#: modules/cons.py:320
 msgid "Tile All Custom _1"
 msgstr "Vydláždit všechno podle rozvržení _1"
 
-#: modules/cons.py:319
+#: modules/cons.py:320
 msgid "Tile All Windows Custom 1"
 msgstr "Vydláždit všechna okna podle vlastního rozvržení 1"
 
-#: modules/cons.py:320
+#: modules/cons.py:321
 msgid "Tile All _Grid"
 msgstr "Vydláždit vše v _mřížce"
 
-#: modules/cons.py:320
+#: modules/cons.py:321
 msgid "Tile All Windows Grid"
 msgstr "Vydláždit všechna okna v mřížce"
 
-#: modules/cons.py:321
+#: modules/cons.py:322
 msgid "Tile All _Horizontally"
 msgstr "Vydláždit vše _vodorovně"
 
-#: modules/cons.py:321
+#: modules/cons.py:322
 msgid "Tile All Windows Horizontally"
 msgstr "Vydláždit všechna okna vodorovně"
 
-#: modules/cons.py:322
+#: modules/cons.py:323
 msgid "Tile All _Vertically"
 msgstr "Vydláždit vše _svisle"
 
-#: modules/cons.py:322
+#: modules/cons.py:323
 msgid "Tile All Windows Vertically"
 msgstr "Vydláždit všechna okna svisle"
 
@@ -566,117 +566,121 @@ msgid "Preferences"
 msgstr "Nastavení"
 
 #: glade/x-tile.glade.h:32
-msgid " Language "
-msgstr " Jazyk "
-
-#: glade/x-tile.glade.h:33
 msgid "Do Not List Minimized Windows"
 msgstr "Neukazovat žádná zmenšená okna"
 
-#: glade/x-tile.glade.h:34
+#: glade/x-tile.glade.h:33
 msgid "Only Current Workspace"
 msgstr "Jen současná pracovní oblast"
 
-#: glade/x-tile.glade.h:35
+#: glade/x-tile.glade.h:34
 msgid "Enable System Tray Docking"
 msgstr "Povolit ikonu v oznamovací oblasti panelu"
 
-#: glade/x-tile.glade.h:36
+#: glade/x-tile.glade.h:35
 msgid "Start Minimized in the System Tray"
 msgstr "Spustit zmenšené v oznamovací oblasti panelu"
+
+#: glade/x-tile.glade.h:36
+msgid "Use AppIndicator for Docking"
+msgstr ""
 
 #: glade/x-tile.glade.h:37
 msgid "Show Toolbar"
 msgstr "Ukázat nástrojový pruh"
 
 #: glade/x-tile.glade.h:38
+msgid " Language "
+msgstr " Jazyk "
+
+#: glade/x-tile.glade.h:39
 msgid "Override Monitor 1 Tiling Area"
 msgstr "Přepsat oblast dláždění obrazovka 1"
 
-#: glade/x-tile.glade.h:39
+#: glade/x-tile.glade.h:40
 msgid "X"
 msgstr "X"
 
-#: glade/x-tile.glade.h:40
+#: glade/x-tile.glade.h:41
 msgid "Y"
 msgstr "Y"
 
-#: glade/x-tile.glade.h:41
+#: glade/x-tile.glade.h:42
 msgid "Position"
 msgstr "Poloha"
 
-#: glade/x-tile.glade.h:42
+#: glade/x-tile.glade.h:43
 msgid "Width"
 msgstr "Šířka"
 
-#: glade/x-tile.glade.h:43
+#: glade/x-tile.glade.h:44
 msgid "Height"
 msgstr "Výška"
 
-#: glade/x-tile.glade.h:44
+#: glade/x-tile.glade.h:45
 msgid "Size"
 msgstr "Velikost"
 
-#: glade/x-tile.glade.h:45
+#: glade/x-tile.glade.h:46
 msgid "Override Monitor 2 Tiling Area"
 msgstr "Přepsat oblast dláždění obrazovka 2"
 
-#: glade/x-tile.glade.h:46
+#: glade/x-tile.glade.h:47
 msgid "Close"
 msgstr "Zavřít"
 
-#: glade/x-tile.glade.h:47
+#: glade/x-tile.glade.h:48
 msgid "Cancel"
 msgstr "Zrušit"
 
-#: glade/x-tile.glade.h:48
+#: glade/x-tile.glade.h:49
 msgid "OK"
 msgstr "OK"
 
-#: glade/x-tile.glade.h:49
+#: glade/x-tile.glade.h:50
 msgid "<b>Custom Tiling Layout</b>"
 msgstr "<b>Vlastní rozvržení dláždění</b>"
 
-#: glade/x-tile.glade.h:50
+#: glade/x-tile.glade.h:51
 msgid "1) Tile Some Windows Manually"
 msgstr "1) Vydlážděte určitá okna ručně"
 
-#: glade/x-tile.glade.h:51
+#: glade/x-tile.glade.h:52
 msgid "2) Select Them in the X Tile Windows List"
 msgstr "2) Vyberte je v seznamu oken X Tile"
 
-#: glade/x-tile.glade.h:52
+#: glade/x-tile.glade.h:53
 msgid "3) Click the Update Button"
 msgstr "3) Klepněte na tlačítko Nahrát znovu"
 
-#: glade/x-tile.glade.h:53
+#: glade/x-tile.glade.h:54
 msgid "Update"
 msgstr "Aktualizovat"
 
-#: glade/x-tile.glade.h:54
+#: glade/x-tile.glade.h:55
 msgid "Rows to Filter"
 msgstr "Přidat filtr"
 
-#: glade/x-tile.glade.h:55
+#: glade/x-tile.glade.h:56
 msgid "Add an Application Filter"
 msgstr "Přidat programový filtr"
 
-#: glade/x-tile.glade.h:56
+#: glade/x-tile.glade.h:57
 msgid "Remove an Application Filter"
 msgstr "Odstranit programový filtr"
 
-#: glade/x-tile.glade.h:57
+#: glade/x-tile.glade.h:58
 msgid "Add Row"
 msgstr "Přidat řádek"
 
-#: glade/x-tile.glade.h:59
+#: glade/x-tile.glade.h:60
 msgid "X Tile"
 msgstr "X Tile"
 
-#: glade/x-tile.glade.h:60
+#: glade/x-tile.glade.h:61
 msgid "Set Destination Workspace"
 msgstr "Nastavit cílovou pracovní oblast"
 
-#: glade/x-tile.glade.h:61
+#: glade/x-tile.glade.h:62
 msgid "Exit After Tile"
 msgstr "Ukončit po vydláždění"
