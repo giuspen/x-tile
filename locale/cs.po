@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: x-tile 1.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-07 23:14+0200\n"
-"PO-Revision-Date: 2012-07-12 14:53+0200\n"
+"PO-Revision-Date: 2012-09-07 23:52+0200\n"
 "Last-Translator: Pavel Fric <pavelfric@seznam.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.5\n"
 
 #: modules/core.py:307
 msgid "Use Drag and Drop to Sort the Rows"
@@ -583,7 +583,7 @@ msgstr "Spustit zmenšené v oznamovací oblasti panelu"
 
 #: glade/x-tile.glade.h:36
 msgid "Use AppIndicator for Docking"
-msgstr ""
+msgstr "Použít ukazatel programu pro ukotvení v panelu"
 
 #: glade/x-tile.glade.h:37
 msgid "Show Toolbar"
