@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: X Tile\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-16 21:38+0200\n"
+"POT-Creation-Date: 2012-09-07 23:14+0200\n"
 "PO-Revision-Date: 2012-06-26 02:01+0100\n"
 "Last-Translator: Dominik Wójt <domin144@o2.pl>\n"
 "Language-Team: Polish\n"
@@ -18,55 +18,55 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2)\n"
 
-#: modules/core.py:306
+#: modules/core.py:307
 msgid "Use Drag and Drop to Sort the Rows"
 msgstr "Użyj przeciągania, aby sortować rzędy"
 
-#: modules/core.py:346
+#: modules/core.py:347
 msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr "Nowy język będzie dostępny dopiero po ponownym uruchomieniu X Tile"
 
-#: modules/core.py:368 glade/x-tile.glade.h:5
+#: modules/core.py:369 glade/x-tile.glade.h:5
 msgid "Tile the Windows Upon your X Desktop"
 msgstr "Ułóż okna na twoim pulpicie X"
 
-#: modules/core.py:567
+#: modules/core.py:583
 msgid "The Size of the Toolbar Icons is already at the Maximum Value"
 msgstr "Rozmiar paska narzędzi ma już maksymalną wartość"
 
-#: modules/core.py:577
+#: modules/core.py:593
 msgid "The Size of the Toolbar Icons is already at the Minimum Value"
 msgstr "Rozmiar ikon paska narzędzi ma już maksymalną wartość"
 
-#: modules/core.py:684 modules/core.py:692 modules/core.py:700
+#: modules/core.py:703 modules/core.py:711 modules/core.py:719
 msgid "No Row is Selected"
 msgstr "Żaden rząd nie jest zaznaczony"
 
-#: modules/core.py:722 modules/core.py:756
+#: modules/core.py:741 modules/core.py:775
 msgid "No Application Selected!"
 msgstr "Żadna aplikacja nie jest zaznaczona"
 
-#: modules/core.py:836
+#: modules/core.py:855
 msgid "Grid Details"
 msgstr "Szczegóły siatki"
 
-#: modules/core.py:844
+#: modules/core.py:863
 msgid "Rows"
 msgstr "Rzędy"
 
-#: modules/core.py:851
+#: modules/core.py:870
 msgid "Columns"
 msgstr "Kolumny"
 
-#: modules/core.py:932 modules/core.py:940 modules/core.py:950
+#: modules/core.py:956 modules/core.py:964 modules/core.py:974
 msgid "No Windows Checked"
 msgstr "Żadne okno nie jest zaznaczone"
 
-#: modules/core.py:990 modules/core.py:1003
+#: modules/core.py:1014 modules/core.py:1027
 msgid "Edit Custom Tile Settings"
 msgstr "Ustaw niestandardowe ustawienia układu"
 
-#: modules/core.py:1150
+#: modules/core.py:1174
 msgid ""
 "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
 "Set'"
@@ -74,7 +74,7 @@ msgstr ""
 "Niestandardowy układ 1 nie został jeszcze ustawiony: Kliknij element menu "
 "'Układ->Ustaw niestandardowy układ 1'"
 
-#: modules/core.py:1168
+#: modules/core.py:1192
 msgid ""
 "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
 "Set'"
@@ -82,407 +82,407 @@ msgstr ""
 "Niestandardowy układ 2 nie został jeszcze ustawiony: Kliknij element menu "
 "'Układ->Ustaw niestandardowy układ 2'"
 
-#: modules/cons.py:267
+#: modules/cons.py:268
 msgid "_File"
 msgstr "_Plik"
 
-#: modules/cons.py:268
+#: modules/cons.py:269
 msgid "_Edit"
 msgstr "_Edycja"
 
-#: modules/cons.py:269
+#: modules/cons.py:270
 msgid "_Row"
 msgstr "_Rząd"
 
-#: modules/cons.py:270
+#: modules/cons.py:271
 msgid "_Tile"
 msgstr "_Ułóż"
 
-#: modules/cons.py:271
+#: modules/cons.py:272
 msgid "_View"
 msgstr "_Widok"
 
-#: modules/cons.py:272 modules/cons.py:307
+#: modules/cons.py:273 modules/cons.py:308
 msgid "_Help"
 msgstr "_Pomoc"
 
-#: modules/cons.py:274
+#: modules/cons.py:275
 msgid "_Filter"
 msgstr "_Filtruj"
 
-#: modules/cons.py:274
+#: modules/cons.py:275
 msgid "Filter Rows"
 msgstr "Filtruj Rzędy"
 
-#: modules/cons.py:275
+#: modules/cons.py:276
 msgid "Selected by _Default"
 msgstr "Wybrane _domyślnie"
 
-#: modules/cons.py:275 glade/x-tile.glade.h:58
+#: modules/cons.py:276 glade/x-tile.glade.h:59
 msgid "Rows to be Selected by Default"
 msgstr "Rzędy, które mają być wybrane domyślnie"
 
-#: modules/cons.py:276
+#: modules/cons.py:277
 msgid "_Reload"
 msgstr "_Odśwież"
 
-#: modules/cons.py:276
+#: modules/cons.py:277
 msgid "Reload the Windows List"
 msgstr "Odśwież listę okien"
 
-#: modules/cons.py:277
+#: modules/cons.py:278
 msgid "_Quit"
 msgstr "_Wyjdź"
 
-#: modules/cons.py:277
+#: modules/cons.py:278
 msgid "Quit the Application"
 msgstr "Wyjdź z aplikacji"
 
-#: modules/cons.py:278
+#: modules/cons.py:279
 msgid "_Exit X Tile"
 msgstr "_Zamknij X Tile"
 
-#: modules/cons.py:278
+#: modules/cons.py:279
 msgid "Exit from X Tile"
 msgstr "Zamknij X tile"
 
-#: modules/cons.py:279
+#: modules/cons.py:280
 msgid "Show/Hide _X Tile"
 msgstr "Pokaż/ukryj _X Tile"
 
-#: modules/cons.py:279
+#: modules/cons.py:280
 msgid "Toggle Show/Hide X Tile"
 msgstr "Przełącz pokaż/ukryj X Tile"
 
-#: modules/cons.py:280
+#: modules/cons.py:281
 msgid "_Preferences"
 msgstr "_Preferencje"
 
-#: modules/cons.py:280
+#: modules/cons.py:281
 msgid "Open the Preferences Window"
 msgstr "Otwórz okno preferencji"
 
-#: modules/cons.py:281
+#: modules/cons.py:282
 msgid "Select _All"
 msgstr "Zaznacz _wszystkie"
 
-#: modules/cons.py:281
+#: modules/cons.py:282
 msgid "Select All the Windows in the List"
 msgstr "Zaznacz wszystkie okna na liście"
 
-#: modules/cons.py:282
+#: modules/cons.py:283
 msgid "Deselect A_ll"
 msgstr "_Odznacz wszystkie"
 
-#: modules/cons.py:282
+#: modules/cons.py:283
 msgid "Deselect All the Windows in the List"
 msgstr "Odznacz wszystkie okna na liście"
 
-#: modules/cons.py:283
+#: modules/cons.py:284
 msgid "Tile _Vertically"
 msgstr "Ułóż _pionowo"
 
-#: modules/cons.py:283
+#: modules/cons.py:284
 msgid "Tile Vertically The Checked Windows"
 msgstr "Ułóż pionowo zaznaczone okna"
 
-#: modules/cons.py:284
+#: modules/cons.py:285
 msgid "Tile _Horizontally"
 msgstr "Ułóż po_ziomo"
 
-#: modules/cons.py:284
+#: modules/cons.py:285
 msgid "Tile Horizontally The Checked Windows"
 msgstr "Ułóż poziomo zaznaczone okna"
 
-#: modules/cons.py:285
+#: modules/cons.py:286
 msgid "_Triangle Up"
 msgstr "Trójkąt _górny"
 
-#: modules/cons.py:285
+#: modules/cons.py:286
 msgid "Tile Triangle Up The Checked Windows"
 msgstr "Ułóż zaznaczone okna w trójkąt górny"
 
-#: modules/cons.py:286
+#: modules/cons.py:287
 msgid "Triangle _Down"
 msgstr "Trójkąt _dolny"
 
-#: modules/cons.py:286
+#: modules/cons.py:287
 msgid "Tile Triangle Down The Checked Windows"
 msgstr "Ułóż zaznaczone okna w trójkąt dolny"
 
-#: modules/cons.py:287
+#: modules/cons.py:288
 msgid "Triangle _Left"
 msgstr "Trójkąt _lewy"
 
-#: modules/cons.py:287
+#: modules/cons.py:288
 msgid "Tile Triangle Left The Checked Windows"
 msgstr "Ułóż zaznaczone okna w trójkąt lewy"
 
-#: modules/cons.py:288
+#: modules/cons.py:289
 msgid "Triangle _Right"
 msgstr "Trójkąt _prawy"
 
-#: modules/cons.py:288
+#: modules/cons.py:289
 msgid "Tile Triangle Right The Checked Windows"
 msgstr "Ułóż zaznaczone okna w trójkąt prawy"
 
-#: modules/cons.py:289
+#: modules/cons.py:290
 msgid "Tile _Quad"
 msgstr "Ułóż w _kwadrat"
 
-#: modules/cons.py:289
+#: modules/cons.py:290
 msgid "Tile into 4 quadrants The Checked Windows"
 msgstr "Ułóż zaznaczone okna w kwadrat"
 
-#: modules/cons.py:290
+#: modules/cons.py:291
 msgid "Tile _Grid"
 msgstr "_Siatka"
 
-#: modules/cons.py:290
+#: modules/cons.py:291
 msgid "Tile into an Arbitrary Grid The Checked Windows"
 msgstr "Ułóż zaznaczone okna w siatkę"
 
-#: modules/cons.py:291
+#: modules/cons.py:292
 msgid "Custom Tile 1 _Set"
 msgstr "Ustaw _niestandardowy układ 1"
 
-#: modules/cons.py:291
+#: modules/cons.py:292
 msgid "Edit Custom Tile 1 Settings"
 msgstr "Edytuj ustawienia niestandardowego układu 1"
 
-#: modules/cons.py:292
+#: modules/cons.py:293
 msgid "Custom Tile _1 Run"
 msgstr "Ułóż w niestandardowy układ _1"
 
-#: modules/cons.py:292
+#: modules/cons.py:293
 msgid "Execute Custom Tile 1"
 msgstr "Ułóż w niestandardowy układ 1"
 
-#: modules/cons.py:293
+#: modules/cons.py:294
 msgid "Custom Tile 2 S_et"
 msgstr "Ustaw n_iestandardowy układ 2"
 
-#: modules/cons.py:293
+#: modules/cons.py:294
 msgid "Edit Custom Tile 2 Settings"
 msgstr "Edytuj ustawienia niestandardowego układu 2"
 
-#: modules/cons.py:294
+#: modules/cons.py:295
 msgid "Custom Tile _2 Run"
 msgstr "Ułóż w niestandardowy układ _2"
 
-#: modules/cons.py:294
+#: modules/cons.py:295
 msgid "Execute Custom Tile 2"
 msgstr "Ułóż w niestandardowy układ 2"
 
-#: modules/cons.py:295 modules/cons.py:324
+#: modules/cons.py:296 modules/cons.py:325
 msgid "U_ndo Tiling"
 msgstr "Co_fnij układanie"
 
-#: modules/cons.py:295 modules/cons.py:324
+#: modules/cons.py:296 modules/cons.py:325
 msgid "Undo the Latest Tiling Operation"
 msgstr "Cofnij ostatnią operację układania"
 
-#: modules/cons.py:296 modules/cons.py:323
+#: modules/cons.py:297 modules/cons.py:324
 msgid "_Invert Tiling Order"
 msgstr "_Odwróć kolejność układania"
 
-#: modules/cons.py:296 modules/cons.py:323
+#: modules/cons.py:297 modules/cons.py:324
 msgid "Invert the Order of the Latest Tiling Operation"
 msgstr "Odwróć kolejność ostatniej operacji układania"
 
-#: modules/cons.py:297 modules/cons.py:325
+#: modules/cons.py:298 modules/cons.py:326
 msgid "C_ycle Tiling Order"
 msgstr "Przesuń c_yklicznie kolejność układania"
 
-#: modules/cons.py:297 modules/cons.py:325
+#: modules/cons.py:298 modules/cons.py:326
 msgid "Cycle the Order of the Latest Tiling Operation"
 msgstr "Przesuń cyklicznie kolejność ostatniej operacji układania"
 
-#: modules/cons.py:298
+#: modules/cons.py:299
 msgid "_Maximize Windows"
 msgstr "Z_maksymalizuj okna"
 
-#: modules/cons.py:298
+#: modules/cons.py:299
 msgid "Maximize The Checked Windows"
 msgstr "Zmaksymalizuj okna"
 
-#: modules/cons.py:299
+#: modules/cons.py:300
 msgid "_Unmaximize Windows"
 msgstr "Prz_ywróć okna"
 
-#: modules/cons.py:299
+#: modules/cons.py:300
 msgid "Unmaximize The Checked Windows"
 msgstr "Przywróć rozmiar zaznaczonych okien"
 
-#: modules/cons.py:300
+#: modules/cons.py:301
 msgid "_Close Windows"
 msgstr "_Zamknij okna"
 
-#: modules/cons.py:300
+#: modules/cons.py:301
 msgid "Close The Checked Windows"
 msgstr "Zamknij zaznaczone okna"
 
-#: modules/cons.py:301
+#: modules/cons.py:302
 msgid "Move _Up"
 msgstr "Przesuń do _góry"
 
-#: modules/cons.py:301
+#: modules/cons.py:302
 msgid "Move the Selected Row Up"
 msgstr "Przesuń zaznaczony rząd do góry"
 
-#: modules/cons.py:302
+#: modules/cons.py:303
 msgid "Move _Down"
 msgstr "Przesuń w _dół"
 
-#: modules/cons.py:302
+#: modules/cons.py:303
 msgid "Move the Selected Row Down"
 msgstr "Przesuń zaznaczony rząd w dół"
 
-#: modules/cons.py:303
+#: modules/cons.py:304
 msgid "_Remove"
 msgstr "_Usuń"
 
-#: modules/cons.py:303
+#: modules/cons.py:304
 msgid "Remove the Selected Row"
 msgstr "Usuń zaznaczony rząd"
 
-#: modules/cons.py:304
+#: modules/cons.py:305
 msgid "Show/Hide _Toolbar"
 msgstr "Pokaż/ukryj pasek _narzędzi"
 
-#: modules/cons.py:304
+#: modules/cons.py:305
 msgid "Toggle Show/Hide Toolbar"
 msgstr "Przełącz pokaż/ukryj pasek narzędzi"
 
-#: modules/cons.py:305
+#: modules/cons.py:306
 msgid "_Increase Toolbar Icons Size"
 msgstr "_Zwiększ rozmiar ikon paska narzędzi"
 
-#: modules/cons.py:305
+#: modules/cons.py:306
 msgid "Increase the Size of the Toolbar Icons"
 msgstr "Zwiększ rozmiar ikon paska narzędzi"
 
-#: modules/cons.py:306
+#: modules/cons.py:307
 msgid "_Decrease Toolbar Icons Size"
 msgstr "Z_mniejsz rozmiar ikon paska narzędzi"
 
-#: modules/cons.py:306
+#: modules/cons.py:307
 msgid "Decrease the Size of the Toolbar Icons"
 msgstr "Zmniejsz rozmiar ikon paska narzędzi"
 
-#: modules/cons.py:307
+#: modules/cons.py:308
 msgid "X Tile Project Home Page"
 msgstr "Strona domowa projektu X Tile"
 
-#: modules/cons.py:308 modules/cons.py:309
+#: modules/cons.py:309 modules/cons.py:310
 msgid "_About"
 msgstr "_O programie"
 
-#: modules/cons.py:308 modules/cons.py:309 glade/x-tile.glade.h:1
+#: modules/cons.py:309 modules/cons.py:310 glade/x-tile.glade.h:1
 msgid "About X Tile"
 msgstr "O X Tile"
 
-#: modules/cons.py:310
+#: modules/cons.py:311
 msgid "_Close All"
 msgstr "_Zamknij wszystkie"
 
-#: modules/cons.py:310
+#: modules/cons.py:311
 msgid "Close All Windows"
 msgstr "Zamknij wszystkie okna"
 
-#: modules/cons.py:311
+#: modules/cons.py:312
 msgid "_Unmaximize All"
 msgstr "_Przywróć wszystkie"
 
-#: modules/cons.py:311
+#: modules/cons.py:312
 msgid "Unmaximize All Windows"
 msgstr "Przywróć rozmiar wszystkich okien"
 
-#: modules/cons.py:312
+#: modules/cons.py:313
 msgid "_Maximize All"
 msgstr "_Zmaksymalizuj wszystkie"
 
-#: modules/cons.py:312
+#: modules/cons.py:313
 msgid "Maximize All Windows"
 msgstr "Zmaksymalizuj wszystkie okna"
 
-#: modules/cons.py:313
+#: modules/cons.py:314
 msgid "Tile All _Quad"
 msgstr "Ułóż wszystkie w _kwadrat"
 
-#: modules/cons.py:313
+#: modules/cons.py:314
 msgid "Tile All Windows Quad"
 msgstr "Ułóż wszystkie okna w kwadrat"
 
-#: modules/cons.py:314
+#: modules/cons.py:315
 msgid "Tile All Triangle _Down"
 msgstr "Ułóż wszystkie w trójkąt _dolny"
 
-#: modules/cons.py:314
+#: modules/cons.py:315
 msgid "Tile All Windows Triangle Down"
 msgstr "Ułóż wszystkie okna w trójkąt dolny"
 
-#: modules/cons.py:315
+#: modules/cons.py:316
 msgid "Tile All Triangle _Up"
 msgstr "Ułóż wszystkie w trójkąt _górny"
 
-#: modules/cons.py:315
+#: modules/cons.py:316
 msgid "Tile All Windows Triangle Up"
 msgstr "Ułóż wszystkie okna w trójkąt górny"
 
-#: modules/cons.py:316
+#: modules/cons.py:317
 msgid "Tile All Triangle _Right"
 msgstr "Ułóż wszystkie w trójkąt _prawy"
 
-#: modules/cons.py:316
+#: modules/cons.py:317
 msgid "Tile All Windows Triangle Right"
 msgstr "Ułóż wszystkie okna w trójkąt prawy"
 
-#: modules/cons.py:317
+#: modules/cons.py:318
 msgid "Tile All Triangle _Left"
 msgstr "Ułóż wszystkie w trójkąt _lewy"
 
-#: modules/cons.py:317
+#: modules/cons.py:318
 msgid "Tile All Windows Triangle Left"
 msgstr "Ułóż wszystkie okna w trójkąt lewy"
 
-#: modules/cons.py:318
+#: modules/cons.py:319
 msgid "Tile All Custom _2"
 msgstr "Ułóż wszystkie w układ niestandardowy _2"
 
-#: modules/cons.py:318
+#: modules/cons.py:319
 msgid "Tile All Windows Custom 2"
 msgstr "Ułóż wszystkie okna w układ niestandardowy 2"
 
-#: modules/cons.py:319
+#: modules/cons.py:320
 msgid "Tile All Custom _1"
 msgstr "Ułóż wszystkie w układ niestandardowy _1"
 
-#: modules/cons.py:319
+#: modules/cons.py:320
 msgid "Tile All Windows Custom 1"
 msgstr "Ułóż wszystkie okna w układ niestandardowy 1"
 
-#: modules/cons.py:320
+#: modules/cons.py:321
 msgid "Tile All _Grid"
 msgstr "Ustaw wszystkie w _siatkę"
 
-#: modules/cons.py:320
+#: modules/cons.py:321
 msgid "Tile All Windows Grid"
 msgstr "Ustaw wszystkie okna w siatkę"
 
-#: modules/cons.py:321
+#: modules/cons.py:322
 msgid "Tile All _Horizontally"
 msgstr "Ustaw wszystkie po_ziomo"
 
-#: modules/cons.py:321
+#: modules/cons.py:322
 msgid "Tile All Windows Horizontally"
 msgstr "Ustaw wszystkie okna poziomo"
 
-#: modules/cons.py:322
+#: modules/cons.py:323
 msgid "Tile All _Vertically"
 msgstr "Ustaw wszystkie pio_nowo"
 
-#: modules/cons.py:322
+#: modules/cons.py:323
 msgid "Tile All Windows Vertically"
 msgstr "Ustaw wszystkie okna pionowo"
 
@@ -563,118 +563,122 @@ msgid "Preferences"
 msgstr "Preferencje"
 
 #: glade/x-tile.glade.h:32
-msgid " Language "
-msgstr "Język"
-
-#: glade/x-tile.glade.h:33
 msgid "Do Not List Minimized Windows"
 msgstr "Nie wypisuj zminimalizowanych okien"
 
-#: glade/x-tile.glade.h:34
+#: glade/x-tile.glade.h:33
 msgid "Only Current Workspace"
 msgstr "Tylko aktywna przestrzeń robocza"
 
-#: glade/x-tile.glade.h:35
+#: glade/x-tile.glade.h:34
 msgid "Enable System Tray Docking"
 msgstr "Włącz dokowanie na pasku systemowym"
 
-#: glade/x-tile.glade.h:36
+#: glade/x-tile.glade.h:35
 msgid "Start Minimized in the System Tray"
 msgstr "Zaczynaj zminimalizowany w pasku systemowym"
+
+#: glade/x-tile.glade.h:36
+msgid "Use AppIndicator for Docking"
+msgstr ""
 
 #: glade/x-tile.glade.h:37
 msgid "Show Toolbar"
 msgstr "Pokaż pasek narzędzi"
 
 #: glade/x-tile.glade.h:38
+msgid " Language "
+msgstr "Język"
+
+#: glade/x-tile.glade.h:39
 msgid "Override Monitor 1 Tiling Area"
 msgstr "Nadpisz obszar układania na monitorze 1"
 
-#: glade/x-tile.glade.h:39
+#: glade/x-tile.glade.h:40
 msgid "X"
 msgstr "X"
 
-#: glade/x-tile.glade.h:40
+#: glade/x-tile.glade.h:41
 msgid "Y"
 msgstr "Y"
 
-#: glade/x-tile.glade.h:41
+#: glade/x-tile.glade.h:42
 msgid "Position"
 msgstr "Pozycja"
 
-#: glade/x-tile.glade.h:42
+#: glade/x-tile.glade.h:43
 msgid "Width"
 msgstr "Szerokość"
 
-#: glade/x-tile.glade.h:43
+#: glade/x-tile.glade.h:44
 msgid "Height"
 msgstr "Wysokość"
 
-#: glade/x-tile.glade.h:44
+#: glade/x-tile.glade.h:45
 msgid "Size"
 msgstr "Rozmiar"
 
-#: glade/x-tile.glade.h:45
+#: glade/x-tile.glade.h:46
 msgid "Override Monitor 2 Tiling Area"
 msgstr "Nadpisz obszar układania na monitorze 2"
 
-#: glade/x-tile.glade.h:46
+#: glade/x-tile.glade.h:47
 msgid "Close"
 msgstr "Zamknij"
 
-#: glade/x-tile.glade.h:47
+#: glade/x-tile.glade.h:48
 msgid "Cancel"
 msgstr "Anuluj"
 
-#: glade/x-tile.glade.h:48
+#: glade/x-tile.glade.h:49
 msgid "OK"
 msgstr "OK"
 
-#: glade/x-tile.glade.h:49
+#: glade/x-tile.glade.h:50
 msgid "<b>Custom Tiling Layout</b>"
 msgstr "<b>Niestandardowy układ</b>"
 
-#: glade/x-tile.glade.h:50
+#: glade/x-tile.glade.h:51
 msgid "1) Tile Some Windows Manually"
 msgstr "1) Ułóż jakieś okna ręcznie"
 
-#: glade/x-tile.glade.h:51
+#: glade/x-tile.glade.h:52
 msgid "2) Select Them in the X Tile Windows List"
 msgstr "2) Zaznacz je na liście okien X"
 
-#: glade/x-tile.glade.h:52
+#: glade/x-tile.glade.h:53
 msgid "3) Click the Update Button"
 msgstr "3) Kliknij przycisk aktualizuj"
 
-#: glade/x-tile.glade.h:53
+#: glade/x-tile.glade.h:54
 msgid "Update"
 msgstr "Aktualizuj"
 
-#: glade/x-tile.glade.h:54
+#: glade/x-tile.glade.h:55
 msgid "Rows to Filter"
 msgstr "Rzędy do przefiltrowania"
 
-#: glade/x-tile.glade.h:55
+#: glade/x-tile.glade.h:56
 msgid "Add an Application Filter"
 msgstr "Dodaj filtr aplikacji"
 
-#: glade/x-tile.glade.h:56
+#: glade/x-tile.glade.h:57
 msgid "Remove an Application Filter"
 msgstr "Usuń filtr aplikacji"
 
-#: glade/x-tile.glade.h:57
+#: glade/x-tile.glade.h:58
 msgid "Add Row"
 msgstr "Dodaj rząd"
 
-#: glade/x-tile.glade.h:59
+#: glade/x-tile.glade.h:60
 msgid "X Tile"
 msgstr "X Tile"
 
-#: glade/x-tile.glade.h:60
+#: glade/x-tile.glade.h:61
 msgid "Set Destination Workspace"
 msgstr "Wyznacz docelową przestrzeń roboczą"
 
-#: glade/x-tile.glade.h:61
+#: glade/x-tile.glade.h:62
 msgid "Exit After Tile"
 msgstr "Wyjdź po ułożeniu"
 
