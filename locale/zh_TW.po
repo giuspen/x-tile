@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: 2.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-07 23:14+0200\n"
-"PO-Revision-Date: 2012-07-13 06:13+0800\n"
+"PO-Revision-Date: 2012-09-08 05:53+0800\n"
 "Last-Translator: Yan-ren Tsai <elleryq@gmail.com>\n"
 "Language-Team: 漢語 <chinese-l10n@googlegroups.com>\n"
 "Language: \n"
@@ -570,7 +570,7 @@ msgstr "啟動時最小化到系統匣"
 
 #: glade/x-tile.glade.h:36
 msgid "Use AppIndicator for Docking"
-msgstr ""
+msgstr "使用 AppIndicator 停駐"
 
 #: glade/x-tile.glade.h:37
 msgid "Show Toolbar"
