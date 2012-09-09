@@ -486,7 +486,7 @@ class XTile:
         if self.gconf_client.get_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index) == None:
             self.gconf_client.set_string(cons.GCONF_EXIT_AFTER_TILE % glob.screen_index, cons.STR_TRUE)
         if self.gconf_client.get_string(cons.GCONF_NOT_MINIMIZED % glob.screen_index) == None:
-            self.gconf_client.set_string(cons.GCONF_NOT_MINIMIZED % glob.screen_index, cons.STR_TRUE)
+            self.gconf_client.set_string(cons.GCONF_NOT_MINIMIZED % glob.screen_index, cons.STR_FALSE)
         if self.gconf_client.get_string(cons.GCONF_ONLY_CURR_DESK % glob.screen_index) == None:
             self.gconf_client.set_string(cons.GCONF_ONLY_CURR_DESK % glob.screen_index, cons.STR_FALSE)
         # systray handling
