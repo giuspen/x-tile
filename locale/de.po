@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: x-tile 1.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-07 23:14+0200\n"
-"PO-Revision-Date: 2012-07-15 21:35+0100\n"
+"PO-Revision-Date: 2012-09-09 17:26+0100\n"
 "Last-Translator: Jöran Zeller <joeran@zeller.ws>\n"
 "Language-Team: German\n"
 "Language: German (Deutsch)\n"
@@ -576,7 +576,7 @@ msgstr "Starte minimiert im System Tray"
 
 #: glade/x-tile.glade.h:36
 msgid "Use AppIndicator for Docking"
-msgstr ""
+msgstr "Benutze AppIndicator zum Andocken"
 
 #: glade/x-tile.glade.h:37
 msgid "Show Toolbar"

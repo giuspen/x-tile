@@ -16,8 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Language: ru_RU\n"
 "X-Source-Language: C\n"
 
@@ -74,16 +73,16 @@ msgid ""
 "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
 "Set'"
 msgstr ""
-"Пользовательская схема 1 не выставлена: Выберите ее в меню 'Разбиение-"
-">Пользовательская схема 1'"
+"Пользовательская схема 1 не выставлена: Выберите ее в меню "
+"'Разбиение->Пользовательская схема 1'"
 
 #: modules/core.py:1192
 msgid ""
 "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
 "Set'"
 msgstr ""
-"Пользовательская схема2  не выставлена: Выберите ее в меню 'Разбиение-"
-">Пользовательская схема 2'"
+"Пользовательская схема2  не выставлена: Выберите ее в меню "
+"'Разбиение->Пользовательская схема 2'"
 
 #: modules/cons.py:268
 msgid "_File"
@@ -585,7 +584,7 @@ msgstr "Свернуть в системный лоток при запуске"
 
 #: glade/x-tile.glade.h:36
 msgid "Use AppIndicator for Docking"
-msgstr ""
+msgstr "Использовать Appindicator"
 
 #: glade/x-tile.glade.h:37
 msgid "Show Toolbar"
