@@ -32,7 +32,11 @@ import globs, cons
 def get_desktop_width_n_height():
     """Get Desktop Width and Height"""
     get_property("_NET_WORKAREA", glob.root, glob.XA_CARDINAL)
-    return glob.ret_pointer[2], glob.ret_pointer[3]
+    if bool(glob.ret_pointer): return glob.ret_pointer[2], glob.ret_pointer[3]
+    print "The WM does not set _NET_WORKAREA properly, x-tile may not work properly"
+    screen = gtk.gdk.screen_get_default()
+    rect = screen.get_monitor_geometry(0)
+    return rect.width, rect.height
 
 def is_window_in_curr_viewport(desktop_width, desktop_height, win_id):
     """Check the Window to be in the Current Viewport assuming Compiz is Running"""
