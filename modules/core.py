@@ -352,6 +352,7 @@ class XTile:
         """Creates the Stats Icon"""
         if self.use_appindicator():
             self.ind = appindicator.Indicator("x-tile", "indicator-messages", appindicator.CATEGORY_APPLICATION_STATUS)
+            self.ind.set_icon_theme_path(cons.GLADE_PATH)
             self.ind.set_status(appindicator.STATUS_ACTIVE)
             self.ind.set_attention_icon("indicator-messages-new")
             for icp in ["/usr/share/icons/hicolor/scalable/apps/x-tile.svg",

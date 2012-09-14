@@ -870,6 +870,8 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
   <object class="GtkDialog" id="customsetdialog">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
+    <property name="modal">True</property>
+    <property name="destroy_with_parent">True</property>
     <property name="type_hint">normal</property>
     <property name="transient_for">window</property>
     <child internal-child="vbox">
@@ -1142,8 +1144,10 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
     <property name="title" translatable="yes">Rows to Filter</property>
+    <property name="modal">True</property>
     <property name="default_width">300</property>
     <property name="default_height">300</property>
+    <property name="destroy_with_parent">True</property>
     <property name="type_hint">normal</property>
     <property name="transient_for">window</property>
     <child internal-child="vbox">
@@ -1315,8 +1319,10 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
     <property name="title" translatable="yes">Add Row</property>
+    <property name="modal">True</property>
     <property name="default_width">300</property>
     <property name="default_height">300</property>
+    <property name="destroy_with_parent">True</property>
     <property name="type_hint">normal</property>
     <property name="transient_for">window</property>
     <child internal-child="vbox">
@@ -1450,8 +1456,10 @@ Russian (ru) Andriy Kovtun &lt;kovtunos@yandex.ru&gt;</property>
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
     <property name="title" translatable="yes">Rows to be Selected by Default</property>
+    <property name="modal">True</property>
     <property name="default_width">300</property>
     <property name="default_height">300</property>
+    <property name="destroy_with_parent">True</property>
     <property name="type_hint">normal</property>
     <property name="transient_for">window</property>
     <child internal-child="vbox">
