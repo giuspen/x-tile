@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: 1.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-07 23:14+0200\n"
-"PO-Revision-Date: 2012-07-13 13:20+0800\n"
+"PO-Revision-Date: 2012-09-14 12:45+0800\n"
 "Last-Translator: Khiyuan.Fan <Fan.Khiyuan@gmail.com>\n"
 "Language-Team: Fan.khiyuan@gmail.com\n"
 "Language: \n"
@@ -20,7 +20,8 @@ msgstr "使用拖拉来排序行"
 msgid "The New Language will be Available Only After Restarting X Tile"
 msgstr "新语言将在重启 X Tile 后生效。"
 
-#: modules/core.py:369 glade/x-tile.glade.h:5
+#: modules/core.py:369
+#: glade/x-tile.glade.h:5
 msgid "Tile the Windows Upon your X Desktop"
 msgstr ""
 "X Tile\n"
@@ -34,11 +35,14 @@ msgstr "工具栏图标的尺寸已经是最大的了。"
 msgid "The Size of the Toolbar Icons is already at the Minimum Value"
 msgstr "工具栏图标的尺寸已经是最小的了。"
 
-#: modules/core.py:703 modules/core.py:711 modules/core.py:719
+#: modules/core.py:703
+#: modules/core.py:711
+#: modules/core.py:719
 msgid "No Row is Selected"
 msgstr "没有选定任何行"
 
-#: modules/core.py:741 modules/core.py:775
+#: modules/core.py:741
+#: modules/core.py:775
 msgid "No Application Selected!"
 msgstr "没有选择应用程序!"
 
@@ -54,24 +58,23 @@ msgstr "行"
 msgid "Columns"
 msgstr "列"
 
-#: modules/core.py:956 modules/core.py:964 modules/core.py:974
+#: modules/core.py:956
+#: modules/core.py:964
+#: modules/core.py:974
 msgid "No Windows Checked"
 msgstr "没有选择窗口"
 
-#: modules/core.py:1014 modules/core.py:1027
+#: modules/core.py:1014
+#: modules/core.py:1027
 msgid "Edit Custom Tile Settings"
 msgstr "编辑自定排列设定"
 
 #: modules/core.py:1174
-msgid ""
-"The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 "
-"Set'"
+msgid "The Custom Tile 1 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 1 Set'"
 msgstr "自定排列1尚未设置：点击菜单 '排列->自定排列1' 进行设置。"
 
 #: modules/core.py:1192
-msgid ""
-"The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 "
-"Set'"
+msgid "The Custom Tile 2 was Not Set Yet: Click the Menu Item 'Tile->Custom Tile 2 Set'"
 msgstr "自定排列2尚未设置：点击菜单 '排列->自定排列2' 进行设置。"
 
 #: modules/cons.py:268
@@ -94,7 +97,8 @@ msgstr "排列 (_T)"
 msgid "_View"
 msgstr "查看 (_V)"
 
-#: modules/cons.py:273 modules/cons.py:308
+#: modules/cons.py:273
+#: modules/cons.py:308
 msgid "_Help"
 msgstr "帮助 (_H)"
 
@@ -110,7 +114,8 @@ msgstr "过滤行"
 msgid "Selected by _Default"
 msgstr "预设选定 (_D)"
 
-#: modules/cons.py:276 glade/x-tile.glade.h:59
+#: modules/cons.py:276
+#: glade/x-tile.glade.h:59
 msgid "Rows to be Selected by Default"
 msgstr "预设选定的行"
 
@@ -266,27 +271,33 @@ msgstr "运行自定排列2 (_2)"
 msgid "Execute Custom Tile 2"
 msgstr "运行自定排列2"
 
-#: modules/cons.py:296 modules/cons.py:325
+#: modules/cons.py:296
+#: modules/cons.py:325
 msgid "U_ndo Tiling"
 msgstr "撤销排列 (_N)"
 
-#: modules/cons.py:296 modules/cons.py:325
+#: modules/cons.py:296
+#: modules/cons.py:325
 msgid "Undo the Latest Tiling Operation"
 msgstr "撤消最后一次排列操作"
 
-#: modules/cons.py:297 modules/cons.py:324
+#: modules/cons.py:297
+#: modules/cons.py:324
 msgid "_Invert Tiling Order"
 msgstr "倒置排列次序(_I)"
 
-#: modules/cons.py:297 modules/cons.py:324
+#: modules/cons.py:297
+#: modules/cons.py:324
 msgid "Invert the Order of the Latest Tiling Operation"
 msgstr "倒置最后一次排列操作"
 
-#: modules/cons.py:298 modules/cons.py:326
+#: modules/cons.py:298
+#: modules/cons.py:326
 msgid "C_ycle Tiling Order"
 msgstr "循环排列次序(_I)"
 
-#: modules/cons.py:298 modules/cons.py:326
+#: modules/cons.py:298
+#: modules/cons.py:326
 msgid "Cycle the Order of the Latest Tiling Operation"
 msgstr "循环最后一次排列操作"
 
@@ -366,11 +377,14 @@ msgstr "缩小工具栏图标"
 msgid "X Tile Project Home Page"
 msgstr "X Tile 项目首页"
 
-#: modules/cons.py:309 modules/cons.py:310
+#: modules/cons.py:309
+#: modules/cons.py:310
 msgid "_About"
 msgstr "关于 (_A)"
 
-#: modules/cons.py:309 modules/cons.py:310 glade/x-tile.glade.h:1
+#: modules/cons.py:309
+#: modules/cons.py:310
+#: glade/x-tile.glade.h:1
 msgid "About X Tile"
 msgstr "关于 X Tile"
 
@@ -569,7 +583,7 @@ msgstr "启动后最小化于系统托盘"
 
 #: glade/x-tile.glade.h:36
 msgid "Use AppIndicator for Docking"
-msgstr ""
+msgstr "使用任务栏进行排布"
 
 #: glade/x-tile.glade.h:37
 msgid "Show Toolbar"
@@ -670,3 +684,4 @@ msgstr "设置目标工作区"
 #: glade/x-tile.glade.h:62
 msgid "Exit After Tile"
 msgstr "排列后退出"
+
