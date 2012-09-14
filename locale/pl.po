@@ -2,13 +2,13 @@
 # Copyright (C) 2012 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Dominik Wójt <domin144@o2.pl>, 2012.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: X Tile\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-07 23:14+0200\n"
-"PO-Revision-Date: 2012-06-26 02:01+0100\n"
+"PO-Revision-Date: 2012-09-13 23:50+0100\n"
 "Last-Translator: Dominik Wójt <domin144@o2.pl>\n"
 "Language-Team: Polish\n"
 "Language: pl\n"
@@ -580,7 +580,7 @@ msgstr "Zaczynaj zminimalizowany w pasku systemowym"
 
 #: glade/x-tile.glade.h:36
 msgid "Use AppIndicator for Docking"
-msgstr ""
+msgstr "Używaj obszaru wskaźników aplikacji do dokowania"
 
 #: glade/x-tile.glade.h:37
 msgid "Show Toolbar"
