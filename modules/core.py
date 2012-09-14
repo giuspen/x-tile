@@ -272,8 +272,6 @@ class XTile:
             gtk_settings.set_property("gtk-button-images", True)
             gtk_settings.set_property("gtk-menu-images", True)
         except: pass # older gtk do not have the property "gtk-menu-images"
-        icon_theme = gtk.icon_theme_get_default()
-        icon_theme.append_search_path(cons.GLADE_PATH)
         self.cmd_line_only = False
         # instantiate the Glade Widgets Wrapper
         self.glade = GladeWidgetsWrapper(cons.GLADE_PATH + 'x-tile.glade', self)
