@@ -60,8 +60,10 @@ except: print "libc.prctl not available, the process name will be python and not
 
 # icons generation
 factory = gtk.IconFactory()
-for filename, stock_name in cons.ICONS_FILENAMES:
-    pixbuf = gtk.gdk.pixbuf_new_from_file(filename)
+for filename in cons.ICONS_FILENAMES:
+    stock_name = filename[:-4]
+    filepath = os.path.join(cons.GLADE_PATH, filename)
+    pixbuf = gtk.gdk.pixbuf_new_from_file(filepath)
     iconset = gtk.IconSet(pixbuf)
     factory.add(stock_name, iconset)
 factory.add_default()
