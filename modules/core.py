@@ -366,7 +366,7 @@ class XTile:
             self.ind.set_menu(self.ui.get_widget("/SysTrayMenu"))
         else:
             self.status_icon = gtk.StatusIcon()
-            self.status_icon.set_from_stock("Tile Quad")
+            self.status_icon.set_from_stock("tile-quad")
             self.status_icon.connect('button-press-event', self.on_mouse_button_clicked_systray)
             self.status_icon.set_tooltip(_("Tile the Windows Upon your X Desktop"))
     
