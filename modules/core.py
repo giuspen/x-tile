@@ -257,13 +257,23 @@ class XTile:
         retrieves and stores the information about the running desktop self.geometry"""
         # create a variable pointing to the instance of the InfoModel class
         self.store = store
+        # icons generation
+        factory = gtk.IconFactory()
+        for filename in cons.ICONS_FILENAMES:
+            stock_name = filename[:-4]
+            filepath = os.path.join(cons.GLADE_PATH, filename)
+            pixbuf = gtk.gdk.pixbuf_new_from_file(filepath)
+            iconset = gtk.IconSet(pixbuf)
+            factory.add(stock_name, iconset)
+        factory.add_default()
         # system settings
         try:
             gtk_settings = gtk.settings_get_default()
             gtk_settings.set_property("gtk-button-images", True)
             gtk_settings.set_property("gtk-menu-images", True)
         except: pass # older gtk do not have the property "gtk-menu-images"
-        os.environ['UBUNTU_MENUPROXY'] = '0' # for custom stock icons not visible in appmenu
+        icon_theme = gtk.icon_theme_get_default()
+        icon_theme.append_search_path(cons.GLADE_PATH)
         self.cmd_line_only = False
         # instantiate the Glade Widgets Wrapper
         self.glade = GladeWidgetsWrapper(cons.GLADE_PATH + 'x-tile.glade', self)
