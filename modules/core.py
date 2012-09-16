@@ -272,6 +272,7 @@ class XTile:
             gtk_settings.set_property("gtk-button-images", True)
             gtk_settings.set_property("gtk-menu-images", True)
         except: pass # older gtk do not have the property "gtk-menu-images"
+        os.environ['UBUNTU_MENUPROXY'] = '0' # x-tile has custom stock icons not visible in appmenu
         self.cmd_line_only = False
         # instantiate the Glade Widgets Wrapper
         self.glade = GladeWidgetsWrapper(cons.GLADE_PATH + 'x-tile.glade', self)
