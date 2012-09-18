@@ -364,14 +364,7 @@ class XTile:
             self.ind.set_icon_theme_path(cons.GLADE_PATH)
             self.ind.set_status(appindicator.STATUS_ACTIVE)
             self.ind.set_attention_icon("indicator-messages-new")
-            for icp in ["/usr/share/icons/hicolor/scalable/apps/x-tile.svg",
-                        "/usr/local/share/icons/hicolor/scalable/apps/x-tile.svg",
-                        "glade/x-tile.svg"]:
-                if os.path.isfile(icp):
-                    icon_path = icp
-                    break
-            else: icon_path = cons.APP_NAME
-            self.ind.set_icon(icon_path)
+            self.ind.set_icon("tile-quad")
             self.ind.set_menu(self.ui.get_widget("/SysTrayMenu"))
         else:
             self.status_icon = gtk.StatusIcon()
