@@ -1,0 +1,3 @@
+X-tile is an application that allows you to select a number of windows and tile them in different ways.
+X-tile works on any X desktop (gnome, kde, xfce, lxde…).
+The main features are: many tiling geometries, undo tiling, invert tiling order, optional system tray docking and menu, filter to avoid listing some windows, filter to check some windows by default, command line interface.
