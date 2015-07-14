@@ -2,7 +2,7 @@
 #
 #      core.py
 #
-#      Copyright 2009-2012
+#      Copyright 2009-2015
 #      Giuseppe Penone <giuspen@gmail.com>,
 #      Chris Camacho (chris_c) <codifies@gmail.com>.
 #
