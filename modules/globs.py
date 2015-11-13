@@ -100,7 +100,8 @@ class GlobalsObject(object):
         support.glob = self
         # x11 reference to xlib library display and root window globals
         self.x11 = ctypes.CDLL(ctypes.util.find_library("X11"))
-        self.disp = self.x11.XOpenDisplay(0)
+        self.x11.XOpenDisplay.restype = ctypes.c_void_p
+        self.disp = ctypes.c_void_p(self.x11.XOpenDisplay(0))
         self.root = self.x11.XDefaultRootWindow(self.disp)
         # property atoms for moveresize
         # assigned once here so they are not recreated
