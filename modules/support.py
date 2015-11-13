@@ -310,6 +310,7 @@ def get_root_screen_index():
     """Get Screen Index"""
     xwa = globs.XWindowAttributes()
     glob.x11.XGetWindowAttributes(glob.disp, glob.root,ctypes.byref(xwa))
+    glob.x11.XScreenNumberOfScreen.argtypes = [ctypes.c_void_p]
     screen_index = glob.x11.XScreenNumberOfScreen(xwa.screen)
     return screen_index
 
