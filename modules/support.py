@@ -134,9 +134,13 @@ def get_icon(win):
     """   this returns a gtk.gdk.pixbuf of the windows icon
           converts argb into rgba in the process   """
     get_property("_NET_WM_ICON", win, glob.XA_CARDINAL)
-    if not glob.ret_pointer : return None
+    if not glob.ret_pointer:
+        return None
     w = glob.ret_pointer[0]
     h = glob.ret_pointer[1]
+    #print w,h
+    if w > 48 or h > 48:
+        return None
     s = w*h
     buff = ""
     i = 0

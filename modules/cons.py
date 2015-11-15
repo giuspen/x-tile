@@ -28,7 +28,7 @@ import gtk, os
 
 
 APP_NAME = "x-tile"
-VERSION = "2.5"
+VERSION = "2.5.1"
 if os.path.isdir("glade"):
     GLADE_PATH = os.path.join(os.getcwd(), "glade/")
     LOCALE_PATH = "locale/"
