@@ -1,5 +1,6 @@
-x-tile (2.5.1-1) stable; urgency=low
+x-tile (2.5.1-1) trusty; urgency=low
 
-  * Fellow upstream.
+  * support for python 2.7.10 (fix from Raghavendra Talur)
+  * bugfix: atom.io crashing x-tile
 
- -- Giuseppe Penone <giuspen@gmail.com>  Sun, 30 Jan 2011 03:00:00 +0800
+ -- Giuseppe Penone <giuspen@gmail.com>  Sun, 17 Apr 2016 22:03:19 +0100

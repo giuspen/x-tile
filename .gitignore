@@ -1,6 +1,3 @@
-syntax: glob
 *.pyc
-*.glade.h
-*.log
 *.mo
 linux/x-tile.1.gz
