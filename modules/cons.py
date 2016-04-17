@@ -2,7 +2,7 @@
 #
 #      cons.py
 #
-#      Copyright 2009-2015
+#      Copyright 2009-2016
 #      Giuseppe Penone <giuspen@gmail.com>,
 #      Chris Camacho (chris_c) <chris@bedroomcoders.co.uk>.
 #
@@ -24,7 +24,7 @@
 #      Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 #      MA 02110-1301, USA.
 
-import gtk, os
+import os
 
 
 APP_NAME = "x-tile"
@@ -75,9 +75,6 @@ DRAW_RGBS = (
                (0.25, 1, 0), # yellow green
                (1, 0, 0.25), # red wine
              )
-
-ICONS_SIZE = {1: gtk.ICON_SIZE_MENU, 2: gtk.ICON_SIZE_SMALL_TOOLBAR, 3: gtk.ICON_SIZE_LARGE_TOOLBAR,
-              4: gtk.ICON_SIZE_DND, 5: gtk.ICON_SIZE_DIALOG}
 
 ICONS_FILENAMES = ['tile-vertically.svg',
                    'tile-horizontally.svg',

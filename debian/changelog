@@ -1,4 +1,4 @@
-x-tile (2.5.1-1) trusty; urgency=low
+x-tile (2.5.1-3) trusty; urgency=low
 
   * support for python 2.7.10 (fix from Raghavendra Talur)
   * bugfix: atom.io crashing x-tile

@@ -2,7 +2,7 @@
 #
 #      support.py
 #
-#      Copyright 2009-2015
+#      Copyright 2009-2016
 #      Giuseppe Penone <giuspen@gmail.com>,
 #      Chris Camacho (chris_c) <chris@bedroomcoders.co.uk>.
 #

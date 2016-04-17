@@ -2,7 +2,7 @@
 #
 #      core.py
 #
-#      Copyright 2009-2015
+#      Copyright 2009-2016
 #      Giuseppe Penone <giuspen@gmail.com>,
 #      Chris Camacho (chris_c) <chris@bedroomcoders.co.uk>.
 #
@@ -33,7 +33,8 @@ except: HAS_APPINDICATOR = False
 XDG_CURRENT_DESKTOP = 'XDG_CURRENT_DESKTOP'
 HAS_SYSTRAY = not (XDG_CURRENT_DESKTOP in os.environ and os.environ[XDG_CURRENT_DESKTOP] == "Unity")
 import cons, support, tilings
-
+ICONS_SIZE = {1: gtk.ICON_SIZE_MENU, 2: gtk.ICON_SIZE_SMALL_TOOLBAR, 3: gtk.ICON_SIZE_LARGE_TOOLBAR,
+              4: gtk.ICON_SIZE_DND, 5: gtk.ICON_SIZE_DIALOG}
 
 class InfoModel:
     """Holds the information"""
@@ -542,9 +543,9 @@ class XTile:
         if grid_cols: cons.GRID_COLS = grid_cols
 
         key = self.gconf_client.get_int(cons.GCONF_TOOLBAR_ICON_SIZE % glob.screen_index)
-        if key not in cons.ICONS_SIZE: self.gconf_client.set_int(cons.GCONF_TOOLBAR_ICON_SIZE % glob.screen_index, 3)
+        if key not in ICONS_SIZE: self.gconf_client.set_int(cons.GCONF_TOOLBAR_ICON_SIZE % glob.screen_index, 3)
         self.ui.get_widget("/ToolBar").set_property("icon-size",
-              cons.ICONS_SIZE[self.gconf_client.get_int(cons.GCONF_TOOLBAR_ICON_SIZE % glob.screen_index)])
+              ICONS_SIZE[self.gconf_client.get_int(cons.GCONF_TOOLBAR_ICON_SIZE % glob.screen_index)])
 
         blacklist = self.gconf_client.get_string(cons.GCONF_PROCESS_BLACKLIST % glob.screen_index)
         if blacklist not in [None, ""]:
@@ -588,7 +589,7 @@ class XTile:
             return
         toolbar_icon_size += 1
         self.gconf_client.set_int(cons.GCONF_TOOLBAR_ICON_SIZE % glob.screen_index, toolbar_icon_size)
-        self.ui.get_widget("/ToolBar").set_property("icon-size", cons.ICONS_SIZE[toolbar_icon_size])
+        self.ui.get_widget("/ToolBar").set_property("icon-size", ICONS_SIZE[toolbar_icon_size])
 
     def toolbar_icons_size_decrease(self, *args):
         """Decrease the Size of the Toolbar Icons"""
@@ -598,7 +599,7 @@ class XTile:
             return
         toolbar_icon_size -= 1
         self.gconf_client.set_int(cons.GCONF_TOOLBAR_ICON_SIZE % glob.screen_index, toolbar_icon_size)
-        self.ui.get_widget("/ToolBar").set_property("icon-size", cons.ICONS_SIZE[toolbar_icon_size])
+        self.ui.get_widget("/ToolBar").set_property("icon-size", ICONS_SIZE[toolbar_icon_size])
 
     def toggle_active(self, cell, path, model):
         """Toggles the Active state"""
