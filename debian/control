@@ -17,7 +17,7 @@ Vcs-Browser: https://github.com/giuspen/x-tile
 Package: x-tile
 Architecture: all
 Depends:
- python-gtk2,
+ python-gtk2 (>= 2.16),
  python-gconf,
  ${misc:Depends},
  ${python:Depends}
