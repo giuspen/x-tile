@@ -2,7 +2,7 @@
 #
 #      core.py
 #
-#      Copyright 2009-2016
+#      Copyright 2009-2019
 #      Giuseppe Penone <giuspen@gmail.com>,
 #      Chris Camacho (chris_c) <chris@bedroomcoders.co.uk>.
 #
@@ -24,7 +24,7 @@
 #      Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 #      MA 02110-1301, USA.
 
-import gtk, gobject, gconf
+import gtk, gobject
 import os, sys, ctypes, webbrowser, time, subprocess
 try:
     import appindicator
@@ -36,13 +36,43 @@ import cons, support, tilings
 ICONS_SIZE = {1: gtk.ICON_SIZE_MENU, 2: gtk.ICON_SIZE_SMALL_TOOLBAR, 3: gtk.ICON_SIZE_LARGE_TOOLBAR,
               4: gtk.ICON_SIZE_DND, 5: gtk.ICON_SIZE_DIALOG}
 
+class MockingGConf:
+    """Minimal GConf replacement"""
+
+    def _get_filepath(self, key):
+        key_clean = key.replace("/", "-")
+        return os.path.join(cons.CONFIG_DIR, key_clean)
+
+    def add_dir(self, dirpath):
+        if not os.path.isdir(cons.CONFIG_DIR):
+            os.makedirs(cons.CONFIG_DIR)
+
+    def get_string(self, key):
+        ret_val = None
+        if os.path.isfile(self._get_filepath(key)):
+            with open(self._get_filepath(key), "r") as fd:
+                ret_val = fd.read()
+        return ret_val
+
+    def set_string(self, key, value):
+        with open(self._get_filepath(key), "w") as fd:
+            fd.write(value)
+
+    def get_int(self, key):
+        the_string = self.get_string(key)
+        return int(the_string) if the_string is not None else 0
+
+    def set_int(self, key, value):
+        self.set_string(key, str(value))
+
+
 class InfoModel:
     """Holds the information"""
 
     def __init__(self):
         """Sets up and populates the gtk.ListStore"""
         # 0:selected, 1:window ref, 2:title, 3:pixbuf of icon, 4:selected2, 5:cell_background
-        self.gconf_client = gconf.client_get_default()
+        self.gconf_client = MockingGConf()
         self.liststore = gtk.ListStore(gobject.TYPE_BOOLEAN,
                                        gobject.TYPE_ULONG,
                                        gobject.TYPE_STRING,
@@ -323,8 +353,8 @@ class XTile:
         self.glade.processadddialog.connect('key_press_event', self.on_key_press_processadddialog)
         self.glade.aboutdialog.set_version(cons.VERSION)
         self.glade.window.set_title(self.glade.window.get_title() + " " + cons.VERSION)
-        self.gconf_client = gconf.client_get_default()
-        self.gconf_client.add_dir("/apps/x-tile/%s" % glob.screen_index, gconf.CLIENT_PRELOAD_NONE)
+        self.gconf_client = MockingGConf()
+        self.gconf_client.add_dir("/apps/x-tile/%s" % glob.screen_index)
         self.combobox_country_lang_init()
 
     def combobox_country_lang_init(self):

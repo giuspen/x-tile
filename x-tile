@@ -26,7 +26,7 @@
 #      MA 02110-1301, USA.
 
 import sys, os, gettext, ctypes, ctypes.util, locale
-import gtk, gconf
+import gtk
 import __builtin__
 
 if os.path.isfile('modules/globs.py'): MODULES_PATH = 'modules/'
@@ -35,8 +35,8 @@ sys.path.append(MODULES_PATH)
 import cons, globs, core
 
 # language installation
-gconf_client = gconf.client_get_default()
-gconf_client.add_dir(cons.GCONF_DIR, gconf.CLIENT_PRELOAD_NONE)
+gconf_client = core.MockingGConf()
+gconf_client.add_dir(cons.GCONF_DIR)
 lang_str = gconf_client.get_string(cons.GCONF_LANG)
 if lang_str == None:
     gconf_client.set_string(cons.GCONF_LANG, "default")

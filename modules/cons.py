@@ -2,7 +2,7 @@
 #
 #      cons.py
 #
-#      Copyright 2009-2016
+#      Copyright 2009-2019
 #      Giuseppe Penone <giuspen@gmail.com>,
 #      Chris Camacho (chris_c) <chris@bedroomcoders.co.uk>.
 #
@@ -35,6 +35,7 @@ if os.path.isdir("glade"):
 else:
     GLADE_PATH = "/usr/share/x-tile/glade/"
     LOCALE_PATH = "/usr/share/locale/"
+CONFIG_DIR = os.path.join(os.path.expanduser('~'), '.config', APP_NAME)
 
 AVAILABLE_LANGS = ['default', 'cs', 'de', 'en', 'es_AR', 'fr', 'it', 'pl', 'ru', 'zh_CN', 'zh_TW']
 

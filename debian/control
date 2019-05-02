@@ -18,7 +18,6 @@ Package: x-tile
 Architecture: all
 Depends:
  python-gtk2 (>= 2.16),
- python-gconf,
  ${misc:Depends},
  ${python:Depends}
 Conflicts: x-tile-ng
