@@ -19,7 +19,6 @@ Architecture: all
 Depends:
  python-gtk2 (>= 2.16),
  ${misc:Depends},
- ${python:Depends}
 Conflicts: x-tile-ng
 Description: X Tile
  Allows you to select a number of windows and tile them in different ways
