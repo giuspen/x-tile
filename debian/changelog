@@ -1,5 +1,5 @@
-x-tile (2.6-0) bionic; urgency=low
+x-tile (3.0-0) bionic; urgency=low
 
-  * removed dependency from gconf (#9)
+  * Porting to PyGobject
 
  -- Giuseppe Penone <giuspen@gmail.com>  Sun, 07 Jul 2019 14:00:18 +0100

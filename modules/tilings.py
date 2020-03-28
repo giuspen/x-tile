@@ -2,7 +2,7 @@
 #
 #      core.py
 #
-#      Copyright 2009-2019
+#      Copyright 2009-2020
 #      Giuseppe Penone <giuspen@gmail.com>,
 #      Chris Camacho (chris_c) <chris@bedroomcoders.co.uk>.
 #
@@ -24,8 +24,8 @@
 #      Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 #      MA 02110-1301, USA.
 
-import support, cons
-
+import support
+import cons
 
 def tile_vertically(windows_list, monitors_areas, dws):
     """Tile the Checked Windows Vertically"""

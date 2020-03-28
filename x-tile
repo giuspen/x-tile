@@ -3,7 +3,7 @@
 #
 #      x-tile
 #
-#      Copyright 2009-2019
+#      Copyright 2009-2020
 #      Giuseppe Penone <giuspen@gmail.com>,
 #      Chris Camacho (chris_c) <chris@bedroomcoders.co.uk>.
 #
@@ -25,14 +25,23 @@
 #      Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 #      MA 02110-1301, USA.
 
-import sys, os, gettext, ctypes, ctypes.util, locale
-import gtk
+import sys
+import os
+import gettext
+import ctypes
+import ctypes.util
+import locale
+import gi
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk
 import __builtin__
 
 if os.path.isfile('modules/globs.py'): MODULES_PATH = 'modules/'
 else: MODULES_PATH = '/usr/share/x-tile/modules/'
 sys.path.append(MODULES_PATH)
-import cons, globs, core
+import cons
+import core
+import globs
 
 # language installation
 gconf_client = core.MockingGConf()
@@ -64,7 +73,7 @@ if arg == "w":
     x = core.XTile(core.InfoModel())
     x.launch_application()
     x.reload_windows_list()
-    gtk.main()
+    Gtk.main()
 elif arg in cons.CMD_LINE_ACTIONS:
     x = core.XTile(core.InfoModel())
     x.launch_application()

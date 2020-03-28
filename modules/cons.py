@@ -2,7 +2,7 @@
 #
 #      cons.py
 #
-#      Copyright 2009-2019
+#      Copyright 2009-2020
 #      Giuseppe Penone <giuspen@gmail.com>,
 #      Chris Camacho (chris_c) <chris@bedroomcoders.co.uk>.
 #
@@ -26,9 +26,8 @@
 
 import os
 
-
 APP_NAME = "x-tile"
-VERSION = "2.6"
+VERSION = "3.0"
 if os.path.isdir("glade"):
     GLADE_PATH = os.path.join(os.getcwd(), "glade/")
     LOCALE_PATH = "locale/"

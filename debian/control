@@ -2,13 +2,7 @@ Source: x-tile
 Section: utils
 Priority: optional
 Maintainer: Giuseppe Penone <giuspen@gmail.com>
-Build-Depends:
- debhelper (>= 9),
- desktop-file-utils,
- dh-python,
- gettext,
- python (>= 2.6.6-3~)
-X-Python-Version: >= 2.6
+Build-Depends: debhelper (>= 7), python-central (>=0.5.6), python (>=2.4), python-gi, python-gi-cairo, gir1.2-gtk-3.0
 Standards-Version: 3.9.5
 Homepage: http://www.giuspen.com/x-tile/
 Vcs-Git: https://github.com/giuspen/x-tile.git
@@ -16,9 +10,9 @@ Vcs-Browser: https://github.com/giuspen/x-tile
 
 Package: x-tile
 Architecture: all
-Depends:
- python-gtk2 (>= 2.16),
- ${misc:Depends},
+XS-Python-Version: >=2.4
+XB-Python-Version: >=2.4
+Depends: python-gi, python-gi-cairo, gir1.2-gtk-3.0
 Conflicts: x-tile-ng
 Description: X Tile
  Allows you to select a number of windows and tile them in different ways

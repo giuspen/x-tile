@@ -2,7 +2,7 @@
 #
 #      globs.py
 #
-#      Copyright 2009-2019
+#      Copyright 2009-2020
 #      Giuseppe Penone <giuspen@gmail.com>,
 #      Chris Camacho (chris_c) <chris@bedroomcoders.co.uk>.
 #
@@ -24,10 +24,13 @@
 #      Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 #      MA 02110-1301, USA.
 
-import gtk
-import ctypes, ctypes.util
-import cons, support, core
-
+from gi.repository import Gtk
+from gi.repository import Gdk
+import ctypes
+import ctypes.util
+import cons
+import support
+import core
 
 class XSizeHints(ctypes.Structure):
     """ XSizeHints structure (xlib) """
@@ -127,7 +130,7 @@ class GlobalsObject(object):
         self.size_hints_return = XSizeHints()
         self.screen_index = support.get_root_screen_index()
         self.str2_atom = self.x11.XInternAtom(self.disp, "STRING", False)
-        self.num_monitors = gtk.gdk.screen_get_default().get_n_monitors()
+        self.num_monitors = Gdk.Screen.get_default().get_n_monitors()
         self.is_compiz_running = support.is_compiz_running()
         self.desktop_width, self.desktop_height = support.get_desktop_width_n_height()
 
@@ -135,7 +138,7 @@ class GlobalsObject(object):
         """Read Monitor(s) Area(s)"""
         strut_windows = support.enumerate_strut_windows(self.disp, self.root)
         #print strut_windows
-        screen = gtk.gdk.screen_get_default()
+        screen = Gdk.Screen.get_default()
         self.num_monitors = screen.get_n_monitors()
         self.monitors_areas = []
         drawing_area_size = [0, 0]
@@ -147,4 +150,4 @@ class GlobalsObject(object):
             for strut_win in strut_windows:
                 self.monitors_areas[-1] = support.subtract_areas(self.monitors_areas[-1], strut_win)
         #print self.monitors_areas
-        self.drawing_rect = gtk.gdk.Rectangle(0, 0, drawing_area_size[0]/cons.DRAW_SCALE, drawing_area_size[1]/cons.DRAW_SCALE)
+        self.drawing_rect = (0, 0, drawing_area_size[0]/cons.DRAW_SCALE, drawing_area_size[1]/cons.DRAW_SCALE)
