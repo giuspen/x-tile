@@ -98,22 +98,22 @@ class InfoModel:
         """Populates the Gtk.ListStore"""
         self.liststore.clear()
         clients = []
-        support.get_property("_NET_CLIENT_LIST", glob.root, glob.XA_WINDOW)
+        support.get_property(b"_NET_CLIENT_LIST", glob.root, glob.XA_WINDOW)
         for i in range(0, glob.num_items.value):
             clients.append(glob.ret_pointer[i])
         rows_num = 0
-        support.get_property("_NET_CURRENT_DESKTOP", glob.root, glob.XA_CARDINAL)
+        support.get_property(b"_NET_CURRENT_DESKTOP", glob.root, glob.XA_CARDINAL)
         if bool(glob.ret_pointer) == False:
             curr_workspace_num = -2
-            print "DEBUG warning _NET_CURRENT_DESKTOP improperly set"
+            print("DEBUG warning _NET_CURRENT_DESKTOP improperly set")
         else: curr_workspace_num = glob.ret_pointer[0] # the number of the current workspace
         screen = Gdk.Screen.get_default()
         for client in clients:
             if support.is_window_sticky(client): continue
-            support.get_property("_NET_WM_DESKTOP", client, glob.XA_CARDINAL)
+            support.get_property(b"_NET_WM_DESKTOP", client, glob.XA_CARDINAL)
             if bool(glob.ret_pointer): workspace_num = glob.ret_pointer[0]
             else:
-                print "DEBUG warning _NET_WM_DESKTOP improperly set"
+                print("DEBUG warning _NET_WM_DESKTOP improperly set")
                 workspace_num = curr_workspace_num
             if self.gconf_client.get_string(cons.GCONF_ONLY_CURR_DESK % glob.screen_index) == cons.STR_TRUE\
             and (workspace_num != curr_workspace_num or not support.is_window_in_curr_viewport(glob.desktop_width, glob.desktop_height, client)):
@@ -121,25 +121,25 @@ class InfoModel:
             if self.gconf_client.get_string(cons.GCONF_NOT_MINIMIZED % glob.screen_index) == cons.STR_TRUE\
             and support.is_window_hidden(client):
                 continue
-            support.get_property("_NET_WM_NAME", client, glob.str_atom)
-            title="???"
+            support.get_property(b"_NET_WM_NAME", client, glob.str_atom)
+            title=b"???"
             if bool(glob.ret_pointer)==False:
-                print "DEBUG warning _NET_WM_NAME improperly set by application"
-                support.get_property("WM_NAME", client, glob.str2_atom)
+                print("DEBUG warning _NET_WM_NAME improperly set by application")
+                support.get_property(b"WM_NAME", client, glob.str2_atom)
                 if bool(glob.ret_pointer)==False:
-                    print "DEBUG warning WM_NAME not set by application"
+                    print("DEBUG warning WM_NAME not set by application")
                 else:
                     title = ctypes.string_at(glob.ret_pointer)
-                    print "class "+title
+                    print("class "+title)
             else: title = ctypes.string_at(glob.ret_pointer)
             if title in cons.WINNAMES_BLACKLIST: continue
             pxb = support.get_icon(client)
             if pxb: pxb = pxb.scale_simple(24, 24, GdkPixbuf.InterpType.BILINEAR)
-            support.get_property("_NET_WM_PID", client, glob.XA_CARDINAL)
+            support.get_property(b"_NET_WM_PID", client, glob.XA_CARDINAL)
             pid=0
-            process_name="UNKNOWN"
+            process_name=b"UNKNOWN"
             if bool(glob.ret_pointer)==False:
-                print "DEBUG warning can't get PID _NET_WM_PID failed"
+                print("DEBUG warning can't get PID _NET_WM_PID failed")
             else:
                 pid = glob.ret_pointer[0]
                 process_name = support.get_process_name(pid)
@@ -164,7 +164,7 @@ class InfoModel:
                 else: cell_background = 'gray'
                 if process_name not in self.process_whitelist: flagged = False
                 else: flagged = True
-                if win_curr_monitor == 0: self.liststore.prepend([flagged, client, title, pxb, False, cell_background])
+                if win_curr_monitor == 0: self.liststore.prepend([flagged, client, title.decode('utf-8'), pxb, False, cell_background])
                 else: self.liststore.append([flagged, client, title, pxb, False, cell_background])
                 rows_num += 1
         if rows_num == 2:
@@ -237,7 +237,7 @@ class InfoModel:
         while iter != None:
             next_iter = self.liststore.iter_next(iter)
             if self.liststore[iter][0] == True or self.liststore[iter][4] == True:
-                support.client_msg(self.liststore[iter][1],"_NET_CLOSE_WINDOW",0,0,0,0,0)
+                support.client_msg(self.liststore[iter][1], b"_NET_CLOSE_WINDOW", 0, 0, 0, 0, 0)
                 glob.x11.XSync(glob.disp, False)
                 self.liststore.remove(iter)
             iter = next_iter
@@ -282,7 +282,7 @@ class GladeWidgetsWrapper:
             self.glade_widgets.set_translation_domain(cons.APP_NAME)
             self.glade_widgets.add_from_file(glade_file_path)
             self.glade_widgets.connect_signals(gui_instance)
-        except: print "Failed to load the glade file"
+        except: print("Failed to load the glade file")
 
     def __getitem__(self, key):
         """Gives us the ability to do: wrapper['widget_name'].action()"""
@@ -291,7 +291,7 @@ class GladeWidgetsWrapper:
     def __getattr__(self, attr):
         """Gives us the ability to do: wrapper.widget_name.action()"""
         new_widget = self.glade_widgets.get_object(attr)
-        if new_widget is None: raise AttributeError, 'Widget %r not found' % attr
+        if new_widget is None: raise AttributeError('Widget %r not found' % attr)
         setattr(self, attr, new_widget)
         return new_widget
 

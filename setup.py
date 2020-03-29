@@ -147,7 +147,7 @@ setup(
     long_description = "Allows you to select a number of windows and tile them in different ways",
     version = cons.VERSION,
     author = "Giuseppe Penone & Chris Camacho",
-    author_email = "giuspen@gmail.com & codifies@gmail.com",
+    author_email = "giuspen@gmail.com & chris@bedroomcoders.co.uk",
     url = "http://www.giuspen.com/x-tile/",
     license = "GPL",
     data_files = [

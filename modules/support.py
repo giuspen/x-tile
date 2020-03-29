@@ -25,6 +25,7 @@
 #      MA 02110-1301, USA.
 
 from gi.repository import Gtk
+from gi.repository import Gdk
 from gi.repository import GdkPixbuf
 import os
 import subprocess
@@ -35,9 +36,9 @@ import cons
 
 def get_desktop_width_n_height():
     """Get Desktop Width and Height"""
-    get_property("_NET_WORKAREA", glob.root, glob.XA_CARDINAL)
+    get_property(b"_NET_WORKAREA", glob.root, glob.XA_CARDINAL)
     if bool(glob.ret_pointer): return glob.ret_pointer[2], glob.ret_pointer[3]
-    print "The WM does not set _NET_WORKAREA properly, x-tile may not work properly"
+    print("The WM does not set _NET_WORKAREA properly, x-tile may not work properly")
     screen = Gdk.Screen.get_default()
     rect = screen.get_monitor_geometry(0)
     return rect.width, rect.height
@@ -50,21 +51,21 @@ def is_window_in_curr_viewport(desktop_width, desktop_height, win_id):
 
 def is_compiz_running():
     """Return True if Compiz is running"""
-    get_property("_NET_SUPPORTING_WM_CHECK", glob.root, glob.XA_WINDOW)
+    get_property(b"_NET_SUPPORTING_WM_CHECK", glob.root, glob.XA_WINDOW)
     if bool(glob.ret_pointer) == False:
-        get_property("_NET_SUPPORTING_WM_CHECK", glob.root, glob.XA_CARDINAL)
+        get_property(b"_NET_SUPPORTING_WM_CHECK", glob.root, glob.XA_CARDINAL)
         if bool(glob.ret_pointer) == False:
-            print "no 1!"
+            print("no 1!")
             return False
         else:
             sup_window = glob.ret_pointer[0]
     else:
         sup_window = glob.ret_pointer[0]
-    get_property("_NET_WM_NAME", sup_window, glob.str_atom)
+    get_property(b"_NET_WM_NAME", sup_window, glob.str_atom)
     if bool(glob.ret_pointer) == False:
-        get_property("_NET_WM_NAME", sup_window, glob.XA_STRING)
+        get_property(b"_NET_WM_NAME", sup_window, glob.XA_STRING)
         if bool(glob.ret_pointer) == False:
-            print "no 2!"
+            print("no 2!")
             return False
     buff = ""
     keep_going = True
@@ -78,7 +79,7 @@ def is_compiz_running():
                 break
             buff += "%c" % curr_char
         i += 1
-    print "WM =", buff
+    print("WM =", buff)
     if buff == "Compiz": return True
     return False
 
@@ -118,7 +119,7 @@ def get_geom(win):
     xwa = globs.XWindowAttributes()
     glob.x11.XGetWindowAttributes(glob.disp, win,ctypes.byref(xwa))
 
-    get_property("_NET_FRAME_EXTENTS",win,glob.XA_CARDINAL)
+    get_property(b"_NET_FRAME_EXTENTS",win,glob.XA_CARDINAL)
     if bool(glob.ret_pointer)==False:
         l,r,t,b = (0,0,0,0)
     else:
@@ -137,7 +138,7 @@ def get_property(prop_name, window, data_type):  #128*256 longs (128kb) should b
 def get_icon(win):
     """   this returns a Gdk.pixbuf of the windows icon
           converts argb into rgba in the process   """
-    get_property("_NET_WM_ICON", win, glob.XA_CARDINAL)
+    get_property(b"_NET_WM_ICON", win, glob.XA_CARDINAL)
     if not glob.ret_pointer:
         return None
     w = glob.ret_pointer[0]
@@ -146,15 +147,15 @@ def get_icon(win):
     if w > 48 or h > 48:
         return None
     s = w*h
-    buff = ""
+    buff = b""
     i = 0
     while i<s:
         argb = glob.ret_pointer[i+2]
         i += 1
-        buff = buff + ("%c" % ((argb >> 16) & 0xff))
-        buff = buff + ("%c" % ((argb >> 8) & 0xff))
-        buff = buff + ("%c" % (argb & 0xff))
-        buff = buff + ("%c" % ((argb >> 24) & 0xff))
+        buff = buff + (b"%c" % ((argb >> 16) & 0xff))
+        buff = buff + (b"%c" % ((argb >> 8) & 0xff))
+        buff = buff + (b"%c" % (argb & 0xff))
+        buff = buff + (b"%c" % ((argb >> 24) & 0xff))
     pxbuf = GdkPixbuf.Pixbuf.new_from_data(buff, GdkPixbuf.Colorspace.RGB, True, 8, w, h, w*4)
     return pxbuf
 
@@ -180,54 +181,54 @@ def client_msg(win, msg, d0, d1, d2, d3, d4):
     event.data4 = d4
     # mask is SubstructureRedirectMask | SubstructureNotifyMask (20&19)
     if not glob.x11.XSendEvent(glob.disp,glob.root,False, 1<<20 | 1<<19,ctypes.byref(event)):
-        print "can't send message ", msg # DEBUG
+        print("can't send message ", msg) # DEBUG
 
 def moveresize(win, x, y, w, h, dest_workspace):
     """   moves window to the users current desktop removes states like
           maximised and fullscreen activates the window,
           raises it then finally! moves and resizes it """
     glob.x11.XSync(glob.disp, False)
-    get_property("_NET_FRAME_EXTENTS", win, glob.XA_CARDINAL)
+    get_property(b"_NET_FRAME_EXTENTS", win, glob.XA_CARDINAL)
     if bool(glob.ret_pointer) == False:
         l,r,t,b = (0, 0, 0, 0)
     else:
         l,r,t,b = glob.ret_pointer[0], glob.ret_pointer[1], glob.ret_pointer[2], glob.ret_pointer[3]
     if dest_workspace < 0:
-        get_property("_NET_CURRENT_DESKTOP", glob.root, glob.XA_CARDINAL)
+        get_property(b"_NET_CURRENT_DESKTOP", glob.root, glob.XA_CARDINAL)
         dest_workspace = glob.ret_pointer[0]
     ###
     # move myself to desktop
-    client_msg(glob.root, "_NET_CURRENT_DESKTOP", dest_workspace, 0, 0, 0, 0)
+    client_msg(glob.root, b"_NET_CURRENT_DESKTOP", dest_workspace, 0, 0, 0, 0)
     # move window to desktop
-    client_msg(win, "_NET_WM_DESKTOP", dest_workspace, 0, 0, 0, 0)
+    client_msg(win, b"_NET_WM_DESKTOP", dest_workspace, 0, 0, 0, 0)
     ###
-    client_msg(win,"_NET_WM_STATE", 0, glob.fscreen_atom, 0, 0, 0)
-    client_msg(win,"_NET_WM_STATE", 0, glob.maxv_atom,glob.maxh_atom, 0, 0)
-    client_msg(win,"_NET_ACTIVE_WINDOW", 0, 0, 0, 0, 0)
+    client_msg(win, b"_NET_WM_STATE", 0, glob.fscreen_atom, 0, 0, 0)
+    client_msg(win, b"_NET_WM_STATE", 0, glob.maxv_atom,glob.maxh_atom, 0, 0)
+    client_msg(win, b"_NET_ACTIVE_WINDOW", 0, 0, 0, 0, 0)
     glob.x11.XMapRaised(glob.disp, win)
     glob.x11.XSync(glob.disp, False)
-    glob.x11.XMoveResizeWindow(glob.disp, win, x, y, w-(l+r), h-(t+b)) # only interior size needs deco subtracting not position
+    glob.x11.XMoveResizeWindow(glob.disp, win, int(x), int(y), int(w-(l+r)), int(h-(t+b))) # only interior size needs deco subtracting not position
     glob.x11.XSync(glob.disp, False)
 
 def maximize(win):
     """ moves a window to the current desktop and maximises it """
-    get_property("_NET_CURRENT_DESKTOP",glob.root,glob.XA_CARDINAL)
+    get_property(b"_NET_CURRENT_DESKTOP",glob.root,glob.XA_CARDINAL)
     cdt = glob.ret_pointer[0]
-    client_msg(win, "_NET_WM_DESKTOP", cdt, 0, 0, 0, 0)
-    client_msg(win, "_NET_WM_STATE", 1, glob.maxv_atom, glob.maxh_atom, 0, 0) # 1 = add
+    client_msg(win, b"_NET_WM_DESKTOP", cdt, 0, 0, 0, 0)
+    client_msg(win, b"_NET_WM_STATE", 1, glob.maxv_atom, glob.maxh_atom, 0, 0) # 1 = add
     glob.x11.XSync(glob.disp, False)
 
 def unmaximize(win):
     """ moves a window to the current desktop and 'unmaximises' it """
-    get_property("_NET_CURRENT_DESKTOP", glob.root, glob.XA_CARDINAL)
+    get_property(b"_NET_CURRENT_DESKTOP", glob.root, glob.XA_CARDINAL)
     cdt = glob.ret_pointer[0]
-    client_msg(win, "_NET_WM_DESKTOP", cdt, 0, 0, 0, 0)
-    client_msg(win,"_NET_WM_STATE", 0, glob.maxv_atom, glob.maxh_atom, 0, 0) # 0 = remove
+    client_msg(win, b"_NET_WM_DESKTOP", cdt, 0, 0, 0, 0)
+    client_msg(win, b"_NET_WM_STATE", 0, glob.maxv_atom, glob.maxh_atom, 0, 0) # 0 = remove
     glob.x11.XSync(glob.disp, False)
 
 def desktop_size():
     """   gets the "work area" usually space between panels """
-    get_property("_NET_WORKAREA", glob.root, glob.XA_CARDINAL)
+    get_property(b"_NET_WORKAREA", glob.root, glob.XA_CARDINAL)
     if glob.num_items.value:
         return glob.ret_pointer[0], glob.ret_pointer[1], glob.ret_pointer[2], glob.ret_pointer[3]
     return 0,0,0,0
@@ -300,7 +301,7 @@ def enumerate_strut_windows(display, rootwindow):
     width_return = ctypes.c_int()
     height_return = ctypes.c_int()
     dummy = ctypes.c_int()
-    get_property("_NET_WM_STRUT_PARTIAL", rootwindow, glob.XA_CARDINAL)
+    get_property(b"_NET_WM_STRUT_PARTIAL", rootwindow, glob.XA_CARDINAL)
     if glob.num_items.value:
         glob.x11.XGetGeometry(display, rootwindow, ctypes.byref(dummy), ctypes.byref(x_return), ctypes.byref(y_return),
                               ctypes.byref(width_return), ctypes.byref(height_return), ctypes.byref(dummy), ctypes.byref(dummy) )
@@ -357,28 +358,28 @@ def get_process_name(p):
 
 def is_window_hidden(win):
     """ is a window hidden ie "minimised" ? """
-    get_property("_NET_WM_STATE", win, glob.XA_ATOM)
+    get_property(b"_NET_WM_STATE", win, glob.XA_ATOM)
     for i in range(0, glob.num_items.value):
         if glob.ret_pointer[i] == glob.hidden_atom: return True
     return False
 
 def is_window_sticky(win):
     """ is a window sticky ? """
-    get_property("_NET_WM_STATE", win, glob.XA_ATOM)
+    get_property(b"_NET_WM_STATE", win, glob.XA_ATOM)
     for i in range(0, glob.num_items.value):
         if glob.ret_pointer[i] == glob.sticky_atom: return True
     return False
 
 def is_window_Vmax(win):
     """ is a window vertically maximised ? """
-    get_property("_NET_WM_STATE", win, glob.XA_ATOM)
+    get_property(b"_NET_WM_STATE", win, glob.XA_ATOM)
     for i in range(0, glob.num_items.value):
         if glob.ret_pointer[i] == glob.maxv_atom: return True
     return False
 
 def is_window_Hmax(win):
     """ is a window horizontally maximised ? """
-    get_property("_NET_WM_STATE", win, glob.XA_ATOM)
+    get_property(b"_NET_WM_STATE", win, glob.XA_ATOM)
     for i in range(0, glob.num_items.value):
         if glob.ret_pointer[i] == glob.maxh_atom: return True
     return False

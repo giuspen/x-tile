@@ -34,65 +34,65 @@ import core
 
 class XSizeHints(ctypes.Structure):
     """ XSizeHints structure (xlib) """
-    _fields_ = [("flags",ctypes.c_long),
-                ("x",ctypes.c_int),        # Obsolete
-                ("y",ctypes.c_int),        # Obsolete
-                ("width",ctypes.c_int),    # Obsolete
-                ("height",ctypes.c_int),   # Obsolete
-                ("min_width",ctypes.c_int),
-                ("min_height",ctypes.c_int),
-                ("max_width",ctypes.c_int),
-                ("max_height",ctypes.c_int),
-                ("width_inc",ctypes.c_int),
-                ("height_inc",ctypes.c_int),
-                ("min_asp_width",ctypes.c_int),
-                ("min_asp_height",ctypes.c_int),
-                ("max_asp_width",ctypes.c_int),
-                ("max_asp_height",ctypes.c_int),
-                ("base_width",ctypes.c_int),
-                ("base_height",ctypes.c_int),
-                ("win_gravity",ctypes.c_int)]
+    _fields_ = [("flags",              ctypes.c_long),
+                ("x",                  ctypes.c_int),  # Obsolete
+                ("y",                  ctypes.c_int),  # Obsolete
+                ("width",              ctypes.c_int),  # Obsolete
+                ("height",             ctypes.c_int),  # Obsolete
+                ("min_width",          ctypes.c_int),
+                ("min_height",         ctypes.c_int),
+                ("max_width",          ctypes.c_int),
+                ("max_height",         ctypes.c_int),
+                ("width_inc",          ctypes.c_int),
+                ("height_inc",         ctypes.c_int),
+                ("min_asp_width",      ctypes.c_int),
+                ("min_asp_height",     ctypes.c_int),
+                ("max_asp_width",      ctypes.c_int),
+                ("max_asp_height",     ctypes.c_int),
+                ("base_width",         ctypes.c_int),
+                ("base_height",        ctypes.c_int),
+                ("win_gravity",        ctypes.c_int)]
 
 class XWindowAttributes(ctypes.Structure):
     """ XWindowAttributes structure (xlib) """
-    _fields_ = [  ("x",                      ctypes.c_int32),
-                  ("y",                      ctypes.c_int32),
-                  ("width",                  ctypes.c_int32),
-                  ("height",                 ctypes.c_int32),
-                  ("border_width",           ctypes.c_int32),
-                  ("depth",                  ctypes.c_int32),
-                  ("visual",                 ctypes.c_ulong),
-                  ("root",                   ctypes.c_ulong),
-                  ("class",                  ctypes.c_int32),
-                  ("bit_gravity",            ctypes.c_int32),
-                  ("win_gravity",            ctypes.c_int32),
-                  ("backing_store",          ctypes.c_int32),
-                  ("backing_planes",         ctypes.c_ulong),
-                  ("backing_pixel",          ctypes.c_ulong),
-                  ("save_under",             ctypes.c_int32),
-                  ("colourmap",              ctypes.c_ulong),
-                  ("mapinstalled",           ctypes.c_uint32),
-                  ("map_state",              ctypes.c_uint32),
-                  ("all_event_masks",        ctypes.c_ulong),
-                  ("your_event_mask",        ctypes.c_ulong),
-                  ("do_not_propagate_mask",  ctypes.c_ulong),
-                  ("override_redirect",      ctypes.c_int32),
-                  ("screen",                 ctypes.c_ulong) ]
+    _fields_ = [("x",                      ctypes.c_int32),
+                ("y",                      ctypes.c_int32),
+                ("width",                  ctypes.c_int32),
+                ("height",                 ctypes.c_int32),
+                ("border_width",           ctypes.c_int32),
+                ("depth",                  ctypes.c_int32),
+                ("visual",                 ctypes.c_ulong),
+                ("root",                   ctypes.c_ulong),
+                ("class",                  ctypes.c_int32),
+                ("bit_gravity",            ctypes.c_int32),
+                ("win_gravity",            ctypes.c_int32),
+                ("backing_store",          ctypes.c_int32),
+                ("backing_planes",         ctypes.c_ulong),
+                ("backing_pixel",          ctypes.c_ulong),
+                ("save_under",             ctypes.c_int32),
+                ("colourmap",              ctypes.c_ulong),
+                ("mapinstalled",           ctypes.c_uint32),
+                ("map_state",              ctypes.c_uint32),
+                ("all_event_masks",        ctypes.c_ulong),
+                ("your_event_mask",        ctypes.c_ulong),
+                ("do_not_propagate_mask",  ctypes.c_ulong),
+                ("override_redirect",      ctypes.c_int32),
+                ("screen",                 ctypes.c_ulong)]
 
 class XClientMessageEvent(ctypes.Structure):
     """ XClientMessageEvent structure (xlib) """
-    _fields_ = [("type", ctypes.c_int),
-                ("serial", ctypes.c_long),
-                ("send", ctypes.c_byte),
-                ("display",ctypes.c_long),
-                ("window",ctypes.c_long),
-                ("msgtype",ctypes.c_long),
-                ("format",ctypes.c_int),
-                ("data0",ctypes.c_long),
-                ("data1",ctypes.c_long),
-                ("data2",ctypes.c_long),
-                ("data3",ctypes.c_long),
-                ("data4",ctypes.c_long)]
+    _fields_ = [("type",       ctypes.c_int),
+                ("serial",     ctypes.c_long),
+                ("send",       ctypes.c_byte),
+                ("display",    ctypes.c_long),
+                ("window",     ctypes.c_long),
+                ("msgtype",    ctypes.c_long),
+                ("format",     ctypes.c_int),
+                ("data0",      ctypes.c_long),
+                ("data1",      ctypes.c_long),
+                ("data2",      ctypes.c_long),
+                ("data3",      ctypes.c_long),
+                ("data4",      ctypes.c_long)]
 
 
 class GlobalsObject(object):
@@ -109,12 +109,12 @@ class GlobalsObject(object):
         # property atoms for moveresize
         # assigned once here so they are not recreated
         # every time moveresize is called
-        self.fscreen_atom = self.x11.XInternAtom(self.disp, "_NET_WM_STATE_FULLSCREEN", False)
-        self.maxv_atom = self.x11.XInternAtom(self.disp, "_NET_WM_STATE_MAXIMIZED_VERT", False)
-        self.maxh_atom = self.x11.XInternAtom(self.disp, "_NET_WM_STATE_MAXIMIZED_HORZ", False)
-        self.hidden_atom = self.x11.XInternAtom(self.disp, "_NET_WM_STATE_HIDDEN", False)
-        self.sticky_atom = self.x11.XInternAtom(self.disp, "_NET_WM_STATE_STICKY", False)
-        self.str_atom = self.x11.XInternAtom(self.disp, "UTF8_STRING", False)
+        self.fscreen_atom = self.x11.XInternAtom(self.disp, b"_NET_WM_STATE_FULLSCREEN", False)
+        self.maxv_atom = self.x11.XInternAtom(self.disp, b"_NET_WM_STATE_MAXIMIZED_VERT", False)
+        self.maxh_atom = self.x11.XInternAtom(self.disp, b"_NET_WM_STATE_MAXIMIZED_HORZ", False)
+        self.hidden_atom = self.x11.XInternAtom(self.disp, b"_NET_WM_STATE_HIDDEN", False)
+        self.sticky_atom = self.x11.XInternAtom(self.disp, b"_NET_WM_STATE_STICKY", False)
+        self.str_atom = self.x11.XInternAtom(self.disp, b"UTF8_STRING", False)
         # GLOBAL returns for getwindowproperty
         self.ret_type = ctypes.c_long()
         self.ret_format = ctypes.c_long()
@@ -129,7 +129,7 @@ class GlobalsObject(object):
         # GLOBAL size hints return
         self.size_hints_return = XSizeHints()
         self.screen_index = support.get_root_screen_index()
-        self.str2_atom = self.x11.XInternAtom(self.disp, "STRING", False)
+        self.str2_atom = self.x11.XInternAtom(self.disp, b"STRING", False)
         self.num_monitors = Gdk.Screen.get_default().get_n_monitors()
         self.is_compiz_running = support.is_compiz_running()
         self.desktop_width, self.desktop_height = support.get_desktop_width_n_height()

@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # -*- coding: UTF-8 -*-
 #
 #      x-tile
@@ -34,7 +34,7 @@ import locale
 import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
-import __builtin__
+import builtins
 
 if os.path.isfile('modules/globs.py'): MODULES_PATH = 'modules/'
 else: MODULES_PATH = '/usr/share/x-tile/modules/'
@@ -57,14 +57,14 @@ try:
 except:
     def _(transl_str):
         return transl_str
-    __builtin__._ = _
+    builtins._ = _
 
-__builtin__.glob = globs.GlobalsObject()
+builtins.glob = globs.GlobalsObject()
 
 try:
    libc = ctypes.cdll.LoadLibrary(ctypes.util.find_library("libc"))
    libc.prctl(15, cons.APP_NAME, 0, 0, 0)
-except: print "libc.prctl not available, the process name will be python and not x-tile"
+except: print("libc.prctl not available, the process name will be python and not x-tile")
 
 if len(sys.argv) < 2: sys.argv.append("w")
 
@@ -99,10 +99,10 @@ elif arg in cons.CMD_LINE_ACTIONS:
             try:
                 rows, cols = ([max(0, min(wins, int(a))) for a in sys.argv[2:4]] + [0, 0])[:2]
             except:
-                print "bad arguments"
+                print("bad arguments")
                 exit(1)
             if not rows and not cols:
-                for rows, cols in ((r, c) for r in xrange(1, 100) for c in [r, r + 1]):
+                for rows, cols in ((r, c) for r in range(1, 100) for c in [r, r + 1]):
                     if rows * cols >= wins:
                         break
             elif not rows:
@@ -117,4 +117,4 @@ elif arg in cons.CMD_LINE_ACTIONS:
     elif arg == "M": x.unmaximize_checked_windows()
     elif arg == "c": x.close_checked_windows()
 else: # -h
-    print cons.HELP_TEXT
+    print(cons.HELP_TEXT)

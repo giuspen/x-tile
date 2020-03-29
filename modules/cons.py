@@ -53,8 +53,8 @@ H2 = 10
 GRID_ROWS = 2
 GRID_COLS = 2
 
-WINNAMES_BLACKLIST = ["x-nautilus-desktop", "pcmanfm"]
-PROCESSES_BLACKLIST = ["lxpanel"]
+WINNAMES_BLACKLIST = [b"x-nautilus-desktop", b"pcmanfm"]
+PROCESSES_BLACKLIST = [b"lxpanel"]
 #PROCESSES_PARENT_BLACKLIST = ["gnome-session"]
 
 STR_TRUE = "True"
