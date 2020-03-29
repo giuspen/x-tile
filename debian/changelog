@@ -1,5 +1,5 @@
 x-tile (3.0-0) bionic; urgency=low
 
-  * Porting to PyGobject
+  * Porting to PyGobject, Gtk3 and Python3
 
- -- Giuseppe Penone <giuspen@gmail.com>  Sun, 07 Jul 2019 14:00:18 +0100
+ -- Giuseppe Penone <giuspen@gmail.com>  Sun, 29 Mar 2020 16:39:50 +0100

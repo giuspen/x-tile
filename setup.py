@@ -1,6 +1,6 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
-# for linux install: "python setup.py install --prefix=/usr --exec-prefix=/usr -f"
+# for linux install: "python3 setup.py install --prefix=/usr --exec-prefix=/usr -f"
 
 from distutils.core import setup
 from distutils.dist import Distribution
@@ -13,10 +13,10 @@ from distutils.log import warn, info, error
 from distutils.errors import DistutilsFileError
 
 import os, glob, sys, subprocess
-import __builtin__
+import builtins
 def _(transl_str):
     return transl_str
-__builtin__._ = _
+builtins._ = _
 sys.path.append(os.path.join(os.getcwd(), "modules"))
 import cons
 
@@ -58,8 +58,8 @@ class BuildData(build):
                 info('compiling %s -> %s' % (po, mo))
                 try:
                     rc = subprocess.call(['msgfmt', '-o', mo, po])
-                    if rc != 0: raise Warning, "msgfmt returned %d" % rc
-                except Exception, e:
+                    if rc != 0: raise Warning("msgfmt returned %d" % rc)
+                except Exception as e:
                     error("Building gettext files failed. Try setup.py --without-gettext [build|install]")
                     error("Error: %s" % str(e))
                     sys.exit(1)
@@ -87,7 +87,7 @@ class Uninstall(Command):
                     raise DistutilsFileError("Pass manifest with --manifest=file")
                 f = open(self.manifest)
                 files = [file.strip() for file in f]
-            except IOError, e:
+            except IOError as e:
                 raise DistutilsFileError("unable to open install manifest: %s", str(e))
         finally:
             if f: f.close()
@@ -96,7 +96,7 @@ class Uninstall(Command):
                 info("removing %s" % repr(file))
                 if not self.dry_run:
                     try: os.unlink(file)
-                    except OSError, e:
+                    except OSError as e:
                         warn("could not delete: %s" % repr(file))
             elif not os.path.isdir(file):
                 info("skipping %s" % repr(file))
@@ -111,7 +111,7 @@ class Uninstall(Command):
                     info("removing %s" % repr(dir))
                     if not self.dry_run:
                         try: os.rmdir(dir)
-                        except OSError, e:
+                        except OSError as e:
                             warn("could not remove directory: %s" % str(e))
                 else: info("skipping empty directory %s" % repr(dir))
 
@@ -131,7 +131,7 @@ class InstallData(install_data):
     def _find_desktop_file(self):
         return [("share/applications", ["linux/x-tile.desktop"] )]
 
-    def _find_mo_files (self):
+    def _find_mo_files(self):
         data_files = []
         if not self.distribution.without_gettext:
             for mo in glob.glob(os.path.join (MO_DIR, '*', 'x-tile.mo')):

@@ -129,7 +129,7 @@
     <property name="type_hint">dialog</property>
     <property name="transient_for">window</property>
     <property name="program_name">X Tile</property>
-    <property name="copyright">Copyright © 2009-2016
+    <property name="copyright">Copyright © 2009-2020
 Giuseppe Penone &lt;giuspen@gmail.com&gt;
 Chris Camacho &lt;chris@bedroomcoders.co.uk&gt;</property>
     <property name="comments" translatable="yes">Tile the Windows Upon your X Desktop</property>
