@@ -424,7 +424,7 @@ class XTile:
     def on_mouse_button_clicked_systray(self, widget, event):
         """Catches mouse buttons clicks upon the system tray icon"""
         if event.button == 1: self.toggle_show_hide_main_window()
-        elif event.button == 3: self.ui.get_widget("/SysTrayMenu").popup(None, None, None, event.button, event.time)
+        elif event.button == 3: self.ui.get_widget("/SysTrayMenu").popup(None, None, None, None, event.button, event.time)
     
     def toggle_show_hide_main_window(self, *args):
         if self.win_on_screen: self.window_hide()
