@@ -26,7 +26,7 @@
 import os
 
 APP_NAME = "x-tile"
-VERSION = "3.0"
+VERSION = "3.1"
 if os.path.isdir("glade"):
     GLADE_PATH = os.path.join(os.getcwd(), "glade/")
     LOCALE_PATH = "locale/"

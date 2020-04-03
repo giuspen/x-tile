@@ -1,5 +1,5 @@
-x-tile (3.0-0) bionic; urgency=low
+x-tile (3.1-0) bionic; urgency=low
 
-  * Porting to PyGobject, Gtk3 and Python3
+  * fixed right click on systray crash
 
- -- Giuseppe Penone <giuspen@gmail.com>  Sun, 29 Mar 2020 16:39:50 +0100
+ -- Giuseppe Penone <giuspen@gmail.com>  Fri, 03 Apr 2020 17:59:38 +0100
