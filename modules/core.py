@@ -152,7 +152,7 @@ class InfoModel:
             self.process_picklist.add(process_name)
             if process_name not in self.process_blacklist: # user filter
                 if glob.num_monitors > 1:
-                    win_geom = support.get_geom(win_id)
+                    win_geom = support.get_geom(client)
                     win_curr_monitor = screen.get_monitor_at_point(win_geom[0]+win_geom[2]/2,
                                                                    win_geom[1]+win_geom[3]/2)
                 else: win_curr_monitor = 0
@@ -161,7 +161,7 @@ class InfoModel:
                 if process_name not in self.process_whitelist: flagged = False
                 else: flagged = True
                 if win_curr_monitor == 0: self.liststore.prepend([flagged, client, title.decode('utf-8'), pxb, False, cell_background])
-                else: self.liststore.append([flagged, client, title, pxb, False, cell_background])
+                else: self.liststore.append([flagged, client, title.decode('utf-8'), pxb, False, cell_background])
                 rows_num += 1
         if rows_num == 2:
             iter = self.liststore.get_iter_first()
