@@ -127,7 +127,6 @@ class InfoModel:
                     print("DEBUG warning WM_NAME not set by application")
                 else:
                     title = ctypes.string_at(glob.ret_pointer)
-                    print("class "+title)
             else: title = ctypes.string_at(glob.ret_pointer)
             if title in cons.WINNAMES_BLACKLIST: continue
             pxb = support.get_icon(client)
