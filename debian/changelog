@@ -1,5 +1,5 @@
-x-tile (3.1-0) bionic; urgency=low
+x-tile (3.2-0) focal; urgency=low
 
-  * fixed right click on systray crash
+  * fixed crashes after porting to Gtk3 (#12, #13)
 
- -- Giuseppe Penone <giuspen@gmail.com>  Fri, 03 Apr 2020 17:59:38 +0100
+ -- Giuseppe Penone <giuspen@gmail.com>  Thu, 03 Sep 2020 22:08:42 +0100
