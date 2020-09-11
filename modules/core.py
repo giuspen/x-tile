@@ -3,7 +3,7 @@
 #
 #      Copyright 2009-2020
 #      Giuseppe Penone <giuspen@gmail.com>,
-#      Chris Camacho (chris_c) <chris@bedroomcoders.co.uk>.
+#      Chris Camacho (chris_c) <codifies@gmail.com>.
 #
 #      plus many thanks to  http://tronche.com/gui/x/xlib/
 #                      and  http://tripie.sweb.cz/utils/wmctrl/
@@ -917,14 +917,18 @@ class XTile:
         label_rows = Gtk.Label(label=_("Rows"))
         spinbutton_rows = Gtk.SpinButton()
         adj_rows = spinbutton_rows.get_adjustment()
-        adj_rows.set_all(cons.GRID_ROWS, 1, 100, 1, 0, 0)
+        #adj_rows.set_all(cons.GRID_ROWS, 1, 100, 1, 0, 0)
+        adj_rows = Gtk.Adjustment(value=1,lower=1,upper=100, step_increment=1, page_increment=0)
+        spinbutton_rows.set_adjustment(adj_rows)
         hbox_rows.pack_start(label_rows, True, True, 0)
         hbox_rows.pack_start(spinbutton_rows, True, True, 0)
         hbox_cols = Gtk.HBox()
         label_cols = Gtk.Label(label=_("Columns"))
         spinbutton_cols = Gtk.SpinButton()
-        adj_cols = spinbutton_cols.get_adjustment()
-        adj_cols.set_all(cons.GRID_COLS, 1, 100, 1, 0, 0)
+        #adj_cols = spinbutton_cols.get_adjustment()
+        #adj_cols.set_all(cons.GRID_COLS, 1, 100, 1, 0, 0)
+        adj_cols = Gtk.Adjustment(value=1, lower=1,upper=100, step_increment=1, page_increment=0)
+        spinbutton_cols.set_adjustment(adj_cols)
         hbox_cols.pack_start(label_cols, True, True, 0)
         hbox_cols.pack_start(spinbutton_cols, True, True, 0)
         content_area.pack_start(hbox_rows, True, True, 0)
