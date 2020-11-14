@@ -1,5 +1,6 @@
-x-tile (3.2-0) focal; urgency=low
+x-tile (3.3-0) focal; urgency=low
 
-  * fixed crashes after porting to Gtk3 (#12, #13)
+  * fixed tile grid crash after porting to Gtk3
+  * added command line options to print version -V/--version (#8)
 
- -- Giuseppe Penone <giuspen@gmail.com>  Thu, 03 Sep 2020 22:08:42 +0100
+ -- Giuseppe Penone <giuspen@gmail.com>  Sat, 14 Nov 2020 21:57:56 +0000

@@ -26,7 +26,7 @@
 import os
 
 APP_NAME = "x-tile"
-VERSION = "3.2"
+VERSION = "3.3"
 if os.path.isdir("glade"):
     GLADE_PATH = os.path.join(os.getcwd(), "glade/")
     LOCALE_PATH = "locale/"
@@ -325,7 +325,7 @@ def get_entries(inst):
 HELP_TEXT = """
 
 NAME
-   X Tile - Tile the Windows upon your Desktop
+   X Tile {} - Tile the Windows upon your Desktop
 
 SYNOPSIS
    x-tile OPTION
@@ -378,4 +378,4 @@ SEE ALSO
 AUTHORS
    Giuseppe Penone (aka giuspen) and Chris Camacho (aka Chris_C)
 
-"""
+""".format(VERSION)

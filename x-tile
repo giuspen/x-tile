@@ -73,6 +73,8 @@ if arg == "w":
     x.launch_application()
     x.reload_windows_list()
     Gtk.main()
+elif arg in ("-V", "--version"):
+    print("X Tile {}".format(cons.VERSION))
 elif arg in cons.CMD_LINE_ACTIONS:
     x = core.XTile(core.InfoModel())
     x.launch_application()
