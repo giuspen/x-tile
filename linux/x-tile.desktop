@@ -1,4 +1,3 @@
-
 [Desktop Entry]
 Name=X Tile
 Comment=Tile the Windows Upon your X Desktop
@@ -9,3 +8,4 @@ Type=Application
 StartupNotify=true
 Categories=GTK;Utility;
 Name[en_US]=x-tile
+Keywords=tile,tiling,sort,organize,windows
