@@ -33,11 +33,22 @@ import ctypes
 import webbrowser
 import time
 import subprocess
-try:
-    gi.require_version('AppIndicator3', '0.1')
+def module_exists(module_name):
+    try:
+        gi.require_version(module_name, '0.1')
+    except:
+        return False
+    else:
+        return True
+
+if module_exists('AppIndicator3'):
     from gi.repository import AppIndicator3 as appindicator
     HAS_APPINDICATOR = True
-except: HAS_APPINDICATOR = False
+elif module_exists('AyatanaAppIndicator3'):
+    from gi.repository import AyatanaAppIndicator3 as appindicator
+    HAS_APPINDICATOR = True
+else:
+    HAS_APPINDICATOR = False
 import cons
 import support
 import tilings
