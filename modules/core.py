@@ -1,7 +1,7 @@
 #
 #      core.py
 #
-#      Copyright 2009-2020
+#      Copyright 2009-2022
 #      Giuseppe Penone <giuspen@gmail.com>,
 #      Chris Camacho (chris_c) <codifies@gmail.com>.
 #
@@ -1321,7 +1321,7 @@ class XTile:
     
     def on_help_menu_item_activated(self, menuitem, data=None):
         """Show the application's Instructions"""
-        webbrowser.open("http://www.giuspen.com/x-tile/")
+        webbrowser.open("https://www.giuspen.net/x-tile/")
     
     def hide_and_process(self, command_str):
         """Hide the X Tile Window if Visible, then Process the Command"""

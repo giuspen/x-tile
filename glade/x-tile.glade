@@ -133,8 +133,8 @@
 Giuseppe Penone &lt;giuspen@gmail.com&gt;
 Chris Camacho &lt;codifies@gmail.com&gt;</property>
     <property name="comments" translatable="yes">Tile the Windows Upon your X Desktop</property>
-    <property name="website">http://www.giuspen.com/x-tile/</property>
-    <property name="website_label" translatable="yes">http://www.giuspen.com/x-tile/</property>
+    <property name="website">https://www.giuspen.net/x-tile/</property>
+    <property name="website_label" translatable="no">https://www.giuspen.net/x-tile/</property>
     <property name="license" translatable="yes">
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

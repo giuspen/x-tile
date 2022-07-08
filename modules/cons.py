@@ -1,7 +1,7 @@
 #
 #      cons.py
 #
-#      Copyright 2009-2020
+#      Copyright 2009-2022
 #      Giuseppe Penone <giuspen@gmail.com>,
 #      Chris Camacho (chris_c) <codifies@gmail.com>.
 #
@@ -373,7 +373,7 @@ OPTIONS
    c => close all opened windows
 
 SEE ALSO
-   http://www.giuspen.com/x-tile
+   https://www.giuspen.net/x-tile
 
 AUTHORS
    Giuseppe Penone (aka giuspen) and Chris Camacho (aka Chris_C)

@@ -148,7 +148,8 @@ setup(
     version = cons.VERSION,
     author = "Giuseppe Penone & Chris Camacho",
     author_email = "giuspen@gmail.com & codifies@gmail.com",
-    url = "http://www.giuspen.com/x-tile/",
+    packages=[],
+    url = "http://www.giuspen.net/x-tile/",
     license = "GPL",
     data_files = [
                   ("share/icons/hicolor/scalable/apps", ["glade/x-tile.svg"] ),

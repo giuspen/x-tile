@@ -12,7 +12,7 @@ Build-Depends:
  gir1.2-gtk-3.0
 X-Python-Version: >= 3.0
 Standards-Version: 3.9.5
-Homepage: https://www.giuspen.com/x-tile/
+Homepage: https://www.giuspen.net/x-tile/
 Vcs-Git: https://github.com/giuspen/x-tile.git
 Vcs-Browser: https://github.com/giuspen/x-tile
 

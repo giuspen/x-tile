@@ -1,9 +1,9 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: x-tile
-Source: http://www.giuspen.com/x-tile/
+Source: https://www.giuspen.net/x-tile/
 
 Files: *
-Copyright: 2009-2020 Giuseppe Penone <giuspen@gmail.com>
+Copyright: 2009-2022 Giuseppe Penone <giuspen@gmail.com>
 License: GPL-2.0+
 
 License: GPL-2.0+
